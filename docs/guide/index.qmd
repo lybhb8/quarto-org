@@ -1,6 +1,7 @@
 ---
-title: "Guide"
-subtitle: Comprehensive guide to using Quarto. If you are just starting out, you may want to  explore the [tutorials](../get-started/index.qmd) to learn the basics.
+title: "指南"
+subtitle: "使用Quarto综合指南，如果您刚刚开始，您需要浏览[教程](../get-started/index.qmd)，去学习一些基础知识"
+#Comprehensive guide to using Quarto. If you are just starting out, you may want to  explore the [tutorials](../get-started/index.qmd) to learn the basics.
 page-layout: article
 anchor-sections: false
 search: false

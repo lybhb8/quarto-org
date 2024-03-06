@@ -1,6 +1,6 @@
 ---
-title: "Get Started"
-subtitle: "Install Quarto, then check out the tutorials to learn the basics."
+title: "开始" #"Get Started"
+subtitle: "先安装 Quarto，然后查看教程学习基础知识" #"Install Quarto, then check out the tutorials to learn the basics."
 format:
   html:
     include-in-header: 
@@ -24,9 +24,14 @@ image: /images/hero_right.png
 
 ::: {.grid .step .column-page-right}
 ::: {.g-col-lg-3 .g-col-12}
+<!--
 ## Step 1 
-
 #### Install Quarto {.fw-light}
+-->
+## 第一步
+
+### 安装 Quarto {.fw-light}
+
 :::
 
 ::: {.g-col-lg-9 .g-col-12}
@@ -50,9 +55,15 @@ image: /images/hero_right.png
 
 ::: {.grid .step .column-page-right}
 ::: {.g-col-lg-3 .g-col-12}
+<!--
 ## Step 2 
 
 #### Choose your tool<br/>and get started{.fw-light}
+-->
+## 第二步
+
+### 选择IDE工具<br/>开始{.fw-light}
+
 :::
 
 ::: {.tool .g-col-lg-9 .g-col-12}

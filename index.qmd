@@ -37,7 +37,7 @@ resources:
 <!--
 ### Analyze. Share. Reproduce. You have a story to tell with data---tell it with Quarto.
 -->
-### 分析、分享、复制、您有一个故事要用数据和Quarto讲述。
+### 分析、分享、复制您的故事，用数据和Quarto来讲述
 
 ::: {.hero-buttons}
 <!--

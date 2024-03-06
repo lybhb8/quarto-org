@@ -7,7 +7,7 @@ project:
     - "/_redirects"
 
 website:
-  title: "Quarto"
+  title: "Quarto" 
   image: "quarto-dark-bg.jpeg"
   favicon: "favicon.png"
   google-analytics: "G-FV9Z7SDZ0M"
@@ -33,13 +33,13 @@ website:
       Proudly supported by
       [![](https://www.rstudio.com/assets/img/posit-logo-fullcolor-TM.svg){fig-alt="Posit" width=65px}](https://posit.co)
     center:
-      - text: "About"
+      - text: "关于" #"About"
         href: about.qmd
-      - text: "FAQ"
+      - text: "问答" #"FAQ"
         href: docs/faq/index.qmd
       - text: "License"
         href: license.qmd
-      - text: "Trademark"
+      - text: 商标 #"Trademark"
         href: trademark.qmd
     right:
       - icon: twitter
@@ -61,29 +61,29 @@ website:
     title: false
     collapse-below: lg
     left:
-      - text: "Overview"
+      - text: "概述" #"Overview"
         href: index.qmd
-      - text: "Get Started"
+      - text: "开始" #"Get Started"
         href: docs/get-started/index.qmd
-      - text: "Guide"
+      - text: "指南" #"Guide" 
         href: docs/guide/index.qmd
-      - text: Extensions
+      - text: 扩展 #Extensions
         href: docs/extensions/index.qmd
-      - text: "Reference"
+      - text: "引用" #"Reference"
         href: docs/reference/index.qmd
-      - text: "Gallery"
+      - text: "展厅" #"Gallery"
         href: docs/gallery/index.qmd
-      - text: "Blog"
+      - text: "博客" #"Blog"
         href: docs/blog/index.qmd
-      - text: "Help"
+      - text: "帮助" #"Help"
         menu:
-          - text: "Report a Bug"
+          - text: "提交Bug" #"Report a Bug"
             icon: "bug"
             href: "https://github.com/quarto-dev/quarto-cli/issues"
-          - text: "Ask a Question"
+          - text: "回答问题" #"Ask a Question"
             icon: "chat-right-text"
             href: "https://github.com/quarto-dev/quarto-cli/discussions"
-          - text: "FAQ"
+          - text: "常见问题" #"FAQ"
             icon: "question-circle"
             href: docs/faq/index.qmd
     tools:
@@ -99,26 +99,28 @@ website:
 
   sidebar:
     - id: get-started
-      title: "Get Started"
+      title: "开始" #"Get Started"
+      text: "开始"
       style: "floating"
       collapse-level: 2
       align: left
       contents:
         - docs/get-started/index.qmd
-        - text: "Tutorial: Hello, Quarto"
+        - text: "教程: 您好,Quarto" #"Tutorial: Hello, Quarto"
           href: docs/get-started/hello/
-        - text: "Tutorial: Computations"
+        - text: "教程: 计算" #"Tutorial: Computations"
           href: docs/get-started/computations/
-        - text: "Tutorial: Authoring"
+        - text: "教程: 写作" #"Tutorial: Authoring"
           href: docs/get-started/authoring/
 
     - id: guide
+      text: "指南"
       collapse-level: 1
       contents:
-        - section: "Guide"
+        - section: "指南" #"Guide"
           href: docs/guide/index.qmd
           contents:
-          - section: "Authoring"
+          - section: "创作" #"Authoring"
             contents:
               - docs/authoring/markdown-basics.qmd
               - docs/authoring/figures.qmd
@@ -137,9 +139,9 @@ website:
                   - docs/authoring/footnotes-and-citations.qmd
                   - section: Cross-References
                     contents:
-                      - text: Basics
+                      - text: 基础 #Basics
                         href: docs/authoring/cross-references.qmd
-                      - text: Options
+                      - text: 选择 #Options
                         href: docs/authoring/cross-reference-options.qmd
                       - text: Div Syntax
                         href: docs/authoring/cross-references-divs.qmd
@@ -147,7 +149,7 @@ website:
                         href: docs/authoring/cross-references-custom.qmd
                   - docs/authoring/create-citeable-articles.qmd
                   - docs/authoring/appendices.qmd
-          - section: "Computations"
+          - section: "计算" #"Computations"
             contents:
               - docs/computations/python.qmd
               - docs/computations/r.qmd
@@ -157,7 +159,7 @@ website:
               - docs/computations/render-scripts.qmd
               - docs/computations/execution-options.qmd
               - docs/computations/parameters.qmd
-          - section: "Tools"
+          - section: "工具" #"Tools"
             contents:
               - section: "JupyterLab"
                 contents:
@@ -190,7 +192,7 @@ website:
                 
               - docs/tools/neovim.qmd
               - docs/tools/text-editors.qmd
-          - section: "Documents"
+          - section: "文档" #"Documents"
             contents:
               - section: "HTML"
                 contents:
@@ -219,7 +221,7 @@ website:
                   - docs/output-formats/hugo.qmd
                   - docs/output-formats/docusaurus.qmd
               - docs/output-formats/all-formats.qmd
-          - section: "Presentations"
+          - section: "讲稿" #"Presentations"
             contents:
               - text: "Overview"
                 href: docs/presentations/index.qmd
@@ -233,7 +235,7 @@ website:
               - docs/presentations/powerpoint.qmd
               - docs/presentations/beamer.qmd
      
-          - section: "Dashboards"
+          - section: "展板" #"Dashboards"
             href: docs/dashboards/index.qmd
             contents:
               - text: Overview
@@ -279,7 +281,7 @@ website:
               - text: Examples
                 href: docs/dashboards/examples/index.qmd
           
-          - section: "Websites"
+          - section: "网站" #"Websites"
             href: docs/websites/website-basics.qmd
             contents:
               - docs/websites/website-basics.qmd
@@ -294,7 +296,7 @@ website:
                   - docs/websites/website-listings.qmd
                   - docs/websites/website-listings-custom.qmd
           
-          - section: "Books"
+          - section: "图书" #"Books"
             href: docs/books/book-basics.qmd
             contents:
               - docs/books/book-basics.qmd
@@ -303,7 +305,7 @@ website:
               - text: "Customizing Output"
                 href: docs/books/book-output.qmd
 
-          - section: "Manuscripts"
+          - section: "手稿" #"Manuscripts"
             href: docs/manuscripts/index.qmd
             contents: 
               - text: Getting Started
@@ -325,7 +327,7 @@ website:
               - text: "Using Manuscripts"
                 href: docs/manuscripts/components.qmd
 
-          - section: "Interactivity"
+          - section: "互动" #"Interactivity"
             contents:
               - text: "Overview"
                 href: docs/interactive/index.qmd
@@ -377,7 +379,7 @@ website:
                   - docs/interactive/widgets/jupyter.qmd
                   - docs/interactive/widgets/htmlwidgets.qmd
               - docs/interactive/layout.qmd
-          - section: "Publishing"
+          - section: "部署" #"Publishing"
             contents:
               - docs/publishing/index.qmd
               - docs/publishing/quarto-pub.qmd
@@ -389,7 +391,7 @@ website:
               - docs/publishing/other.qmd
               - text: "Publishing with CI"
                 href: docs/publishing/ci.qmd
-          - section: "Projects"
+          - section: "项目" #"Projects"
             contents:
               - docs/projects/quarto-projects.qmd
               - docs/projects/code-execution.qmd
@@ -398,7 +400,7 @@ website:
               - docs/projects/scripts.qmd
               - docs/projects/virtual-environments.qmd
               - docs/projects/binder.qmd
-          - section: "Advanced"
+          - section: "先进" #"Advanced"
             contents:
               - docs/authoring/includes.qmd
               - docs/authoring/variables.qmd
@@ -407,7 +409,7 @@ website:
               - docs/authoring/conditional.qmd
               - docs/extensions/nbfilter.qmd
     - id: extensions
-      title: "Extensions"
+      title: "扩展" #"Extensions"
       contents:
         - "---"
         - section: docs/extensions/index.qmd

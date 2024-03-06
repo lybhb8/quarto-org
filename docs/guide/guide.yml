@@ -1,40 +1,40 @@
   
-- title: Authoring
-  subtitle: Create content with markdown 
+- title: "创作" #"Authoring"
+  subtitle: "Markdown语法" #Create content with markdown 
   links:
-    - text: Markdown Basics
+    - text: "Markdown 基础" #Markdown Basics
       href: ../authoring/markdown-basics.qmd
-    - text: Figures
+    - text: "图片" #Figures
       href: ../authoring/figures.qmd
-    - text: Tables
+    - text: "表格" #Tables
       href: ../authoring/tables.qmd
-    - text: Diagrams
+    - text: "图表" #Diagrams
       href: ../authoring/diagrams.qmd
-    - text: Citations & Footnotes
+    - text: "引文和脚注" #Citations & Footnotes
       href: ../authoring/footnotes-and-citations.qmd
-    - text: Cross References
+    - text: "交叉引用" #Cross References
       href: ../authoring/cross-references.qmd
-    - text: Article Layout
+    - text: "文章布局" #Article Layout
       href: ../authoring/article-layout.qmd
 
-- title: Computations
-  subtitle: Execute code and display its output
+- title: "计算" #Computations
+  subtitle: "编程代码" #Execute code and display its output
   links:
-    - text: "Using Python"
+    - text: "Python" #"Using Python"
       href: ../computations/python.qmd
-    - text: "Using R"
+    - text: "R" #"Using R"
       href: ../computations/r.qmd
-    - text: "Using Julia"
+    - text: "Julia" #"Using Julia"
       href: ../computations/julia.qmd
-    - text: "Using Observable"
+    - text: "Observable" #"Using Observable"
       href: ../computations/ojs.qmd
-    - text: Execution Options
+    - text: "执行选项" #Execution Options
       href: ../computations/execution-options.qmd
-    - text: Parameters
+    - text: "参数" #Parameters
       href: ../computations/parameters.qmd
 
-- title: Tools
-  subtitle: "Use your favorite tools with Quarto"
+- title: "IDE工具" #Tools
+  subtitle: "选最喜爱的" #"Use your favorite tools with Quarto"
   links: 
     - text: JupyterLab
       href: ../tools/jupyter-lab.qmd
@@ -44,13 +44,13 @@
       href: ../tools/vscode.qmd
     - text: Neovim
       href: ../tools/neovim.qmd
-    - text: Text Editors
+    - text: "文本编辑器" #Text Editors
       href: ../tools/text-editors.qmd
-    - text: Visual Editor
+    - text: "可视化编辑器" #Visual Editor
       href: ../visual-editor/index.qmd
 
-- title: Documents
-  subtitle: Generate output in many formats
+- title: "文档" #Documents
+  subtitle: "可生成多种文件格式" #Generate output in many formats
   links:
     - text: HTML
       href: ../output-formats/html-basics.qmd
@@ -65,10 +65,10 @@
     - text: All Formats
       href: ../output-formats/all-formats.qmd      
 
-- title: Presentations
-  subtitle: Present code and technical content 
+- title: "讲稿" #Presentations
+  subtitle: "讲解代码和技术" #Present code and technical content 
   links:
-   - text: "Presentation Basics"
+   - text: "讲稿基础" #"Presentation Basics"
      href: ../presentations/index.qmd
    - text: "Revealjs (HTML)"
      href: ../presentations/revealjs/index.qmd
@@ -77,76 +77,76 @@
    - text: "Beamer (PDF)"
      href: ../presentations/beamer.qmd
 
-- title: Dashboards
-  subtitle: Publish data with dashboards
+- title: "展板" #Dashboards
+  subtitle: "展示数据" #Publish data with dashboards
   links:
-   - text: "Dashboard Basics"
+   - text: "展板基础" #"Dashboard Basics"
      href: ../dashboards/index.qmd
-   - text: "Layout"
+   - text: "布局" #"Layout"
      href: ../dashboards/layout.qmd
-   - text: "Data Display"
+   - text: "日期" #"Data Display"
      href: ../dashboards/data-display.qmd
-   - text: "Interactivity"
+   - text: "互动" #"Interactivity"
      href: ../dashboards/interactivity/index.qmd
-   - text: "Deployment"
+   - text: "部署" #"Deployment"
      href: ../dashboards/deployment.qmd
 
-- title: Websites
-  subtitle: Create websites and blogs
+- title: "网站" #Websites
+  subtitle: "构建网站和博客" #Create websites and blogs
   links:
-    - text: "Creating a Website"
+    - text: "网站" #"Creating a Website"
       href: ../websites/website-basics.qmd
-    - text: "Website Navigation"
+    - text: "导航" #"Website Navigation"
       href: ../websites/website-navigation.qmd
-    - text: "Creating a Blog"
+    - text: "博客" #"Creating a Blog"
       href: ../websites/website-blog.qmd
-    - text: "Website Search"
+    - text: "搜索" #"Website Search"
       href: ../websites/website-search.qmd
-    - text: "Website Listings"
+    - text: "列表" #"Website Listings"
       href: ../websites/website-listings.qmd
 
-- title: Books
-  subtitle: Create books and manuscripts
+- title: "图书" #Books
+  subtitle: "撰写书稿" #Create books and manuscripts
   links:
-   - text: "Creating a Book" 
+   - text: "写书" #"Creating a Book" 
      href:  ../books/book-basics.qmd
-   - text: "Book Structure"
+   - text: "图书结构" #"Book Structure"
      href: ../books/book-structure.qmd
-   - text: "Book Crossrefs"
+   - text: "互相引用" #"Book Crossrefs"
      href: ../books/book-crossrefs.qmd
-   - text: "Customizing Output"
+   - text: "自定义格式" #"Customizing Output"
      href: ../books/book-output.qmd  
 
-- title: Manuscripts
-  subtitle: Write and publish notebook-first scholarly articles
+- title: "手稿" #Manuscripts
+  subtitle: "撰写部署notebook优先的学术文章" #Write and publish notebook-first scholarly articles
   links:
-    - text: Getting Started
+    - text: "开始" #Getting Started
       href: /docs/manuscripts/index.qmd
-    - text: "Authoring Manuscripts"
+    - text: "撰稿" #"Authoring Manuscripts"
       href: /docs/manuscripts/authoring/jupyterlab.qmd
-    - text: "Publishing Manuscripts"
+    - text: "部署" #"Publishing Manuscripts"
       href: /docs/manuscripts/publishing.qmd
-    - text: "Using Manuscripts"
+    - text: "用稿" #"Using Manuscripts"
       href: /docs/manuscripts/components.qmd  
 
-- title: Interactivity
-  subtitle: Engage readers with interactivity
+- title: "互动性" #Interactivity
+  subtitle: "互动吸引读者" #Engage readers with interactivity
   links:
-    - text: Overview
+    - text: "概述" #Overview
       href: ../interactive/index.qmd
     - text: Observable JS
       href: ../interactive/ojs/index.qmd
     - text: Shiny
       href: ../interactive/shiny/index.qmd
-    - text: Widgets
+    - text: "组件" #Widgets
       href: ../interactive/widgets/jupyter.qmd
-    - text: Component Layout
+    - text: "组件布局" #Component Layout
       href: ../interactive/layout.qmd
 
-- title: Publishing
-  subtitle: Publishing documents and sites
+- title: "部署" #Publishing
+  subtitle: "部署文档和网站" #Publishing documents and sites
   links:
-     - text: Publishing Basics
+     - text: "部署基础" #Publishing Basics
        href: ../publishing/index.qmd
      - text: Quarto Pub
        href: ../publishing/quarto-pub.qmd
@@ -160,37 +160,37 @@
        href: ../publishing/netlify.qmd
      - text: Confluence
        href: ../publishing/confluence.qmd
-     - text: Other Services
+     - text: "其他服务商" #Other Services
        href: ../publishing/other.qmd
  
-- title: Projects
-  subtitle: Scale up your work with projects
+- title: "项目" #Projects
+  subtitle: "" #Scale up your work with projects
   links:
-    - text: Project Basics
+    - text: "项目基础" #Project Basics
       href: ../projects/quarto-projects.qmd
-    - text: Managing Execution
+    - text: "管理执行" #Managing Execution
       href: ../projects/code-execution.qmd
-    - text: Project Profiles
+    - text: "项目简介" #Project Profiles
       href: ../projects/profiles.qmd
-    - text: Environment Variables
+    - text: "环境变量" #Environment Variables
       href: ../projects/environment.qmd
-    - text: Project Scripts
+    - text: "项目脚本" #Project Scripts
       href: ../projects/scripts.qmd
-    - text: Virtual Environments
+    - text: "虚拟环境" #Virtual Environments
       href: ../projects/virtual-environments.qmd
 
-- title: Advanced
-  subtitle: Refine documents with advanced tools
+- title: "先进性" #Advanced
+  subtitle: "用先进的工具充实文档" #Refine documents with advanced tools
   links:
-    - text: "Includes"
+    - text: "包容" #"Includes"
       href: ../authoring/includes.qmd
-    - text: "Variables"
+    - text: "变量" #"Variables"
       href: ../authoring/variables.qmd
-    - text: "Page Layout"
+    - text: "页面布局" #"Page Layout"
       href: ../output-formats/page-layout.qmd
-    - text: "Document Language"
+    - text: "文稿多语言" #"Document Language"
       href: ../authoring/language.qmd
-    - text: "Conditional Content"
+    - text: "条件内容" #"Conditional Content"
       href: ../authoring/conditional.qmd
-    - text: "Notebook Filters"
+    - text: "Notebook过滤器" #"Notebook Filters"
       href: ../extensions/nbfilter.qmd
