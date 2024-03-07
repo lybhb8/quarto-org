@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Authoring"
+title: "创作" #"Tutorial: Authoring"
 code-copy: hover
 editor_options:
   markdown:
@@ -12,4 +12,7 @@ editor_options:
 {{< include _text-editor.md >}}
 
 
-Additionally, if you are interested in seeing how to use Quarto from within `.ipynb` notebooks, check out the documentation on using the VS Code [Notebook Editor](/docs/tools/vscode.qmd#notebook-editor) with Quarto.
+<!-- Additionally, if you are interested in seeing how to use Quarto from within `.ipynb` notebooks, check out the documentation on using the VS Code [Notebook Editor](/docs/tools/vscode.qmd#notebook-editor) with Quarto. -->
+
+
+此外，如果您有兴趣了解如何在 `.ipynb` 记事本中使用 Quarto，请查看有关将 VS Code [Notebook Editor](/docs/tools/vscode.qmd#notebook-editor) 与 Quarto 结合使用的文档。
