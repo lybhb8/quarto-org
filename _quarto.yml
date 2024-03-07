@@ -108,9 +108,9 @@ website:
         - docs/get-started/index.qmd
         - text: "教程: 您好,Quarto" #"Tutorial: Hello, Quarto"
           href: docs/get-started/hello/
-        - text: "教程: 计算" #"Tutorial: Computations"
+        - text: "教程: 计算方法" #"Tutorial: Computations"
           href: docs/get-started/computations/
-        - text: "教程: 写作" #"Tutorial: Authoring"
+        - text: "教程: 创作" #"Tutorial: Authoring"
           href: docs/get-started/authoring/
 
     - id: guide
@@ -149,7 +149,7 @@ website:
                         href: docs/authoring/cross-references-custom.qmd
                   - docs/authoring/create-citeable-articles.qmd
                   - docs/authoring/appendices.qmd
-          - section: "计算" #"Computations"
+          - section: "计算方法" #"Computations"
             contents:
               - docs/computations/python.qmd
               - docs/computations/r.qmd
@@ -159,7 +159,7 @@ website:
               - docs/computations/render-scripts.qmd
               - docs/computations/execution-options.qmd
               - docs/computations/parameters.qmd
-          - section: "工具" #"Tools"
+          - section: "编辑工具" #"Tools"
             contents:
               - section: "JupyterLab"
                 contents:

@@ -6,7 +6,14 @@ editor_options:
     canonical: true
 ---
 
-{{< include ../_tool-chooser.md >}}
+<!--
+#The following is the original English version.
+-->
+
+
+<!--
+
+"{{< include ../_tool-chooser.md >}}"
 
 ## Overview
 
@@ -222,7 +229,234 @@ One particularly useful cell option for figures is `fig-alt`, which enables you 
 See Amy Cesal's article on [Writing Alt Text for Data Visualization](https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81) to learn more.
 :::
 
+"{{< include _footer.md >}}"
+
+Additionally, you may want to install the [Quarto JupyterLab Extension](/docs/tools/jupyter-lab-extension.qmd) which provides additional tools for working with Quarto in JupyterLab.
+
+-->
+
+<!--
+---
+#The above is the original English version.
+---
+-->
+
+
+{{< include ../_tool-chooser.md >}}
+
+
+## 概述
+
+在本教程中，我们将向你展示如何将 Jupyter Lab 与 Quarto 结合使用。
+您将在 Jupyter Lab 中编辑代码和Markdown，就像使用其他记事本一样，并在工作时在网络浏览器中预览渲染文档。
+以下为其浏览概述
+
+![](images/jupyter-quarto-preview.png){fig-alt="On the left: A Jupyter notebook titled Quarto Basics containing some text, a code cell, and the result of the code cell, which is a line plot on a polar axis. On the right: Rendered version of the same notebook."}
+
+左边的notebook*渲染*成右边的 HTML 版本。
+这就是 Quarto 出版的基本模式--将源文档（本例中为notebook）渲染为各种[output formats](https://quarto.org/docs/output-formats/all-formats.html "输出格式")，包括 HTML、PDF、MS Word 等。
+
+::: callout-note
+请注意，虽然本教程使用的是 Python，但也支持使用 Julia（通过 [IJulia](https://julialang.github.io/IJulia.jl/stable/) 内核）。
+更多详情，请参阅[Using Julia](/docs/computations/julia.qmd "使用 Julia")一文。
+:::
+
+## 渲染
+
+首先，我们将在 Jupyter Lab 中打开一个笔记本 (`hello.ipynb`)，并将其渲染为几种格式。
+如果你想在自己的环境中逐步学习，请下载下面的笔记本。
+
+::: {.callout-note appearance="minimal"}
+<i class="bi bi-journal-code"></i> [Download hello.ipynb](_hello.ipynb){download="hello.ipynb"}
+:::
+
+然后，创建一个新的工作目录，将笔记本复制到该目录，并在终端中切换到该目录。
+
+接下来，执行以下命令安装 JupyterLab 以及教程中使用的软件包（ `matplotlib` 和 `plotly` ），并打开教程笔记本：
+
++---------------+------------------------------------------------+
+| Platform      | Commands                                       |
++===============+================================================+
+| Mac/Linux     | ```{.bash filename="Terminal"}                 |
+|               | python3 -m pip install jupyter jupyterlab      |
+|               | python3 -m pip install matplotlib plotly       |
+|               | python3 -m jupyter lab hello.ipynb             |
+|               | ```                                            |
++---------------+------------------------------------------------+
+| Windows       | ```{.bash filename="Terminal"}                 |
+|               | py -m pip install jupyter jupyterlab           |
+|               | py -m pip install matplotlib plotly            |
+|               | py -m jupyter lab hello.ipynb                  |
+|               | ```                                            |
++---------------+------------------------------------------------+
+
+下面是 Jupyter Lab 中我们的notebook。
+
+```` {.markdown .visually-hidden}
+---
+title: "Quarto Basics"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+
+有关极轴线性图的演示，请参阅 @fig-polar。
+
+```{{python}}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+````
+
+![](images/jupyter-basics.png){.border fig-alt="A Jupyter notebook titled Quarto Basics containing some text, a code cell, and the result of the code cell, which is a line plot on a polar axis."}
+
+接下来，在 Jupyter Lab 中创建一个新终端，用于执行 Quarto 命令。
+
+![](images/jupyter-terminal.png){.border fig-alt="Screenshot of menu items in Jupuyter Lab: File > New > Terminal."}
+
+最后，将notebook渲染成几种格式。
+
+``` {.bash filename="Terminal"}
+quarto render hello.ipynb --to html
+quarto render hello.ipynb --to docx
+```
+
+请注意，目标文件（本例中为 `hello.ipynb`）应始终是第一个命令行参数。
+
+使用 Quarto 渲染 Jupyter notebook时，笔记本的内容（代码、markdown 和输出）会被转换为纯 markdown，然后由 [Pandoc](http://pandoc.org/)处理，生成最终格式。
+
+![](images/ipynb-how-it-works.png){style="margin-left: 15px;" fig-align="left" width="516" fig-alt="Workflow diagram starting with a Jupyter notebook, then md, then pandoc, then PDF, MS Word, or HTML."}
+
+## 写作
+
+`quarto render` 命令用于创建用于发布的文档最终版本。
+不过，在编写过程中，您将使用 `quarto preview` 命令。
+现在就从终端使用 `hello.ipynb` 试试吧。
+
+``` {.bash filename="Terminal"}
+quarto preview hello.ipynb
+```
+
+这将渲染您的文档，然后将其显示在浏览器中。
+
+![](images/quarto-preview.png){.border fig-alt="Rendered version of the earlier notebook in a web browser." width="500"}
+
+您可能需要将 Jupyter Lab 和浏览器预览并排放置，以便在工作时看到变化。
+
+![](images/jupyter-quarto-preview.png){fig-alt="Side-by-side preview of notebook on the left and live preview in the browser on the right."}
+
+查看实时预览的运行情况：
+
+1. 将定义 `theta` 的代码行修改如下：
+
+    ``` python
+    theta = 4 * np.pi * r
+    ```
+
+2.  重新运行代码单元，生成新版本的绘图。
+
+3. 保存在notebook（预览会自动更新）。
+
+这是用 Quarto 创作的基本工作流程。一旦熟练掌握，我们还建议你安装[Quarto JupyterLab Extension扩展](/docs/tools/jupyter-lab-extension.qmd "Quarto JupyterLab 扩展")，它提供了在 JupyterLab 中使用 Quarto 的其他工具。
+
+我们的笔记本中有几种不同类型的单元格，让我们对每种类型的单元格进行一下处理。
+
+## YAML 选项
+
+您可能已经熟悉Markdown和代码块，但还有一种新的单元格类型（"Raw"），用于文档级 YAML 选项。
+
+``` {.yaml .visually-hidden}
+---
+title: "Quarto Basics"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+```
+
+![](images/jupyter-yaml.png){.border fig-alt="YAML of the notebook with the fields title, format, and jupyter. Title is set to Quarto Basics with title: \"Quarto Basics\". Format is defined as html in the next line, and within the html format, code-fold is set to true. Jupyter is set to python3 with jupyter: python3."}
+
+尝试将 `code-fold` 选项更改为 `false`。
+
+``` yaml
+format: 
+  html:
+    code-fold: false
+```
+
+然后保存在notebook。
+你会注意到，代码现在显示在绘图的上方，而之前它是隐藏的，只有一个 **Code** 按钮可以用来显示它。
+
+## Markdown 单元格
+
+Markdown 单元格包含原始标记，将在渲染过程中传递给 Quarto。
+您可以在这些单元格中使用任何有效的 Quarto [markdown syntax](/docs/authoring/markdown-basics.qmd "markdown 语法")。
+在这里，我们指定了一个标题和一个与下面代码单元格中创建的图表的交叉引用。
+
+``` {.markdown .visually-hidden}
+## 极坐标
+
+有关极轴线性图的演示，请参阅 @fig-polar。
+```
+
+![](images/jupyter-markdown.png){.border fig-alt="A Markdown cell with the title Polar Axis as a second level header and text that reads 'For a demonstration of a line plot on a polar axis, see @fig-polar.'"}
+
+尝试更改页眉并保存笔记本，预览时会更新新的页眉文本。
+
+## 代码块
+
+您可能已经熟悉代码单元格，如下图所示。
+
+```` {.markdown .visually-hidden}
+```{{python}}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+````
+
+![](images/jupyter-cell.png){.border fig-alt="A code cell with cell options for label and fig-cap and the code required to create the line plot on a polar axis."}
+但在代码单元格的顶部有一些新的组件：`label` 和 `fig-cap` 选项。
+单元格选项是用 YAML 写成的，并使用特殊前缀的注释 (`#|`)。
+
+在本例中，单元格选项用于使图形可交叉引用。
+请尝试更改 `fig-cap` 和/或代码，运行单元格，然后保存笔记本，查看更新后的预览效果。
+
+你可以使用多种 [cell options](/docs/reference/cells/cells-jupyter.qmd "单元格选项") 来定制输出。
+我们将在下一个教程中详细介绍这些选项。
+
+::: callout-note
+一个特别有用的数字单元格选项是 "fig-alt"，它可以为有视觉障碍的用户在图像上添加替代文本。
+欲了解更多信息，请参阅 Amy Cesal 的文章[Writing Alt Text for Data Visualization](https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81 "为数据可视化编写替代文本")。
+:::
 
 {{< include _footer.md >}}
 
-Additionally, you may want to install the [Quarto JupyterLab Extension](/docs/tools/jupyter-lab-extension.qmd) which provides additional tools for working with Quarto in JupyterLab.
+此外，你可能需要安装 [Quarto JupyterLab Extension](/docs/tools/jupyter-lab-extension.qmd "Quarto JupyterLab 扩展")，它提供了在 JupyterLab 中使用 Quarto 的其他工具。

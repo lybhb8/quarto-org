@@ -7,6 +7,12 @@ editor_options:
 ---
 
 <!--
+#The following is the original English version.
+-->
+
+<!--
+
+""{{< include ../_tool-chooser.md >}}""
 
 ## Overview
 
@@ -235,7 +241,26 @@ If you prefer to use an external browser for preview (or have no preview trigger
 ![](/docs/tools/images/vscode-preview-settings.png){.border fig-alt="VS Code settings interface with 'quarto preview type' entered into the search bar. User settings reveals Quarto > Render: Preview Type, with a dropdown to select location for document preview after render. The default, internal, is selected, which previews using a side-by-side panel in VS Code. The other two options in the dropdown are external and none."}
 
 
+
+""{{< include _footer.md >}}""
+
+
+Additionally, you may wish to learn about the other editing modes for Quarto documents available within VS Code:
+
+The Visual Editor for WYSIWYG editing of .qmd documents.
+
+The Notebook Editor for editing .ipynb notebooks.
+
 -->
+
+<!--
+---
+#The above is the original English version.
+---
+-->
+
+
+
 
 {{< include ../_tool-chooser.md >}}
 
@@ -398,13 +423,13 @@ format:
 
 然后重新渲染文档（同样，渲染前无需保存）。您会注意到代码现在显示在绘图上方，而之前它是通过可用于显示它的 **Code** 按钮隐藏的。
 
-## Markdown
+## Markdown 单元块
 
 叙述内容是使用 Markdown 编写的。
 在这里，我们指定标题和对下面代码单元中创建的图形的交叉引用。
 
 ``` markdown
-## Polar Axis
+## 极坐标
 
 For a demonstration of a line plot on a polar axis, see @fig-polar.
 ```

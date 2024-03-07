@@ -1,12 +1,19 @@
 ---
-title: "Tutorial: Computations"
+title: "计算方法" #"Tutorial: Computations"
 editor_options:
   markdown:
     wrap: sentence
     canonical: true
 ---
 
-{{< include ../_tool-chooser.md >}}
+<!--
+#The following is the original English version.
+-->
+
+<!--
+
+""{{< include ../_tool-chooser.md >}}""
+
 
 ## Overview
 
@@ -286,5 +293,308 @@ Finally, we added an option to control the span of the page that our figures occ
 
 This allows our figure display to span out beyond the normal body text column.
 See the documentation on [Article Layout](/docs/authoring/article-layout.qmd) to learn about all of the available layout options.
+
+"{{< include _footer.md >}}"
+
+-->
+
+<!--
+---
+#The above is the original English version.
+---
+-->
+
+
+{{< include ../_tool-chooser.md >}}
+
+
+## 概述
+
+Quarto 有多种选项可用于控制代码和计算输出在渲染文档中的显示方式。
+在本教程中，我们将使用一个包含一些数字输出和绘图的 `.qmd` 文件，并介绍如何应用这些选项。
+
+本教程将使用 `matplotlib` 和 `plotly` Python 软件包。
+下表列出了安装它们的命令。
+
++-----------+--------------------------------------------------+
+| Platform  | Commands                                         |
++===========+==================================================+
+| Mac/Linux | ```{.bash filename="Terminal"}                   |
+|           | python3 -m pip install jupyter matplotlib plotly |
+|           | ```                                              |
++-----------+--------------------------------------------------+
+| Windows   | ```{.powershell filename="Terminal"}             |
+|           | py -m pip install jupyter matplotlib plotly      |
+|           | ```                                              |
++-----------+--------------------------------------------------+
+
+如果你想在自己的环境中一步一步地学习，请创建一个 `computations.qmd` 文件，并将以下内容复制到其中。
+
+```` markdown
+---
+title: Quarto Computations
+jupyter: python3
+---
+
+## NumPy
+
+```{{python}}
+import numpy as np
+a = np.arange(15).reshape(3, 5)
+a
+```
+
+## Matplotlib
+
+```{{python}}
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+x = np.arange(10)
+y = 2.5 * np.sin(x / 20 * np.pi)
+yerr = np.linspace(0.05, 0.2, 10)
+
+plt.errorbar(x, y + 3, yerr=yerr, label='both limits (default)')
+plt.errorbar(x, y + 2, yerr=yerr, uplims=True, label='uplims=True')
+plt.errorbar(x, y + 1, yerr=yerr, uplims=True, lolims=True,
+             label='uplims=True, lolims=True')
+
+upperlimits = [True, False] * 5
+lowerlimits = [False, True] * 5
+plt.errorbar(x, y, yerr=yerr, uplims=upperlimits, lolims=lowerlimits,
+             label='subsets of uplims and lolims')
+
+plt.legend(loc='lower right')
+plt.show(fig)
+```
+
+## Plotly
+
+```{{python}}
+import plotly.express as px
+import plotly.io as pio
+gapminder = px.data.gapminder()
+gapminder2007 = gapminder.query("year == 2007")
+fig = px.scatter(gapminder2007, 
+                 x="gdpPercap", y="lifeExp", color="continent", 
+                 size="pop", size_max=60,
+                 hover_name="country")
+fig.show()
+```
+````
+
+然后，执行**Quarto: Preview**命令。您也可以使用 <kbd>Ctrl+Shift+K</kbd> 键盘快捷键或编辑器右上角的 **Preview** 按钮：
+
+![](/docs/tools/images/vscode-preview-button.png){.border fig-alt="The top of the Visual Studio code editor. The right side of the editor tab area includes a Preview button."}
+
+::: {.callout-note appearance="simple"}
+请注意，在 Mac 上，您应该使用 `Cmd` 而不是 `Ctrl` 作为所有Quarto快捷键的前缀。
+:::
+
+以下是您在 VS 代码中应该看到的内容：
+
+![](images/vscode-computations-preview.png){.border .column-page-outset-right fig-alt="Side-by-side preview of text editor on the left and live preview in the browser on the right."}
+
+## 单元格运行
+
+在编写文档时，您可能希望执行一个或多个单元格，而无需重新渲染整个文档。
+您可以使用代码单元格上方的 **Run Cell** 按钮来实现这一点。
+点击该按钮即可执行单元格（输出将并排显示在 Jupyter 交互式控制台中）：
+
+![](/docs/tools/images/vscode-execute-cell.png){.border fig-alt="VS Code with two panes open, vscode.qmd source code on the right, and the interactive output of that code shown in a second pane on the left."}
+
+有多种命令和键盘快捷键可用于执行单元格：
+
+|    Quarto 命令        |        快捷键        |      中文      |     键组合       |
+|----------------------|---------------------|----------------|-----------------|
+| Run Current Cell     | <kbd>⇧⌘ Enter</kbd>|   执行单元格    | shift+Enter     |
+| Run Selected Line(s) | <kbd> ⌘ Enter</kbd>|   执行选定行    | Enter         |
+| Run Next Cell        | <kbd>⌥⌘ N</kbd>   |  执行下一单元    | Alt+N         |
+| Run Previous Cell    | <kbd>⌥⌘ P</kbd>   |  执行前一单元    | Alt+p         |
+| Run All Cells        | <kbd>⌥⌘ R</kbd>   |  执行所以单元    | Alt+R         |
+| Run Cells Above      | <kbd>⇧⌥⌘ P</kbd>  |  执行以上单元    | shift+Alt+p |
+| Run Cells Below      | <kbd>⇧⌥⌘ N</kbd>  |  执行以下单元    | shift+Alt+N |
+
+
+::: {.callout-note appearance="simple"}
+
+- 在 <CMD 命令行> 执行快捷键组合
+- ⇧: shift键    ⌥: Alt键
+  
+:::
+
+
+## 单元格输出
+
+源文件中的所有代码都会显示在渲染文档中。
+不过，在某些情况下，您可能希望隐藏所有代码，只显示输出结果。
+让我们继续在文档的 `execute` 选项中指定 `echo: false` 以防止代码被打印出来。
+
+``` yaml
+---
+title: Quarto Computations
+execute:
+  echo: false
+jupyter: python3
+---
+```
+
+重新渲染文档，预览将更新为显示无代码输出（记住，渲染前无需保存文件，因为渲染时会自动保存）。
+
+![](images/exec-echo-false-preview.png){.border fig-alt="Output of computations.qmd with 'echo: false' set, shows Title, resulting array in NumPy section, line chart in Matplotlib section, and interactive bubble chart in Plotly section."}
+
+您可能希望有选择性地为某些单元格启用代码 `echo`。
+为此，请添加 `echo: true` 单元格选项。
+用 NumPy 单元格试试看。
+
+```` markdown
+```{{python}}
+#| echo: true
+
+import numpy as np
+a = np.arange(15).reshape(3, 5)
+a
+```
+````
+
+重新渲染注意，现在 NumPy 单元已包含代码。
+
+![](images/exec-echo-true-preview.png){.border fig-alt="Rendered NumPy section of computations.qmd which shows the code and the resulting array."}
+
+单元格输出还有许多其他选项，例如，`warning `用于显示/隐藏警告（这对软件包加载信息特别有用），"include "用于防止输出中包含任何输出（代码或结果），"error "用于防止代码执行错误导致文档渲染停止（并在渲染的文档中打印错误信息）。
+
+更多详情，请参阅 [Jupyter Cell Options](https://quarto.org/docs/reference/cells/cells-jupyter.html "Jupyter 单元选项") 文档。
+
+## 代码折叠
+
+与其完全隐藏代码，不如将其折叠起来，让读者自行决定是否查看。
+您可以通过 `code-fold` 选项来实现这一点。
+移除我们之前添加的 `echo` 选项，并添加 `code-fold` HTML 格式选项。
+
+``` yaml
+---
+title: Quarto Computations
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+```
+
+渲染文档。
+现在，每个单元格的输出上方都有一个 "代码 "部件。
+
+![](images/code-fold-preview.png){.border fig-alt="Rendered NumPy section of computations.qmd which shows a toggleable section that is labelled 'Code' and the resulting array."}
+
+您还可以对代码折叠进行全局控制。
+请尝试在 HTML 格式选项中添加 `code-tools: true`。
+
+``` yaml
+---
+title: Quarto Computations
+format:
+  html:
+    code-fold: true
+    code-tools: true
+jupyter: python3
+---
+```
+
+渲染文档后，你会发现文档右上方出现了一个代码菜单，可以全局控制代码的显示和隐藏。
+
+![](images/text-editor-code-tools-preview.png){.border fig-alt="Rendered version of the computations.qmd document. A new code widget appears on top right of the document. The screenshot shows that the widget is clicked on, which reveals a drop down menu with three choices: Show All Code, Hide All Code, and View Source. In the background is the rendered document. The title is followed by some text, which is followed by a Code widget that would expand if clicked on, which is followed by the output of the code. The Code widgets are folded, so the code is not visible in the rendered document."}
+
+## 图片
+
+让我们来改善 Matplotlib 输出的外观。
+它当然可以更宽一些，如果能提供一个标题和标签用于交叉引用就更好了。
+
+继续修改 Matplotlib 单元，加入 `label `和 `fig-cap `选项，并调用 `fig.set_size_inches() `来设置更大的图形尺寸和更宽的纵横比：
+
+
+```` markdown
+```{{python}}
+#| label: fig-limits
+#| fig-cap: "Errorbar limit selector"
+
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+fig.set_size_inches(12, 7)
+```
+````
+
+重新渲染文档后，您将看到更新后的图形：
+
+![](images/figure-options-preview.png){.border fig-alt="Rendered Matplotlib section of computations.qmd which includes a toggleable code-folding widget, the figure, and a caption under the figure that reads 'Figure 1: Errorbar limit selection.'"}
+
+## 多个图片
+
+Plotly 单元格可视化了单个年份（2007 年）的 GDP 和预期寿命数据。
+让我们在其旁边绘制另一年的数据以作比较，并添加标题和副标题。
+由于这将产生更广泛的可视化效果，我们还将使用 `column`(列) 选项将其铺满整个页面，而不是局限于正文一列。
+
+这个单元格有很多改动。
+如果您想在本地试用，请将这些代码复制并粘贴到 `computations.qmd` 中：
+
+``` python
+#| label: fig-gapminder
+#| fig-cap: "Life Expectancy and GDP"
+#| fig-subcap:
+#|   - "Gapminder: 1957"
+#|   - "Gapminder: 2007"
+#| layout-ncol: 2
+#| column: page
+
+import plotly.express as px
+import plotly.io as pio
+gapminder = px.data.gapminder()
+def gapminder_plot(year):
+    gapminderYear = gapminder.query("year == " + 
+                                    str(year))
+    fig = px.scatter(gapminderYear, 
+                     x="gdpPercap", y="lifeExp",
+                     size="pop", size_max=60,
+                     hover_name="country")
+    fig.show()
+    
+gapminder_plot(1957)
+gapminder_plot(2007)
+```
+
+渲染文档后，预览会更新如下：
+
+![](images/plotly-preview.png){.border fig-alt="Output of Plotly section which shows two charts side-by-side. The first has a caption below that reads '(a) Gapminder: 1957', the second's caption reads '(b) Gapminder 2007'. Below both figures, there's a caption that reads 'Figure 1: Life Expectancy and GDP (Data from World Bank via gapminder.org).'"}
+
+让我们来讨论一下这里使用的一些新选项。
+你以前见过 `fig-cap` 选项，但现在我们增加了一个 `fig-subcap` 选项：
+
+``` python
+#| fig-cap: "Life Expectancy and GDP"
+#| fig-subcap:
+#|   - "Gapminder: 1957"
+#|   - "Gapminder: 2007"
+```
+
+对于有多个输出的代码单元，添加 "fig-subcap "选项后，我们就能将它们视为子图。
+
+我们还添加了一个选项来控制多个图形的布局方式--在本例中，我们指定了并列的两列：
+
+``` python
+#| layout-ncol: 2
+```
+
+如果一个面板中有 3 个、4 个或更多图片，有很多选项可用于自定义它们的布局。
+详见文章 [Figures](/docs/authoring/figures.qmd "图片") 。
+
+最后，我们添加了一个选项来控制图表所占页面的跨度：
+
+``` python
+#| column: page
+```
+
+这样，我们的图片显示就可以超出正常的正文列。
+请参阅[Article Layout](/docs/authoring/article-layout.qmd "文章布局")文档，了解所有可用的布局选项。
+
 
 {{< include _footer.md >}}

@@ -1,4 +1,4 @@
 ---
-title: "Tutorial: Computations"
+title: "计算方法" #"Tutorial: Computations"
 include-in-header: ../_redirect.html
 ---
