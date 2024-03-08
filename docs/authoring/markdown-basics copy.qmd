@@ -5,17 +5,17 @@ aliases:
   - /docs/authoring/
 ---
 
-## 概述
+## Overview
 
-Quarto 基于 Pandoc，并使用其变体 Markdown 作为基础文档语法。Pandoc markdown 是 John Gruber 的 [Markdown](https://daringfireball.net/projects/markdown/) 语法的扩展和略微修订版。
+Quarto is based on Pandoc and uses its variation of markdown as its underlying document syntax. Pandoc markdown is an extended and slightly revised version of John Gruber's [Markdown](https://daringfireball.net/projects/markdown/) syntax.
 
-Markdown 是一种纯文本格式，旨在方便书写，更重要的是方便阅读：
+Markdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read:
 
-> Markdown 格式的文档应该可以按原样发布，就像纯文本一样，而不会看起来像被标记了标签或格式说明。-- [John Gruber](https://daringfireball.net/projects/markdown/syntax#philosophy)
+> A Markdown-formatted document should be publishable as-is, as plain text, without looking like it's been marked up with tags or formatting instructions. -- [John Gruber](https://daringfireball.net/projects/markdown/syntax#philosophy)
 
-本文档提供了最常用的 Markdown 语法示例。更深入的文档请参见 [Pandoc's Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) 的完整文档。
+This document provides examples of the most commonly used markdown syntax. See the full documentation of [Pandoc's Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) for more in-depth documentation.
 
-## 字体
+## Text Formatting
 
 +-----------------------------------------+-----------------------------------------+
 | Markdown Syntax                         | Output                                  |
@@ -37,7 +37,7 @@ Markdown 是一种纯文本格式，旨在方便书写，更重要的是方便�
 | ```                                     |                                         |
 +-----------------------------------------+-----------------------------------------+
 
-## 标题
+## Headings {#headings}
 
 +-----------------+-----------------------------------+
 | Markdown Syntax | Output                            |
@@ -76,7 +76,7 @@ Markdown 是一种纯文本格式，旨在方便书写，更重要的是方便�
 }
 </style>
 ```
-## 图像链接
+## Links & Images
 
 +--------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
 | Markdown Syntax                                              | Output                                                                                                 |
@@ -106,7 +106,7 @@ Markdown 是一种纯文本格式，旨在方便书写，更重要的是方便�
 | ```                                                          |                                                                                                        |
 +--------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
 
-## 列表
+## Lists
 
 +-----------------------------------+---------------------------------+
 | Markdown Syntax                   | Output                          |
@@ -156,11 +156,11 @@ Markdown 是一种纯文本格式，旨在方便书写，更重要的是方便�
 | ```                               |                                 |
 +-----------------------------------+---------------------------------+
 
-请注意，与其他 Markdown 呈现器（尤其是 Jupyter 和 GitHub）不同，Quarto 中的列表需要在列表上方留出一整行空白。否则，列表将无法以列表形式呈现，而只能以普通文本形式显示在一行中。
+Note that unlike other Markdown renderers (notably Jupyter and GitHub), lists in Quarto require an entire blank line above the list. Otherwise the list will not be rendered in list form, rather it will all appear as normal text along a single line.
 
-## 表格
+## Tables
 
-#### Markdown 语法
+#### Markdown Syntax
 
 ``` markdown
 | Right | Left | Default | Center |
@@ -170,7 +170,7 @@ Markdown 是一种纯文本格式，旨在方便书写，更重要的是方便�
 |    1  |    1 |     1   |     1  |
 ```
 
-#### 效果
+#### Output
 
 | Right | Left | Default | Center |
 |------:|:-----|---------|:------:|
@@ -178,11 +178,11 @@ Markdown 是一种纯文本格式，旨在方便书写，更重要的是方便�
 |   123 | 123  | 123     |  123   |
 |     1 | 1    | 1       |   1    |
 
-更多信息，请参阅 [表格](tables.qmd) 一文。
+Learn more in the article on [Tables](tables.qmd).
 
-## 代码
+## Source Code
 
-使用 ```` ``` ```` 来划分代码块：
+Use ```` ``` ```` to delimit blocks of source code:
 
 ```` markdown
 ```
@@ -190,7 +190,7 @@ code
 ```
 ````
 
-添加语言语法，高亮显示代码块：
+Add a language to syntax highlight code blocks:
 
 ```` markdown
 ```python
@@ -198,7 +198,7 @@ code
 ```
 ````
 
-Pandoc 支持超过 [140 种不同语言](https://github.com/jgm/skylighting/tree/master/skylighting-core/xml) 的语法高亮显示。如果不支持您的语言，您可以使用 "默认 "语言来获得类似的可视化处理：
+Pandoc supports syntax highlighting for over [140 different languages](https://github.com/jgm/skylighting/tree/master/skylighting-core/xml). If your language is not supported then you can use the `default` language to get a similar visual treatment:
 
 ```` markdown
 ```default
@@ -206,11 +206,11 @@ code
 ```
 ````
 
-如果要创建 HTML 输出，有多种代码块输出选项可供选择。更多详情，请参阅 [HTML 代码] 一文（.../output-formats/html-code.qmd）。
+If you are creating HTML output there is a wide variety of options available for code block output. See the article on [HTML Code](../output-formats/html-code.qmd) for additional details.
 
-## 数学公式
+## Equations
 
-内联数学使用 `$` 分隔符，显示数学使用 `$$` 分隔符。例如
+Use `$` delimiters for inline math and `$$` delimiters for display math. For example:
 
 +---------------------------+-------------------------+
 | Markdown Syntax           | Output                  |
@@ -226,7 +226,7 @@ code
 | ```                       |                         |
 +---------------------------+-------------------------+
 
-如果要定义自定义 TeX 宏，请将其包含在`.hidden`块中的`$$`分隔符内。例如：
+If you want to define custom TeX macros, include them within `$$` delimiters enclosed in a `.hidden` block. For example:
 
 ``` tex
 ::: {.hidden}
@@ -237,13 +237,13 @@ $$
 :::
 ```
 
-对于使用 [MathJax](https://docs.mathjax.org/)（默认）处理的 HTML 数学过程，您可以使用 `\def`, `\newcommand`, `\renewcommand`, `\newenvironment`, `\renewenvironment` 和 `\let` 命令创建自己的宏和环境。
+For HTML math processed using [MathJax](https://docs.mathjax.org/) (the default) you can use the `\def`, `\newcommand`, `\renewcommand`, `\newenvironment`, `\renewenvironment`, and `\let` commands to create your own macros and environments.  
 
-## 图表
+## Diagrams
 
-Quarto 本机支持嵌入 [Mermaid](https://mermaid-js.github.io/mermaid/#/) 和 [Graphviz](https://graphviz.org/)图表。这样，您就可以使用受 markdown 启发的纯文本语法创建流程图、序列图、状态图、甘特图等。
+Quarto has native support for embedding [Mermaid](https://mermaid-js.github.io/mermaid/#/) and [Graphviz](https://graphviz.org/) diagrams. This enables you to create flowcharts, sequence diagrams, state diagrams, Gantt charts, and more using a plain text syntax inspired by markdown.
 
-例如，这里我们嵌入了一个使用 Mermaid 创建的流程图：
+For example, here we embed a flowchart created using Mermaid:
 
 ```{mermaid}
 %%| echo: fenced
@@ -254,75 +254,73 @@ flowchart LR
   C --> E[Result two]
 ```
 
-更多信息，请参阅 [图表](diagrams.qmd "Diagrams") 一文。
+Learn more in the article on [Diagrams](diagrams.qmd).
 
-## 视频
+## Videos
 
-您可以使用 `{{{< video >}}}` 简码在文档中加入视频。例如，这里我们嵌入了一段 YouTube 视频：
+You can include videos in documents using the `{{{< video >}}}` shortcode. For example, here we embed a YouTube video:
 
 ``` {.markdown shortcodes="false"}
-{{< video https://www.youtube.com/watch?v=_f3latmOhew >}}
-
+{{< video https://www.youtube.com/embed/wo9vZccmqwc >}}
 ```
-{{< video https://www.youtube.com/watch?v=_f3latmOhew >}}
 
-视频可以是指视频文件（如 MPEG），也可以是指向 YouTube、Vimeo 或 Brightcove 上发布的视频的链接。了解更多信息，请参阅[视频](videos.qmd "videos")一文。
+Videos can refer to video files (e.g. MPEG) or can be links to videos published on YouTube, Vimeo, or Brightcove. Learn more in the article on [Videos](videos.qmd).
 
 {{< include _pagebreak.qmd >}}
 
 ## Divs and Spans
 
-您可以使用 div 和 Spans 为内容区域添加类、属性和其他标识符（您将在下面的 [Callout Blocks] 中看到这方面的示例）。
+You can add classes, attributes, and other identifiers to regions of content using Divs and Spans (you'll see an example of this below in [Callout Blocks]).
 
-例如，在这里我们使用 div (`:::`) 为内容区域添加 "border "类：
+For example, here we add the "border" class to a region of content using a div (`:::`):
 
 ``` markdown
 ::: {.border}
-该内容可使用边框样式
+This content can be styled with a border
 :::
 ```
 
-转换为 HTML 后，Quarto 会将markdown翻译成:
+Once rendered to HTML, Quarto will translate the markdown into:
 
 ``` html
 <div class="border">
-  <p>该内容可使用边框样式</p>
+  <p>This content can be styled with a border</p>
 </div>
 ```
 
-分隔符以至少包含三个连续冒号和一些属性的栅栏开始。属性后面可以选择另一串连续的冒号。分隔符以另一行结束，该行至少包含三个连续冒号。分隔符应与前后区块用空行隔开。分隔符也可以嵌套。例如
+Divs start with a fence containing at least three consecutive colons plus some attributes. The attributes may optionally be followed by another string of consecutive colons. The Div ends with another line containing a string of at least three consecutive colons. The Div should be separated by blank lines from preceding and following blocks. Divs may also be nested. For example
 
 ``` markdown
 ::::: {#special .sidebar}
 
 ::: {.warning}
-在此提出警告。
+Here is a warning.
 :::
 
-更多内容.
+More content.
 :::::
 ```
 
-转换为 HTML 后，Quarto 会将markdown翻译成:
+Once rendered to HTML, Quarto will translate the markdown into:
 
 ``` html
 <div id="special" class="sidebar">
   <div class="warning">
-    <p>在此提出警告。</p>
+    <p>Here is a warning.</p>
   </div>
-  <p>更多内容.</p>
+  <p>More content.</p>
 </div>
 ```
 
-没有属性的标签栏总是要闭合。与围栏代码块不同，结束围栏中的冒号数量不需要与开始围栏中的冒号数量匹配。但是，使用不同长度的标签栏来区分嵌套 div 与其父级，有助于提高视觉清晰度。
+Fences without attributes are always closing fences. Unlike with fenced code blocks, the number of colons in the closing fence need not match the number in the opening fence. However, it can be helpful for visual clarity to use fences of different lengths to distinguish nested divs from their parents.
 
-括号内的内联序列（用于开始链接）`Span`如果紧随其后的是属性，则将被视为带有属性：
+A bracketed sequence of inlines, as one would use to begin a link, will be treated as a `Span` with attributes if it is followed immediately by attributes:
 
 ``` markdown
 [This is *some text*]{.class key="val"}
 ```
 
-转换为 HTML 后，Quarto 会将标记符翻译成：
+Once rendered to HTML, Quarto will translate the markdown into:
 
 ``` html
 <span class="class" data-key="val">
@@ -330,31 +328,31 @@ flowchart LR
 </span>
 ```
 
-通常情况下，您会使用 CSS 和/或 [过滤器](/docs/extensions/filters.qmd)以及 Divs 和 Spans 在渲染的文档中提供样式或其他行为。
+Typically, you'll use CSS and/or a [Filter](/docs/extensions/filters.qmd) along with Divs and Spans to provide styling or other behavior within rendered documents.
 
-### 属性排序
+### Ordering of Attributes
 
-Pandoc 中的 div 和 spans 都可以拥有标识符、类和（可能有很多）键值属性的任意组合。为了让 Pandoc 识别这些属性，必须按照特定顺序提供：标识符、类，然后是键值属性。这些属性中的任何一个都可以省略，但如果提供了，则必须遵循该顺序。例如，以下内容是有效的：
+Both divs and spans in Pandoc can have any combination of identifiers, classes, and (potentially many) key-value attributes. In order for these to be recognized by Pandoc, they have to be provided in a specific order: identifiers, classes, and then key-value attributes. Any of these can be omitted, but must follow that order if they are provided. For example, the following is valid:
 
 ``` markdown
 [This is good]{#id .class key1="val1" key2="val2"}
 ```
 
-但是，Pandoc 将无法识别下列：
+However, the following *will not be recognized by Pandoc*:
 
 ``` markdown
 [This does *not* work!]{.class key="val" #id}
 ```
 
-这种排序限制同时适用于 div 和 spans。更多详情，请参阅 Pandoc 的 [Divs and Spans](https://pandoc.org/MANUAL.html#divs-and-spans) 文档。
+This ordering restriction applies to both divs and spans. See Pandoc's documentation on [Divs and Spans](https://pandoc.org/MANUAL.html#divs-and-spans) for additional details.
 
-## 标注块
+## Callout Blocks
 
-#### Markdown 语法
+#### Markdown Syntax
 
 ``` markdown
 :::{.callout-note}
-请注意，有五种类型的标注，包括
+Note that there are five types of callouts, including: 
 `note`, `tip`, `warning`, `caution`, and `important`.
 :::
 ```
@@ -362,12 +360,12 @@ Pandoc 中的 div 和 spans 都可以拥有标识符、类和（可能有很多�
 #### Output
 
 ::: callout-note
-请注意，有五种类型的标注，包括 `note`, `tip`, `warning`, `caution`, and `important`.
+Note that there are five types of callouts, including `note`, `tip`, `warning`, `caution`, and `important`.
 :::
 
-更多信息，请参阅 [Callout Blocks](callouts.qmd) 一文。
+Learn more in the article on [Callout Blocks](callouts.qmd).
 
-## 其余标注块
+## Other Blocks
 
 +--------------------------+--------------------------+
 | Markdown Syntax          | Output                   |
@@ -389,7 +387,7 @@ Pandoc 中的 div 和 spans 都可以拥有标识符、类和（可能有很多�
 | ```                      |                          |
 +--------------------------+--------------------------+
 
-## 特殊字符
+## Special Characters
 
 +-----------------+---------------+
 | Markdown Syntax | Output        |
@@ -403,6 +401,6 @@ Pandoc 中的 div 和 spans 都可以拥有标识符、类和（可能有很多�
 | ```             |               |
 +-----------------+---------------+
 
-## 快捷键 {#keyboard-shortcuts}
+## Keyboard Shortcuts {#keyboard-shortcuts}
 
 {{< include _kbd.qmd >}}

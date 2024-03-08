@@ -12,8 +12,7 @@ Quarto 支持将笔记本渲染为数十种不同的[output formats输出格式]
 
 让我们创建一个新文件（"authoring.qmd"），并定义要呈现的各种格式，为每种格式添加一些选项。需要提醒的是，文件选项是在源文件的开头以 YAML 格式指定的。
 
-
-``` yaml
+```yaml
 ---
 title: "Quarto Document"
 author: "Norah Jones"
@@ -25,8 +24,7 @@ format: pdf
 
 让我们添加一些选项来控制 PDF 输出。
 
-
-``` yaml
+```yaml
 ---
 title: "Quarto Document"
 author: "Norah Jones"
@@ -41,7 +39,7 @@ format:
 
 您创建的某些文档只有一种输出格式，但在许多情况下，我们需要支持多种格式。让我们在文档中添加 `html` 和 `docx` 格式。
 
-``` yaml
+```yaml
 ---
 title: "Quarto Document"
 author: "Norah Jones"
@@ -62,15 +60,14 @@ format:
 
 这里有很多东西需要了解！让我们来细分一下。前两行是与输出格式完全无关的通用文档元数据。
 
-
-``` yaml
+```yaml
 title: "Quarto Document"
 author: "Norah Jones"
 ```
 
 接下来的三行是*适用于所有格式*的文档格式选项，这也是在根级别指定这些选项的原因。
 
-``` yaml
+```yaml
 toc: true
 number-sections: true
 highlight-style: pygments
@@ -78,7 +75,7 @@ highlight-style: pygments
 
 接下来是 `format`（格式）选项，提供特定格式。
 
-``` yaml
+```yaml
 format:
   html: 
     code-fold: true
@@ -90,26 +87,25 @@ format:
   docx: default
 ```
 
-`html `和 `pdf `格式各提供一两个选项。例如，对于 HTML 输出，我们希望用户可以控制显示或隐藏代码（`code-fold: true`），并使用`katex`来处理数学文本。对于 PDF，我们定义了一些页边距。docx "格式有点不同--它指定了 `docx: default`。这意味着只需使用该格式的所有默认选项。
+`html `和 `pdf `格式各提供一两个选项。例如，对于 HTML 输出，我们希望用户可以控制显示或隐藏代码（`code-fold: true`），并使用 `katex`来处理数学文本。对于 PDF，我们定义了一些页边距。docx "格式有点不同--它指定了 `docx: default`。这意味着只需使用该格式的所有默认选项。
 
 ## 重新渲染
 
 文档选项中指定的格式定义了默认渲染的格式。如果我们使用上述所有选项渲染文档，则格式如下。
 
-
-``` {.bash filename="Terminal"}
+```{.bash
 quarto render authoring.qmd
 ```
 
 然后会创建以下文件。
 
--   `authoring.html`
--   `authoring.pdf`
--   `authoring.docx`
+- `authoring.html`
+- `authoring.pdf`
+- `authoring.docx`
 
 我们可以使用 `--to` 选项选择一种或多种格式。
 
-``` {.bash filename="Terminal"}
+```{.bash
 quarto render authoring.qmd --to docx
 quarto render authoring.qmd --to docx,pdf
 ```
@@ -118,7 +114,7 @@ quarto render authoring.qmd --to docx,pdf
 
 如果需要，我们还可以呈现未在文档选项中指定的格式。
 
-``` {.bash filename="Terminal"}
+```{.bash
 quarto render authoring.qmd --to odt
 ```
 
@@ -128,7 +124,7 @@ quarto render authoring.qmd --to odt
 
 您可以使用目录和/或章节编号来方便读者浏览文档。方法是在文档选项中添加 `toc` 和/或 `number-sections` 选项。请注意，这些选项通常在根级别指定，因为它们在所有格式中共享。
 
-``` markdown
+```markdown
 ---
 title: Quarto Basics
 author: Norah Jones
@@ -163,9 +159,10 @@ number-sections: true
 有很多选项可用于控制目录和章节编号的行为方式。请参阅输出格式文档（例如 [HTML](/docs/output-formats/html-basics.qmd)、[PDF](/docs/output-formats/pdf-basics.qmd)、[MS Word](/docs/output-formats/ms-word.qmd)）了解更多详情。
 
 ## 公式
+
 您可以在 markdown 中使用 LaTeX 方程。
 
-``` markdown
+```markdown
 爱因斯坦的特殊相对理论，表达了质量和能量的等价性：
 
 $E = mc^{2}$
@@ -181,13 +178,13 @@ $E = mc^{2}$
 
 内联方程用 `$...$` 分隔。要在新行内创建等式（显示等式），请使用 `$$...$$`。更多详情，请参阅 [markdown 公式](/docs/authoring/markdown-basics.html#equations)。
 
-## 引文
+## 引用
 
 在 Quarto 文档中引用其他作品。首先以支持的格式（BibTeX 或 CSL）创建一个书目文件。然后，使用 `bibliography` YAML 元数据选项将书目链接到文档。
 
 下面是一份包含书目和单一引文的文档。
 
-```` markdown
+````markdown
 ---
 title: Quarto Basics
 format: html
@@ -208,7 +205,7 @@ Knuth says always be literate [@knuth1984].
 
 请注意，书目中的项目使用 `@citeid` 语法引用。
 
-``` markdown
+```markdown
  Knuth says always be literate [@knuth1984].
 ```
 
@@ -218,8 +215,8 @@ Knuth says always be literate [@knuth1984].
 
 ![](/docs/get-started/authoring/images/citations-render.png){.border width="600" fig-alt="Rendered document with references section at the bottom the content of which reads 'Knuth, Donald E. 1984. Literate Programming. The Computer Journal 27 (2): 97-111.'"}
 
-\
-`@` 引用语法非常灵活，支持前缀、后缀、定位器和文中引用。如需了解更多信息，请参阅[引文和脚注](/docs/authoring/footnotes-and-citations.qmd “Citations and Footnotes”)文档。
+
+`@` 引用语法非常灵活，支持前缀、后缀、定位器和文中引用。如需了解更多信息，请参阅[引文和脚注](/docs/authoring/footnotes-and-citations.qmd "Citations and Footnotes")文档。
 
 ## 交叉引用
 
@@ -227,7 +224,7 @@ Knuth says always be literate [@knuth1984].
 
 本例说明了各类实体的交叉引用。
 
-```` markdown
+````markdown
 ---
 title: Quarto Crossrefs
 format: html
@@ -264,22 +261,15 @@ $$ {#eq-stddev}
 +==========+===============+==================================+
 | Section  | `@sec-plot`   | ID added to heading:             |
 |          |               |                                  |
-|          |               | ``` {.default code-copy="false"} |
-|          |               | # Plot {#sec-plot}               |
-|          |               | ```                              |
+|          |               | ``{.default code-copy="false"} | |          |               | # Plot {#sec-plot}               | |          |               |``                              |
 +----------+---------------+----------------------------------+
 | Figure   | `@fig-simple` | YAML options in code cell:       |
 |          |               |                                  |
-|          |               | ``` {.default code-copy="false"} |
-|          |               | #| label: fig-simple             |
-|          |               | #| fig-cap: "Simple Plot"        |
-|          |               | ```                              |
+|          |               | ``{.default code-copy="false"} | |          |               | #| label: fig-simple             | |          |               | #| fig-cap: "Simple Plot"        | |          |               |``                              |
 +----------+---------------+----------------------------------+
 | Equation | `@eq-stddev`  | At end of display equation:      |
 |          |               |                                  |
-|          |               | ``` default                      |
-|          |               | $$ {#eq-stddev}                  |
-|          |               | ```                              |
+|          |               | ``default                      | |          |               | $$ {#eq-stddev}                  | |          |               |``                              |
 +----------+---------------+----------------------------------+
 
 : {tbl-colwidths=\[20,30,50\]}
@@ -288,7 +278,7 @@ $$ {#eq-stddev}
 
 ![](/docs/get-started/authoring/images/crossref-render.png){.border width="600" fig-alt="Rendered page with linked cross references to figures and equations."}
 
-请参阅[Cross References](/docs/authoring/cross-references.qmd “交叉引用”)一文了解更多信息，包括如何自定义标题和参考文献文本（例如，使用 "Fig. "而不是 "Figure"）。
+请参阅[交叉引用](/docs/authoring/cross-references.qmd "Cross References")一文了解更多信息，包括如何自定义标题和参考文献文本（例如，使用 "Fig. "而不是 "Figure"）。
 
 ## 标示
 
@@ -296,7 +286,7 @@ $$ {#eq-stddev}
 
 标注是具有特殊标注属性的标记符 div。要在标记符单元格中创建标示，请在文档中键入以下内容。
 
-``` markdown
+```markdown
 ::: {.callout-note}
 请注意，有五种类型的标注，包括:
 `note`, `tip`, `warning`, `caution`, and `important`.
@@ -306,10 +296,10 @@ $$ {#eq-stddev}
 显示效果如下
 
 ::: callout-note
-请注意，有五种类型的标注，包括`note`, `tip`, `warning`, `caution`, and `important`.
+请注意，有五种类型的标注，包括 `note`, `tip`, `warning`, `caution`, and `important`.
 :::
 
-您可以在 [Callouts](/docs/authoring/callouts.qmd) 文档中进一步了解不同类型的标注及其外观选项。
+您可以在 [标示](/docs/authoring/callouts.qmd "Callouts") 文档中进一步了解不同类型的标注及其外观选项。
 
 ## 文章布局
 
@@ -319,7 +309,7 @@ Quarto 文章正文的默认宽度约为 700 像素。选择这种宽度是为�
 
 我们还使用了 "column: screen-inset "单元格选项，表示我们希望我们的数字占据整个屏幕的宽度，并有一个小的嵌入。
 
-```` markdown
+````markdown
 ---
 title: Quarto Layout
 format: html

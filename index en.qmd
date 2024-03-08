@@ -18,23 +18,26 @@ resources:
 
 ::: {.hero-text}
 
-# 欢迎来到Quarto^[®]{.trademark}^ {.mt-1}
+# Welcome to Quarto^[®]{.trademark}^ {.mt-1}
 
-### 一个开源的科技类内容发布系统（CMS）
-
-- 使用 [Jupyter](https://jupyter.org) 笔记本或在您喜欢的编辑器中使用纯文本 Markdown 进行创作。
-- 使用[Python](docs/computations/python.qmd), [R](docs/computations/r.qmd), [Julia](docs/computations/julia.qmd),和[Observable](docs/computations/ojs.qmd)创建动态内容。
-- 以 HTML、PDF、MS Word、ePub 等格式发布可复制、高质量的文章、演示文稿、仪表板、网站、博客和书籍。
-- 通过发布到[Posit Connect](https://quarto.org/docs/publishing/rstudio-connect.html), [Confluence](docs/publishing/confluence.qmd)或其他发布系统，在整个组织范围内共享知识和见解。
-- 使用[Pandoc](https://pandoc.org) Markdown进行编写，包括方程、引文、交叉引用、图形面板、标注、高级布局等。
+### An open-source scientific and technical publishing system
 
 
-### 分析、分享、复制您的故事，用数据和Quarto来讲述
+- Author using [Jupyter](https://jupyter.org) notebooks or with plain text markdown in your favorite editor.
+- Create dynamic content with [Python](docs/computations/python.qmd), [R](docs/computations/r.qmd), [Julia](docs/computations/julia.qmd), and [Observable](docs/computations/ojs.qmd).
+- Publish reproducible, production quality articles, presentations, dashboards, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.
+- Share knowledge and insights organization-wide by publishing to [Posit Connect](https://quarto.org/docs/publishing/rstudio-connect.html), [Confluence](docs/publishing/confluence.qmd), or other publishing systems. 
+- Write using [Pandoc](https://pandoc.org) markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.\above
+
+
+### Analyze. Share. Reproduce. You have a story to tell with data---tell it with Quarto.
+
 
 ::: {.hero-buttons}
 
-[开始](docs/get-started/){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
-[指南](docs/guide/){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
+[Get Started](docs/get-started/){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
+[Guide](docs/guide/){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
+
 
 ::: 
 :::
@@ -77,8 +80,8 @@ resources:
 
 <div class="tab-pane fade  show active" id="python" role="tabpanel" aria-labelledby="python-tab">
 
+Combine Jupyter notebooks with flexible options to produce production quality output in a wide variety of formats. Author using traditional notebook UIs or with a plain text markdown representation of notebooks.
 
-将 Jupyter notebooks与灵活的选项相结合，以多种格式生成生产质量的输出。使用传统notebooks UI 或notebooks的纯文本 Markdown 表示形式进行创作。
 
 ::: {.grid}
 ::: {.g-col-lg-6 .g-col-12}
@@ -94,7 +97,9 @@ resources:
 
 <div class="tab-pane fade" id="knitr" role="tabpanel" aria-labelledby="knitr-tab">
 
-Quarto 是 Posit 的 R Markdown 的多语言下一代版本，具有许多新特性和功能。与 R Markdown 一样，Quarto 使用[knitr](https://yihui.org/knitr/)执行 R 代码，因此无需修改即可渲染大多数现有 Rmd 文件。
+Quarto is a multi-language, next generation version of R Markdown from Posit, with many new new features and capabilities. Like R Markdown, Quarto uses [knitr](https://yihui.org/knitr/) to execute R code, and is therefore able to render most existing Rmd files without modification.
+
+
 
 ::: {.grid}
 ::: {.g-col-lg-6 .g-col-12}
@@ -138,7 +143,9 @@ ggplot(airquality, aes(Temp, Ozone)) +
 
 <div class="tab-pane fade" id="julia" role="tabpanel" aria-labelledby="julia-tab">
 
-结合 Markdown 和 Julia 代码来创建完全可复制的动态文档。Quarto 通[IJulia](https://github.com/JuliaLang/IJulia.jl) Jupyter 内核执行 Julia 代码，使您能够以纯文本进行创作（如下所示）或渲染现有的 Jupyter notebooks。
+Combine markdown and Julia code to create dynamic documents that are fully reproducible. Quarto executes Julia code via the [IJulia](https://github.com/JuliaLang/IJulia.jl) Jupyter kernel, enabling you to author in plain text (as shown below) or render existing Jupyter notebooks.
+
+
 
 ::: {.grid}
 ::: {.g-col-lg-6 .g-col-12}
@@ -186,7 +193,7 @@ plot(sin,
 
 <div class="tab-pane fade" id="observable" role="tabpanel" aria-labelledby="observable-tab">
 
-Quarto 包含对 Observable JS 的本机支持，这是由 Mike Bostock（D3 的作者）创建的一组 JavaScript 增强功能。Observable JS 使用反应式执行模型，特别适合交互式数据探索和分析。
+Quarto includes native support for Observable JS, a set of JavaScript enhancements created by Mike Bostock (the author of D3). Observable JS uses a reactive execution model, and is especially well suited for interactive data exploration and analysis.
 
 
 ::: {.grid}
@@ -251,66 +258,61 @@ Plot.plot({
 
 ::: {.feature}
 
-### 动态文档
-使用 Python、R、Julia 和 Observable 生成动态输出。创建可重复的文档，当基本假设或数据发生变化时可以重新生成这些文档。
+### Dynamic Documents
+Generate dynamic output using Python, R, Julia, and Observable. Create reproducible documents that can be regenerated when underlying assumptions or data change.
+
 
 ::: {.learn-more}
-[了解更多 »](docs/computations/python.qmd "Learn more")
+[Learn more »](docs/computations/python.qmd )
+:::
+:::
+
+::: {.feature}
+### Beautiful Publications
+Publish high-quality articles, reports, presentations, websites, and books in HTML, PDF, MS Word, ePub, and more. Use a single source document to target multiple formats.
+
+
+::: {.learn-more}
+[Learn more »](docs/output-formats/all-formats.qmd )
+:::
+:::
+
+::: {.feature}
+### Scientific Markdown
+Pandoc markdown has excellent support for LaTeX equations and citations. Quarto adds extensions for cross-references, figure panels, callouts, advanced page layout, and more.
+
+::: {.learn-more}
+[Learn more »](docs/authoring/markdown-basics.qmd )
+:::
+:::
+
+::: {.feature}
+### Authoring Tools
+Use your favorite tools including VS Code, RStudio, Jupyter Lab, or any text editor. Use the Quarto visual markdown editor for long-form documents.
+
+
+::: {.learn-more}
+[Learn more »](docs/tools/jupyter-lab.qmd )
+:::
+:::
+
+::: {.feature}
+### Interactivity
+Engage readers by adding interactive data exploration to your documents using Jupyter Widgets, htmlwidgets for R, Observable JS, and Shiny.
+
+::: {.learn-more}
+[Learn more »](docs/interactive/ )
 :::
 :::
 
 ::: {.feature}
 
-### 精美的出版物 
-以 HTML、PDF、MS Word、ePub 等格式发布高质量的文章、报告、演示文稿、网站和书籍。使用单个源文档来定位多种格式。
+### Websites and Books
+Publish collections of documents as a blog or full website. Create books and manuscripts in both print formats (PDF and MS Word) and online formats (HTML and ePub).
+
 
 ::: {.learn-more}
-[了解更多 »](docs/output-formats/all-formats.qmd "Learn more")
-:::
-:::
-
-::: {.feature}
-
-### 科学标记
-
-Pandoc markdown 对 LaTeX 方程和引文具有出色的支持。Quarto 添加了交叉引用、图形面板、标注、高级页面布局等的扩展。
-
-::: {.learn-more}
-[了解更多 »](docs/authoring/markdown-basics.qmd "Learn more")
-:::
-:::
-
-::: {.feature}
-
-### 创作工具
-
-使用您最喜欢的工具，包括 VS Code、RStudio、Jupyter Lab 或任何文本编辑器。使用 Quarto 可视化 Markdown 编辑器来处理长格式文档。
-
-::: {.learn-more}
-[了解更多 »](docs/tools/jupyter-lab.qmd "Learn more")
-:::
-:::
-
-::: {.feature}
-
-### 互动
-
-通过使用 Jupyter Widgets、R 的 htmlwidgets、Observable JS 和 Shiny 在文档中添加交互式数据探索吸引读者。
-
-::: {.learn-more}
-[了解更多 »](docs/interactive/ "Learn more")
-:::
-:::
-
-::: {.feature}
-
-
-### 网站和书籍
-
-将文档集发布为博客或完整网站。创建印刷格式（PDF 和 MS Word）和在线格式（HTML 和 ePub）的书籍和手稿。
-
-::: {.learn-more}
-[了解更多 »](docs/websites/ "Learn more" )
+[Learn more »](docs/websites/ )
 :::
 :::
 
@@ -321,10 +323,10 @@ Pandoc markdown 对 LaTeX 方程和引文具有出色的支持。Quarto 添加�
 ::: {.get-started .alt-background}
 ::: {.content-block}
 
-[开始](docs/get-started/index.html "Get Started"){.btn-action-primary  .btn-action .btn .btn-success .btn-lg role="button" style="margin-top: 1em;"}
 
 :::
 :::
+
 
 
 

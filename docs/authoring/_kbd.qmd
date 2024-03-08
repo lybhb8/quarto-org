@@ -1,13 +1,13 @@
 {{< include ../_require-1.3.qmd >}}
 
-The `kbd` shortcode can be used to describe keyboard shortcuts in documentation. On Javascript formats, it will attempt to detect the operating system of the format and show the correct shortcut. On print formats, it will print the keyboard shortcut information for all operating systems.
+` kbd` 简码可用于在文档中描述键盘快捷方式。在 Javascript 格式中，它将尝试检测格式的操作系统并显示正确的快捷方式。在打印格式中，它将打印所有操作系统的键盘快捷方式信息。
 
-For example, writing the following markdown:
+例如，编写以下标记符：
 
 ``` md
-To print, press {{{< kbd Shift-Ctrl-P >}}}. To open an existing new project, press {{{< kbd mac=Shift-Command-O win=Shift-Control-O linux=Shift-Ctrl-L >}}}.
+打印，请按 {{{< kbd Shift-Ctrl-P >}}}. 打开现有的新项目，请按 {{{< kbd mac=Shift-Command-O win=Shift-Control-O linux=Shift-Ctrl-L >}}}.
 ```
 
-will render the keyboard shortcuts as:
+将键盘快捷键显示为：
 
-To print, press {{< kbd Shift-Ctrl-P >}}. To open an existing new project, press {{< kbd mac=Shift-Command-O win=Shift-Control-O linux=Shift-Ctrl-L >}}.
+打印，请按 {{< kbd Shift-Ctrl-P >}}. 打开现有的新项目，请按 press {{< kbd mac=Shift-Command-O win=Shift-Control-O linux=Shift-Ctrl-L >}}.
