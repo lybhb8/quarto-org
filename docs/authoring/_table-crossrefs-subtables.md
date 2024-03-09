@@ -1,4 +1,4 @@
-You may want to create a composition of several sub-tables. To do this, create a div with a main identifier, then apply sub-identifiers (and optional caption text) to the contained tables. For example:
+您可能希望创建一个由多个子表格组成的组合。为此，请创建一个带有主标识符的 div，然后将子标识符（以及可选的标题文本）应用到所包含的表格中。例如
 
 ``` markdown
 ::: {#tbl-panel layout-ncol=2}
@@ -24,8 +24,8 @@ Main Caption
 See @tbl-panel for details, especially @tbl-second.
 ```
 
-Which looks like this when rendered to HTML:
+渲染成 HTML 时看起来是这样的：
 
 ![](/docs/authoring/images/crossref-subtable.png){fig-alt="Two tables side-by-side. Both tables have 3 columns and 4 rows. The table on the left is titled '(a) First table'. The table on the right is titled '(b) Second Table'. Centered underneath both tables is the text 'Table 1: Main Caption'. The text 'See tbl. 2 for details, especially tbl. 2 (b)' is aligned to the left underneath that."}
 
-Note that the "Main Caption" for the table is provided as the last block within the containing div.
+请注意，表格的 "主标题 "是作为包含 div 的最后一个块提供的。

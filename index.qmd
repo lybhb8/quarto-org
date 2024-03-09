@@ -22,7 +22,7 @@ resources:
 
 ### 一个开源的科技类内容发布系统（CMS）
 
-- 使用 [Jupyter](https://jupyter.org) 笔记本或在您喜欢的编辑器中使用纯文本 Markdown 进行创作。
+- 使用 [Jupyter](https://jupyter.org) 记事本或在您喜欢的编辑器中使用纯文本 Markdown 进行创作。
 - 使用[Python](docs/computations/python.qmd), [R](docs/computations/r.qmd), [Julia](docs/computations/julia.qmd),和[Observable](docs/computations/ojs.qmd)创建动态内容。
 - 以 HTML、PDF、MS Word、ePub 等格式发布可复制、高质量的文章、演示文稿、仪表板、网站、博客和书籍。
 - 通过发布到[Posit Connect](https://quarto.org/docs/publishing/rstudio-connect.html), [Confluence](docs/publishing/confluence.qmd)或其他发布系统，在整个组织范围内共享知识和见解。

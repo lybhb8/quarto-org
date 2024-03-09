@@ -1,21 +1,22 @@
 ---
-title: 表格 #Tables
+title: Tables
 engine: jupyter
 ---
 
-## 概述
+## Overview
 
-Quarto 包含大量功能，旨在方便用户编写和定制标记符表格输出，包括
+Quarto includes a number of features aimed at making it easy to to author and customize markdown table output, including:
 
-- 指定列对齐方式和宽度
-- 提供标题、副标题和交叉引用。
-- 从可执行代码单元格动态生成表格。
+-   Specifying column alignment and widths.
+-   Providing captions, subcaptions, and cross-references.
+-   Generating tables dynamically from executable code cells.
 
-本文将深入介绍这些功能的使用。
+This article covers using these features in-depth.
 
-## 标记符表格
+## Markdown Tables
 
-最常用的标记符表格被称为管道表。管道表支持指定每列对齐方式和标题。例如
+The most commonly used markdown table is known as a pipe table. Pipe tables support specifying per column alignment as well as captions. For example:
+
 
 ::: {layout-ncol="2"}
 
@@ -47,9 +48,9 @@ Quarto 包含大量功能，旨在方便用户编写和定制标记符表格输�
 
 :::
 
-开始和结束的管道字符是可选的，但所有列之间都需要管道。冒号表示列对齐，如图所示。表头不能省略，但可以通过包含空白单元格的表头来模拟无表头表格。
+The beginning and ending pipe characters are optional, but pipes are required between all columns. The colons indicate column alignment as shown. The header cannot be omitted, however you can simulate a headerless table by including a header with blank cells.
 
-由于管道表示列的边界，因此列不必像上例那样垂直对齐。因此，这是一个完全合法（虽然很难看）的管道表：
+Since the pipes indicate column boundaries, columns need not be vertically aligned, as they are in the above example. So, this is a perfectly legal (though ugly) pipe table:
 
 ``` markdown
 fruit| price
@@ -59,16 +60,16 @@ pear|1.37
 orange|3.09
 ```
 
-管道表的单元格不能包含段落和列表等块元素，也不能跨多行。如果管道表中包含一行，其标记内容的宽度大于列宽（参见 `columns`选项），那么管道表将占用全部文本宽度，单元格内容将被换行，单元格的相对宽度由表头与表体之间的分隔线上的破折号数量决定。
+The cells of pipe tables cannot contain block elements like paragraphs and lists, and cannot span multiple lines. If a pipe table contains a row whose markdown content is wider than the column width (see `columns` option), then the table will take up the full text width and the cell contents will wrap, with the relative cell widths determined by the number of dashes in the line separating the table header from the table body.
 
-例如，`---|-` 将使第一列和第二列的宽度分别为全文宽度的 3/4 和 1/4 。另一方面，如果没有一行的宽度超过列宽，那么单元格内容将不会被包裹，单元格的大小将与内容一致。
+For example `---|-` would make the first column 3/4 and the second column 1/4 of the full text width. On the other hand, if no lines are wider than column width, then cell contents will not be wrapped, and the cells will be sized to their contents.
 
-### 使用 Bootstrap 类
+### Using Bootstrap classes
 
-作为表格标题旁边的属性给出的 Bootstrap 表格类会插入到 `<table>` 元素中。
-允许使用的类是那些明确适用于整个表格的类，它们是
-"primary"`, `"secondary"`, `"success"`, `"danger"`, `"warning"`, `"info"`, `"light"`, `"dark"`, `"striped"`, `"hover"`, `"active"`, `"bordered"`, `"borderless"`, `"sm"`, `"responsive"`, `"responsive-sm"`, `"responsive-md"`, `"responsive-lg"`, `"responsive-xl"`, `"responsive-xxl"`.
-例如，下面的 Markdown 表格将以行条纹呈现，悬停时还将突出显示行：
+Bootstrap table classes given as attributes next to a table caption are inserted into the `<table>` element.
+The classes permitted are those that apply expressly to the entire table, and these are:
+`"primary"`, `"secondary"`, `"success"`, `"danger"`, `"warning"`, `"info"`, `"light"`, `"dark"`, `"striped"`, `"hover"`, `"active"`, `"bordered"`, `"borderless"`, `"sm"`, `"responsive"`, `"responsive-sm"`, `"responsive-md"`, `"responsive-lg"`, `"responsive-xl"`, `"responsive-xxl"`.
+For example, the following Markdown table will be rendered with row stripes and the rows will also be highlighted on hover:
 
 ::: {layout-ncol="2"}
 
@@ -101,25 +102,25 @@ orange|3.09
 
 :::
 
-### 创建
+### Authoring
 
-对于只有几个单元格的简单表格，可以直接用 markdown 创建。表格越大，使用制作工具就越有意义。可以考虑使用的表格制作工具包括
+For simple tables with only a few cells it's straightforward to create them directly in markdown. As tables get larger, it makes sense to use an authoring tool. Some table authoring tools to consider include:
 
 +------------------------------------------------------------------------+---------------------------------------------------------------+
-| [TablesGenerator](https://tablesgenerator.com/markdown_tables)         | 在线生成的markdown表格工具.                                                         |
+| [TablesGenerator](https://tablesgenerator.com/markdown_tables)         | Online tool for generating markdown tables                    |
 +------------------------------------------------------------------------+---------------------------------------------------------------+
-| [Emacs TableMode](https://www.emacswiki.org/emacs/TableMode)           | 基于文本的表格创建和编辑功能的Emacs.                                                       |
+| [Emacs TableMode](https://www.emacswiki.org/emacs/TableMode)           | Text based table creation and editing capabilities for Emacs. |
 +------------------------------------------------------------------------+---------------------------------------------------------------+
-| [Quarto Visual Editor](/docs/visual-editor/content.qmd#editing-tables) | 用于`.qmd`文件的可视化编辑器，支持表格编辑.                                                 |
+| [Quarto Visual Editor](/docs/visual-editor/content.qmd#editing-tables) | Visual editor for `.qmd` files with table editing support.    |
 +------------------------------------------------------------------------+---------------------------------------------------------------+
 
 : {tbl-colwidths="\[35,65\]"}
 
-## 列宽
+## Column Widths
 
-上面我们介绍了一种使用每列标题中破折号的相对数量来指定列宽的方法（例如__，`---|-`以获得双列表格的 75% / 25% 分割）。
+Above we describe a means of specifying column widths using the relative number of dashes in each column header (_e.g._, `---|-` to get a 75% / 25% split for a two-column table).
 
-也可以使用 `tbl-colwidths` 属性或文档级选项明确指定列宽。对于单个标记符表格，请在标题后添加属性。例如
+You can also explicitly specify columns widths using the `tbl-colwidths` attribute or document-level option. For an individual markdown table, add the attribute after the caption. For example:
 
 ::: {layout-ncol="2"}
 
@@ -151,7 +152,7 @@ orange|3.09
 
 :::
 
-如果表格没有标题，则仍可只指定 `tbl-colwidths` ：
+If your table doesn't have a caption, then you can still specify only `tbl-colwidths`:
 
 ::: {layout-ncol="2"}
 
@@ -183,7 +184,7 @@ orange|3.09
 
 :::
 
-也可以在文档级别指定列宽（_例如_，以便在一组表格中使用统一的宽度）：
+Column widths can also be specified at the document level (_e.g._, to have uniform widths across a set of tables):
 
 ``` yaml
 ---
@@ -193,10 +194,10 @@ tbl-colwidths: [75,25]
 ---
 ```
 
-## 交叉引用
+## Cross References
 
-对于由可执行代码单元格生成的表格，请使用带有 `tbl-` 前缀的标签，以便交叉引用。
-例如
+For tables produced by executable code cells, include a label with a `tbl-` prefix to make them cross-referenceable.
+For example:
 
 ```{python}
 #| label: tbl-planets
@@ -218,20 +219,20 @@ Markdown(tabulate(
 ::: callout-important
 ## Label Prefix
 
-为了使表格可以交叉引用，其标签必须以 `tbl-` 前缀开头。
+In order for a table to be cross-referenceable, its label must start with the `tbl-` prefix.
 :::
 
 {{< include _table-crossrefs.md >}}
 
-更多详情，请参阅 [交叉引用](cross-references.qmd "Cross References") 一文。
+See the article on [Cross References](cross-references.qmd) for additional details.
 
-### 副表格
+### Subtables
 
 {{< include _table-crossrefs-subtables.md >}}
 
-### 标题位置
+## Caption Location
 
-默认情况下，表格标题位于表格上方。你可以使用 `tbl-cap-location` 选项修改这一行为。例如
+By default, table captions are positioned above tables. You can modify this behavior using the `tbl-cap-location` option. For example:
 
 ``` yaml
 ---
@@ -239,25 +240,21 @@ tbl-cap-location: top
 ---
 ```
 
-请注意，该选项是在顶层指定的，因此 PDF 和 HTML 格式都可以共享。如果只针对一种格式，可以将其与其他 `format` 特定选项放在一起。
+Note that this option is specified at the top level so that it can be shared by both PDF and HTML formats. If you are only targeting a single format you can place it alongside other `format` specific options.
 
-标题位置的有效值包括
+Valid values for the caption location include:
 
 | Value    | Description                           |
 |----------|---------------------------------------|
-| `top`    | 标题位于表头顶部.                       |
+| `top`    | Position the caption above the table. |
 | `bottom` | Position the caption below the table. |
 | `margin` | Position the caption in the margin.   |
 
-请参阅[文章布局](article-layout.qmd#margin-captions)一文，了解在页边空白处放置标题的更多详情。
+See the article on [Article Layout](article-layout.qmd#margin-captions) for additional details on placing captions in the margin.
 
-##  计算方法
+## Computations
 
-请参阅[文章布局](article-layout.qmd#margin-captions)一文，了解在页边空白处放置标题的更多详情。
-
-##  计算方法
-
-上述所有选项都适用于由可执行代码单元格生成的表格。例如，在这里我们使用 Python [tabulate](https://pypi.org/project/tabulate/) 包和 IPython [display](https://ipython.readthedocs.io/en/stable/api/generated/IPython.display.html#) 模块中的 `Markdown()` 函数来打印markdown表格：
+All of the options described above work for tables produced by executable code cells. For example, here we use the Python [tabulate](https://pypi.org/project/tabulate/) package along with the `Markdown()` function from the IPython [display](https://ipython.readthedocs.io/en/stable/api/generated/IPython.display.html#) module to print a markdown table:
 
 ```{python}
 #| label: tbl-planet-measures
@@ -276,7 +273,7 @@ Markdown(tabulate(
 ))
 ```
 
-在这里，我们将 `tbl-cap` 和 `tbl-colwidths` 选项应用到使用 knitr `kable()` 函数编写markdown表格的代码单元格中：
+Here we apply the `tbl-cap` and `tbl-colwidths` options to a code cell that uses the knitr `kable()` function to write a markdown table:
 
 ```{{r}}
 #| label: tbl-cars
@@ -286,7 +283,7 @@ Markdown(tabulate(
 kable(head(cars))
 ```
 
-如果代码单元会生成多个表格，还可以使用单元格选项指定副标题和布局：
+If your code cell produces multiple tables, you can also specify subcaptions and layout using cell options:
 
 ::: {.panel-tabset group="language"}
 
@@ -311,7 +308,7 @@ display(Markdown(taxis.to_markdown(index = False)))
 ```
 ````
 
-请注意，我们使用了从 `IPython` 中导入的 [`display()`](https://ipython.readthedocs.io/en/stable/api/generated/IPython.display.html#IPython.display.display) 函数，这样就可以从一个单元格中呈现多个输出(默认情况下，单元格只输出最后一个表达式)
+Note that we use the [`display()`](https://ipython.readthedocs.io/en/stable/api/generated/IPython.display.html#IPython.display.display) function imported from `IPython` so that we can render multiple outputs from a single cell (by default cells only output their last expression).
 
 ## R
 
@@ -333,9 +330,9 @@ kable(head(pressure))
 
 :::
 
-### 网格表格
+## Grid Tables
 
-网格表是一种更高级的 markdown 表格，允许使用任意块元素（多个段落、代码块、列表等）。例如
+Grid tables are a more advanced type of markdown tables that allow arbitrary block elements (multiple paragraphs, code blocks, lists, etc.). For example:
 
 
 ``` markdown
@@ -349,10 +346,10 @@ kable(head(pressure))
 |           |           | - tasty            |
 +-----------+-----------+--------------------+
 
-: 网格表示例
+: Sample grid table.
 ```
 
-渲染 `HTML` 成这样的：
+Which looks like this when rendered to HTML:
 
 +-----------+-----------+--------------------+
 | Fruit     | Price     | Advantages         |
@@ -364,12 +361,12 @@ kable(head(pressure))
 |           |           | - tasty            |
 +-----------+-----------+--------------------+
 
-: 网格表示例
+: Sample grid table.
 
 
-行`=`分隔表头和表体，无表头表格可以省略。不支持跨越多列或多行的单元格。
+The row of `=`s separates the header from the table body, and can be omitted for a headerless table. Cells that span multiple columns or rows are not supported.
 
-与管道表一样，可以通过在表头后的分隔线边界上加上冒号来指定对齐方式：
+Alignments can be specified as with pipe tables, by putting colons at the boundaries of the separator line after the header:
 
 
 ``` markdown
@@ -379,7 +376,7 @@ kable(head(pressure))
 | Bananas | $1.34  | built-in wrapper |
 +---------+--------+------------------+
 ```
-渲染` HTML `成这样的：
+Which looks like this when rendered to HTML:
 
 +---------+--------+------------------+
 | Right   | Left   | Centered         |
@@ -388,7 +385,7 @@ kable(head(pressure))
 +---------+--------+------------------+
 
 
-对于无表头的表格，`冒号`放在顶行：
+For headerless tables, the colons go on the top line instead:
 
 ``` markdown
 +----------:+:----------+:--------:+
@@ -396,26 +393,26 @@ kable(head(pressure))
 +-----------+-----------+----------+
 ```
 
-渲染 `HTML` 成这样的：
+Which looks like this when rendered to HTML:
 
 +----------:+:----------+:--------:+
 | Right     | Left      | Centered |
 +-----------+-----------+----------+
 
 
-请注意，使用纯文本编辑器编写网格表非常麻烦（因为与管道表不同，列指示器必须对齐）。以下是一些可以帮助创建网格表的工具：
+Note that grid tables are quite awkward to write with a plain text editor (because unlike pipe tables, the column indicators must align). Here are some tools that can assist with creating grid tables:
 
 -   Emacs' [table-mode](https://www.gnu.org/software/emacs/manual/html_node/emacs/Text-Based-Tables.html) (`M-x table-insert`)
 -   Quarto [Visual Editor](https://quarto.org/docs/visual-editor/content.html#editing-tables)
 -   Tables Generator's [Plain Text mode](https://www.tablesgenerator.com/text_tables) with `Use reStructuredText syntax` enabled
 
-## HTML 表格
+## HTML Tables
 
-Quarto 可以处理 `html` `RawBlock` 节点（即`{=html}`）中的 HTML 表格，并将其转换为 Markdown 表格，而无需考虑输出格式（有意包括非 HTML 格式）。
-因此，您可以在文档中使用 HTML 表格语法，并将其转换为适用于所有格式的 Markdown 语法。
-此外，以 HTML 格式输出计算表格的库可以在其他输出格式中使用。
+Quarto can process HTML tables in `html` `RawBlock` nodes (_i.e._, `{=html}`) and convert them to Markdown tables, regardless of the output format (intentionally including non-HTML formats).
+As a result, you can use HTML table syntax in your documents and it will be converted to Markdown syntax for all formats.
+Additionally, libraries that emit computational tables in HTML format can work in other output formats.
 
-例如，请看下面的原生 HTML 块：
+For example, consider the following raw HTML block:
 
 ````markdown
 ```{=html}
@@ -437,7 +434,7 @@ Quarto 可以处理 `html` `RawBlock` 节点（即`{=html}`）中的 HTML 表格
 ```
 ````
 
-渲染`HTML` 和 `PDF` 格式的输出结果如下：
+When rendered, this results in the following output for HTML and PDF formats:
 
 ::: {layout-ncol=2}
 
@@ -471,11 +468,11 @@ Quarto 可以处理 `html` `RawBlock` 节点（即`{=html}`）中的 HTML 表格
 
 :::
 
-此外，Quarto 还支持在表格中指定嵌入式 Markdown 内容。
-这是通过在嵌入的 `span` 或 `div` 节点中提供数据属性 `qmd` 或 `qmd-base64` 来实现的。
-这些节点可以出现在允许出现此类内容的任何地方：表头、页脚、单元格、标题等。
+In addition, Quarto supports the specification of embedded Markdown content in tables.
+This is done by providing a data attribute `qmd` or `qmd-base64` in an embedded `span` or `div` node.
+These nodes can appear anywhere that such content is allowed: table headers, footers, cells, captions, _etc._ 
 
-例如，下表包含一个交叉引用、markdown 格式和一个简码：
+For example, the following table includes a cross reference, markdown formatting and a shortcode:
 
 :::: {layout-nrow="2"}
 
@@ -507,9 +504,9 @@ Quarto 可以处理 `html` `RawBlock` 节点（即`{=html}`）中的 HTML 表格
 
 ::: {}
 
-翻译如下:
+Which renders as follows:
 
-## HTML 表格范例 {#sec-html-tables}
+## HTML Tables Example {#sec-html-tables}
 
 ```{=html}
 <table>
@@ -534,11 +531,11 @@ Quarto 可以处理 `html` `RawBlock` 节点（即`{=html}`）中的 HTML 表格
 ::::
 
 
-## 禁用的 Quarto 表格处理功能
+## Disabling Quarto Table Processing
 
-Quarto 对 HTML 表格的处理可能会干扰用 R 和 Python（或其他支持的语言）表格包计算生成的 HTML。
+It's possible that Quarto's processing of HTML tables may interfere with the HTML produced computationally with table packages in R and Python (or other supported languages).
 
-你可以使用选项 `html-table-processing` 在文档级或项目级禁用 Quarto 的 HTML 表格处理功能：
+You can disable Quarto's HTML table processing at a document level or project level with the option `html-table-processing`:
 
 ```{.yaml}
 ---
@@ -548,7 +545,7 @@ format:
 ---
 ```
 
-该选项也可作为 Knitr 和 Jupyter 的代码单元选项，例如
+This option is also available as a code cell option for Knitr and Jupyter, e.g. 
 
 ````{markdown}
 ```{{r}}
@@ -558,19 +555,19 @@ format:
 ```
 ````
 
-要禁用 Quarto 对文档部分内容的 HTML 表格处理，请使用带有属性 `html-table-processing="none" ` 的 div：
+To disable Quarto's HTML table processing for parts of a document use a div with the attribute `html-table-processing="none"`:
 
 ````{.markdown}
 ::: {html-table-processing="none"}
 
-含有不希望处理的 HTML 表格的内容。
+Content with HTML tables you don't want processed.
 
 :::
 ````
 
-### 库作者
+### Library authors
 
-如果您是输出 HTML 表格的库的作者，您可以通过在 `<table>` 元素中添加属性 `data-quarto-disable-processing="true"` 来禁用 Quarto 对 HTML 表格的处理。例如
+If you are the author of a library that emits HTML tables you might like to disable Quarto's processing of HTML tables by adding the attribute `data-quarto-disable-processing="true"` to the `<table>` element. For example:
 
 ```html
 <table data-quarto-disable-processing="true">

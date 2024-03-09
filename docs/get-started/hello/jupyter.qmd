@@ -263,16 +263,16 @@ Additionally, you may want to install the [Quarto JupyterLab Extension](/docs/to
 
 ## 渲染
 
-首先，我们将在 Jupyter Lab 中打开一个笔记本 (`hello.ipynb`)，并将其渲染为几种格式。
-如果你想在自己的环境中逐步学习，请下载下面的笔记本。
+首先，我们将在 Jupyter Lab 中打开一个记事本 (`hello.ipynb`)，并将其渲染为几种格式。
+如果你想在自己的环境中逐步学习，请下载下面的记事本。
 
 ::: {.callout-note appearance="minimal"}
 <i class="bi bi-journal-code"></i> [Download hello.ipynb](_hello.ipynb){download="hello.ipynb"}
 :::
 
-然后，创建一个新的工作目录，将笔记本复制到该目录，并在终端中切换到该目录。
+然后，创建一个新的工作目录，将记事本复制到该目录，并在终端中切换到该目录。
 
-接下来，执行以下命令安装 JupyterLab 以及教程中使用的软件包（ `matplotlib` 和 `plotly` ），并打开教程笔记本：
+接下来，执行以下命令安装 JupyterLab 以及教程中使用的软件包（ `matplotlib` 和 `plotly` ），并打开教程记事本：
 
 +---------------+------------------------------------------------+
 | Platform      | Commands                                       |
@@ -337,7 +337,7 @@ quarto render hello.ipynb --to docx
 
 请注意，目标文件（本例中为 `hello.ipynb`）应始终是第一个命令行参数。
 
-使用 Quarto 渲染 Jupyter notebook时，笔记本的内容（代码、markdown 和输出）会被转换为纯 markdown，然后由 [Pandoc](http://pandoc.org/)处理，生成最终格式。
+使用 Quarto 渲染 Jupyter notebook时，记事本的内容（代码、markdown 和输出）会被转换为纯 markdown，然后由 [Pandoc](http://pandoc.org/)处理，生成最终格式。
 
 ![](images/ipynb-how-it-works.png){style="margin-left: 15px;" fig-align="left" width="516" fig-alt="Workflow diagram starting with a Jupyter notebook, then md, then pandoc, then PDF, MS Word, or HTML."}
 
@@ -373,7 +373,7 @@ quarto preview hello.ipynb
 
 这是用 Quarto 创作的基本工作流程。一旦熟练掌握，我们还建议你安装[Quarto JupyterLab Extension扩展](/docs/tools/jupyter-lab-extension.qmd "Quarto JupyterLab 扩展")，它提供了在 JupyterLab 中使用 Quarto 的其他工具。
 
-我们的笔记本中有几种不同类型的单元格，让我们对每种类型的单元格进行一下处理。
+我们的记事本中有几种不同类型的单元格，让我们对每种类型的单元格进行一下处理。
 
 ## YAML 选项
 
@@ -416,7 +416,7 @@ Markdown 单元格包含原始标记，将在渲染过程中传递给 Quarto。
 
 ![](images/jupyter-markdown.png){.border fig-alt="A Markdown cell with the title Polar Axis as a second level header and text that reads 'For a demonstration of a line plot on a polar axis, see @fig-polar.'"}
 
-尝试更改页眉并保存笔记本，预览时会更新新的页眉文本。
+尝试更改页眉并保存记事本，预览时会更新新的页眉文本。
 
 ## 代码块
 
@@ -447,7 +447,7 @@ plt.show()
 单元格选项是用 YAML 写成的，并使用特殊前缀的注释 (`#|`)。
 
 在本例中，单元格选项用于使图形可交叉引用。
-请尝试更改 `fig-cap` 和/或代码，运行单元格，然后保存笔记本，查看更新后的预览效果。
+请尝试更改 `fig-cap` 和/或代码，运行单元格，然后保存记事本，查看更新后的预览效果。
 
 你可以使用多种 [cell options](/docs/reference/cells/cells-jupyter.qmd "单元格选项") 来定制输出。
 我们将在下一个教程中详细介绍这些选项。

@@ -1,67 +1,67 @@
 ---
-title: "Figures"
+title: "图片" #"Figures"
 format: html
 aliases: 
   - figures-and-layout.html
   - figure-layout.html
 ---
 
-Quarto includes a number of features aimed at making it easier to work with figures and subfigures, as well as for laying out panels that contain multiple figures, tables, or other content.
+Quarto 包含许多功能，旨在使图片和附图的处理以及包含多个数字、表格或其他内容的面板的布局更加方便。
 
-## Figure Basics
+## 图片基础
 
-In Pandoc markdown, a figure is created whenever a captioned image appears by-itself in a paragraph. For example:
+在 Pandoc markdown 中，每当一个段落中出现一张带标题的图片时，就会创建一个数字。例如
 
 ``` markdown
 ![Elephant](elephant.png)
 ```
 
-This results in the following treatment for various output types:
+因此，各种输出类型的处理方法如下：
 
 | HTML                                                                              | PDF                                                                  | Word                                                                  |
 |---------------------------|-----------------------|-----------------------|
 | ![](images/html-figure.png){fig-alt="A line drawing of an elephant." width="340"} | ![](images/pdf-figure.png){fig-alt="A line drawing of an elephant."} | ![](images/word-figure.png){fig-alt="A line drawing of an elephant."} |
 
-Note that for LaTeX / PDF output figures are automatically numbered (you can arrange for figures to be numbered in other formats using [Cross References](cross-references.html)).
+请注意，对于 LaTeX / PDF 输出，数字会自动编号（您可以使用 [交叉引用](cross-references.html ”Cross References“)，为其他格式的数字安排编号）。
 
-### Figure Sizing
+### 图片尺寸
 
-By default figures are displayed using their actual size (subject to the width constraints imposed by the page they are rendered within). You can change the display size by adding the `width` and `height` attributes to the figure. For example:
+默认情况下，图片以其实际大小显示（受所渲染页面的宽度限制）。您可以通过为图片添加 `width` 和 `height` 属性来更改显示尺寸。例如：
 
 ``` markdown
 ![Elephant](elephant.png){width=300}
 ```
 
-Note that if only `width` is specified then `height` is calculated automatically. If you need to modify the default behaviour just add an explicit `height` attribute.
+请注意，如果只指定了 `width`，则会自动计算 `height`。如果需要修改默认行为，只需添加明确的 `height` 属性即可。
 
-The default units for `width` and `height` are pixels. You can also specify sizes using a percentage or a conventional measurement like inches or millimetres. For example:
+`width` 和 `height` 的默认单位是像素。您也可以使用百分比或英寸或毫米等传统度量单位指定尺寸。例如：
 
 ``` markdown
 ![Elephant](elephant.png){width=80%}
 ![Elephant](elephant.png){width=4in}
 ```
 
-### Linked Figures
+### 图片链接
 
-When rendering with Quarto, you can enclose a figure within a link and it will still be treated within output as a captioned figure. For example:
+在使用 Quarto 进行渲染时，您可以在链接中包含一个图片，但在输出时仍将其视为有标题的图片。例如：
 
 ``` markdown
 [![Elephant](elephant.png)](https://en.wikipedia.org/wiki/Elephant)
 ```
 
-### Figure Alignment
+### 图片对齐
 
-Figures are center aligned by default. Add the `fig-align` attribute to the image to use a different alignment. For example:
+图片默认居中对齐。要使用不同的对齐方式，请在图片中添加 `fig-align` 属性。例如：
 
 ``` markdown
 ![Elephant](elephant.png){fig-align="left"}
 ```
 
-Note that figure captions are left aligned to accommodate longer caption text (which looks odd when center aligned).
+请注意，图片标题左对齐是为了容纳较长的标题文字（居中对齐时看起来很奇怪）。
 
-### Alt Text
+### 文本选项
 
-You can add alternative text to a figure by adding the `fig-alt` attribute to the image. For example, the following Markdown...
+您可以通过为图片添加 `fig-alt` 属性来为图片添加替代文本。例如，下面的 Markdown...
 
 ``` markdown
 ![](elephant.png){fig-alt="A drawing of an elephant."}
@@ -73,7 +73,7 @@ You can add alternative text to a figure by adding the `fig-alt` attribute to th
 <img src="elephant.png" alt="A drawing of an elephant.">
 ```
 
-Note that the figure caption, title, and alt text can all be different. For example, the following code...
+请注意，图片标题、标题和 alt 文本都可以不同。例如，以下代码...
 
 ``` markdown
 ![Elephant](elephant.png "Title: An elephant"){fig-alt="A drawing of an elephant."}
@@ -85,15 +85,15 @@ Note that the figure caption, title, and alt text can all be different. For exam
 <img src="elephant.png" title="Title: An elephant" alt="A drawing of an elephant.">
 ```
 
-### Multiformat Figures
+### 多格式图片
 
-You can write markdown that provides a distinct image file format depending on the target output format. To do this simply leave-off the extension, for example:
+您可以根据目标输出格式编写提供不同图像文件格式的标记符。要做到这一点，只需省略扩展名即可，例如：
 
 ``` markdown
 ![](elephant)
 ```
 
-By default this will look for `elephant.png`, however if you are rendering to PDF it will look for `elephant.pdf`. You can customize this behavior using the `default-image-extension` option. For example:
+默认情况下，它会查找 `elephant.png`，但如果要渲染为 PDF，则会查找 `elephant.pdf`。你可以使用 `default-image-extension` 选项自定义这种行为。例如：
 
 ``` yaml
 format:
@@ -103,9 +103,9 @@ format:
     default-image-extension: tex
 ```
 
-### Lightbox Figures
+### 灯箱图
 
-In HTML output formats you can add  lightbox styling and behavior to images to allow a reader to click to see a larger version of the image. For example, the following image has lightbox treatment (click on the image to see lightbox in action):
+在 HTML 输出格式中，您可以为图片添加灯箱样式和行为，以便读者点击查看图片的放大版本。例如，下面的图片就采用了灯箱处理（点击图片查看灯箱效果）：
 
 ![An elephant](elephant.png){.lightbox width=50%}
 
@@ -115,28 +115,28 @@ Lightbox treatment can be added by adding the class `.lightbox` to an image:
 ![An elephant](elephant.png){.lightbox}
 ```
 
-For further details and other ways to enable and disable lightbox treatment see [Lightbox Figures](/docs/output-formats/html-lightbox-figures.qmd).
+有关详情以及启用和禁用灯箱处理的其它方法，请参阅 [灯箱图](/docs/output-formats/html-lightbox-figures.qmd ”Lightbox Figures“)。
 
-### Applying Multiple Parameters 
-To combine the above methods, separate arguments by a space, for example:
+### 多重参数 
+要组合上述方法，可以用空格分隔参数，例如
 ``` markdown
 ![](elephant.png){fig-alt="A drawing of an elephant." fig-align="left" width=20%}
 ```
 
-## Cross References
+## 交叉引用
 
-You can cross-reference figures by adding an ID with the `fig-` prefix to them, and then referencing the figure using the `@` prefix. For example:
+您可以通过添加带 `fig-` 前缀的 ID 来交叉引用图片，然后使用 `@` 前缀引用数字。例如
 
 ``` markdown
 ![An Elephant](elephant.png){#fig-elephant}
 
-This is illustrated well by @fig-elephant.
+@fig-elephant 很好地诠释了这一点。
 ```
 
-For figures produced by executable code cells, include a `label` with a `fig-` prefix to make them cross-referenceable. For example:
+对于由可执行代码单元生成的图片，请在 "标签 "中加入 "fig-"前缀，以便交叉引用。例如
 
 ```` markdown
-For a demonstration of a line plot, see @fig-line-plot.
+有关折线图的演示，请参阅 @fig-line-plot。
 
 ```{{python}}
 #| label: fig-line-plot
@@ -151,14 +151,14 @@ plt.show()
 ::: callout-important
 ## Label Prefix
 
-In order for a figure to be cross-referenceable, its label must start with the `fig-` prefix.
+为使图表可相互参照，其标签必须以 `fig-` 前缀开头。
 :::
 
-See the article on [Cross References](cross-references.qmd) for additional details.
+更多详情，请参阅 [交叉引用](cross-references.qmd ”Cross References“) 一文。
 
-## Subfigures
+## 附图
 
-If you have several figures that appear as a group, you can create a figure div to enclose them. For example:
+如果有几个图片作为一组出现，可以创建一个数字 div 将它们包围起来。例如
 
 ``` markdown
 ::: {#fig-elephants layout-ncol=2}
@@ -171,19 +171,19 @@ Famous Elephants
 :::
 ```
 
-Again, the last paragraph provides the main caption, and the individual figures carry the sub-captions. Here is what this looks like when rendered as HTML:
+同样，最后一段提供了主标题，各个图片则带有副标题。下面是以 HTML 格式呈现的内容：
 
 ![](images/elephant-subfigures.png){fig-alt="An artistic rendition of Surus, Hannibal's last war elephant, is on the left. Underneath this picture is the caption '(a) Surus.' On the right is a line drawing of Hanno, a famous elephant. Underneath this picture is the caption '(b) Hanno.' The words 'Figure 1: Famous elephants' are centered beneath both pictures."}
 
-Note that the empty lines between the figures (and between the last figure and the caption) are required (it's what indicates that these images belong to their own paragraphs rather than being multiple images within the same paragraph).
+请注意，图与图（以及最后一幅图与标题之间）之间的空行是必需的（这表示这些图片属于各自的段落，而不是同一段落中的多幅图片）。
 
-Note also that we also used a `layout-ncol` attribute to specify a two-column layout. The next section delves more into customizing figure layouts.
+还请注意，我们还使用了 `layout-ncol `属性来指定双栏布局。下一节将深入探讨自定义图片布局。
 
-## Figure Panels
+## 图片面板
 
-Above we demonstrate laying out two side-by-side figures with subcaptions and a main caption. You may or may not want the caption / sub-caption treatment, and you might also want to use multiple rows of figures. All of these variations are possible.
+上面我们演示了两个并排数字的布局，并配有副标题和主标题。您可能需要，也可能不需要标题/副标题处理，还可能需要使用多行图片。所有这些变化都是可能的。
 
-To layout two figures with their own standalone captions (and no main caption), just eliminate the `#fig` identifiers and main caption at the bottom:
+要布局两个带有各自独立标题（无主标题）的图片，只需去掉底部的`#fig`标识符和主标题即可：
 
 ``` markdown
 ::: {layout-ncol=2}
@@ -195,7 +195,7 @@ To layout two figures with their own standalone captions (and no main caption), 
 
 ![](images/elephant-figures-no-subcaption.png){fig-alt="An artistic rendition of Surus, Hannibal's last war elephant, is on the left. Underneath this picture is the caption 'Surus.' On the right is a line drawing of Hanno, a famous elephant. Underneath this picture is the caption 'Hanno.'"}
 
-You can also eliminate the captions entirely:
+也可以删除字幕：
 
 ``` markdown
 ::: {layout-ncol=2}
@@ -205,9 +205,9 @@ You can also eliminate the captions entirely:
 :::
 ```
 
-### Multiple Rows
+### 多行
 
-If you have more than 2 images, you might want to lay them out across multiple rows. You can do this using the `layout-nrow` attribute. For example:
+如果有 2 张以上的图片，您可能希望将它们分排在多行中。您可以使用 `layout-nrow` 属性来实现这一目的。例如
 
 ``` markdown
 ::: {layout-nrow=2}
@@ -223,11 +223,11 @@ If you have more than 2 images, you might want to lay them out across multiple r
 
 ![](images/elephant-rows.png){fig-alt="A 2x2 grid of pictures of elephants. There are labels underneath each of the pictures. Clockwise from the upper left, the labels say: Surus, Hanno, Lin Wang, and Abdul Abbas."}
 
-More complex figure arrangements (e.g. rows with varying column layouts) are possible. See the [Custom Layouts](#complex-layouts) section below for more details.
+还可以采用更复杂的图形排列方式（例如具有不同列布局的行）。详情请参阅下面的 [自定义布局](#complex-layouts "Custom Layouts")部分。
 
-## Figure Divs
+## 图片 Divs
 
-You can treat any markdown content you want as a figure by enclosing it in Pandoc div block with an identifier prefaced with `#fig-`. For example, here we create a figure that includes an embedded iframe:
+您可以将任何标记符内容作为图片处理，只需将其封装在 Pandoc div 块中，并以 `#fig-` 作为前缀的标识符即可。例如，在这里我们创建了一个包含嵌入式 iframe 的图片：
 
 ``` markdown
 ::: {#fig-elephant}
@@ -238,17 +238,16 @@ Elephant
 :::
 ```
 
-Note that the last paragraph in the div block is used as the figure caption.
+请注意，div 块中的最后一段被用作图片标题。
 
-## LaTeX Figures
+## LaTeX 图
+本节将介绍一些针对 LaTeX 输出的图形处理选项。
 
-This section describes some figure handling options that are specific to LaTeX output.
+需要注意的一点是，使用下面描述的 `fig-env` 和 `fig-pos` 选项会触发创建一个 LaTeX 浮动环境（通常是 `\begin{figure}`）。根据生成 LaTeX 的位置（例如，是否在另一个 `\begin{figure}` 中），这可能会生成无效的 LaTeX。为了安全起见，这些属性通常只能用于文档顶层的图像。
 
-One very important thing to note is that using the `fig-env` and `fig-pos` options described below will trigger the creation of a LaTeX floating environment (most often `\begin{figure}`). Depending upon where this LaTeX is generated it (e.g. is it within another `\begin{figure}`) this could generate invalid LaTeX. To be on the safe side these attributes should typically only be used for images at the very top level of your document.
+### 图片环境
 
-### Environments
-
-There are a number of LaTeX packages that provide custom figure environments. For example, in two-column formats, the `figure*` environment spans both columns of the document. You can explicitly pass the figure environment to use as the `fig-env` attribute of the image or the fenced div:
+有许多 LaTeX 软件包提供自定义的图片环境。例如，在双栏格式中，`figure*` 环境横跨文档的两栏。您可以明确地将要使用的图形环境作为图像或 div块 的 `fig-env` 属性传递：
 
 ``` markdown
 ![Elephant](surus.jpg){#fig-elephant fig-env="figure*"}
@@ -262,9 +261,8 @@ Another elephant.
 :::
 ```
 
-### Figure Position
-
-The default LaTeX `figure` is a floating environment, so the specific location it appears in your document will depend on its size and the nature of the other content around it. You can exercise some control over this behavior using the `fig-pos` option. The `fig-pos` option provides a placement specifier for the `figure` environment. For example, the `ht` in this LaTeX snippet is the `fig-pos`:
+### 图片位置
+默认的 LaTeX `figure` 是一个浮动环境，因此它在文档中出现的具体位置将取决于其大小和周围其他内容的性质。你可以使用 `fig-pos` 选项来控制这种行为。`fig-pos` 选项为 `figure` 环境提供了一个位置指定器。例如，本 LaTeX 代码段中的 `ht` 就是 `fig-pos` 选项：
 
 ``` latex
 \begin{figure}[ht]
@@ -272,7 +270,7 @@ The default LaTeX `figure` is a floating environment, so the specific location i
 \end{figure}
 ```
 
-You can specify `fig-pos` either at the document level, as a executable code block option, or within markdown. Here we do all three:
+您可以在文档级别、作为可执行代码块选项或在标记符中指定 `fig-pos` 。在这里，我们三者兼顾：
 
 ```` markdown
 ---
@@ -290,17 +288,17 @@ format:
 ![](figure.png){fig-pos='b'}
 ````
 
-See [this article](https://www.latex-project.org/publications/2014-FMi-TUB-tb111mitt-float-placement.pdf) for additional details on LaTeX figure positioning.
+有关 LaTeX 图形定位的更多详情，请参阅[本文](https://www.latex-project.org/publications/2014-FMi-TUB-tb111mitt-float-placement.pdf "this article")。
 
 ::: callout-note
-## Figures and Code Blocks
+## 图片和代码块
 
-If your figure was generated by an executable code block and the code was included in the output (`echo: true`), then `fig-pos` will be set to `H` by default (to try to keep it alongside the code that generated it). In all other cases, default LaTeX handing of figure position is used unless you specify an explicit `fig-pos`.
+如果您的图表是由可执行代码块生成的，并且代码包含在输出中（`echo: true`），那么`fig-pos`将默认设置为`H`（以尽量使其与生成它的代码保持一致）。在所有其他情况下，除非指定明确的 `fig-pos` ，否则将使用默认的 LaTeX 处理图的位置。
 :::
 
 ### PGF/Ti*k*Z Graphics
 
-If you are creating LaTeX output, Quarto will automatically emit the correct LaTeX for markdown images that reference `.tex` files containg [PGF/Ti*k*Z](https://en.wikipedia.org/wiki/PGF/TikZ) vector graphics. For example, the following markdown images:
+如果您正在创建 LaTeX 输出，Quarto 将自动为引用包含 [PGF/Ti*k*Z](https://en.wikipedia.org/wiki/PGF/TikZ) 矢量图形的 `.tex` 文件的标记符图像输出正确的 LaTeX。例如，以下标记符图像：
 
 ``` markdown
 ![](image1.tex)
@@ -316,11 +314,11 @@ Will be written to LaTeX as:
 \resizebox{0.8\linewidth}{!}{\input{image2.tex}}
 ```
 
-As shown above, `width` and `height` percentages are automatically converted to `\linewidth` scaled. Alternatively you can specify custom LaTeX for the `width` and `height` arguments of `\resizebox`.
+如上所示，`width` 和`height` 百分比会自动按比例转换为 `linewidth`。或者，你也可以为 `\resizebox` 的 `width` 和 `height` 参数指定自定义的 LaTeX。
 
-## Caption Locations
+## 标题位置
 
-By default, figure captions are positioned below figures. In HTML and PDF formats, you can modify this behavior using the `fig-cap-location` option. For example:
+默认情况下，图表标题位于图表下方。在 HTML 和 PDF 格式中，您可以使用 "fig-cap-location "选项修改这一行为。例如
 
 ``` yaml
 ---
@@ -328,23 +326,23 @@ fig-cap-location: top
 ---
 ```
 
-Note that this option is specified at the top level so that it can be shared by both PDF and HTML formats. If you are only targeting a single format you can place it alongside other `format` specific options.
+请注意，该选项是在顶层指定的，因此 PDF 和 HTML 格式都可以共享。如果只针对一种格式，可以将其与其他 "格式 "特定选项放在一起。
 
-Valid values for the caption location include:
+标题位置的有效值包括
 
 | Value    | Description                            |
 |----------|----------------------------------------|
-| `top`    | Position the caption above the figure. |
-| `bottom` | Position the caption below the figure. |
-| `margin` | Position the caption in the margin.    |
+| `top`    | 标题置于图片上方。                       |
+| `bottom` | 标题置于图片上方。                       |
+| `margin` | 标题置于页边空白处.                      |
 
-See the article on [Article Layout](article-layout.qmd#margin-captions) for additional details on placing captions in the margin.
+请参阅[文章布局]（article-layout.qmd#margin-captions "Article Layout"）一文，了解在页边空白处放置标题的更多详情。
 
-## Custom Layouts {#complex-layouts}
+## 自定义布局 {#complex-layouts}
 
-The examples above used the `layout-ncol` or `layout-nrow` attributes to create straightforward layouts where all columns are of equal sizes. The `layout` attribute enables the creation of much more complex layouts.
+上述示例使用 `layout-ncol` 或 `layout-nrow` 属性创建了所有列大小相同的直接布局。通过 `layout` 属性，可以创建更为复杂的布局。
 
-For example, this defines a layout with two equally sized figures in the first row, then another image that spans the entire second row:
+例如，这定义了一个布局，在第一行有两个大小相等的图片，然后另一个图片横跨整个第二行：
 
 ``` markdown
 ::: {layout="[[1,1], [1]]"}
@@ -358,9 +356,9 @@ For example, this defines a layout with two equally sized figures in the first r
 
 ![](images/layout-attrib.png){fig-alt="Three elephant pictures arranged such that two pictures are side-by-side in the first row, and the third picture is underneath both of these. The picture on the left in the first row is captioned 'Surus' and the picture on the right is captioned 'Hanno'. The picture underneath these two is captioned 'Lin Wang' and is as as wide and tall as the other two put together."}
 
-The `layout` attribute is a 2-dimensional array where the first dimension defines rows and the second columns. In this case `"layout="[[1,1], [1]]"` translates to: create two rows, the first of which has two columns of equal size and the second of which has a single column.
+`layout` 属性是一个二维数组，第一维定义行，第二维定义列。在本例中，`"layout="[[1,1], [1]]"`表示：创建两行，其中第一行有两列大小相等的行，第二行只有一列。
 
-Note that the numbers in a row are arbitrary and don't need to add up to a particular total. You can therefore use whatever scheme is most natural. For example, here we define columns that occupy varying percentage widths of the row:
+请注意，一行中的数字是任意的，不需要加起来就是一个特定的总数。因此，您可以使用任何最自然的方案。例如，在这里我们定义了占行宽度百分比不同的列：
 
 ``` markdown
 ::: {layout="[[70,30], [100]]"}
@@ -372,7 +370,7 @@ Note that the numbers in a row are arbitrary and don't need to add up to a parti
 :::
 ```
 
-You can also use negative values to create space between elements. For example:
+还可以使用负值在元素之间创建空间。例如
 
 ``` markdown
 ::: {layout="[[40,-20,40], [100]]"}
@@ -386,9 +384,9 @@ You can also use negative values to create space between elements. For example:
 
 ![](images/layout-attrib-negative.png){fig-alt="Three elephant pictures arranged such that two pictures are side-by-side in the first row, and the third picture is underneath both of these. The picture on the left in the first row is captioned 'Surus' and the picture on the right is captioned 'Hanno'. The two pictures are separated by some whitespace. The picture underneath these two is captioned 'Lin Wang' and is wider and taller than the other two put together."}
 
-### Vertical Alignment
+### 垂直对齐
 
-If you have a layout with a row of images of differing heights, you can control their vertical alignment using the `layout-valign` attribute. A simple example:
+如果布局中有一排高度不同的图片，可以使用 `layout-valign` 属性控制它们的垂直对齐方式。举个简单的例子
 
 ``` markdown
 ::: {layout="[15,-2,10]" layout-valign="bottom"}
@@ -400,20 +398,20 @@ If you have a layout with a row of images of differing heights, you can control 
 
 ![](images/valign.png){fig-alt="Two pictures of elephants side by side. The picture on the left has the label 'Figure 1: Surus' underneath it. The picture on the right has the label 'Figure 2: Lin Wang' underneath it. The figure on the left is more than twice the width and height of the figure on the right."}
 
-Note that vertical alignment isn't limited to images, you can also vertically align any other elements that are included in a panel.
+请注意，垂直对齐不仅限于图像，您还可以垂直对齐面板中的任何其他元素。
 
-## Computations
+## 计算方法
 
-Figures produced by executable code blocks are automatically included in your document. 
-To set the ID, caption and link, use the chunk options `label`, `fig-cap` and `fig-link` respectively. 
-Other attributes, e.g. `fig-align` and `fig-alt`, can be set using the chunk option of the same name.
+可执行代码块生成的图片会自动包含在文档中。
+要设置 ID、标题和链接，请分别使用块选项 `label`、`fig-cap` 和 `fig-link`。
+其他属性，例如 "fig-align "和 "fig-alt"，可以使用同名的 chunk 选项来设置。
 
-You can control the default size for computational figures using the `fig-width` and `fig-height` options in the document header.  
-Read more about these options in [Execution Options: Figure Options](https://quarto.org/docs/computations/execution-options.html#figure-options).
+你可以使用文档标题中的 "fig-width "和 "fig-height "选项来控制计算数字的默认大小。 
+有关这些选项的更多信息，请参阅 [执行选项：图表选项](https://quarto.org/docs/computations/execution-options.html#figure-options "Execution Options: Figure Options")。
 
-### Layout 
+### 布局 
 
-Note that figure layout attributes also work for figures produced by executable code blocks. Here are examples for both Jupyter and Knitr:
+请注意，图片布局属性也适用于可执行代码块生成的图表。以下是 Jupyter 和 Knitr 的示例：
 
 ::: panel-tabset
 #### Jupyter
@@ -449,11 +447,11 @@ plot(pressure)
 ![](images/knitr-figure-layout.png){fig-alt="Two scatter plots arranged side-by-side."}
 :::
 
-Note that in these examples we also use the `fig-cap` option to apply a caption to each of the generated figures.
+请注意，在这些示例中，我们还使用了 `fig-cap` 选项，为生成的每个图表添加标题。
 
-### Subcaptions
+### 副标题
 
-You can create subcaptions for computational output by combining the `fig-cap` and `fig-subcap` options. When applying captions to computational output you can optionally include a `label` with a `fig-` prefix---if you do this then the figure will be numbered and [cross-referenceable](cross-references.qmd).
+结合使用 `fig-cap` 和 `fig-subcap` 选项，你可以为计算输出创建副标题。在为计算输出应用标题时，你可以选择包含一个以 `fig-` 为前缀的 `label` --如果你这样做了，图表将被编号并可[交叉引用](cross-references.qmd "cross-referenceable")。
 
 ::: panel-tabset
 #### Jupyter
@@ -493,9 +491,9 @@ plot(pressure)
 ![](images/knitr-figure-layout-caption.png){fig-alt="Two scatter plots with captions arranged side-by-side."}
 :::
 
-### Custom Layout
+### 自定义布局
 
-The `layout` works the same way for figures produced by Knitr or Jupyter. For example, here's an Rmd code chunk that produces 3 plots and defines a custom layout for them:
+对于由 Knitr 或 Jupyter 生成的图形，"布局 "的作用与此相同。例如，下面的 Rmd 代码块生成了 3 幅图，并为它们定义了自定义布局：
 
 ```{{r}}
 #| layout: [[45,-10, 45], [100]]
@@ -507,9 +505,9 @@ plot(mtcars)
 
 ![](images/knitr-layout-complex.png){.preview-image fig-alt="Two plots arranged side-by-side with a large plot underneath it. The top two plots are scatter plots visualizing the `cars` and `pressure` datasets. These two plots are separated by some additional white space. The plot on the bottom visualizes the `mtcars` dataset and is wider and taller than the other two plots combined. This plot is an 11 by 11 grid plotting each of the 11 variables in the `mtcars` dataset against each other as a scatterplot. Instead of scatter plots in the diagonal starting in the upper left and going to the lower right are text labels for each of the variable names. These are: 'mpg', 'cyl', 'disp', 'hp', 'drat', 'wt', 'qsec', 'vs', 'am', 'gear', and 'carb'."}
 
-## Block Layout
+## 区块布局
 
-While the examples above illustrate laying out figures, it's important to note that layout attributes can be used to layout any sort of block content. For example, here we layout 2 lists side-by-side:
+上面的例子说明了图片的布局，但需要注意的是，布局属性可用于布局任何类型的块内容。例如，我们在这里并排布局了两个列表：
 
 ``` markdown
 ::: {layout-ncol=2}
@@ -539,7 +537,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur gravida eu er
 :::
 ```
 
-For more complicated content use divs (`:::`) to divide your content into blocks for the layout. For example, here's how you could lay out a code cell along with some text, next to a figure:
+对于更复杂的内容，可以使用 divs (`:::`) 将内容划分成块来进行布局。例如，以下是如何将代码单元格和一些文本布局在图片旁边：
 
 ````markdown
 :::: {layout="[ 40, 60 ]"}
@@ -549,7 +547,7 @@ For more complicated content use divs (`:::`) to divide your content into blocks
 # Some code
 ```
 
-Some text that should be laid out below the code
+应在代码下方列出一些文字
 :::
 
 ::: {#second-column}
@@ -559,5 +557,5 @@ Some text that should be laid out below the code
 ::::
 ````
 
-The id attributes (`#first-column` and `#second-column`) are optional, 
-but aid readability.
+id 属性（`#first-column` 和 `#second-column`）是可选的、 
+但有助于阅读。

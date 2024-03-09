@@ -6,7 +6,7 @@
 ## 输出格式
 
 
-Quarto 支持将笔记本渲染为数十种不同的[output formats输出格式]（/docs/output-formats/all-formats.qmd "输出格式"）。默认情况下使用 `html` 格式，但你也可以在文档选项中指定另一种（或多种）格式。
+Quarto 支持将记事本渲染为数十种不同的[output formats输出格式]（/docs/output-formats/all-formats.qmd "输出格式"）。默认情况下使用 `html` 格式，但你也可以在文档选项中指定另一种（或多种）格式。
 
 ### 格式选择
 
