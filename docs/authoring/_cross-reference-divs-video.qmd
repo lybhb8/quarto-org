@@ -1,4 +1,4 @@
-To add a cross-reference to a video, use the [cross-reference div syntax](cross-references-divs.qmd) and treat it like a figure. For example, 
+要在视频中添加交叉引用，使用 [cross-reference div 语法](cross-references-divs.qmd)，并将其视为数字。例如
 
 ````{.markdown shortcodes=false}
 ::: {#fig-cern}
@@ -12,8 +12,8 @@ The video "CERN: The Journey of Discovery"
 In @fig-cern...
 ````
 
-Which renders as:
+渲染为：
 
 ![](images/crossrefs-video.png){fig-alt="Screenshot that shows a YouTube video followed by the caption, 'Figure 1: The video CERN: The Journey of Discovery'. Below the caption is the text 'In Figure 1 ...'."}
 
-If you would rather give videos a label and counter distinct from figures, consider defining [Custom Cross-Reference Types](cross-references-custom.qmd).
+如果您希望给视频加上不同于数字的标签和计数器，可以考虑定义[自定义交叉引用类型](cross-references-custom.qmd "Custom Cross-Reference Types")。

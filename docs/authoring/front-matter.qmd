@@ -1,12 +1,12 @@
 ---
-title: Front Matter
+title: "封面" #Front Matter
 ---
 
-## Overview
+## 概述
 
-Scholarly articles require much more detail in their front matter than simply a title and an author. Quarto provides a rich set of YAML metadata keys to describe these details. On this page, you'll learn how to specify authors and their affiliations, article summaries like an abstract and keywords, and how to include information on copyright, licensing and funding.
+学术文章的封面需要更多细节，而不仅仅是标题和作者。Quarto 提供了一套丰富的 YAML 元数据键来描述这些细节。在本页中，您将了解如何指定作者及其所属单位、文章摘要（如摘要和关键词），以及如何包含版权、许可和资金信息。
 
-This YAML header includes examples of all the top level keys discussed on this page:
+此 YAML 标头包含本页讨论的所有顶级键的示例：
 
 ``` {.yaml filename="document.qmd"}
 ---
@@ -41,7 +41,7 @@ funding: "The author received no specific funding for this work."
 ---
 ```
 
-The documents produced by the above metadata for the HTML and JATS formats are shown below.
+通过上述元数据生成的 HTML 和 JATS 格式文件如下所示。
 
 ::: panel-tabset
 ## JATS
@@ -53,11 +53,11 @@ The documents produced by the above metadata for the HTML and JATS formats are s
 ![](images/scholarly-front-matter-html.png){fig-alt="Screenshot of the HTML preview from the document with the above metadata."}
 :::
 
-Not all of the metadata keys are used in every format. However, the tags described on this page will generally be supported in [journal article formats](/docs/extensions/listing-journals.html). Currently the JATS format makes use of the broadest set of metadata tags, so if you want to check how things render we recommend previewing with `format: jats`.
+并非每种格式都使用所有元数据键。不过，[期刊文章格式](/docs/extensions/listing-journals.html "journal article formats")一般都支持本页描述的标记。目前，JATS 格式使用了最广泛的元数据标记集，因此如果您想查看渲染效果，建议使用 `format: jats` 进行预览。
 
-## Authors & Affiliations {#authors-and-affiliations}
+## 作者和所属 {#authors-and-affiliations}
 
-The simplest way to describe an author is with a string directly to the `author` key:
+描述作者的最简单方法是直接在 `author` 键上输入一个字符串：
 
 ``` yaml
 ---
@@ -65,7 +65,7 @@ author: Norah Jones
 ---
 ```
 
-However, the `author` key has a number of sub-keys that provide the additional detail required for scholarly articles. For instance, you can add an author's affiliation by using the `affiliation` key. In the simplest form, an author along with their affiliation can be described by passing a string to each of `name` and `affiliation`:
+不过，`作者` 键有许多子键，可提供学术文章所需的额外细节。例如，您可以使用 `affiliation ` 键添加作者的所属单位。在最简单的形式中，可以通过向`name`和`affiliation`各传递一个字符串来描述作者及其所属单位：
 
 ``` yaml
 ---
@@ -75,10 +75,9 @@ author:
 ---
 ```
 
-You can read about the other keys you can provide to `author` and `affiliation` in the corresponding [Author](#author) and [Affiliation](#affiliation) sections below.
+您可以在下面相应的 [Author](#author) 和 [Affiliation](#affiliation) 章节中阅读有关您可以为 `author` 和 `affiliation` 提供的其他键的信息。
 
-Both `author` and `affiliation` can take multiple elements to describe multiple authors, or authors with multiple affiliations. As an example, here is the YAML to describe a document with two authors, the first of which has two affiliations:
-
+Both `author` and `affiliation`都可以包含多个元素，以描述多个作者或具有多个所属关系的作者。例如，下面的 YAML 描述了一个有两个作者的文档，其中第一个作者有两个所属单位：
 ``` yaml
 ---
 author:
@@ -91,17 +90,17 @@ author:
 ---
 ```
 
-Notice that each element of `author` and `affiliation` is prefaced by a `-` and indented appropriately. You can read more about shortcuts to avoid repetition when authors share affiliations in the [Multiple Authors](#multiple-authors) section below.
+请注意，`author` and `affiliation`的每个元素前都有一个"-"，并适当缩进。您可以在下面的[Multiple Authors](#multiple-authors)部分阅读更多有关作者共享隶属关系时避免重复的快捷方式。
 
 ::: callout-note
 ## Singular or Plural?
 
-Both of these keys can be specified using a singular (`author` and `affiliation`) or plural (`authors` and `affiliations`) form.
+这两个键都可以使用单数（`author` and `affiliation`）或复数（`authors` and `affiliations`）形式指定。
 :::
 
 ### Author {#author}
 
-Beyond `name` and `affiliation`, `author` can also take any of the following:
+除了 `name` and `affiliation`外，`author`还可以使用以下任何一项：
 
 +----------------------+----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | `email`\             | string         | Contact details for the author. Converted to hyperlinks in many formats.                                                                                            |
@@ -128,9 +127,9 @@ Beyond `name` and `affiliation`, `author` can also take any of the following:
 
 : Available keys to `author`
 
-An `affiliations-url` key can also be provided to `author`, and will be propagated to the `url` key of `affiliation`.
+也可以向 `author`"提供 `affiliations-url `键，该键将传播到 `affiliation `的 `url `键。
 
-As an example, a more complete description of an author might look like:
+举例来说，对作者更完整的描述可能如下：
 
 ``` yaml
 ---
@@ -143,10 +142,10 @@ author:
 ---
 ```
 
-#### Name Components
+#### 名称组件 | Name Components
 
-Quarto will automatically parse the `name` key into its components. 
-However, if this parsing is incorrect you can specify the components, `given`, `family`, `dropping-particle`, and `non-dropping-particle` directly, for example:
+Quarto 会自动将 `name` 键解析为其组件。
+但是，如果解析不正确，您可以直接指定`given`、`family`、`dropping-particle`和`non-dropping-particle`等组件：
 
 ``` yaml
 ---
@@ -162,9 +161,9 @@ author:
 ---
 ```
 
-#### Degrees 
+#### 学位 
 
-You may specify degrees or academic titles using the `degrees` field of authors:
+可以使用作者的 `degrees` 字段指定学位或学术头衔：
 
 ```yaml
 author:
@@ -176,7 +175,7 @@ author:
 
 #### Author Roles {#roles}
 
-Use `roles` to describe an author's contributions to the work. You can use free form text as a string:
+使用 `roles` 来描述作者对作品的贡献。您可以使用自由格式文本作为字符串：
 
 ``` yaml
 author:
@@ -184,8 +183,8 @@ author:
     roles: "Conceived and designed the study, analysed the results and wrote the manuscript."
 ```
 
-Or alternatively, make use of the [Contributor Roles Taxonomy (CRediT)](https://credit.niso.org). 
-To use CRediT roles provide one of the [14 contributor](#credit-roles) roles, e.g.:
+或者使用[贡献者角色分类标准（CRediT）](https://credit.niso.org "Contributor Roles Taxonomy (CRediT)")。
+要使用 CRediT 角色，请提供 [14 个贡献者](#credit-roles "14 contributor") 角色之一，例如：
 
 ``` yaml
 author:
@@ -193,7 +192,7 @@ author:
     roles: conceptualization
 ```
 
-Or, an array of roles:
+或者，一系列角色：
 
 ``` yaml
 author:
@@ -201,7 +200,7 @@ author:
     roles: [investigation, data curation]
 ```
 
-Or specify the role along with a degree of contribution:
+或具体说明角色和贡献程度：
 ```yaml
 author:
   - name: Josiah Carberry
@@ -212,7 +211,7 @@ author:
 
 ::: {.callout-tip collapse="true" #credit-roles}
 
-## Expand to see the 14 Contributor Roles
+## 展开查看 14 个贡献者角色
 
 | Value                                                                                        | Alias |
 |----------------------------------------------------|----------|
@@ -240,7 +239,7 @@ author:
 
 ### Affiliation {#affiliation}
 
-Like `author`, you can provide a string is directly to `affiliation`, as in:
+与 `author`一样，您也可以直接为 `affiliation` 提供一个字符串，如
 
 ``` yaml
 ---
@@ -250,7 +249,7 @@ author:
 ---
 ```
 
-Alternatively, you can provide the name explicitly to the `name` key, like:
+或者，您也可以向 `name` 键明确提供名称，如
 
 ``` yaml
 ---
@@ -261,7 +260,7 @@ author:
 ---
 ```
 
-In addition to `name`, `affiliation` can take any of the following:
+除了 `name` 以外，`affiliation` 还可以包含以下任何内容：
 
 +-------------------------+-----------+----------------------------------------------------------------------------------------------------+
 | `department`            | String    |                                                                                                    |
@@ -285,7 +284,7 @@ In addition to `name`, `affiliation` can take any of the following:
 
 : Available keys to `affiliation`
 
-For example, a more complete `affiliation` for an author might look like:
+例如，一个作者更完整的 `affiliation`(隶属关系) 可能是这样的：
 
 ``` yaml
 ---
@@ -309,9 +308,9 @@ author:
 
 ### Multiple Authors {#multiple-authors}
 
-When there are multiple authors of a document, it is common that they share affiliations. To avoid repeating an affiliation's details, you can describe an affiliation once, assign it an id, and then refer to the id in other fields.
+当一篇文档有多个作者时，他们通常会共享隶属关系。为了避免重复隶属关系的细节，可以先描述一次隶属关系，为其分配一个 id，然后在其他字段中引用该 id。
 
-One approach is to assign an `id` to each affiliation where they are described within an author. For example, here we assign the author's affiliations the ids `cmu` and `chicago`:
+一种方法是为作者中描述的每个从属关系分配一个 `id`。例如，在这里我们为作者的从属关系分配了 `cmu` 和 `ichicago` id：
 
 ``` yaml
 ---
@@ -325,7 +324,7 @@ author:
 ---
 ```
 
-Then, when adding additional authors, you can refer to affiliations using `ref:`:
+然后，在添加其他作者时，您可以使用 `ref:` 引用隶属关系：
 
 ``` yaml
 ---
@@ -342,7 +341,7 @@ author:
 ---
 ```
 
-An alternative approach is to define affiliations at the top level, as opposed to within an `author`:
+另一种方法是在顶层定义从属关系，而不是在 `author`中定义从属关系：
 
 ``` yaml
 ---
@@ -362,13 +361,13 @@ affiliations:
 ---
 ```
 
-This approach may be more convenient in cases where you also want to refer to affiliations in fields other than `author`, e.g. `funding`.
+如果您还想在 `author`以外的字段中引用隶属关系，例如 `funding`(资助)，这种方法可能更方便。
 
-## Abstract
+## 摘要 | Abstract
 
-You can add an abstract with the `abstract` key. Since abstracts are generally longer than a line, and may contain markdown, you'll need to provide it using YAML's literal block style. That is, place a `|` on the same line as `abstract:` and indent your raw abstract text by two spaces.
+您可以使用 `abstract` 键添加摘要。由于摘要通常长于一行，而且可能包含标记符，因此需要使用 YAML 的字面块样式来提供摘要。也就是说，在 `abstract:` 的同一行放置一个 `|`，并将原始摘要文本缩进两个空格。
 
-For example:
+例如:
 
 ``` yaml
 ---
@@ -378,9 +377,9 @@ abstract: |
 ---
 ```
 
-## Keywords
+## 关键字 | Keywords
 
-Keywords can be added with `keywords`:
+可使用 `keywords` 添加关键词：
 
 ``` yaml
 ---
@@ -391,17 +390,16 @@ keywords:
 ---
 ```
 
-## Copyright
+## 版权 | Copyright
 
-You can specify copyright in two ways. Either directly as a string to `copyright`:
-
+您可以通过两种方式指定版权。要么直接以字符串形式指定为 `copyright`：
 ``` yaml
 ---
 copyright: "Copyright Acme, Inc. 2021. All Rights Reserved"
 ---
 ```
 
-Which is equivalent to providing the same string to the `statement` sub-key:
+这相当于为 `statement` 子键提供相同的字符串：
 
 ``` yaml
 ---
@@ -410,7 +408,7 @@ copyright:
 ---
 ```
 
-Or, alternatively, by specifying a `holder` and `year`:
+或者，也可以指定 `holder` and `year`:
 
 ``` yaml
 ---
@@ -420,11 +418,11 @@ copyright:
 ---
 ```
 
-When specifying `year` you can also use a range (`year: 2021 - 2023`) or an array (`year: [2021, 2022, 2023]`).
+指定 `year` 时，也可以使用范围（`year: 2021 - 2023`）或数组（`year: [2021, 2022, 2023]`）。
 
-## License
+## 许可证 | License
 
-To specify a license, you can pass a string directly to `license`:
+要指定许可证，可以直接向 `license` 传递一个字符串：
 
 ``` yaml
 ---
@@ -432,7 +430,7 @@ license: "This work is dedicated to the Public Domain"
 ---
 ```
 
-This is equivalent to specifying the `text` sub-key directly:
+这相当于直接指定 `text` 子键：
 
 ``` yaml
 ---
@@ -441,25 +439,25 @@ license:
 ---
 ```
 
-You can add additional details by providing the `type` and `url` sub-keys:
+您可以通过提供 `type` 和 `url` 子键来添加其他详细信息：
 
 ``` yaml
 ---
 license:
   text: > 
-    Permission is granted to copy, distribute and/or 
-    modify this document under the terms of the GNU Free 
-    Documentation License, Version 1.3 or any later version 
-    published by the Free Software Foundation; with no 
-    Invariant Sections, no Front-Cover Texts, and no 
-    Back-Cover Texts. A copy of the license is included in 
-    the section entitled "GNU Free Documentation License
+    允许复制、分发和/或 
+    或修改本文档。
+    文档许可证》1.3 版或自由软件基金会发布的任何后续版本的条款，允许复制、分发和/或修改本文档。
+    自由软件基金会发布的 GNU 自由文档许可证第 1.3 版或任何更新版本的条款，复制和/或修改本文档。
+    无不变章节、无封面文本、无封底文本。
+    封底文本。许可证副本包含在 
+    章节中包含了许可证的副本。
   type: open-access
   url: https://www.gnu.org/licenses/fdl-1.3-standalone.html
 ---
 ```
 
-If you are choosing a Creative Commons license you may simply pass an abbreviation:
+如果选择 "知识共享 "许可协议，则只需通过缩写即可：
 
 ``` yaml
 ---
@@ -467,39 +465,39 @@ license: "CC BY"
 ---
 ```
 
-The available abbreviations are covered in the [Creative Commons](#cc) section below.
+下文[知识共享](#cc)部分介绍了可用缩写。
 
 ### Creative Commons {#cc}
 
-The Creative Commons copyright licenses and tools forge a balance inside the traditional "all rights reserved" setting that copyright law creates. These tools give everyone from individual creators to large companies and institutions a simple, standardized way to grant copyright permissions to their creative work.
+知识共享(Creative Commons)版权许可协议和工具在版权法规定的 "all rights reserved"（保留所有权利 ）的传统框架内建立了一种平衡。从个人创作者到大型公司和机构，都可以通过这些工具以简单、标准化的方式为自己的创意作品授予版权许可。
 
-Here are some of the common forms of Creative Commons content license:
+以下是一些常见的知识共享内容许可形式：
 
 +---------------+-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | License       | Name                                    | Description                                                                                                                                                                                                                                                                                                                                                                           |
 +===============+=========================================+=======================================================================================================================================================================================================================================================================================================================================================================================+
-| `CC BY`       | Attribution                             | This license lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of licenses offered.                                                                                                                                                                             |
+| `CC BY`       | Attribution                             | 该许可证允许他人对你的作品进行发布、混音、调整和改编，甚至是商业性的改编，只要他们将你的原创归功于你。这是最宽松的许可证。                                                                                                                                                                                                       
 +---------------+-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `CC BY-SA`    | Attribution-ShareAlike                  | This license lets others remix, tweak, and build upon your work even for commercial purposes, as long as they credit you and license their new creations under the identical terms. This license is often compared to "copyleft" free and open source software licenses. All new works based on yours will carry the same license, so any derivatives will also allow commercial use. |
+| `CC BY-SA`    | Attribution-ShareAlike                  | 这种许可证允许他人对你的作品进行混音、调整和改编，甚至用于商业目的，只要他们注明你的名字，并以相同的条款许可他们的新创作。这种许可通常与 "copyleft "自由和开源软件许可相提并论。所有以你的作品为基础的新作品都将使用相同的许可，因此任何衍生作品也允许用于商业用途。 
 +---------------+-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `CC BY-ND`    | Attribution-NoDerivs                    | This license allows for redistribution, commercial and non-commercial, as long as it is passed along unchanged and in whole, with credit to you.                                                                                                                                                                                                                                      |
+| `CC BY-ND`    | Attribution-NoDerivs                    | 本许可证允许商业和非商业性的再分发，只要不作任何改动和完整地传递，并注明出处即可。                                                                                                                                                                                                                                      
 +---------------+-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `CC BY-NC`    | Attribution-NonCommercial               | This license lets others remix, tweak, and build upon your work non-commercially, and although their new works must also acknowledge you and be non-commercial, they don't have to license their derivative works on the same terms.                                                                                                                                                  |
+| `CC BY-NC`    | Attribution-NonCommercial               | 这种许可允许他人在你的作品基础上进行非商业性的混音、调整和构建，尽管他们的新作品也必须承认你的存在，并且是非商业性的，但他们不必以同样的条款许可他们的衍生作品。                                                                                                                                                  
 +---------------+-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `CC BY-NC-SA` | Attribution-NonCommercial-ShareAlike    | This license lets others remix, adapt, and build upon your work non-commercially, as long as they credit you and license their new creations under the identical terms.                                                                                                                                                                                                             |
+| `CC BY-NC-SA` | Attribution-NonCommercial-ShareAlike    | 该许可允许他人对您的作品进行非商业性的混音、改编和构建，只要他们注明您的名字，并根据相同的条款许可他们的新创作。                                                                                                                                                                                                             
 +---------------+-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `CC BY-NC-ND` | Attribution-NonCommercial-NoDerivs      | This license is the most restrictive of the six main licenses, only allowing others to download your works and share them with others as long as they credit you, but they can't change them in any way or use them commercially.                                                                                                                                                     |
+| `CC BY-NC-ND` | Attribution-NonCommercial-NoDerivs      | 该许可证是六种主要许可证中限制最严格的一种，只允许他人下载你的作品并与他人分享，只要他们注明你的名字，但他们不能以任何方式更改作品或将其用于商业用途。                                                                                                                                    
 +---------------+-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-If you specify a Creative Commons license for your content, Quarto will automatically include the relevant link to the appropriate license.
+如果您为内容指定了知识共享许可协议，Quarto 将自动包含指向相应许可协议的相关链接。
 
-## Citation
+## 引文 | Citation
 
-The `citation` key allows you to specify additional metadata that is used to create a citation for the document. You can read more about this in [Creating Citeable Articles](/docs/authoring/create-citeable-articles.qmd).
+引用 "键允许您指定用于为文档创建引用的附加元数据。你可以在[创建可引用文章](/docs/authoring/create-citeable-articles.qmd "Creating Citeable Articles")中阅读更多相关信息。
 
-## Funding
+## 资助 | Funding
 
-The `funding` key can directly take a string:
+`funding` 键可以直接使用字符串：
 
 ``` yaml
 ---
@@ -507,7 +505,7 @@ funding: "The author(s) received no specific funding for this work."
 ---
 ```
 
-This is equivalent to providing the `statement` sub-key directly:
+这相当于直接提供 `statement` 子键：
 
 ``` yaml
 ---
@@ -516,7 +514,7 @@ funding:
 ---
 ```
 
-The `funding` key can also take the sub-keys `source`, `recipient` and `investigator`. Both `recipient` and `investigator` can take a string, or a reference to an author or affiliation using `ref:`. For example, this front matter adds funding where the investigator is specified using an author id:
+funding "键还可以包含子键 `source`, `recipient` and `investigator`.。`recipient` and `investigator` 都可以是一个字符串，也可以使用 `ref:` 引用作者或所属单位。例如，该前置事项添加了使用作者 ID 指定研究者的资金：
 
 ``` yaml
 ---

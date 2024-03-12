@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Quarto</title>
+<link>https://quarto.org/docs/blog/index zh.html</link>
+<atom:link href="https://quarto.org/docs/blog/index zh.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<image>
+<url>https://quarto.org/quarto-blog-v2.png</url>
+<title>Quarto</title>
+<link>https://quarto.org/docs/blog/index zh.html</link>
+</image>
+<generator>quarto-1.4.551</generator>
+<lastBuildDate>Tue, 23 Jan 2024 16:00:00 GMT</lastBuildDate>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2024-01-24-1.4-release/index.html}</title>
+  <dc:creator>Charlotte Wickham</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2024-01-24-1.4-release/</link>
+  <description>{B4F502887207:/docs/blog/posts/2024-01-24-1.4-release/index.html}</description>
+  <category>Quarto 1.4</category>
+  <category>Releases</category>
+  <guid>https://quarto.org/docs/blog/posts/2024-01-24-1.4-release/</guid>
+  <pubDate>Tue, 23 Jan 2024 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2024-01-24-1.4-release/images/thumbnail.png" medium="image" type="image/png" height="76" width="144"/>
+</item>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2023-12-07-quarto-dashboards-demo/index.html}</title>
+  <dc:creator>Andrew Holz</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2023-12-07-quarto-dashboards-demo/</link>
+  <description>{B4F502887207:/docs/blog/posts/2023-12-07-quarto-dashboards-demo/index.html}</description>
+  <category>Demo</category>
+  <category>Quarto 1.4</category>
+  <guid>https://quarto.org/docs/blog/posts/2023-12-07-quarto-dashboards-demo/</guid>
+  <pubDate>Wed, 06 Dec 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2023-12-07-quarto-dashboards-demo/quarto-dashboards-video-cover.png" medium="image" type="image/png" height="80" width="144"/>
+</item>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2023-12-05-asa-traveling-courses/index.html}</title>
+  <dc:creator>Mine Çetinkaya-Rundel</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2023-12-05-asa-traveling-courses/</link>
+  <description>{B4F502887207:/docs/blog/posts/2023-12-05-asa-traveling-courses/index.html}</description>
+  <category>Learn</category>
+  <guid>https://quarto.org/docs/blog/posts/2023-12-05-asa-traveling-courses/</guid>
+  <pubDate>Mon, 04 Dec 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2023-12-05-asa-traveling-courses/asa-traveling-courses.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2023-05-22-quarto-for-academics/index.html}</title>
+  <dc:creator>Mine Çetinkaya-Rundel</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2023-05-22-quarto-for-academics/</link>
+  <description>{B4F502887207:/docs/blog/posts/2023-05-22-quarto-for-academics/index.html}</description>
+  <category>Learn</category>
+  <guid>https://quarto.org/docs/blog/posts/2023-05-22-quarto-for-academics/</guid>
+  <pubDate>Sun, 21 May 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2023-05-22-quarto-for-academics/quarto-for-academics-video-cover.png" medium="image" type="image/png" height="80" width="144"/>
+</item>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2023-05-15-get-started/index.html}</title>
+  <dc:creator>Mine Çetinkaya-Rundel</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2023-05-15-get-started/</link>
+  <description>{B4F502887207:/docs/blog/posts/2023-05-15-get-started/index.html}</description>
+  <category>Learn</category>
+  <guid>https://quarto.org/docs/blog/posts/2023-05-15-get-started/</guid>
+  <pubDate>Sun, 14 May 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2023-05-15-get-started/get-started-video-cover.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2023-04-26-1.3-release/index.html}</title>
+  <dc:creator>Charlotte Wickham</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2023-04-26-1.3-release/</link>
+  <description>{B4F502887207:/docs/blog/posts/2023-04-26-1.3-release/index.html}</description>
+  <category>Quarto 1.3</category>
+  <category>Releases</category>
+  <guid>https://quarto.org/docs/blog/posts/2023-04-26-1.3-release/</guid>
+  <pubDate>Tue, 25 Apr 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2023-04-26-1.3-release/arthur-chauvineau-Dn7P1U26ZkE-unsplash.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2023-03-20-confluence/index.html}</title>
+  <dc:creator>Charlotte Wickham</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2023-03-20-confluence/</link>
+  <description>{B4F502887207:/docs/blog/posts/2023-03-20-confluence/index.html}</description>
+  <category>Features</category>
+  <category>Authoring</category>
+  <category>Quarto 1.3</category>
+  <guid>https://quarto.org/docs/blog/posts/2023-03-20-confluence/</guid>
+  <pubDate>Sun, 19 Mar 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2023-03-20-confluence/confluence-logo-gradient-blue-attribution_rgb@2x.png" medium="image" type="image/png" height="50" width="144"/>
+</item>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2023-03-17-jupyter-cell-embedding/index.html}</title>
+  <dc:creator>Charlotte Wickham</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2023-03-17-jupyter-cell-embedding/</link>
+  <description>{B4F502887207:/docs/blog/posts/2023-03-17-jupyter-cell-embedding/index.html}</description>
+  <category>Features</category>
+  <category>Authoring</category>
+  <category>Quarto 1.3</category>
+  <guid>https://quarto.org/docs/blog/posts/2023-03-17-jupyter-cell-embedding/</guid>
+  <pubDate>Thu, 16 Mar 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2023-03-17-jupyter-cell-embedding/embed.png" medium="image" type="image/png" height="78" width="144"/>
+</item>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2023-03-15-multi-format/index.html}</title>
+  <dc:creator>Charlotte Wickham</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2023-03-15-multi-format/</link>
+  <description>{B4F502887207:/docs/blog/posts/2023-03-15-multi-format/index.html}</description>
+  <category>Features</category>
+  <category>Authoring</category>
+  <category>Quarto 1.3</category>
+  <guid>https://quarto.org/docs/blog/posts/2023-03-15-multi-format/</guid>
+  <pubDate>Tue, 14 Mar 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2023-03-15-multi-format/multi-format.png" medium="image" type="image/png" height="70" width="144"/>
+</item>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2023-03-13-code-annotation/index.html}</title>
+  <dc:creator>Charlotte Wickham</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2023-03-13-code-annotation/</link>
+  <description>{B4F502887207:/docs/blog/posts/2023-03-13-code-annotation/index.html}</description>
+  <category>Features</category>
+  <category>Authoring</category>
+  <category>Quarto 1.3</category>
+  <guid>https://quarto.org/docs/blog/posts/2023-03-13-code-annotation/</guid>
+  <pubDate>Sun, 12 Mar 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2023-03-13-code-annotation/annotation.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2022-10-25-shinylive-extension/index.html}</title>
+  <dc:creator>Winston Chang</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2022-10-25-shinylive-extension/</link>
+  <description>{B4F502887207:/docs/blog/posts/2022-10-25-shinylive-extension/index.html}</description>
+  <category>Extensions</category>
+  <category>Features</category>
+  <guid>https://quarto.org/docs/blog/posts/2022-10-25-shinylive-extension/</guid>
+  <pubDate>Mon, 24 Oct 2022 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2022-10-25-shinylive-extension/shinylive-embedded-app.png" medium="image" type="image/png" height="97" width="144"/>
+</item>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2022-07-25-feature-extensions/index.html}</title>
+  <dc:creator>J.J. Allaire</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2022-07-25-feature-extensions/</link>
+  <description>{B4F502887207:/docs/blog/posts/2022-07-25-feature-extensions/index.html}</description>
+  <category>Extensions</category>
+  <category>Features</category>
+  <guid>https://quarto.org/docs/blog/posts/2022-07-25-feature-extensions/</guid>
+  <pubDate>Sun, 24 Jul 2022 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2022-07-25-feature-extensions/extensions.png" medium="image" type="image/png" height="72" width="144"/>
+</item>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2022-06-21-rstudio-conf-2022-quarto/index.html}</title>
+  <dc:creator>Mine Çetinkaya-Rundel</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2022-06-21-rstudio-conf-2022-quarto/</link>
+  <description>{B4F502887207:/docs/blog/posts/2022-06-21-rstudio-conf-2022-quarto/index.html}</description>
+  <category>Conf</category>
+  <category>Workshop</category>
+  <category>Talk</category>
+  <guid>https://quarto.org/docs/blog/posts/2022-06-21-rstudio-conf-2022-quarto/</guid>
+  <pubDate>Mon, 20 Jun 2022 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2022-06-21-rstudio-conf-2022-quarto/conf2022.png" medium="image" type="image/png" height="72" width="144"/>
+</item>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2022-02-17-advanced-layout/index.html}</title>
+  <dc:creator>Charles Teague</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2022-02-17-advanced-layout/</link>
+  <description>{B4F502887207:/docs/blog/posts/2022-02-17-advanced-layout/index.html}</description>
+  <category>Features</category>
+  <category>Layout</category>
+  <guid>https://quarto.org/docs/blog/posts/2022-02-17-advanced-layout/</guid>
+  <pubDate>Wed, 16 Feb 2022 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2022-02-17-advanced-layout/margin-content.png" medium="image" type="image/png" height="108" width="144"/>
+</item>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2022-02-15-feature-tables/index.html}</title>
+  <dc:creator>JJ Allaire</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2022-02-15-feature-tables/</link>
+  <description>{B4F502887207:/docs/blog/posts/2022-02-15-feature-tables/index.html}</description>
+  <category>Features</category>
+  <category>Authoring</category>
+  <category>Tables</category>
+  <guid>https://quarto.org/docs/blog/posts/2022-02-15-feature-tables/</guid>
+  <pubDate>Mon, 14 Feb 2022 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2022-02-15-feature-tables/table.png" medium="image" type="image/png" height="82" width="144"/>
+</item>
+<item>
+  <title>{B4F502887207:/docs/blog/posts/2022-02-13-feature-callouts/index.html}</title>
+  <dc:creator>Charles Teague</dc:creator>
+  <link>https://quarto.org/docs/blog/posts/2022-02-13-feature-callouts/</link>
+  <description>{B4F502887207:/docs/blog/posts/2022-02-13-feature-callouts/index.html}</description>
+  <category>Features</category>
+  <category>Authoring</category>
+  <guid>https://quarto.org/docs/blog/posts/2022-02-13-feature-callouts/</guid>
+  <pubDate>Sat, 12 Feb 2022 16:00:00 GMT</pubDate>
+  <media:content url="https://quarto.org/docs/blog/posts/2022-02-13-feature-callouts/callouts.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+</channel>
+</rss>

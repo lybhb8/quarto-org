@@ -1,28 +1,28 @@
-To cross-reference a callout, add an ID attribute that starts with the appropriate callout prefix (see @tbl-callout-prefixes). You can then reference the callout using the usual `@` syntax. For example, here we add the ID `#tip-example` to the callout, and then refer back to it:
+要交叉引用提示，请添加一个以相应提示前缀开头的 ID 属性（请参阅 @tbl-callout-prefixes）。然后就可以使用通常的 `@`语法引用调用。例如，在这里我们将 ID `#tip-example` 添加到提示中，然后再引用它：
 
 ``` markdown
 ::: {#tip-example .callout-tip}
-## Cross-Referencing a Tip
+## 交叉引用提示
 
-Add an ID starting with `#tip-` to reference a tip.
+添加以 `#tip-` 开头的 ID 以引用 `tip`。
 :::
 
 See @tip-example...
 ```
 
-This renders as follows:
+渲染如下：
 
 ::: {.border .p-3}
 ::: {#tip-example .callout-tip}
-## Cross-Referencing a Tip
+## 交叉引用提示
 
-Add an ID starting with `#tip-` to reference a tip.
+添加以 `#tip-` 开头的 ID 以引用 `tip`。
 :::
 
 See @tip-example...
 :::
 
-The prefixes for each type of callout are:
+添加以 `#tip-` 开头的以`ID`引用 `tip`。
 
 | Callout Type | Prefix  |
 |--------------|---------|
@@ -32,4 +32,4 @@ The prefixes for each type of callout are:
 | `important`  | `#imp-` |
 | `caution`    | `#cau-` |
 
-: Prefixes for callout cross-references {#tbl-callout-prefixes}
+: 提示交叉引用的前缀 {#tbl-callout-prefixes}

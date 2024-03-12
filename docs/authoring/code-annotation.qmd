@@ -1,5 +1,5 @@
 ---
-title: Code Annotation
+title: 代码注解 #Code Annotation
 code-annotations: below
 aliases:
   - /docs/prerelease/1.3/code-annotation.html
@@ -7,11 +7,11 @@ aliases:
 
 {{< include ../_require-1.3.qmd >}}
 
-## Overview
+## 概述
 
-Code blocks and executable code cells in Quarto can include line-based annotations. Line-based annotations provide a way to attach explanation to lines of code much like footnotes. 
+Quarto 中的代码块和可执行代码单元格可以包含基于行的注释。基于行的注释提供了一种为代码行附加解释的方法，就像脚注一样。
 
-For example, this code uses annotation to describe the steps in an R dplyr pipeline in plain language:
+例如，这段代码使用注释以浅显的语言描述了 R dplyr 管道中的步骤：
 
 ```r
 library(tidyverse)
@@ -25,20 +25,21 @@ penguins |>                                            # <1>
 1. Take `penguins`, and then,
 2. add new columns for the bill ratio and bill area.
 
-The default HTML annotation style displays annotations in a list below the code block. Clicking on the annotation number in the list highlights the relevant lines in the code. Other [HTML styles](#html-styles) hide the annotations, revealing them in a tooltip when a user hovers or selects a marker, as illustrated in this example of a Revealjs presentation:
+
+默认 HTML 注释样式在代码块下方的列表中显示注释。单击列表中的注释编号会突出显示代码中的相关行。其他 [HTML styles](#html-styles) 隐藏注释，当用户悬停或选择标记时在工具提示中显示它们，如 Revealjs 演示文稿的此示例所示：
 
 ```{.yaml code-preview="code-annotation-example/revealjs.qmd"}
 format: revealjs
 ```
 
-The PDF format also allows for annotations, numbering, and displaying the annotation text below the code. In other formats, like Word and GitHub Markdown, annotations are instead labeled with the line of code (or lines of code) to which the annotation text applies.
+PDF 格式还允许注释、编号以及在代码下方显示注释文本。在其他格式中，例如 Word 和 GitHub Markdown，注释是用注释文本适用的代码行（或多行代码）来标记的。
 
 ::: panel-tabset
 #### PDF
 
 ![](images/annote-pdf.png){fig-alt="Screenshot of output in PDF format showing code annotation."}
 
-#### GitHub Flavored Markdown
+#### GitHub风格的Markdown
 
 ````markdown
 ``` r
@@ -59,20 +60,19 @@ add new columns for the bill ratio and bill area.
 ````
 :::
 
+要将代码注释添加到代码块，您需要添加两件事：代码单元格中特殊格式的代码注释，以及代码单元格下方包含注释文本的有序列表。阅读[Annotation Syntax](#annotation-syntax)了解更多内容。
 
-To add code annotation to a code block, you need to add two things: specially formatted code comments in your code cell, and an ordered list below the code cell with the annotation text. Read more in [Annotation Syntax](#annotation-syntax).
+code-annotations选项控制注释在 HTML 格式（`below`（默认）`hover`或`select`）中的显示方式，以及在所有格式中的显示方式，是否禁用注释（`false`），或者是否应从输出中删除注释（`none`）。
 
-The `code-annotations` option controls how annotations appear in the HTML format (`below` (default), `hover` or `select`), and in all formats, whether annotation is disabled (`false`), or if annotations should be removed from the output (`none`).
+## 注释语法 {#annotation-syntax}
 
-## Annotation Syntax {#annotation-syntax}
+代码单元的注释由两个相关元素组成：
 
-Annotations for a code cell consist of two related elements:
+1. 每个带注释的行都应以注释（使用代码单元的语言注释字符）结尾，后跟一个空格，然后是用尖括号括起来的注释编号（例如 `#<2>`）。如果注释跨越多行，您可以重复注释编号。
 
-1.  Each annotated line should be terminated with a comment (using the code cell's language comment character) followed by a space and then an annotation number enclosed in angle brackets (e.g. `# <2>`). You may repeat an annotation number if the annotation spans multiple lines.
+2. 紧随代码单元格之后出现的有序列表，其中包含每个注释的内容。有序列表中的每个编号项目将对应于具有相同注释编号的代码行。
 
-2.  An ordered list that appears immediately after the code cell which includes the contents of each annotation. Each numbered item in the ordered list will correspond to the line(s) of code with the same annotation number.
-
-For example, the annotations in the overview were produced with the following:
+例如，概述中的注释是通过以下内容生成的：
 
 ```` markdown
 ```r
@@ -88,23 +88,24 @@ penguins |>                                      # <1>
 2. add new columns for the bill ratio and bill area.
 ````
 
-## Annotation Style {#html-styles}
+## 注释式样 {#html-styles}
 
-For HTML output, there are three annotation styles you can set with the `code-annotations` document option:
+对于 HTML 输出，您可以使用文档选项设置三种注释样式`code-annotations：`
 
 `below`
 
-:   By default (or if `code-annotations: below` is specified), code annotation text will appear below the code cell.
+:   默认情况下（或如果code-annotations: below指定），代码注释
+文本将显示在代码单元格下方。
 
 `hover`
 
-:   Code annotation text will be displayed when the user hovers over the annotation marker for a line of code. 
+:    当用户将鼠标悬停在一行代码的注释标记上时，将显示代码注释文本。
 
 `select`
 
-:   Code annotation text will be displayed when the user clicks on an annotation marker (selecting it). The annotation text can be dismissed by clicking the annotation marker once again.
+:    当用户单击注释标记（选择它）时，将显示代码注释文本。再次单击注释标记即可消除注释文本。
 
-For example, to set the display style to hover, the complete Quarto file would be:
+例如，要将显示样式设置为悬停，完整的四开本文件将为：
 
 ```` markdown
 ---
@@ -124,12 +125,10 @@ penguins |>                                      # <1>
 2. add new columns for the bill ratio and bill area.
 ````
 
+## 删除注释 | Removing
 
+对于某些格式，您可能更愿意从输出中删除注释。在这种情况下，您可以设置`code-annotations: none`，这将从代码中删除注释注释并抑制包含注释文本的有序列表的输出。
 
-## Removing Annotations
+## 禁用注释 | Disabling
 
-For some formats, you may prefer to remove annotations from the output. In this case, you can set `code-annotations: none`, which will remove the annotation comments from your code and suppress the output of the ordered list which contains the annotation text.
-
-## Disabling Annotation
-
-You can disable code annotation by including the option `code-annotations: false` in your document. This will stop the processing of code annotations and leave your code (including the annotation comments) and the original ordered list as is.
+`code-annotations: false`您可以通过在文档中包含该选项来禁用代码注释。这将停止代码注释的处理，并让您的代码（包括注释注释）和原始有序列表保持原样。
