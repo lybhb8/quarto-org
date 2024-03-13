@@ -1,34 +1,34 @@
 ---
-title: Title Blocks
+title: 标题 #Title Blocks
 ---
 
-## Overview
+## 概述
 
-HTML pages rendered with Quarto include a formatted title block at the start of the article. The title block contains the title, subtitle, authors, date, doi, and abstract.
+使用 Quarto 呈现的 HTML 页面在文章开头包含一个格式化的标题块。标题块包含标题、副标题、作者、日期、doi 和摘要。
 
-A simple example title block looks like:
+标题块的简单示例如下
 
 ![](images/document-title-block.png){.border fig-alt="Document with header reading: Summarizing Output for Reproducible Documents. Below is Author (Nora Jones), Affiliation (Spacely Sprockets), Published (5/4/2018). Below that is a description which reads: A summary of best practices for summarizing output of reproducible scientific documents."}
 
-The title block will automatically layout elements from the front matter of the document. If you'd like, you can control the behavior using `title-block-style`.
+标题块将自动布局文件正文中的元素。如果你愿意，可以使用 `title-block-style` 来控制这种行为。
 
-There are three options available:
+有三个选项可供选择：
 
-`default`
+`default` 默认
 
-:   The default title-block treatment create a smaller font face and gathers the various title elements into stylized groups in the title block of the document.
+:   默认标题块处理方法是创建一个较小的字体，并将各种标题元素集中到文档标题块的样式组中。
 
-`plain`
+`plain` 普通
 
-:   The plain treatment will do all the title element processing (gathering and organizing the elements), but will not apply the default title block styling.
+:   普通处理将进行所有标题元素处理（收集和组织元素），但不会应用默认标题块样式。
 
-`none`
+`none` 无
 
-:   `none` disables title block processing altogether. Content will not be processed or organized and the title block will be emitted verbatim from Pandoc.
+：`none` 完全禁用标题块处理。内容不会被处理或组织，标题块将从 Pandoc 逐字输出。
 
-## Title Banners
+## 标题横幅
 
-In addition, if you'd like a more prominent title block, you can use `title-block-banner` to create a banner style title block. A banner style title block will position the title, subtitle, description, and categories in a banner above the article. For example:
+此外，如果您想要更突出的标题块，可以使用 `title-block-banner` 创建横幅式标题块。横幅式标题块会将标题、副标题、描述和类别置于插图上方的横幅中. 如:
 
 ``` yaml
 ---
@@ -36,13 +36,13 @@ title-block-banner: true
 ---
 ```
 
-will render a title block like:
+将呈现类似的标题块：
 
 ![](images/document-title-block-banner.png){.border fig-alt="Title block with title and description against a blue background up top, and below a section with author, affilitation, and date published."}
 
-### Custom Backgrounds
+### 自定义背景
 
-In this case, the color of the banner is automatically determined based upon the theme. However, you can control the banner background by providing either a CSS color (e.g. `"#FFDDFF"`, or `red`) or the path to an image which will be used the background. For example, to use a banner image, you might write:
+在这种情况下，横幅的颜色会根据主题自动确定。不过，您可以通过提供 CSS 颜色（例如`"#FFDDFF"`或`红色`）或用作背景的图片路径来控制横幅背景。例如，要使用横幅图片，您可以写道：
 
 ``` yaml
 ---
@@ -50,23 +50,23 @@ title-block-banner: images/banner.jpeg
 ---
 ```
 
-which would render a banner title block like:
+会出现类似的横幅标题块：
 
 ![](images/document-title-block-banner-custom.png){.border fig-alt="Title block with title and description against an image background up top, and below a section with author, affilitation, and date published."}
 
-When you provide an explicit background color or image, Quarto assumes that the color of the background will contrast with the body background color and automatically uses the body background color as the text color over the banner.
+如果提供了明确的背景颜色或图像，Quarto 会假定背景颜色将与正文背景颜色形成对比，并自动使用正文背景颜色作为横幅上的文字颜色。
 
-### Foreground Color
+### 前景色 |Foreground Color
 
-You can specify the color the for the text of the banner as well, using `title-block-banner-color` and providing a CSS color (e.g. `"#FFDDFF"`, or `red`) .
+您还可以使用 `title-block-banner-color` 指定横幅文字的颜色，并提供 CSS 颜色（例如 `"#FFDDFF"` 或 `red`）。
 
-## Date
+## 日期 | Date
 
-Quarto includes the document's `date` in the title block. In addition to writing a standard date, you may also use a few special keywords which will generate a date for you. `today` will provide the current date with the current time set to 0, `now` will provide the current date and time, and `last-modified` will provide the file modification date and time of the document itself.
+Quarto 在标题块中包含文档的 `date`。除了编写标准日期外，您还可以使用一些特殊关键字来生成日期。`today` 将提供当前日期，并将当前时间设为 0, `now` 将提供当前日期和时间；`last-modified` 将提供文件本身的修改日期和时间。
 
-### Formatting
+### 格式化 | Formatting
 
-When your title block is output using the `default` or `plain` styles, Quarto will automatically format the date based upon the document locale (`lang`). You can control formatting by specifying a `date-format` in the document front matter. For example:
+当使用 `default` 或 `plain` 样式输出标题块时，Quarto 会根据文档的语言 (`lang`)自动格式化日期。您可以在文档正文中指定 `date-format` 来控制格式。例如
 
 ``` yaml
 ---
@@ -76,11 +76,11 @@ date-format: short
 ---
 ```
 
-For more about date formats, see the Quarto [date format reference](/docs/reference/dates.qmd).
+有关日期格式的更多信息，请参阅 Quarto [日期格式参考](/docs/reference/dates.qmd "date format reference")。
 
-## Metadata Labels
+## 元数据标签 | Metadata Labels
 
-The labels for the metadata included in the title block have default values that are properly localized, but you may want to provide your own labels for metadata. You can use the following to customize the labels:
+标题块中包含的元数据标签(labels)的默认值已正确本地化，但您可能希望为元数据提供自己的标签。可以使用以下方法自定义标签：
 
 | Option              | Label          | Styles                     |
 |---------------------|----------------|----------------------------|
@@ -91,6 +91,6 @@ The labels for the metadata included in the title block have default values that
 | `published-title`   | Date Published | `plain`, `default`         |
 | `doi-title`         | DOI            | `plain`, `default`         |
 
-## Custom Title Pages
+## 自定义标题页
 
-To learn more about providing a complete custom title block, see the [documentation on template partials](../journals/templates.qmd#template-partials).
+要了解有关提供完整自定义标题块的更多信息，请参阅[模板局部文档](../journ/templates.qmd#template-partials "documentation on template partials")。

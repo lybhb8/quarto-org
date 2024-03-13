@@ -1,16 +1,20 @@
 {{< include ../_require-1.3.qmd >}}
 
-The following sections describe the ways in which you can control the color theme of Mermaid diagrams:
+以下章节介绍了控制 Mermaid图表颜色主题的方法：
 
-- Using the current document theme.
-- Using one of Mermaid's own color themes via a YAML option.
-- Using SCSS and CSS variables.
+- 使用当前文档主题。
+- 通过 YAML 选项使用Mermaid自己的颜色主题。
+- 使用 SCSS 和 CSS 变量。
 
-### Default Colors for Mermaid Diagrams
+### Mermaid图表的默认颜色
 
-If you use Quarto's [bootswatch built-in themes](../output-formats/html-themes.qmd), including the default theme, or a custom theme that uses the same SCSS variables, your Mermaid diagrams will automatically follow your theme.
+如果你使用 Quarto 的 [bootswatch 内置主题](../output-formats/html-themes.qmd "bootswatch built-in themes")，包括默认主题或使用相同 SCSS 变量的自定义主题，你的Mermaid图表将自动遵循你的主题。
 
-The following examples demonstrate this with a few of Quarto's built-in bootswatch themes.
+- Darkly
+- Sandstone
+- Vapor
+
+以下示例用 Quarto 的几个内置引导主题演示了这一点。
 
 ::: panel-tabset
 
@@ -27,11 +31,11 @@ The following examples demonstrate this with a few of Quarto's built-in bootswat
 ![](images/mermaid-vapor.png){fig-alt="A screenshot of a Mermaid flowchart in a document using bootswatch's Vapor theme."}
 :::
 
-You can read more about the correspondence between Bootstrap's SCSS variables and Quarto's Mermaid SCSS variables, and how to change it, below in [Customizing the Mermaid Theme](#customizing-mermaid).
+关于 Bootstrap 的 SCSS 变量与 Quarto 的Mermaid SCSS 变量之间的对应关系以及如何更改，请参阅下面的 [定制Mermaid主题](#customizing-mermaid "Customizing the Mermaid Theme").
 
-### Using Mermaid's Built-in Themes
+### Mermaid的内置主题
 
-If you want to use Mermaid's own themes, you can do so by configuring the `mermaid` option in your YAML front matter:
+如果你想使用Mermaid自己的主题，可以通过在 YAML 前端配置 `mermaid` 选项来实现：
 
 ``` yml
 format:
@@ -40,30 +44,30 @@ format:
       theme: forest
 ```
 
-The available themes from mermaid are: `default`, `dark`, `forest`, and `neutral`.
+Mermaid的可用主题有 默认`default`, `dark`, `forest`, and `neutral`。
 
 ::: panel-tabset
 ## default
 
 ![](images/mermaid-default.png){fig-alt="A screenshot of a Mermaid flowchart using the Mermaid's default theme."}
 
-## dark
+## dark|黑暗
 
 ![](images/mermaid-dark.png){fig-alt="A screenshot of a Mermaid flowchart using the Mermaid's dark theme."}
 
-## forest
+## forest|森林
 
 ![](images/mermaid-forest.png){fig-alt="A screenshot of a Mermaid flowchart using the Mermaid's forest theme."}
 
-## neutral
+## neutral|中性
 
 ![](images/mermaid-neutral.png){fig-alt="A screenshot of a Mermaid flowchart using the Mermaid's neutral theme."}
 
 :::
 
-### Customizing the Mermaid Theme {#customizing-mermaid}
+### 定制Mermaid主题 {#customizing-mermaid}
 
-Quarto provides its own Mermaid SCSS and CSS variables that can be overwritten to allow some customization of the diagram theme. The SCSS variables, together with their default values, are:
+Quarto 提供了自己的 Mermaid SCSS 和 CSS 变量，这些变量可被覆盖，以便对图表主题进行自定义。SCSS 变量及其默认值如下：
 
 <!-- This comes from quarto-dev/quarto-cli/src/resources/formats/html/_quarto-rules.scss -->
 
@@ -82,7 +86,7 @@ $mermaid-node-fg-color: $primary;
 
 ```
 
-Their CSS variable counterparts are:
+CSS 变量对应的是：
 
 ``` css
 :root {
@@ -99,8 +103,7 @@ Their CSS variable counterparts are:
   --mermaid-node-fg-color: #{$mermaid-node-fg-color};
 }
 ```
-
-For example, to provide a custom color for the background of the nodes you could [add a custom CSS stylesheet](../../output-formats/html-basics.html#css-styles) containing:
+例如，要为节点背景提供自定义颜色，您可以[添加自定义 CSS 样式表](../../output-formats/html-basics.html#css-styles "add a custom CSS stylesheet")，其中包含:
 
 ```css
 :root {
@@ -108,4 +111,4 @@ For example, to provide a custom color for the background of the nodes you could
 }
 ```
 
-You can find the correspondence between Quarto's variables and Mermaid's native CSS classes in Quarto's source code in the file  [embed-mermaid.css](https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/html/mermaid/embed-mermaid.css).
+可以在 Quarto 源代码文件 [embed-mermaid.css](https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/html/mermaid/embed-mermaid.css) 中找到 Quarto 变量与Mermaid本地 CSS 类之间的对应关系。

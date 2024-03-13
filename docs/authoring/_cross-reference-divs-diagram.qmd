@@ -1,4 +1,4 @@
-To create a cross-references to a diagram using div syntax, treat it like a figure. For example, @fig-simple is created using:
+要使用 div 语法为图表创建交叉引用，请将其视为图表。例如，@fig-simple 就是通过以下方式创建的：
 
 ````markdown
 ::: {#fig-simple}
@@ -9,7 +9,7 @@ graph {
 }
 ```
 
-This is a simple graphviz graph
+一个简单的 graphviz 图表
 :::
 ````
 
@@ -22,7 +22,7 @@ graph {
 }
 ```
 
-This is a simple graphviz graph
+一个简单的 graphviz 图表
 :::
 
-If you would rather give diagrams a label and counter distinct from figures, consider defining [Custom Cross-Reference Types](cross-references-custom.qmd).
+如果您希望给图表一个有别于数字的标签和计数器，可以考虑定义[Custom Cross-Reference Types](cross-references-custom.qmd "自定义交叉引用类型")。

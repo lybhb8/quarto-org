@@ -1,5 +1,5 @@
 ---
-title: "Article Layout"
+title: "文章布局" #"Article Layout"
 format: html
 reference-location: margin
 citation-location: margin
@@ -7,28 +7,28 @@ aliases:
   - page-layout.html
 ---
 
-## Overview
+## 概述
 
-Quarto supports a variety of page layout options that enable you to author content that:
+Quarto 支持多种页面布局选项，使您能够编写以下内容：
 
--   Fills the main content region
--   Overflows the content region
--   Spans the entire page
--   Occupies the document margin
+- 填充主内容区域
+- 溢出内容区域
+- 横跨整个页面
+- 占据文档边距
 
-Quarto uses the concept of columns to describe page layout (e.g. the "body" column, the "margin" column, etc.). Below we'll describe how to arrange content into these columns. If you need to adjust the widths of the columns, see [Page Layout - Grid Customization](/docs/output-formats/page-layout.qmd#grid-customization).
+Quarto 使用列的概念来描述页面布局（如 "正文 "列、"页边距 "列等）。下面我们将介绍如何将内容安排到这些列中。如果需要调整列宽，请参阅 [页面布局 - 网格自定义](/docs/output-formats/page-ayout.qmd#grid-customization "Page Layout - Grid Customization")。
 
-All of the layout capabilities described in this document work for HTML output and many work for PDF and LaTeX output. For details about the PDF / LaTeX output, see [PDF/LaTeX Layout].
+本文档中描述的所有布局功能都适用于 HTML 输出，许多功能也适用于 PDF 和 LaTeX 输出。有关 PDF / LaTeX 输出的详细信息，请参阅 [PDF/LaTeX 布局]。
 
-## Body Column
+## 正文栏
 
-By default, elements are position in the body of the document and are allowed to span the content of the document, like the below.
+默认情况下，元素在文档正文中的位置允许跨越文档内容，如下所示。
 
 ::: {.layout-example .column-body}
 .column-body
 :::
 
-But if you'd like, you can extend content slightly outside the bounds of the body by creating a div with the .`column-body-outset` class. For example:
+但是，如果您愿意，可以创建一个带有 .`column-body-outset` 类的 div，将内容稍微扩展到正文范围之外。例如：
 
 ``` markdown
 :::{.column-body-outset}
@@ -42,13 +42,13 @@ Outset content...
 
 ## Page Column
 
-If you need even more space for your content, you can use the `.column-page` class to make the content much wider, though stopping short of extending across the whole document.
+如果您的内容需要更大的空间，您可以使用 `.column-page` 类来使内容更宽，但不会扩展到整个文档。
 
 ::: {.layout-example .column-page}
 .column-page
 :::
 
-For example, to create a wider image, you could use:
+例如，要创建更宽的图像，可以使用
 
 ``` markdown
 :::{.column-page}
@@ -60,7 +60,7 @@ For example, to create a wider image, you could use:
 ![](images/elephant.jpg){fig-alt="Three walking elephants in silhouette against the backdrop of a sunset."}
 :::
 
-For computational output, you can specify the page column in your code cell options. For example:
+对于计算输出，您可以在代码单元选项中指定页面列。例如
 
 ```{r}
 #| column: page
@@ -71,7 +71,7 @@ knitr::kable(
 )
 ```
 
-In addition, you can use `.column-page-inset` to inset the element from the page slightly, like so:
+此外，您还可以使用 `.column-page-inset` 将元素从页面中稍微嵌入，就像这样：
 
 ::: {.layout-example .column-page-inset}
 .column-page-inset
@@ -79,7 +79,7 @@ In addition, you can use `.column-page-inset` to inset the element from the page
 
 ## Screen Column
 
-You can have content span the full width of the page with no margin (full bleed). For this, use the `.column-screen` class or specify `column: screen` on a code cell. For example:
+您可以让内容横跨页面的整个宽度，而不留边距（full bleed）。为此，请使用".column-screen "类或在代码单元格中指定 "column: screen"。例如
 
 ``` md
 ::: {.column-screen}
@@ -91,7 +91,7 @@ You can have content span the full width of the page with no margin (full bleed)
 .column-screen
 :::
 
-The following code displays a Leaflet map across the whole page.
+以下代码会在整个页面上显示传单地图。
 
 ```{r}
 #| column: screen
@@ -103,9 +103,9 @@ leaflet() %>%
   addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
 ```
 
-### Screen Inset
+### 屏幕镶嵌
 
-If you'd like a full width appearance, but would like to retain a margin, you can use inset or inset-shaded modifiers on the column. For example:
+如果您想要全宽的外观，但又想保留边距，可以在列上使用内嵌或内嵌阴影修饰符。例如
 
 ``` md
 ::: {.column-screen-inset}
@@ -117,7 +117,7 @@ If you'd like a full width appearance, but would like to retain a margin, you ca
 .column-screen-inset
 :::
 
-The inset-shaded modifier results in a block spanning the full width but wrapped with a lightly shaded background. For example:
+内嵌阴影修改器会产生一个全宽的块，但会用浅色阴影背景包裹。例如
 
 ```{r}
 #| column: screen-inset-shaded
@@ -129,7 +129,7 @@ leaflet() %>%
   addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
 ```
 
-Column layouts like `screen-inset-shaded` will work with advanced figure layout. For example, it is straightforward to create a multi column presentation of figures that spans the document:
+像 "screen-inset-shaded "这样的列布局可以与高级图片布局一起使用。例如，可以直接创建横跨整个文档的多列图表：
 
 ```{r}
 #| column: screen-inset-shaded
@@ -141,9 +141,9 @@ plot(iris)
 plot(pressure)
 ```
 
-## Margin Content
+## 边距
 
-You can place content within the right margin of Quarto document. For example, here we use the `.column-margin` class to place an image in the margin:
+您可以在 Quarto 文档的右边空白处放置内容。例如，这里我们使用 `.column-margin` 类在页边空白处放置一张图片：
 
 ``` md
 ::: {.column-margin}
@@ -155,7 +155,7 @@ You can place content within the right margin of Quarto document. For example, h
 .column-margin
 :::
 
-This also works for text content:
+这也适用于文本内容：
 
 ``` md
 ::: {.column-margin}
@@ -165,15 +165,15 @@ $$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).$$
 :::
 ```
 
-::: column-margin
+::: 贴边 | column-margin
 We know from *the first fundamental theorem of calculus* that for $x$ in $[a, b]$:
 
 $$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).$$
 :::
 
-### Margin Figures
+### 贴边图片 | Margin Figures
 
-Figures that you create using code cells can be placed in the margin by using the `column: margin` code cell option. If the code produces more than one figure, each of the figures will be placed in the margin.
+使用 "column: margin "代码单元格选项，可以将使用代码单元格创建的图片放在页边空白处。如果代码生成的图片不止一个，则每个图片都将放在页边空白处。
 
 ```{r}
 #| label: fig-mtcars
@@ -192,7 +192,7 @@ ggplot(mtcars2, aes(hp, mpg, color = am)) +
   theme(legend.position = 'bottom')
 ```
 
-### Margin Tables
+### 贴边表格 | Margin Tables
 
 You an also place tables in the margin of your document by specifying `column: margin`.
 
@@ -205,9 +205,9 @@ knitr::kable(
 )
 ```
 
-### Multiple Outputs
+### 多个输出 | Multiple Outputs
 
-You can also target specific output types (for example, figures) to be placed in the margin. For example, the following code will render a table showing part of the `mtcars` dataset and produce a plot in the margin next to the table.
+您还可以将特定输出类型（例如数字）放在页边空白处。例如，以下代码将渲染一个显示部分 `mtcars` 数据集的表格，并在表格旁边的空白处生成一个图表。
 
 ```{r}
 #| fig-column: margin
@@ -231,9 +231,9 @@ ggplot(mtcars2, aes(hp, mpg, color = am)) +
 
 {{< include _pagebreak.qmd >}}
 
-## Margin References
+## 页边引用
 
-Footnotes and the bibliography typically appear at the end of the document, but you can choose to have them placed in the margin by setting the following option[^1] in the document front matter:
+脚注和参考书目通常出现在文档末尾，但您也可以通过在文档正文中设置以下选项[^1]，将它们放在页边：
 
 ``` yaml
 ---
@@ -242,19 +242,19 @@ citation-location: margin
 ---
 ```
 
-With these options set, footnotes and citations will (respectively) be automatically be placed in the margin of the document rather than the bottom of the page. As an example, when I cite @xie2018, the citation bibliography entry itself will now appear in the margin.
+设置这些选项后，脚注和引文将（分别）自动放在文档的页边空白处，而不是页面底部。例如，当我引用 @xie2018 时，引用书目条目本身就会出现在页边空白处。
 
-### Asides
+### 旁注
 
-Asides allow you to place content aside from the content it is placed in. Asides look like footnotes, but do not include the footnote mark (the superscript number). [This is a span that has the class `aside` which places it in the margin without a footnote number.]{.aside}
+旁注允许你将内容放置在旁注内容之外。旁注看起来像脚注，但不包括脚注标记（上标数字）。[这是一个具有 "aside "类的 span，将其置于页边，但不包含脚注编号。]{.aside}.
 
 ``` markdown
 [This is a span that has the class `aside` which places it in the margin without a footnote number.]{.aside}
 ```
 
-## Margin Captions
+## 页边标题
 
-For figures and tables, you may leave the content in the body of the document while placing the caption in the margin of the document. Using `cap-location: margin` in a code cell or document front matter to control this. For example:
+对于图和表，您可以将内容留在文档的正文中，而将标题放在文档的页边。在代码单元格或文档正文中使用 `cap-location: margin` 来控制。例如
 
 ```{r}
 #| label: fig-cap-margin
@@ -273,9 +273,9 @@ ggplot(mtcars2, aes(hp, mpg, color = am)) +
   theme(legend.position = 'bottom')
 ```
 
-## Overflowing Content
+## 溢出的内容
 
-You can also extend content outside the body region on only the left or right side of the document by using the `right` and `left` versions of the `body`, `page`, and `screen` columns to layout your content. The `left` or `right` version of these columns are as follows:
+通过使用 `body`、`page` 和 `screen` 列的 `right` 和 `left` 版本来布局内容，您还可以仅在文档的左侧或右侧扩展正文区域以外的内容。这些列的 "左 "或 "右 "版本如下：
 
 ::: {.layout-example .column-body-outset-right .left}
 .column-body-outset-right
@@ -317,7 +317,7 @@ You can also extend content outside the body region on only the left or right si
 .column-screen-left
 :::
 
-Use a div with one of the above classes to align content into one of the overflow regions. This also works using the `column` option of executable code cells:
+使用带有上述类别之一的 div，将内容对齐到其中一个溢出区域。使用可执行代码单元格的 "column "选项也同样有效：
 
 ```{r}
 #| column: screen-inset-right
@@ -329,11 +329,11 @@ leaflet() %>%
   addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
 ```
 
-## Options Reference
+## 引用选项 | Options Reference
 
-### Global Options
+### 全局选项 | Global Options
 
-Some layout options can be specified globally in document yaml. For example:
+某些布局选项可以在文档 yaml 中全局指定。例如：
 
 ``` yaml
 ---
@@ -342,7 +342,7 @@ reference-location: margin
 ---
 ```
 
-All of the below options currently only support setting a value of `margin` which tells Quarto to place the corresponding element in the margin.
+以下所有选项目前都只支持设置`margin`值，该值会告诉 Quarto 将相应元素置于边距中。
 
 +----------------------+---------------------------------------------------------------------------------------------------------+
 | Option               | Description                                                                                             |
@@ -363,9 +363,9 @@ All of the below options currently only support setting a value of `margin` whic
 |                      | \[`top` \| `bottom` \| `margin`\]                                                                       |
 +----------------------+---------------------------------------------------------------------------------------------------------+
 
-### Code Cell Options
+### 代码单元选项 | Code Cell Options
 
-You can also set layout column on specific code cells. This controls the layout of content that is produced by the code cell.
+您还可以为特定代码单元格设置布局列。这可以控制代码单元格生成内容的布局。
 
 ```{{r}}
 #| column: page
@@ -394,9 +394,9 @@ plot(cars)
 +--------------------+------------------------------------------------------------------------------------------------------------------------------+
 :::
 
-### Using Classes
+### 类 | Using Classes
 
-In addition to global and code cell specific options, you may use divs with layout classes (prefixed with `.column-`) to arrange content into columns:
+除了全局和代码单元特定选项外，您还可以使用带有布局类（前缀为 `.column-`）的 div 将内容排列成列：
 
 ``` md
 ::: {.column-margin}
@@ -404,9 +404,9 @@ This content will appear in the margin!
 :::
 ```
 
-### Available Columns
+### 可用列 | Available Columns
 
-Here are all of the available column specifiers:
+以下是所有可用列的指定符：
 
 ::: column-page-right
 +--------------+---------------------------------+---------------------------------+
@@ -437,18 +437,18 @@ Here are all of the available column specifiers:
 +--------------+---------------------------------+---------------------------------+
 :::
 
-## PDF/LaTeX Layout {data-link="PDF/LaTeX Layout"}
+## PDF/LaTeX布局 {data-link="PDF/LaTeX Layout"}
 
-While most of the layout capabilities described are supported for both HTML and PDF output, some are available only for HTML output. You can use the full set of columns for HTML. Then, when you render PDF or LaTeX output, content will automatically be placed in the most appropriate related column (typically this will mean using the main column and right margin). Here is how columns are mapped:
+虽然 HTML 和 PDF 输出都支持所述的大部分布局功能，但有些功能仅适用于 HTML 输出。您可以在 HTML 中使用全套列。然后，当您渲染 PDF 或 LaTeX 输出时，内容将自动放置在最合适的相关列中（通常这意味着使用主列和右边距）。以下是列的映射方式：
 
--   Any column that uses the right margin (e.g. `page`, `screen`, `screen-right`, etc.) will be rendered as `page-right` in LaTeX.
--   Any column that uses the left margin will be rendered as normal body content.
+- 任何使用右边距的列（如 `page`、`screen`、`screen-right` 等）在 LaTeX 中将呈现为 `page-right`。
+- 任何使用左边距的列都将被渲染为正常的正文内容。
 
-### Page Geometry
+### 页面几何 | Page Geometry
 
-When you render a PDF using content in the margin or content that spans the page, Quarto automatically will adjust the page geometry for the default Quarto LaTeX document classes (KOMA `scrartcl`, `scrreport`, or `scrbook`) to create a slightly narrower body content region and a slightly wider margin region. This adjustment will incorporate known paper sizes to create a reasonable page geometry for most content.
+当您使用页边空白或跨页内容渲染 PDF 时，Quarto 会自动调整默认 Quarto LaTeX 文档类（KOMA `scrartcl`、`scrreport` 或 `scrbook`）的页面几何形状，以创建稍窄的正文内容区域和稍宽的页边空白区域。这种调整将结合已知的纸张尺寸，为大多数内容创建合理的页面几何形状。
 
-You can control the page geometry directly yourself by setting `geometry` options in your document's front matter. For example:
+您可以通过在文档前部设置 `geometry` 选项来直接控制页面几何。例如：
 
 ``` yaml
 ---
@@ -460,10 +460,10 @@ geometry:
 ---
 ```
 
-You can use these options to control the page geometry for the built in document classes or to customize the geometry of other document classes that you may be using.
+您可以使用这些选项来控制内置文档类的页面几何形状，或自定义您可能使用的其他文档类的几何形状。
 
 ::: {.callout-tip appearance="simple"}
-If you'd like to view the page geometry in your rendered PDF, you can pass `showframe` to the `geometry` option as in the below example.
+如果想在渲染的 PDF 中查看页面几何图形，可将 `showframe` 传递给 `geometry` 选项，如下例所示。
 
 ``` {.yaml style="background: none;"}
 ---
@@ -473,12 +473,12 @@ geometry:
 ```
 :::
 
-### Code Blocks
+### 代码块 | Code Blocks
 
-When rendering a PDF that uses the margins for content, Quarto automatically adjusts the appearance of code blocks. Rather than having a solid background color, a left border treatment is used.
+在渲染使用页边空白的 PDF 内容时，Quarto 会自动调整代码块的外观。不是使用纯背景色，而是使用左边界处理。
 
-This enables non-breaking code to overflow into the margin without cosmetic issues created by the code block background (which does not overflow into the margin region).
+这样，非断续代码就能溢出到页边，而不会因代码块背景（不会溢出到页边区域）而产生外观问题。
 
-You can disable this treatment by setting the following `code-block-border-left: false` in your document front matter.
+您可以通过在文档正文中设置以下 `code-block-border-left: false` 来禁用这种处理方法。
 
-[^1]: You can also position references in other location (such as the bottom of the block, section, or document).
+[^1]: 您也可以将引用放在其他位置（如代码块、章节或文档的底部）。

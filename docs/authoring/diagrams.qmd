@@ -1,14 +1,14 @@
 ---
-title: "Diagrams"
+title: 图表 #"Diagrams"
 aliases:
   - /docs/prerelease/1.3/mermaid.html
 ---
 
-## Overview
+## Overview|概述
 
-Quarto has native support for embedding [Mermaid](https://mermaid-js.github.io/mermaid/#/) and [Graphviz](https://graphviz.org/) diagrams. This enables you to create flowcharts, sequence diagrams, state diagrams, gantt charts, and more using a plain text syntax inspired by markdown.
+Quarto 本机支持嵌入 [Mermaid](https://mermaid-js.github.io/mermaid/#/) 和 [Graphviz](https://graphviz.org/) 图表。这使您能够使用受 markdown 启发的纯文本语法创建流程图、序列图、状态图、甘特图等。
 
-For example, here we embed a flowchart created using Mermaid:
+例如，这里我们嵌入了一张使用Mermaid创建的流程图：
 
 ```{mermaid}
 %%| echo: fenced
@@ -19,20 +19,20 @@ flowchart LR
   C --> E[Result two]
 ```
 
-As illustrated above, Mermaid diagrams are embedded using `{mermaid}` executable cells.  Graphviz diagrams are embedded using `{dot}` executable cells. Note that cell options are added with slightly different syntax: `%%|` for `{mermaid}`, and `//|` for `{dot}`. 
+如上图所示，Mermaid 图表使用"{mermaid}"可执行单元格嵌入。 Graphviz 图表使用 `{dot}` 可执行单元格嵌入。请注意，单元格选项的添加语法略有不同： `%%|` 用于 `{mermaid}`，而 `//|` 用于 `{dot}`。 
 
 
 ::: callout-note
-For print output formats like `pdf` or `docx`, diagram rendering makes use of the Chrome or Edge web browser to create a high-quality PNG. Quarto can automatically use an existing version of Chrome or Edge on your system, or alternatively if you don't have either installed, can use a lighter-weight library version of Chrome (see [Chrome Install](#chrome-install) below for details).
+对于 `pdf`或 `docx`等打印输出格式，图表渲染会使用 Chrome 或 Edge 网页浏览器创建高质量的 PNG。Quarto 可以自动使用系统中现有的 Chrome 或 Edge 版本，如果没有安装这两种浏览器，也可以使用更轻量级的 Chrome 库版本（详情请参见下面的 [Chrome 安装](#chrome-install)。
 :::
 
 ## Mermaid
 
-Mermaid is a Javascript based diagramming and charting tool that uses Markdown-inspired text definitions and a renderer to create and modify complex diagrams.
+Mermaid 是一款基于 Javascript 的图表制作工具，它使用 Markdown 启发的文本定义和渲染器来创建和修改复杂的图表。
 
-Mermaid diagrams use `%%` as their comment syntax, and so cell options are declared using `%%|`. Cell options **must** be included directly beneath the start of the diagram code chunk.
+Mermaid图表使用 `%%` 作为注释语法，因此单元格选项使用 `%%|` 声明。单元格选项 **必须** 直接包含在图表代码块的开头下方。
 
-Above we demonstrated a flowchart created with Mermaid, here is a sequence diagram (also embedded using a `{mermaid}` executable cell):
+上面我们演示了使用美人鱼创建的流程图，下面是一个序列图（也是使用 `{mermaid}` 可执行单元格嵌入的）：
 
 ```{mermaid}
 %%| echo: fenced
@@ -49,17 +49,17 @@ sequenceDiagram
   Bob-->>John: Jolly good!
 ```
 
-Note that Mermaid output varies depending on the target format (e.g. HTML vs. print-based). See the section below on [Mermaid Formats](#mermaid-formats) for additional details.
+请注意，Mermaid 输出因目标格式（如 HTML 与基于打印的格式）而异。更多详情，请参阅下面的 [Mermaid Formats](#mermaid-formats "Mermaid格式") 部分。
 
-To learn more about using Mermaid, see the [Mermaid website](https://mermaid-js.github.io/mermaid/) or the [Mermaid book](https://www.amazon.com/Official-Guide-Mermaid-js-beautiful-flowcharts-dp-1801078025/dp/1801078025) (which is written by the creator of Mermaid).
+要了解有关使用 Mermaid 的更多信息，请参阅 [Mermaid 网站](https://mermaid-js.github.io/mermaid/) 或 [Mermaid 书籍](https://www.amazon.com/Official-Guide-Mermaid-js-beautiful-flowcharts-dp-1801078025/dp/1801078025)（由 Mermaid 创建者撰写）。
 
 ## Graphviz
 
-The Graphviz layout programs take descriptions of graphs in a simple text language, and make diagrams in useful formats. Graphviz has many useful features for concrete diagrams, such as options for colors, fonts, tabular node layouts, line styles, hyperlinks, and custom shapes.
+Graphviz 布局程序以简单的文本语言对图表进行描述，并以有用的格式制作图表。Graphviz 为具体的图表提供了许多有用的功能，如颜色、字体、表格节点布局、线条样式、超链接和自定义形状等选项。
 
-Graphviz diagrams use `//` as their comment syntax, and so cell options are declared using `//|`. Cell options **must** be included directly beneath the start of the diagram code chunk.
+Graphviz 图表使用 `//` 作为注释语法，因此单元格选项使用 `//|` 声明。单元格选项必须***直接包含在图表代码块的开头下方。
 
-For example, here is a simple undirected graph created using graphviz:
+例如，下面是一个使用 graphviz 创建的简单无向图：
 
 ```{dot}
 //| echo: fenced
@@ -82,34 +82,34 @@ graph G {
 ```
 
 
-To learn more about Graphviz, see the [Graphviz website](https://graphviz.org/), this list of simple [Graphiz Examples](https://renenyffenegger.ch/notes/tools/Graphviz/examples/index), or the [Graphviz Gallery](https://graphviz.org/gallery/).
+要了解有关 Graphviz 的更多信息，请参阅 [Graphviz 网站](https://graphviz.org/)、简单的 [Graphiz 示例](https://renenyffenegger.ch/notes/tools/Graphviz/examples/index) 或 [Graphviz 图库](https://graphviz.org/gallery/)。
 
-## Authoring
+## Authoring|创作
 
-There are a variety of tools available to improve your productivity authoring diagrams:
+有多种工具可以提高您绘制图表的效率：
 
-1)  The [Mermaid Live Editor](https://mermaid.live/) is an online tool for editing and previewing Mermaid diagrams in real time.
+1) [Mermaid Live Editor](https://mermaid.live/ "Mermaid实时编辑器") 是实时编辑和预览美人鱼图表的在线工具。
 
-2)  [Graphviz Online](https://dreampuf.github.io/GraphvizOnline/) provides a similar tool for editing Graphviz diagrams.
+2)  [Graphviz Online](https://dreampuf.github.io/GraphvizOnline/) 提供了用于编辑 Graphviz 图表的类似工具.
 
-3)  [RStudio](https://www.rstudio.com/products/rstudio/download/) includes support for editing and previewing `.mmd` and `.dot` files (with help from the [DiagrammeR](https://rich-iannone.github.io/DiagrammeR/) package).
+3)  [RStudio](https://www.rstudio.com/products/rstudio/download/) 包括对编辑和预览 `.mmd` 和 `.dot` 文件的支持 (帮助在 [DiagrammeR](https://rich-iannone.github.io/DiagrammeR/)).
 
-4)  The Quarto [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=quarto.quarto) supports live preview of diagrams embedded in `.qmd` files and in `.mmd` and `.dot` files:
+4)  Quarto [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=quarto.quarto) 支持实时预览嵌入到 `.qmd` 文件以及 `.mmd` 和 `.dot` 文件中的图表：
 
     ![](images/vscode-graphviz.gif){.border fig-alt="A Quarto document being edited in Visual Studio Code, with a live preview of the currenly edited diagram shown in a pane to the right"}
 
-    Note that you should be sure to have installed the [very latest](https://marketplace.visualstudio.com/items?itemName=quarto.quarto) version of the Quarto VS Code extension to try this out.
+    请注意，您应该确保已经安装了 [最新版](https://marketplace.visualstudio.com/items?itemName=quarto.quarto) 的 `Quarto VS Code extension`插件
 
-## Cross-References
+## Cross-References|交叉引用
 
-Diagrams can be treated as figures the same way that images and plot output are. For example, if we added the following figure options to the diagram above:
+图表可以像图像和绘图输出一样被视为数字。例如，如果我们在上面的图表中添加以下数字选项：
 
 ```{{dot}}
 //| label: fig-simple
 //| fig-cap: "This is a simple graphviz graph."
 ```
 
-We'd get this output:
+会得到这样的输出结果：
 
 ```{dot}
 //| label: fig-simple
@@ -132,7 +132,7 @@ graph G {
 }
 ```
 
-We could then create a cross-reference to the diagram with:
+然后，就可以创建一个与图表的交叉引用：
 
 ```markdown
 @fig-simple
@@ -140,11 +140,11 @@ We could then create a cross-reference to the diagram with:
 
 {{< include _cross-reference-divs-diagram.qmd >}}
 
-## File Include
+## File Include|文件包含
 
-You might find it more convenient to edit your diagram in a standalone `.dot` or `.mmd` file and then reference it from within your `.qmd` document. You can do this by adding the `file` option to a Mermaid or Graphviz cell.
+您可能会发现，在独立的 `.dot` 或 `.mmd` 文件中编辑图表，然后在 `.qmd` 文档中引用它更为方便。您可以通过在 Mermaid 或 Graphviz 单元中添加 `file` 选项来做到这一点。
 
-For example, here we include a very complex diagram whose definition would be too unwieldy to provide inline:
+例如，在这里我们包含了一个非常复杂的图表，如果不在线提供其定义，就会显得过于笨重：
 
 ```{{dot}}
 //| label: fig-linux-kernel
@@ -158,13 +158,13 @@ For example, here we include a very complex diagram whose definition would be to
 //| file: images/linux-kernel-diagram.dot
 ```
 
-Note that the `label` and `fig-cap` attributes still work as expected with `file` includes.
+请注意，`label` 和 `fig-cap `属性在包含 `file`时仍能正常工作。
 
-## Sizing
+## Sizing 尺寸化
 
-By default, diagrams are rendered at their natural size (i.e. they are not stretched to fit the default figure size for the current document). Within HTML output formats, diagrams are also made responsive, so that their width doesn't overflow the current page column. This is similar to the treatment given to images and dynamic JavaScript widgets.
+默认情况下，图表以自然尺寸呈现（即图表不会被拉伸以适应当前文档的默认数字尺寸）。在 HTML 输出格式中，图表也是响应式的，因此其宽度不会超出当前页面的列。这与图像和动态 JavaScript 部件的处理方式类似。
 
-You can disable responsive sizing by specifying the `fig-responsive: false` option. You can also specify explicit sizes via `fig-width` and `fig-height`. For example, here we want to make a mermaid diagram a bit bigger because it contains only a few elements:
+您可以通过指定 `fig-responsive: false` 选项来禁用响应式尺寸。还可以通过 `fig-width` 和 `fig-height` 指定明确的大小。例如，我们想把Mermaid做得更大一些，因为它只包含几个元素：
 
 ```{mermaid}
 %%| echo: fenced
@@ -174,9 +174,9 @@ flowchart LR
   B --> C{Decision}
 ```
 
-## Mermaid Formats {#mermaid-formats}
+## Mermaid 格式 {#mermaid-formats}
 
-When you include a Mermaid diagram in a document, the diagram format used is chosen automatically based on the output format:
+在文档中包含Mermaid图表时，所使用的图表格式会根据输出格式自动选择：
 
 | Format                              | Output                      |
 |-------------------------------------|-----------------------------|
@@ -184,13 +184,13 @@ When you include a Mermaid diagram in a document, the diagram format used is cho
 | GitHub Flavored Markdown (`gfm`)    | Mermaid code block          |
 | Other Formats (`pdf`, `docx`, etc.) | PNG image                   |
 
-The Mermaid native format is used by default whenever the underlying output format supports JavaScript.
+只要底层输出格式支持 JavaScript，就会默认使用Mermaid本地格式。
 
-When using `format: gfm`, diagrams will be emitted as plain `mermaid` code blocks. This is because both [GitHub](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) and [GitLab](https://docs.gitlab.com/ee/user/markdown.html#mermaid) natively support rendering Mermaid diagrams from code.
+使用 `format: gfm` 时，图表将以纯 `mermaid` 代码块的形式发布。这是因为 [GitHub](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) 和 [GitLab](https://docs.gitlab.com/ee/user/markdown.html#mermaid) 都原生支持从代码渲染Mermaid图。
 
-For formats that don't do special handling of Mermaid or lack a JavaScript run-time (e.g. formats like `pdf`, `docx`, `epub`, etc.) a PNG image is created using [Chrome](#chrome-install).
+对于不对 Mermaid 进行特殊处理或缺乏 JavaScript 运行时的格式（如 `pdf`、`docx`、`epub` 等格式），会使用 [Chrome](#chrome-install)创建 PNG 图像。
 
-You can change the default behavior using the `mermaid-format` option. For example:
+你可以使用 `mermaid-format` 选项更改默认行为。例如：
 
 ``` yaml
 ---
@@ -200,38 +200,38 @@ format:
 ---
 ```
 
-Valid values for `mermaid-format` include `js`, `png`, and `svg`,
+`mermaid格式` 的有效值包括 `js`、`png` 和 `svg`、
 
-## Mermaid Themes {#mermaid-theming}
+## Mermaid 主题 {#mermaid-theming}
 
 {{< include _mermaid-theming.qmd >}}
 
-## Code Echo
+## Code Echo|代码回显
 
-Note that unlike other executable cell handlers (e.g. `{python}`), cells with diagrams don't display their code in the rendered document by default. You can display code by adding an `echo: true` option in a comment at the top the cell.
+请注意，与其他可执行单元格处理程序（如 `{python}`）不同，带图表的单元格默认情况下不会在渲染文档中显示代码。您可以通过在单元格顶部的注释中添加 `echo: true` 选项来显示代码。
 
-To include code for `{mermaid}`, add `%%| echo: true` to the top of the cell. For example:
+要包含 `{mermaid}` 的代码，请在单元格顶部添加 `%%| echo: true`。例如：
 
 ```{{mermaid}}
 %%| echo: true
 ```
 
-To include code for `{dot}`, add `//| echo: true` to the top of the cell. For example:
+要包含 `{dot}` 的代码，请在单元格顶部添加 `//| echo: true`。例如：
 
 ```{{dot}}
 //| echo: true
 ```
 
-## Chrome Install {#chrome-install}
+## Chrome 安装 {#chrome-install}
 
-For printing to output formats like `pdf` or `docx`, diagram rendering makes use of the Chrome or Edge web browser to create a high-quality PNG.
+如果要打印成 `pdf` 或 `docx `等输出格式，图表渲染会使用 Chrome 或 Edge 网页浏览器来创建高质量的 PNG。
 
-Quarto can automatically use an existing version of Chrome or Edge on your system for rendering. Alternatively, if you don't have either, you can install a minimal version of Chrome for use by Quarto with the following command:
+Quarto 可以自动使用系统中现有的 Chrome 或 Edge 版本进行渲染。或者，如果你没有 Chrome 或 Edge 浏览器，也可以使用以下命令安装供 Quarto 使用的最小版本 Chrome 浏览器：
 
 ``` {.bash filename="Terminal"}
 quarto install chromium
 ```
 
 ::: callout-note
-Quarto installs headless Chromium via Puppeteer. The bundled Chromium that Puppeteer installs may not work on Docker containers; please check [the Puppeteer documentation](https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#running-puppeteer-in-docker) as well as [this article](https://pptr.dev/next/troubleshooting#running-puppeteer-on-wsl-windows-subsystem-for-linux) if you are attempting to install within Windows Subsystem for Linux (WSL).
+Quarto 通过 Puppeteer 安装无头 Chromium。Puppeteer 安装的捆绑 Chromium 可能无法在 Docker 容器上运行； 请核实 [the Puppeteer documentation](https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#running-puppeteer-in-docker), 如果您在 Windows Subsystem for Linux (WSL) 中安装, 看[这篇文章](https://pptr.dev/next/troubleshooting#running-puppeteer-on-wsl-windows-subsystem-for-linux "this article")。
 :::

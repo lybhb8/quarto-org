@@ -1,5 +1,5 @@
 ---
-title: "Cross References"
+title: "交叉引用" #"Cross References"
 format: html
 toc-expand: 2
 toc-depth: 4
@@ -8,60 +8,60 @@ aliases:
   - /docs/authoring/cross-references-callouts.html
 ---
 
-## Overview
+## 概述
 
-Cross-references make it easier for readers to navigate your document by providing numbered references and hyperlinks to various entities like figures and tables. Every cross-referenceable entity requires a label---a unique identifier prefixed with a cross-reference type e.g. `#fig-element`. For example, this is a cross-referenceable figure:
+交叉引用可为图和表等各种实体提供编号引用和超链接，从而方便读者浏览文档。每个可交叉引用的实体都需要一个标签--一个前缀有交叉引用类型的唯一标识符，例如`#fig-element`。例如，这是一个可交叉引用的图：
 
 ``` markdown
 ![Elephant](elephant.png){#fig-elephant}
 ```
 
-The presence of the label (`#fig-elephant`) makes this figure referenceable. This enables you to use the following syntax to refer to it elsewhere in the document:
+标签 (`#fig-elephant`) 的存在使该图可被引用。这样，您就可以使用以下语法在文档的其他地方引用该图：
 
 ``` markdown
 See @fig-elephant for an illustration.
 ```
 
-Here is what this would look like rendered to HTML:
+下面是将其呈现为 HTML 的效果：
 
 ![](images/crossref-figure.png){.border fig-alt="A line drawing of an elephant. The caption 'Figure 1: Elephant' is centered beneath it." width="100%"}
 
-Note that cross reference identifiers must start with their type (e.g. `fig-` or `tbl-`). So the identifier `#fig-elephant` is valid for a cross-reference but the identifiers `#elephant` and `#elephant-fig` are not.
+请注意，交叉引用标识符必须以其类型（如 `fig-` 或 `tbl-`）开头。因此，标识符 `#fig-elephant` 对于交叉引用是有效的，但标识符 `#elephant` 和 `#elephant-fig` 则无效。
 
 ::: {#reserved-prefixes}
 ::: {.callout-warning}
 
-## Reserved Prefixes 
-
-Unless you are creating a cross-reference, avoid using the reserved cross-reference prefixes for code cell labels (e.g. set using the `label` code cell option) and element IDs (set using a `#` in an attribute). 
+## Reserved Prefixes|保留前缀
  
-The reserved prefixes are: `fig`, `tbl`, `lst`, `tip`, `nte`, `wrn`, `imp`, `cau`, `thm`, `lem`, `cor`, `prp`, `cnj`, `def`, `exm`, `exr`, `sol`, `rem`, `eq`, `sec`.
+除非创建交叉引用，否则请避免在代码单元标签（例如使用 `label` 代码单元选项设置）和元素 ID（使用属性中的 `#` 设置）中使用保留的交叉引用前缀。
 
-Also avoid using underscores (`_`) in labels and IDs as this can cause problems when rendering to PDF with LaTeX.
+保留的前缀有 `fig`, `tbl`, `lst`, `tip`, `nte`, `wrn`, `imp`, `cau`, `thm`, `lem`, `cor`, `prp`, `cnj`, `def`, `exm`, `exr`, `sol`, `rem`, `eq`, `sec`。
+
+此外，请避免在标签和 ID 中使用下划线 (`_`)，因为这会在使用 LaTeX渲染PDF 时导致一些问题。
 
 :::
 :::
 
-Quarto enables you to create cross-references to figures, tables, equations, sections, code listings, theorems, proofs, and more. Cross references can also be applied to dynamic output from Knitr and Jupyter. 
+Quarto 可以让你创建与图、表、方程、章节、代码列表、定理、证明等的交叉引用。交叉引用还可应用于 Knitr 和 Jupyter 的动态输出。
 
-On this page you'll learn:
+在本页中，你将了解到
 
-*  Different ways to use the `@` syntax to create [References](#references).
-*  How to add [Lists](#lists) of references in LaTeX / PDF output.
+* 使用`@`语法创建[References|引用](#references引用)的不同方法。
+* 如何在 LaTeX / PDF 输出中添加 [Lists](#lists列表) 引用。
 
-Then, we enumerate the syntax for the different types of elements you might want to reference:
+然后，我们将列举你可能需要引用的不同类型元素的语法：
 
-*  [Floats](#floats): [Figures](#figures), [Tables](#tables) and [Code Listings](#code-listings)
-* Blocks: [Callouts](#callouts), [Theorems and Proofs](#theorems-and-proofs) and [Equations](#equations) 
-*  [Sections](#sections)
+* [Floats|浮动](#floats浮动)： [Figures|图片](#figures图片)、[Tables|表格](#tables表格) 和[Code Listings|代码列表](#code-listings代码列表)
+* 块|Blocks： [Callouts|提示](#callouts提示)、[Theorems and Proofs|定理和证明](#theorems-and-proofs定理与证明)和[Equations|数学公式](#equations公式) 
+* [Sections|章节](#sections章节)
 
-There are options available that control the text used for titles and references. For example, you could change "Figure 1" to read "Fig 1" or "fig. 1". See the [options documentation](cross-reference-options.qmd) for details on how to customize the text used for cross-references.
+还有一些选项可以控制标题和参考文献使用的文本。例如，你可以将 "Figure 1" to read "Fig 1" or "fig. 1"。有关如何自定义交叉引用文本的详细信息，请参阅[选项文档](cross-reference-options.qmd “options documentation”)。
 
-## References
+## References|引用
 
-The examples on this page all use the default syntax for inline references (e.g. `@fig-elephant`), which results in the reference text "Figure 1", "Table 1", etc.
+本页中的示例均使用内联引用的默认语法（例如 `@fig-elephant`），这将导致引用文本为 "Figure 1", "Table 1"等。
 
-You can customize the appearance of inline references by either changing the syntax of the inline reference or by setting options. Here are the various ways to compose a cross-reference and their resulting output:
+可以通过更改内联引用的语法或设置选项来定制内联引用的外观。以下是编写 **交叉引用** 的各种方法及其结果输出：
 
 | Type          | Syntax                | Output   |
 |---------------|-----------------------|----------|
@@ -70,23 +70,23 @@ You can customize the appearance of inline references by either changing the syn
 | Custom Prefix | `[Fig @fig-elephant]` | Fig 1    |
 | No Prefix     | `[-@fig-elephant]`    | 1        |
 
-Note that the capitalized syntax makes no difference for the default output, but would indeed capitalize the first letter if the default prefix had been changed via an [option](cross-reference-options.qmd#references) to use lower case (e.g. "fig.").
+请注意，大写语法对默认输出没有影响，但如果通过 [option](cross-reference-options.qmd#references “选项”)将默认前缀改为小写（例如 "fig."），则第一个字母确实会大写。
 
-These syntax variations work not only for Figures, but for all cross-referenceable elements in Quarto such as Tables, Equations, Theorems, and so on.
+这些语法变化不仅适用于 "图片"，也适用于 Quarto 中所有可交叉引用的元素，如表格、数学公式、定理等。
 
-You can also group cross-references using the following syntax:
+还可以使用以下语法对交叉引用进行分组：
 
 ``` markdown
-As illustrated in [@fig-elephant; @fig-panther; @fig-rabbit].
+如图所示 [@fig-elephant; @fig-panther; @fig-rabbit].
 ```
 
-There are a number of options that can be used to further customize the treatment of cross-references. See the guide on [Cross Reference Options](cross-reference-options.qmd#references) for additional details.
+有许多选项可用于进一步定制交叉引用的处理方式。更多详情，请参阅指南[交叉引用选项](cross-reference-options.qmd#references "Cross Reference Options")。
 
-## Lists
+## Lists|列表
 
-For LaTeX / PDF output, you can use the raw LaTeX commands `\listoffigures`, `\listoftables` and `\listoflistings` to produce listings of all figures, tables, etc. within a document. You can use the `lof-title`, `lot-title`, and `lol-title` crossref options to customize the title of the listing.
+对于 LaTeX / PDF 输出，您可以使用原始 LaTeX 命令 `\listoffigures`、`\listoftables` 和 `\listoflistings`，生成文档中所有图、表等的列表。你可以使用 `lof-title`、`lot-title` 和 `lol-title` 交叉引用选项来定制列表的标题。
 
-For example:
+例如:
 
 ``` markdown
 ---
@@ -99,20 +99,20 @@ format: pdf
 \listoffigures
 ```
 
-Note that the default titles for the lists use the form displayed above (i.e. "List of \<Type\>").
+请注意，列表的默认标题使用上面显示的形式（即 "List of （<Type\> ）"）。
 
-## Floats
+## Floats|浮动
 
-[Figures](#figures), [tables](#tables) and [code listings](#code-listings) are known as "float" cross-references. Floats can appear in the rendered document at locations other than where they are defined, i.e. they float, and usually have captions. 
+[Figures](#figures)、[tables](#tables) 和[code listings](#code-listings) 被称为 "浮动 "交叉引用。浮动引用可以出现在渲染文档中其定义位置以外的其他位置，即浮动引用，并且通常有标题。
 
-In addition to the compact syntax for the most common uses of float cross-references, you can also define float cross-references with a div syntax. Use the div syntax when you need more flexibility in the content of your cross-reference, for example, to have a [video](cross-references-divs.qmd#videos) be referenced as a figure. Basic examples of the div syntax are included in the sections below, but you can find more complicated examples in [Cross-Reference Div Syntax](cross-references-divs.qmd). 
+除了最常用的浮动交叉引用的紧凑语法外，您还可以使用 div 语法定义浮动交叉引用。当您需要更灵活的交叉引用内容时，请使用 div 语法，例如，将[视频](cross-references-divs.qmd#videos "video") 引用为图表。下面的章节包含了 div 语法的基本示例，但您可以在 [交叉引用 div 语法](cross-references-divs.qmd "Cross-Reference Div Syntax") 中找到更复杂的示例。 
 
-You can also define custom types of float cross-reference to reference elements beyond figures, tables and code listings. Read more at [Custom Float Cross-References](cross-references-custom.qmd).
+您还可以定义自定义浮动交叉引用类型，以引用图、表和代码列表以外的元素。更多信息，请访问 [自定义浮动交叉引用](cross-references-custom.qmd "Custom Float Cross-References")。
 
 
-### Figures
+### Figures|图片
 
-As described on the Overview above, this is the markdown used to create a cross-referenceable figure and then refer to it:
+如上文 "概述 "所述，这是用于创建可交叉引用的图表并对其进行引用的标记符：
 
 ``` markdown
 ![Elephant](elephant.png){#fig-elephant}
@@ -120,15 +120,15 @@ As described on the Overview above, this is the markdown used to create a cross-
 See @fig-elephant for an illustration.
 ```
 
-Note again that cross-reference identifiers must start with their type (e.g. `#fig-`) and that cross-reference identifiers must be all lower case.
+请再次注意，交叉引用标识符必须以其类型开头（例如 `#fig-`），并且交叉引用标识符必须全部小写。
 
 {{< include _cross-reference-divs-figure.qmd >}}
 
-You can read about using div syntax with figures at [Cross-Reference Div Syntax](cross-references-divs.qmd#figures).
+您可以在[交叉引用 div 语法](cross-references-divs.qmd#figures "Cross-Reference Div Syntax")中了解如何使用数字 div 语法。
 
-#### Subfigures
+#### 子图 | Subfigures
 
-You may want to create a figure composed of multiple subfigures. To do this, enclose the figures in a div (with its own label and caption) and give each subfigure its own label and (optionally) caption. You can then refer to either the entire figure in a reference or a single subfigure:
+您可能希望创建一个由多个子图组成的图表。为此，请用一个 div（带有自己的标签和标题）将这些图表包围起来，并为每个子图表添加自己的标签和标题（可选）。然后，您可以在引用中引用整个图表，也可以引用单个子图表：
 
 ``` markdown
 ::: {#fig-elephants layout-ncol=2}
@@ -143,15 +143,15 @@ Famous Elephants
 See @fig-elephants for examples. In particular, @fig-hanno.
 ```
 
-Here is what this looks like when rendered as HTML:
+下面是渲染为 HTML 时的样子：
 
 ![](images/crossref-subfigures.png){.preview-image .border fig-alt="An artistic rendition of Surus, Hannibal's last war elephant, is on the left. Underneath this picture is the caption '(a) Surus.' On the right is a line drawing of Hanno, a famous elephant. Underneath this picture is the caption '(b) Hanno.' The words 'Figure 1: Famous elephants' are centered beneath both pictures. The text 'See fig. 1 for examples. In particular, fig. 1(b).' is underneath this text and is aligned to the left." width="100%"}
 
-Note that we also used the `layout-ncol` attribute to specify a two-column layout. See the article on [Figures](figures.qmd) for more details on laying out panels of figures.
+请注意，我们还使用了 `layout-ncol` 属性来指定双栏布局。请参阅[Figures](figures.qmd)一文，了解更多关于图表面板布局的详细信息。
 
-#### Computations
+#### Computations|计算方法
 
-Figures produced by Jupyter and Knitr can also be cross-referenced. To do this, add a `label` and `fig-cap` option at the top of the code block. For example:
+由 Jupyter 和 Knitr 生成的图表还可以相互参照。为此，请在代码块顶部添加 `label `和 `fig-cap` 选项。例如
 
 ::: panel-tabset
 ##### Jupyter
@@ -165,7 +165,7 @@ Figures produced by Jupyter and Knitr can also be cross-referenced. To do this, 
     plt.show()
     ```
 
-    For example, see @fig-plot.
+    例如，见 @fig-plot.
 
 ![](images/crossref-figure-jupyter.png){fig-alt="A line plot with the label 'Figure 1: Plot' centered underneath it. The text 'For example, see fig. 1' is underneath this label and aligned to the left."}
 
@@ -178,14 +178,14 @@ Figures produced by Jupyter and Knitr can also be cross-referenced. To do this, 
     plot(cars)
     ```
 
-    For example, see @fig-plot.
+    例如，见 @fig-plot.
 
 ![](images/crossref-figure-r.png){fig-alt="A scatter plot of speed versus distance for the `cars` dataset. The label 'Figure 1: Plot' is centered beneath it. The text 'For example, see fig. 1' is aligned to the left underneath that."}
 :::
 
 {{< include _computed-caption.md >}}
 
-You can also create multiple figures within a code cell and reference them as subfigures. To do this use `fig-cap` for the main caption, and `fig-subcap` to provide an array of subcaptions. For example:
+您还可以在一个代码单元中创建多个数字，并将它们作为子图标引用。为此，使用 `fig-cap` 表示主标题，使用 `fig-subcap` 提供子标题数组。例如
 
     ```{{python}}
     #| label: fig-plots
@@ -207,9 +207,9 @@ You can also create multiple figures within a code cell and reference them as su
 
 ![](images/crossref-subfigures-jupyter.png){fig-alt="Two line plots side-by-side. The plot on the left has the caption '(a) Plot 1' centered underneath it. The plot on the right has the caption '(b) Plot 2' centered underneath it. The text 'Figure 1: Plots' is centered underneath both of these plots. The text 'See fig. 1 for examples. In particular, fig. 1(b)' is aligned to the left underneath that."}
 
-Note that subfigure reference labels are created automatically based on the main chunk label (e.g. `@fig-plots-1`, `@fig-plots-2`, etc.).
+请注意，子图标会根据主块标签（如`@fig-plots-1`、`@fig-plots-2`等）自动创建。
 
-If you'd like subfigure captions that include only an identifier, e.g. "(a)", and not a text caption, then specify `fig-subcap: true` rather than providing explicit subcaption text:
+如果希望子图标标题只包含标识符（如"(a)"）而不包含文本标题，则应指定 `fig-subcap: true` 而不是提供明确的子标题文本：
 
 ```{{python}}
 #| label: fig-plots
@@ -218,27 +218,27 @@ If you'd like subfigure captions that include only an identifier, e.g. "(a)", an
 #| layout-ncol: 2
 ```
 
-### Tables
+### Tables|表格
 
 {{< include _table-crossrefs.md >}}
 
 ::: callout-important
-## Label Prefix
+## 标签前缀 | Label Prefix
 
-In order for a table to be cross-referenceable, its label must start with the `tbl-` prefix.
+为了使表格可以交叉引用，其标签必须以 `tbl-` 前缀开头。
 :::
 
 {{< include _cross-reference-divs-table.qmd >}}
 
-You can read more about using div syntax with tables at [Cross-Reference Div Syntax](cross-references-divs.qmd#tables).
+有关在表格中使用 div 语法的更多信息，请参阅 [交叉引用 div 语法](cross-references-divs.qmd#tables "Cross-Reference Div Syntax")。
 
-#### Subtables
+#### Subtables|子表
 
 {{< include _table-crossrefs-subtables.md >}}
 
-#### Computations
+#### Computations|计算方法
 
-You can also cross-reference tables created from code executed via computations. To do this, add the `label` and `tbl-cap` cell options. For example:
+还可以交叉引用通过计算执行的代码所创建的表格。为此，请添加 `label` 和 `tbl-cap` 单元格选项。例如
 
 ```{{r}}
 #| label: tbl-iris
@@ -252,7 +252,7 @@ kable(head(iris))
 
 {{< include _computed-caption.md >}}
 
-You can also create multiple tables within a code cell and reference them as subtables. To do this, add a `tbl-subcap` option with an array of subcaptions. For example:
+还可以在一个代码单元格中创建多个表格，并将它们作为子表格引用。为此，请添加一个包含子表头数组的 `tbl-subcap` 选项。例如
 
 ```{{r}}
 #| label: tbl-tables
@@ -269,7 +269,7 @@ kable(head(pressure))
 
 ![](/docs/authoring/images/crossref-subtable-knitr.png){fig-alt="Two tables side-by-side. Each table has 2 columns and 8 rows. The table on the left is titled '(a) Cars'. The table on the right is titled '(b) Pressure'. Centered underneath both tables is the text 'Table 1: Tables.'" fig-align="center" width="80%"}
 
-If you'd like subtable captions that include only an identifier, e.g. "(a)", and not a text caption, then specify `tbl-subcap: true` rather than providing explicit subcaption text:
+如果希望子表标题只包含标识符（如"(a)"）而不包含文本标题，则应指定 `tbl-subcap: true` 而不是提供明确的子标题文本：
 
 ```{{r}}
 #| label: tbl-tables
@@ -285,9 +285,9 @@ kable(head(pressure))
 ![](/docs/authoring/images/crossref-subtable-nocaption-knitr.png){fig-align="center" width="80%"}
 
 
-### Code Listings
+### Code Listings|代码列表
 
-To create a reference-able code block, add a `#lst-` identifier along with a `lst-cap` attribute. For example:
+要创建一个可引用的代码块，可添加一个 `#lst-` 标识符和一个 `lst-cap` 属性。例如
 
 ```` markdown
 ```{#lst-customers .sql lst-cap="Customers Query"}
@@ -299,24 +299,24 @@ Then we query the customers database (@lst-customers).
 
 {{< include _cross-reference-divs-listing.qmd >}}
 
-You can read more about using div syntax for code listings in [Cross-Reference Div Syntax](cross-references-divs.qmd).
+您可以在 [交叉引用 div 语法](cross-references-divs.qmd "Cross-Reference Div Syntax") 中阅读有关使用 div 语法进行代码列表的更多信息。
 
 {{< include _cross-references-listings.qmd >}}
 
-## Callouts
+## Callouts|提示
 
 {{< include _cross-references-callouts.qmd >}}
 
 ## Theorems and Proofs
 
-Theorems are commonly used in articles and books in mathematics. To include a reference-able theorem, create a div with a `#thm-` label (or one of other theorem-type labels described below). You also need to specify a theorem name either via the first heading in the block. You can include any content you like within the div. For example:
+定理常用于数学文章和书籍中。要包含一个可参考的定理，请创建一个带有 `#thm-` 标签（或下文描述的其他定理类型标签之一）的 div。您还需要通过块中的第一个标题指定定理名称。您可以在 div 中包含任何内容。例如
 
 ``` markdown
 ::: {#thm-line}
 
 ## Line
 
-The equation of any straight line, called a linear equation, can be written as:
+任何直线方程都称为线性方程，可写成：
 
 $$
 y = mx + b
@@ -328,9 +328,9 @@ See @thm-line.
 
 ![](images/crossref-theorem.png){fig-alt="A snippet of a LaTeX document. The first line reads: 'Thereom 1 (Line) The equation of any straight line, called a linear equation, can be written as:' Cenetered on a separate line is the equation 'y = mx + b'. The text 'See thm. 1' is aligned to the left underneath that."}
 
-For LaTeX output, the [amsthm](https://ctan.org/pkg/amsthm?lang=en) package is used for typesetting theorems. For other formats an appropriate treatment is used (the above is an example of HTML output).
+对于 LaTeX 输出，使用 [amsthm](https://ctan.org/pkg/amsthm?lang=en) 软件包对定理进行排版。对于其他格式，则使用适当的处理方法（以上是 HTML 输出的示例）。
 
-There are a number of theorem variations supported, each with their own label prefix:
+支持多种定理变体，每种变体都有自己的标签前缀：
 
 | **Label Prefix** | **Printed Name** | **LaTeX Environment** |
 |------------------|------------------|-----------------------|
@@ -345,7 +345,7 @@ There are a number of theorem variations supported, each with their own label pr
 | `#sol-`          | Solution         | solution              |
 | `#rem-`          | Remark           | remark                |
 
-The `proof` environment receives similar typesetting as theorems, however it is not numbered (and therefore cannot be cross-referenced). To create a proof add the `.proof` class to a div:
+proof 环境的排版与定理类似，但没有编号（因此无法交叉引用）。要创建证明，请在 div 中添加 `.proof` 类：
 
 ``` markdown
 ::: {.proof}
@@ -353,16 +353,16 @@ By induction.
 :::
 ```
 
-As with theorems you can optionally include a heading as the first element of the div (or a `name` attribute) to give the environment a caption for typesetting (this typically appears in parentheses after the environment title).
+与定理一样，您也可以选择在 div 的第一个元素中包含一个标题（或一个 `name` 属性），以便在排版时为环境添加标题（标题通常出现在环境标题之后的括号中）。
 
-For LaTeX output the [amsthm](https://ctan.org/pkg/amsthm?lang=en) package is used to typeset these environments. For other formats a similar treatment is used, but you can further customizing this using CSS.
+对于 LaTeX 输出，[amsthm](https://ctan.org/pkg/amsthm?lang=en) 软件包用于对这些环境进行排版。对于其他格式，也会使用类似的处理方法，但您可以使用 CSS 进一步自定义。
 
-## Equations
+## Equations|公式
 
-Provide an `#eq-` label immediately after an equation to make it referenceable. For example:
+在公式后紧跟一个 `#eq-` 标签，使其可被引用。例如
 
 ``` markdown
-Black-Scholes (@eq-black-scholes) is a mathematical model that seeks to explain the behavior of financial derivatives, most commonly options:
+Black-Scholes（@eq-black-scholes）是一个数学模型，旨在解释金融衍生品（最常见的是期权）的行为：
 
 $$
 \frac{\partial \mathrm C}{ \partial \mathrm t } + \frac{1}{2}\sigma^{2} \mathrm S^{2}
@@ -372,7 +372,8 @@ $$
 $$ {#eq-black-scholes}
 ```
 
-Black-Scholes (@eq-black-scholes) is a mathematical model that seeks to explain the behavior of financial derivatives, most commonly options:
+Black-Scholes（@eq-black-scholes）是一个数学模型，旨在解释金融衍生品（最常见的是期权）的行为：
+
 
 $$
 \frac{\partial \mathrm C}{ \partial \mathrm t } + \frac{1}{2}\sigma^{2} \mathrm S^{2}
@@ -381,11 +382,11 @@ $$
   \mathrm r \mathrm C 
 $$ {#eq-black-scholes}
 
-Note that the equation number is included (via `\qquad`) in the right margin of the equation.
+请注意，方程编号（通过 `\qquad`）包含在方程的右边空白处。
 
-## Sections
+## Sections|章节
 
-To reference a section, add a `#sec-` identifier to any heading. For example:
+要引用章节，请在任何标题下添加 `#sec-` 标识符。例如
 
 ``` markdown
 ## Introduction {#sec-introduction}
@@ -393,7 +394,7 @@ To reference a section, add a `#sec-` identifier to any heading. For example:
 See @sec-introduction for additional context.
 ```
 
-Note that when using section cross-references, you will also need to enable the `number-sections` option (so that section numbering is visible to readers). For example:
+请注意，在使用章节交叉引用时，您还需要启用 `number-sections`选项（以便读者可以看到章节编号）。例如
 
 ``` yaml
 ---

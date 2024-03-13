@@ -1,18 +1,18 @@
 ---
-title: "Videos"
+title: 视频 #"Videos"
 ---
 
-## Overview
+## Overview|概述
 
-You can embed videos in documents using the `{{{< video >}}}` shortcode. For example, here we embed a YouTube video:
+您可以使用`{{{< video >}}}`简码在文档中嵌入视频。例如，这里我们嵌入了一段 YouTube 视频：
 
 ``` {.markdown shortcodes="false"}
 {{< video https://www.youtube.com/embed/wo9vZccmqwc >}}
 ```
 
-Videos can refer to video files (e.g. `.mp4`) or can be links to videos published on YouTube, Vimeo, or Brightcove.
+视频可以是视频文件（如`.mp4`），也可以是 YouTube、Vimeo 或 Brightcove 上发布的视频链接。
 
-Here are some additional examples that demonstrate using various video sources and options:
+以下是使用各种视频源和选项的其他示例：
 
 ``` {.default shortcodes="false"}
 {{< video local-video.mp4 >}}
@@ -30,22 +30,22 @@ Here are some additional examples that demonstrate using various video sources a
 >}}
 ```
 
-In HTML formats the video will be embedded within the document. For other formats, a simple link to the video will be rendered.
+在 HTML 格式中，视频将嵌入文档中。对于其他格式，将呈现一个简单的视频链接。
 
-Next, we'll cover the various options available for video embedding. For additional details on using videos within Revealjs presentations (including how to create slides with full-screen video backgrounds), see the [Revealjs](#revealjs) section below.
+接下来，我们将介绍视频嵌入的各种可用选项。有关在 Revealjs 演示中使用视频的其他详细信息（包括如何创建全屏视频背景的幻灯片），请参阅下面的 [Revealjs](#revealjs) 部分。
 
-## Video URL
+## Video URL|视频路径
 
-The video URL can specify either a path to a video file (e.g. a `.mp4`) alongside the document, a remote URL to a video file, or a URL to a video service (YouTube, Vimeo, or Brightcove).
+视频 URL 可以指定文档旁视频文件（如`.mp4`）的路径、视频文件的远程 URL 或视频服务（YouTube、Vimeo 或 Brightcove）的 URL。
 
-These are valid URLs for video files:
+这些都是视频文件的有效 URL：
 
 ``` {.default shortcodes="false"}
 {{< video local-video.mp4 >}}
 {{< video https://videos.example.com/video.mp4 >}}
 ```
 
-For video services, a variety of URL forms are supported. For example, the following video service URLs are all valid:
+视频服务支持多种 URL 格式。例如，以下视频服务 URL 均有效：
 
 ``` {.default .code-overflow-scroll shortcodes="false"}
 {{< video https://youtu.be/wo9vZccmqwc >}}
@@ -55,41 +55,41 @@ For video services, a variety of URL forms are supported. For example, the follo
 {{< video https://players.brightcove.net/1460825906/default_default/index.html?videoId=5988531335001 >}}
 ```
 
-Note that YouTube videos support both the URL that is available in the address bar when watching a video as well as the standard URLs used for linking and embedding. Brightcove videos are embedded using the standard [iframe embed code](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html).
+请注意，YouTube 视频既支持观看视频时地址栏中可用的 URL，也支持用于链接和嵌入的标准 URL。Brightcove 视频使用标准[iframe embed code](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html "iframe 嵌入代码")嵌入。
 
-## Options
+## Options|选项
 
-### Aspect Ratio
+### Aspect Ratio|高宽比
 
-Videos are automatically rendered responsively using the full width of the document's main text column. The `aspect-ratio` specifies how the height should vary with changes in width. For example:
+视频会使用文档主文本列的全宽自动呈现。`宽高比 `指定了高度随宽度变化而变化的方式。例如：
 
 ``` {.default shortcodes="false"}
 {{< video https://youtu.be/wo9vZccmqwc aspect-ratio="4x3" >}}
 ```
 
-Available [aspect ratios](https://getbootstrap.com/docs/5.0/helpers/ratio/#aspect-ratios) include `1x1`, `4x3`, `16x9` (the default), and `21x9`.
+可用的 [宽高比](https://getbootstrap.com/docs/5.0/helpers/ratio/#aspect-ratios "aspect ratios") 包括 `1x1`、`4x3`、`16x9`（默认）和 `21x9`。
 
-#### Width and Height
+#### Width and Height|宽度和高度
 
-You can disable responsive sizing by providing explicit `width` and `height` attributes. For example:
+您可以通过提供明确的 `width` 和 `height` 属性来禁用响应式大小。例如：
 
 ``` {.default shortcodes="false"}
 {{< video https://youtu.be/wo9vZccmqwc width="250" height="175" >}}
 ```
 
-This will produce a video that renders at the specified dimensions and is not responsive. Note that when no `height` or `width` are specified, videos will size responsively given the space available to them.
+这将产生一个按指定尺寸渲染的视频，但不是响应式的。请注意，如果未指定 "高度 "或 "宽度"，视频将根据可用空间大小进行调整。
 
-### Start Time
+### Start Time|开始时间
 
-For YouTube videos, you can specify a `start` option to indicate how many seconds into the video you want to start playing:
+对于 YouTube 视频，您可以指定一个 `start` 选项，用于指示视频开始播放的秒数：
 
 ``` {.default shortcodes="false"}
 {{< video https://youtu.be/wo9vZccmqwc start="10" >}}
 ```
 
-### Frame Title
+### Frame Title|框架标题
 
-The `title` option adds a `title` attribute to the video `<iframe>`:
+`title`选项会为视频"<iframe>"添加一个`title`属性：
 
 ``` {.default shortcodes="false"}
 {{< video https://www.youtube.com/embed/wo9vZccmqwc 
@@ -99,15 +99,15 @@ The `title` option adds a `title` attribute to the video `<iframe>`:
 
 ## Revealjs {#revealjs}
 
-You can include videos within [Revealjs](/docs/presentations/revealjs/index.qmd) presentations in one of two ways:
+您可以通过以下两种方式之一在 [Revealjs](/docs/presentations/revealjs/index.qmd) 演示中加入视频：
 
--   A video that appears within the contents of a slide.
+- 出现在幻灯片内容中的视频。
 
--   A video that occupies the entire background of a slide.
+- 占据幻灯片整个背景的视频。
 
-### Slide Content
+### Slide Content|幻灯片
 
-Here's a video on a slide without a title:
+下面是一个没有标题的幻灯片视频：
 
 ``` {.default shortcodes="false"}
 ---
@@ -115,9 +115,9 @@ Here's a video on a slide without a title:
 {{< video https://youtu.be/wo9vZccmqwc width="100%" height="100%" >}}
 ```
 
-Note that we set the `width` and `height` explicitly to 100% so that the video fills the slide.
+请注意，我们将 `width` and `height`明确设置为 100%，以便视频填满幻灯片。
 
-Here's a video on a slide with a title.
+下面是带有标题的幻灯片上的视频。
 
 ``` {.default shortcodes="false"}
 ## Video Slide 
@@ -125,11 +125,11 @@ Here's a video on a slide with a title.
 {{< video https://youtu.be/wo9vZccmqwc width="100%" height="85%" >}}
 ```
 
-Note that we set the `height` to 85% to leave room for the title.
+请注意，我们将 `height` 设置为 85%，以便为标题留出空间。
 
-### Backgrounds
+### Backgrounds|背景
 
-For videos on slides without titles, you might prefer to have the video fill the entire background of the slide. You can do this using the `background-video` attribute. For example:
+对于幻灯片上没有标题的视频，您可能更希望让视频充满整个幻灯片的背景。您可以使用 `background-video` 属性来做到这一点。例如:
 
 ``` markdown
 ## {background-video="intro-cern.mp4"}
@@ -141,11 +141,11 @@ For videos on slides without titles, you might prefer to have the video fill the
 ## {background-video="https://vimeo.com/548291297"}
 ```
 
-Note that when using `background-video` for video files (as distinct from services like YouTube) you can specify a number of other attributes, including:
+请注意，当对视频文件（有别于 YouTube 等服务）使用 `background-video` 时，您可以指定一些其他属性，包括:
 
 {{< include ../presentations/revealjs/_background-video.md >}}
 
-## Cross-References
+## Cross-References|交叉引用
 
 {{< include _cross-reference-divs-video.qmd >}}
 
