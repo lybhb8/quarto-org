@@ -82,7 +82,7 @@ Quarto 可以让你创建与图、表、方程、章节、代码列表、定理�
 
 有许多选项可用于进一步定制交叉引用的处理方式。更多详情，请参阅指南[交叉引用选项](cross-reference-options.qmd#references "Cross Reference Options")。
 
-## Lists|列表
+y## Lists|列表
 
 对于 LaTeX / PDF 输出，您可以使用原始 LaTeX 命令 `\listoffigures`、`\listoftables` 和 `\listoflistings`，生成文档中所有图、表等的列表。你可以使用 `lof-title`、`lot-title` 和 `lol-title` 交叉引用选项来定制列表的标题。
 

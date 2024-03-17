@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "trademark.html",
+    "href": "trademark.html",
+    "title": "Trademark Policy",
+    "section": "",
+    "text": "This policy is adapted directly from the WordPress Foundation’s trademark policy for the WordPress and WordCamp names and logos. We admire the job that WordPress has done building a thriving open source community while at the same time making possible a wide variety of WordPress related businesses. We hope that this policy will help us do the same for Quarto."
+  },
+  {
+    "objectID": "trademark.html#goals",
+    "href": "trademark.html#goals",
+    "title": "Trademark Policy",
+    "section": "Goals",
+    "text": "Goals\nPosit, PBC owns and oversees the trademark for the Quarto name and logo. We have developed this trademark usage policy with the following goals in mind:\n\nWe’d like to make it easy for anyone to use the Quarto name or logo for community-oriented efforts that help spread and improve Quarto.\nWe’d like to make it clear how Quarto-related businesses and projects can (and cannot) use the Quarto name and logo.\nWe’d like to make it hard for anyone to use the Quarto name and logo to unfairly profit from, trick or confuse people who are looking for official Quarto resources.\n\nPlease note that it is not the goal of this policy to limit open source or commercial activity around Quarto. We actively encourage Quarto-based open source projects and businesses—our goal with this policy is to prevent confusion about the source of Quarto related software and services."
+  },
+  {
+    "objectID": "trademark.html#permission",
+    "href": "trademark.html#permission",
+    "title": "Trademark Policy",
+    "section": "Permission",
+    "text": "Permission\nPermission from Posit is required to use the Quarto name or logo as part of any project, product, service, domain name, or company name.\nWe will grant permission to use the Quarto name and logo for projects that meet the following criteria:\n\nThe primary purpose of your project is to promote the spread and improvement of the Quarto software.\nYour project is non-commercial in nature (it can make money to cover its costs or contribute to non-profit entities, but it cannot be run as a for-profit project or business).\nYour project neither promotes nor is associated with entities that currently fail to comply with the open source license under which Quarto is distributed.\n\nIf your project meets these criteria, you will be permitted to use the Quarto name and logo to promote your project in any way you see fit with these exceptions: (1) Please do not use Quarto as part of a domain name; and (2) We do not allow the use of the trademark in advertising, including AdSense/AdWords.\nAll other Quarto-related businesses or projects can use the Quarto name and logo to refer to and explain their services, but they cannot use them as part of a product, project, service, domain name, or company name and they cannot use them in any way that suggests an affiliation with or endorsement by the Quarto open source project.\nThe abbreviation “QMD” is not covered by the Quarto trademark and you are free to use it in any way you see fit."
+  },
+  {
+    "objectID": "trademark.html#examples",
+    "href": "trademark.html#examples",
+    "title": "Trademark Policy",
+    "section": "Examples",
+    "text": "Examples\nA consulting company can describe its business as “123 Publishing Services, offering Quarto consulting for publishers,” but cannot call its business “The Quarto Consulting Company.” Similarly, a business related to Quarto extensions can describe itself as “XYZ Extensions, the world’s best Quarto extensions,” but cannot call itself “The Quarto Extension Portal.”\nSimilarly, it’s OK to use the Quarto logo as part of a page that describes your products or services, but it is not OK to use it as part of your company or product logo or branding itself. Under no circumstances is it permitted to use Quarto as part of a domain name or top-level domain name.\nWhen in doubt about your use of the Quarto name or logo, please contact Posit at permissions@posit.co for clarification."
+  },
+  {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "Open Source License",
+    "section": "",
+    "text": "Quarto version 1.3 (and earlier) is licensed under the GNU GPL v2. Quarto version 1.4 is licensed under the MIT License. We believe that it’s better for everyone if the tools used for research and science are free and open. Reproducibility, widespread sharing of knowledge and techniques, and the leveling of the playing field by eliminating cost barriers are but a few of the shared benefits of free software in science.\nThe Quarto source code is available at https://github.com/quarto-dev/\nQuarto is a registered trademark of Posit. Please see our trademark policy for guidelines on usage of the Quarto trademark.\nQuarto also makes use of several other open-source projects, the distribution of which is subject to their respective licenses. Major components and their licenses include:\n\n\n\nProject\nLicense\n\n\n\n\nPandoc\nGNU GPL v2\n\n\nBootstrap 5.1\nMIT\n\n\nBootswatch 5.1\nMIT\n\n\nDeno\nMIT\n\n\nesbuild\nMIT\n\n\nDart Sass\nMIT\n\n\nObservable Runtime\nISC"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Quarto",
+    "section": "",
+    "text": "The overarching goal of Quarto is to make the process of creating and collaborating on scientific and technical documents dramatically better. We hope to do this in several dimensions:\n\nCreate a writing and publishing environment with great integrated tools for technical content. We want to make authoring with embedded code, equations, figures, complex diagrams, interactive widgets, citations, cross references, and the myriad other special requirements of scientific discourse straightforward and productive for everyone.\nHelp authors take full advantage of the web as a connected, interactive platform for communications, while still providing the ability to create excellent printed output from the same document source. Researchers shouldn’t need to choose between LaTeX, MS Word, and HTML but rather be able to author documents that target all of them at the same time.\nMake reproducible research and publications the norm rather than the exception. Reproducibility requires that the code and data required to create a manuscript are an integrated part of it. However, this isn’t often straightforward in practice—Quarto aims to make it easier to adopt a reproducible workflow than not.\n\nQuarto is open source software. We believe that it’s better for everyone if the tools used for research and science are free and open. Reproducibility, widespread sharing of knowledge and techniques, and the leveling of the playing field by eliminating cost barriers are but a few of the shared benefits of free software in science."
+  },
+  {
+    "objectID": "about.html#goals",
+    "href": "about.html#goals",
+    "title": "About Quarto",
+    "section": "",
+    "text": "The overarching goal of Quarto is to make the process of creating and collaborating on scientific and technical documents dramatically better. We hope to do this in several dimensions:\n\nCreate a writing and publishing environment with great integrated tools for technical content. We want to make authoring with embedded code, equations, figures, complex diagrams, interactive widgets, citations, cross references, and the myriad other special requirements of scientific discourse straightforward and productive for everyone.\nHelp authors take full advantage of the web as a connected, interactive platform for communications, while still providing the ability to create excellent printed output from the same document source. Researchers shouldn’t need to choose between LaTeX, MS Word, and HTML but rather be able to author documents that target all of them at the same time.\nMake reproducible research and publications the norm rather than the exception. Reproducibility requires that the code and data required to create a manuscript are an integrated part of it. However, this isn’t often straightforward in practice—Quarto aims to make it easier to adopt a reproducible workflow than not.\n\nQuarto is open source software. We believe that it’s better for everyone if the tools used for research and science are free and open. Reproducibility, widespread sharing of knowledge and techniques, and the leveling of the playing field by eliminating cost barriers are but a few of the shared benefits of free software in science."
+  },
+  {
+    "objectID": "about.html#project",
+    "href": "about.html#project",
+    "title": "About Quarto",
+    "section": "Project",
+    "text": "Project\nAt the core of Quarto is Pandoc, a powerful and flexible document processing tool. Quarto adds a number of facilities to Pandoc aimed at scientific and technical publishing, including:\n\nEmbedding code and output from Python, R, and JavaScript via integration with Jupyter, Knitr, and Observable.\nA variety of extensions to Pandoc markdown useful for technical writing including cross-references, sub-figures, layout panels, hoverable citations and footnotes, callouts, and more.\nA project system for rendering groups of documents at once, sharing options across documents, and producing aggregate output like websites and books.\n\nDevelopment of Quarto is sponsored by Posit, PBC, where we previously created a similar system (R Markdown) that shared the same goals, but was targeted principally at users of the R language. The same core team works on both Quarto and R Markdown:\n\nJ.J. Allaire (@jjallaire)\nChristophe Dervieux (@cderv)\nCarlos Scheidegger (@cscheid)\nCharles Teague (@dragonstyle)\nYihui Xie (@yihui)\n\nWith Quarto, we are hoping to bring these tools to a much wider audience.\nQuarto is a registered trademark of Posit. Please see our trademark policy for guidelines on usage of the Quarto trademark."
+  },
+  {
+    "objectID": "about.html#contribute",
+    "href": "about.html#contribute",
+    "title": "About Quarto",
+    "section": "Contribute",
+    "text": "Contribute\nYou can contribute to Quarto in many ways:\n\nBy opening issues to provide feedback and share ideas.\nBy submitting Pull Request (PR) to fix opened issues\nBy submitting Pull Request (PR) to suggest new features (it is considered good practice to open an issue for discussion before working on a pull request for a new feature).\n\nPlease be mindful of our code of conduct as you interact with other community members.\n\nPull Requests\nPull requests are very welcome! Here’s how to contribute via PR:\n\nFork the repository, clone it locally, and make your changes in a new branch specific to the PR. For example:\n\n\nTerminal\n\n# clone your fork\n$ git clone https://github.com/&lt;username&gt;/quarto-cli\n\n# configure for your platform (./configure.sh or ./configure.cmd for windows)\n$ cd quarto-cli\n$ ./configure.sh\n\n# checkout a new branch\n$ git checkout -b feature/newthing\n\nFor significant changes (e.g more than small bug fixes), ensure that you have signed the individual or corporate contributor agreement as appropriate. You can send the signed copy to jj@rstudio.com.\nSubmit the pull request. It is ok to submit as draft in your are still working on it but would like some feedback from us. It always good to share in the open that you are working on it.\n\nWe’ll try to be as responsive as possible in reviewing and accepting pull requests."
+  },
+  {
+    "objectID": "bug-reports.html",
+    "href": "bug-reports.html",
+    "title": "Bug Reports",
+    "section": "",
+    "text": "We want to hear about Quarto bugs and, we want to fix those bugs! The following guidance will help us be as efficient as we can."
+  },
+  {
+    "objectID": "bug-reports.html#rule-0-please-submit-your-bug-report-anyway",
+    "href": "bug-reports.html#rule-0-please-submit-your-bug-report-anyway",
+    "title": "Bug Reports",
+    "section": "Rule 0: Please submit your bug report anyway!",
+    "text": "Rule 0: Please submit your bug report anyway!\nWe have a better chance to fix your code quickly if you follow the instructions below. Still, we know that this takes work and isn’t always possible.\nWe would rather have a record of the problem than not know about it.\nWe appreciate bug reports even if you are unable to take any or all of the following steps:"
+  },
+  {
+    "objectID": "bug-reports.html#small-is-beautiful-aim-for-a-single-document-with-10-lines",
+    "href": "bug-reports.html#small-is-beautiful-aim-for-a-single-document-with-10-lines",
+    "title": "Bug Reports",
+    "section": "Small is beautiful: Aim for a single document with ~10 lines",
+    "text": "Small is beautiful: Aim for a single document with ~10 lines\nThe most helpful thing you can do to help us is to provide a minimal, self-contained, and reproducible example.\n\nminimal: This will often mean turning your large website project into a project with a single small document, and a single large .qmd file into a small (ideally, about 10-20 total lines of code) example. By doing this, you might also be able to learn more specifically what the problem is.\nself-contained: The more software dependencies we need to understand and install, the harder it is to track the bug down. As you reduce the code, remove as many dependencies as possible.\nreproducible: If we cannot run your example, we cannot track the bug down. Please make sure the file you submitted is enough to trigger the bug on its own.\n\n\nFormatting: Make GitHub’s markdown work for us\nYou can share a minimal self-contained reproducible Quarto document using the following markdown syntax, i.e., using more backticks than you have in your document (usually four ````) to account for code cells.\n\n\n\n\n\n\n````qmd\n---\ntitle: \"Reproducible Quarto Document\"\nformat: html\nengine: jupyter\n---\n\nThis is a minimal self-contained reproducible Quarto document using `format: html` and `jupyter` engine.\nIt is written in Markdown and contains embedded Python code.\n\n```{python}\nprint(\"Hello, world!\")\n```\n\n![Here is an image available to everyone](https://placehold.co/600x400.png)\n\nThe end.\n````\n\n\n````qmd\n---\ntitle: \"Reproducible Quarto Document\"\nformat: html\nengine: knitr\n---\n\nThis is a minimal self-contained reproducible Quarto document using `format: html` and `knitr` engine.\nIt is written in Markdown and contains embedded R code.\n\n```{r}\nprint(\"Hello, world!\")\n```\n\n![Here is an image available to everyone](https://placehold.co/600x400.png)\n\nThe end.\n````"
+  },
+  {
+    "objectID": "bug-reports.html#dont-hold-back-tell-us-anything-you-think-might-make-a-difference",
+    "href": "bug-reports.html#dont-hold-back-tell-us-anything-you-think-might-make-a-difference",
+    "title": "Bug Reports",
+    "section": "Don’t hold back: Tell us anything you think might make a difference",
+    "text": "Don’t hold back: Tell us anything you think might make a difference\nAlthough we want the .qmd file to be small, we still can use as much information from you as you’re willing to share. Tell us all!, including:\n\nThe version of Quarto you’re running\nThe operating system you’re running\nThe IDE you’re using, and its version\n\n\nCheck\nYou can provide the output (within a code block) of the following command to help us understand your environment:\nquarto check\nFor instance, the markdown code you would provide might look like this:\n```bash\nQuarto 99.9.9\n[✓] Checking versions of quarto binary dependencies...\n      Pandoc version 3.1.11: OK\n      Dart Sass version 1.69.5: OK\n      Deno version 1.37.2: OK\n[✓] Checking versions of quarto dependencies......OK\n[✓] Checking Quarto installation......OK\n      Version: 99.9.9\n      Path: /quarto-cli/package/dist/bin\n\n[✓] Checking tools....................OK\n      TinyTeX: v2024.01\n      Chromium: (not installed)\n\n[✓] Checking LaTeX....................OK\n      Using: TinyTex\n      Path: /Users/username/Library/TinyTeX/bin/universal-darwin\n      Version: 2023\n\n[✓] Checking basic markdown render....OK\n\n[✓] Checking Python 3 installation....OK\n      Version: 3.12.1\n      Path: /.venv/bin/python3\n      Jupyter: 5.7.1\n      Kernels: julia-1.10, python3\n\n[✓] Checking Jupyter engine render....OK\n\n[✓] Checking R installation...........OK\n      Version: 4.3.2\n      Path: /Library/Frameworks/R.framework/Resources\n      LibPaths:\n        - /Users/username/Library/Caches/org.R-project.R/R/renv/sandbox/R-4.3/aarch64-apple-darwin20/ac5c2659\n      knitr: 1.45\n      rmarkdown: 2.25\n\n[✓] Checking Knitr engine render......OK\n```\n\n\nPrint stack\nIf you are seeing an error from Quarto, you can also provide additional diagnostic information by defining the QUARTO_PRINT_STACK environment variable.\nFor example on Unix:\nexport QUARTO_PRINT_STACK=true\nquarto render document.qmd\nor on Windows in a Powershell Terminal\n$ENV:QUARTO_PRINT_STACK=\"true\"\nquarto render document.qmd"
+  },
+  {
+    "objectID": "README-ZH.html",
+    "href": "README-ZH.html",
+    "title": "quarto-web-cn",
+    "section": "",
+    "text": "英文版\n中文版\n此仓库的 cn 分支是中文版文档，托管在 quarto.org.cn，从 GitHub - quarto-dev/quarto-web: Quarto-web分支而来, 是quarto官方网站的中文镜像翻译，以作为quarto官方中文网站使用。\n\n\n请通过在 quarto-dev/quarto-cli 资源库中打开 “文档问题”来报告 quarto.org 上的问题： 新问题"
+  },
+  {
+    "objectID": "README-ZH.html#reporting-issues",
+    "href": "README-ZH.html#reporting-issues",
+    "title": "quarto-web-cn",
+    "section": "",
+    "text": "请通过在 quarto-dev/quarto-cli 资源库中打开 “文档问题”来报告 quarto.org 上的问题： 新问题"
+  }
+]
