@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.55">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Download Quarto – Quarto</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete-preset-algolia.umd.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "algolia": {
+    "application-id": "ZPJB5I1QN7",
+    "search-only-api-key": "41be6c1e0a7fea4a51b107810facf577",
+    "index-name": "prod_QUARTO",
+    "analytics-events": true,
+    "show-logo": true,
+    "libDir": "site_libs"
+  },
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": true,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+
+
+<script type="text/javascript">
+var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights/dist/search-insights.iife.min.js";
+!function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+(e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+</script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-algolia-insights">
+
+</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-download-older .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-date','listing-path',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-id","listing-title","listing-date"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-download-older'] = new List('listing-download-older', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FV9Z7SDZ0M"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
+</script>
+<script type="application/javascript" src="https://unpkg.com/commonmark@0.29.3/dist/commonmark.min.js"></script>
+
+
+
+<script type="application/javascript">
+
+  window.document.addEventListener("DOMContentLoaded", function () {
+
+    const downloadDatas = [];
+
+    if (window["quarto-download-release"]) {
+
+      downloadDatas.push({
+
+        prefix: "download",
+
+        dataPath: "/docs/download/_download.json",
+
+        releaseDesc: undefined,
+
+      });
+
+    }
+
+    if (window["quarto-download-prerelease"]) {
+
+      downloadDatas.push({
+
+        prefix: "download-pre",
+
+        dataPath: "/docs/download/_prerelease.json",
+
+        releaseDesc: window["quarto-prerelease-mode"],
+
+      });
+
+    }
+
+
+
+    for (const downloadData of downloadDatas) {
+
+      const dataPath = downloadData.dataPath;
+
+      fetch(dataPath)
+
+        .then((response) => {
+
+          return response.json();
+
+        })
+
+        .then((dlData) => {
+
+
+
+          notifyListeners(
+
+            dlData
+
+          );
+
+
+
+          populateDownloadButton(
+
+            downloadData.prefix,
+
+            downloadData.releaseDesc,
+
+            dlData.version,
+
+            dlData.assets,
+
+            new Date(dlData.created).toLocaleString("en-US", {
+
+              dateStyle: "medium",
+
+            })
+
+          );
+
+          populateDownloadTable(
+
+            downloadData.prefix,
+
+            dlData.version,
+
+            dlData.assets
+
+          );
+
+
+
+          populateVersion(
+
+            downloadData.prefix,
+
+            dlData.version,
+
+            downloadData.releaseDesc
+
+          );
+
+          populateDate(
+
+            downloadData.prefix,
+
+            new Date(dlData.created).toLocaleString("en-US", {
+
+              dateStyle: "medium",
+
+            })
+
+          );
+
+
+
+          if (!window["quarto-download-nonews"]) {
+
+            populateNews(downloadData.prefix, dlData.description);
+
+          } else {
+
+            
+
+            const idsToRemove = [`${downloadData.prefix}-section-news`, `download-section-highlights`, `toc-download-section-highlights`, `toc-${downloadData.prefix}-release-notes`];
+
+            idsToRemove.forEach((id) => {
+
+              const el = window.document.getElementById(id);
+
+              if (el !== null) {
+
+                el.remove();
+
+              }
+
+            })
+
+
+
+          }
+
+
+
+          window.tippy("a.checksum[data-tippy-content]", {
+
+            interactive: true,
+
+            placement: "top-end",
+
+            maxWidth: "none",
+
+          });
+
+        })
+
+        .catch((err) => {
+
+          console.log(err);
+
+        });
+
+    }
+
+  });
+
+
+
+  // Only assets named in this list will be displayed in the list of downloads
+
+  // (Using the label value)
+
+  function downloadMappings(version) {
+
+    const mappings = {
+
+      [`quarto-${version}-win.msi`]: "Windows",
+
+      [`quarto-${version}-macos.pkg`]: "Mac OS",
+
+      [`quarto-${version}-linux-amd64.deb`]: "Ubuntu 18+/Debian 10+",
+
+      [`quarto-${version}-linux-arm64.deb`]: "Linux Arm64",
+
+      
+
+    };
+
+
+
+    if (window["quarto-download-archives"]) {
+
+      mappings[`quarto-${version}-win.zip`] = "Windows Zip";
+
+      mappings[`quarto-${version}-macos.tar.gz`] = "Mac Tarball";
+
+    }
+
+
+
+    if (window["quarto-download-archives"] || isLinux()) {
+
+      mappings[`quarto-${version}-linux-amd64.tar.gz`] = "Linux x86 Tarball";
+
+      mappings[`quarto-${version}-linux-arm64.tar.gz`] = "Linux Arm64 Tarball";
+
+      mappings[`quarto-${version}-linux-rhel7-amd64.tar.gz`] = "RHEL 7 Tarball";
+
+    }
+
+
+
+    return mappings;
+
+  }
+
+
+
+  function populateVersion(idPrefix, version, releaseDesc) {
+
+    const versionNodes = window.document.querySelectorAll(
+
+      `.${idPrefix}-version`
+
+    );
+
+    for (const node of versionNodes) {
+
+      node.innerHTML = version;
+
+    }
+
+  }
+
+
+
+  function populateDate(idPrefix, date) {
+
+    const dateNodes = window.document.querySelectorAll(`.${idPrefix}-date`);
+
+    for (const node of dateNodes) {
+
+      node.innerHTML = date;
+
+    }
+
+  }
+
+
+
+  function populateNews(idPrefix, markdown) {
+
+    if (markdown) {
+
+      markdown = markdown.replace(/^#{1,6} (.*)$/gm, "###### $1");
+
+      var reader = new commonmark.Parser();
+
+      var writer = new commonmark.HtmlRenderer();
+
+      var parsed = reader.parse(markdown);
+
+      var newsHtml = writer.render(parsed);
+
+      const newsDiv = window.document.getElementById(`${idPrefix}-news`);
+
+      if (newsDiv) {
+
+        newsDiv.innerHTML = newsHtml;
+
+      }
+
+    }
+
+  }
+
+
+
+  function notifyListeners(dlData) {
+
+    if (window["quarto-dl-listeners"]) {
+
+      for (const listener of window["quarto-dl-listeners"]) {
+
+        listener(dlData);
+
+      }
+
+    }
+
+  }
+
+
+
+  function populateDownloadButton(idPrefix, releaseDesc, version, assets, releaseDate) {
+
+    const osData = window["quarto-force-os"] || guessOS();
+
+    const extension = window["quarto-force-download"]
+
+      ? window["quarto-force-download"]
+
+      : osData.install_extension;
+
+    const osAsset = assets.find((asset) => asset.name.endsWith(extension));
+
+
+
+    if (isLinux() && !window["quarto-force-os"]) {
+
+      const mainDownloadLink = window.document.getElementById(
+
+        `${idPrefix}-url`
+
+      );
+
+      if (mainDownloadLink) {
+
+        mainDownloadLink.classList.add("hidden");
+
+      }
+
+      const mainDownloadText = window.document.getElementById(
+
+        `${idPrefix}-text`
+
+      );
+
+      if (mainDownloadText) {
+
+        mainDownloadText.classList.remove("hidden");
+
+      }
+
+    } else {
+
+      const mainDownloadLink = window.document.getElementById(
+
+        `${idPrefix}-url`
+
+      );
+
+      if (mainDownloadLink) {
+
+        mainDownloadLink.href = osAsset.download_url;
+
+        mainDownloadLink.innerText = "";
+
+
+
+        const containerEl = window.document.createElement("div");
+
+        containerEl.className = "container";
+
+
+
+        const iconEl = window.document.createElement("div");
+
+        iconEl.innerHTML = osData.icon;
+
+        iconEl.className = "icon-container";
+
+        if (osData.icon_margin) {
+
+          iconEl.style.paddingTop = osData.icon_margin;
+
+        }
+
+        containerEl.append(iconEl);
+
+
+
+        const textContainerEl = window.document.createElement("div");
+
+        textContainerEl.className = "text-container";
+
+
+
+        const mainTextEl = window.document.createElement("div");
+
+        mainTextEl.innerHTML = `Download Quarto CLI`;
+
+        textContainerEl.append(mainTextEl);
+
+
+
+        const secondaryTextEl = window.document.createElement("div");
+
+        secondaryTextEl.className = "secondary";
+
+        secondaryTextEl.innerText = `${version}${
+
+          releaseDesc ? " " + releaseDesc : ""
+
+        } (${osData.name}) | Date: ${releaseDate}`;
+
+        textContainerEl.append(secondaryTextEl);
+
+
+
+        containerEl.append(textContainerEl);
+
+        mainDownloadLink.append(containerEl);
+
+      }
+
+    }
+
+  }
+
+
+
+  function populateDownloadTable(idPrefix, version, assets) {
+
+    const downloadTableContainer = window.document.getElementById(
+
+      `${idPrefix}-table`
+
+    );
+
+    if (!downloadTableContainer) {
+
+      return;
+
+    }
+
+
+
+    const table = createTable();
+
+    createHeadingRow(table, ["Platform", "Download", "Size", "SHA-256"]);
+
+
+
+    const tbody = table.createTBody();
+
+    assets.forEach((asset) => {
+
+      createDownloadRow(tbody, version, asset, idPrefix);
+
+    });
+
+    if (!window["quarto-download-archives"]) {
+
+      createMoreRow(version, tbody);
+
+    }
+
+
+
+    downloadTableContainer.append(table);
+
+    window.tippy(".checksum[data-tippy-content]", {
+
+      interactive: true,
+
+      placement: "top-end",
+
+      maxWidth: "none",
+
+    });
+
+  }
+
+
+
+  function createTable() {
+
+    const table = window.document.createElement("table");
+
+    table.className = "table";
+
+    return table;
+
+  }
+
+
+
+  function createHeadingRow(table, headings) {
+
+    const header = table.createTHead();
+
+    var row = header.insertRow(0);
+
+    row.className = "header";
+
+    let cellCount = 0;
+
+    headings.forEach((heading) => {
+
+      const cell = (row.insertCell(
+
+        cellCount
+
+      ).outerHTML = `<th>${heading}</th>`);
+
+      cellCount = cellCount + 1;
+
+    });
+
+  }
+
+
+
+  function createDownloadRow(tbody, version, asset, idPrefix) {
+
+    // Ignore assets that aren't in the download mapping structure
+
+    const mapping = downloadMappings(version);
+
+    if (mapping[asset.name]) {
+
+      const row = tbody.insertRow();
+
+
+
+      let i = 0;
+
+      const platformCell = row.insertCell(i++);
+
+      platformCell.innerText = mapping[asset.name];
+
+
+
+      const downloadCell = row.insertCell(i++);
+
+      const downloadLinkEl = window.document.createElement("a");
+
+      if (asset.name.endsWith("linux-amd64.tar.gz")) {
+
+        downloadLinkEl.href =
+
+          "/docs/download/tarball.html?version=" +
+
+          version +
+
+          "&idPrefix=" +
+
+          idPrefix;
+
+      } else {
+
+        downloadLinkEl.href = asset.download_url;
+
+      }
+
+
+
+      downloadLinkEl.innerText = asset.name;
+
+
+
+      downloadCell.appendChild(downloadLinkEl);
+
+
+
+      const sizeCell = row.insertCell(i++);
+
+      if (asset.size) {
+
+        sizeCell.innerText = humanFileSize(asset.size);
+
+      }
+
+
+
+      const checksumCell = row.insertCell(i++);
+
+      if (asset.checksum) {
+
+        const checkSumSlice = asset.checksum.slice(0, 7);
+
+
+
+        const checksumEl = window.document.createElement("div");
+
+        checksumEl.className = "checksum font-monospace";
+
+        checksumEl.setAttribute("data-tippy-content", asset.checksum);
+
+        checksumEl.innerText = checkSumSlice;
+
+        checksumCell.appendChild(checksumEl);
+
+      }
+
+    }
+
+  }
+
+
+
+  function createMoreRow(version, tbody) {
+
+    const moreRow = tbody.insertRow();
+
+    moreRow.insertCell(0);
+
+    const cell = moreRow.insertCell(1);
+
+
+
+    const moreLinkEl = window.document.createElement("a");
+
+    moreLinkEl.href = "/docs/download";
+
+    moreLinkEl.innerText = "Release notes and more downloads…";
+
+    cell.appendChild(moreLinkEl);
+
+
+
+    moreRow.insertCell(2);
+
+    moreRow.insertCell(3);
+
+  }
+
+
+
+  function isLinux() {
+
+    const userAgent = window.navigator.userAgent;
+
+    return !userAgent.includes("Mac OS") && !userAgent.includes("Windows");
+
+  }
+
+
+
+  function guessOS() {
+
+    const userAgent = window.navigator.userAgent;
+
+    if (userAgent.includes("Mac OS")) {
+
+      return {
+
+        name: "Mac OS",
+
+        install_extension: "pkg",
+
+        icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>',
+
+      };
+
+    } else if (userAgent.includes("Windows")) {
+
+      return {
+
+        name: "Windows",
+
+        install_extension: "msi",
+
+        icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg>',
+
+        icon_margin: "6px",
+
+      };
+
+    } else {
+
+      return {
+
+        name: "Linux",
+
+        install_extension: "deb",
+
+        icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M220.8 123.3c1 .5 1.8 1.7 3 1.7 1.1 0 2.8-.4 2.9-1.5.2-1.4-1.9-2.3-3.2-2.9-1.7-.7-3.9-1-5.5-.1-.4.2-.8.7-.6 1.1.3 1.3 2.3 1.1 3.4 1.7zm-21.9 1.7c1.2 0 2-1.2 3-1.7 1.1-.6 3.1-.4 3.5-1.6.2-.4-.2-.9-.6-1.1-1.6-.9-3.8-.6-5.5.1-1.3.6-3.4 1.5-3.2 2.9.1 1 1.8 1.5 2.8 1.4zM420 403.8c-3.6-4-5.3-11.6-7.2-19.7-1.8-8.1-3.9-16.8-10.5-22.4-1.3-1.1-2.6-2.1-4-2.9-1.3-.8-2.7-1.5-4.1-2 9.2-27.3 5.6-54.5-3.7-79.1-11.4-30.1-31.3-56.4-46.5-74.4-17.1-21.5-33.7-41.9-33.4-72C311.1 85.4 315.7.1 234.8 0 132.4-.2 158 103.4 156.9 135.2c-1.7 23.4-6.4 41.8-22.5 64.7-18.9 22.5-45.5 58.8-58.1 96.7-6 17.9-8.8 36.1-6.2 53.3-6.5 5.8-11.4 14.7-16.6 20.2-4.2 4.3-10.3 5.9-17 8.3s-14 6-18.5 14.5c-2.1 3.9-2.8 8.1-2.8 12.4 0 3.9.6 7.9 1.2 11.8 1.2 8.1 2.5 15.7.8 20.8-5.2 14.4-5.9 24.4-2.2 31.7 3.8 7.3 11.4 10.5 20.1 12.3 17.3 3.6 40.8 2.7 59.3 12.5 19.8 10.4 39.9 14.1 55.9 10.4 11.6-2.6 21.1-9.6 25.9-20.2 12.5-.1 26.3-5.4 48.3-6.6 14.9-1.2 33.6 5.3 55.1 4.1.6 2.3 1.4 4.6 2.5 6.7v.1c8.3 16.7 23.8 24.3 40.3 23 16.6-1.3 34.1-11 48.3-27.9 13.6-16.4 36-23.2 50.9-32.2 7.4-4.5 13.4-10.1 13.9-18.3.4-8.2-4.4-17.3-15.5-29.7zM223.7 87.3c9.8-22.2 34.2-21.8 44-.4 6.5 14.2 3.6 30.9-4.3 40.4-1.6-.8-5.9-2.6-12.6-4.9 1.1-1.2 3.1-2.7 3.9-4.6 4.8-11.8-.2-27-9.1-27.3-7.3-.5-13.9 10.8-11.8 23-4.1-2-9.4-3.5-13-4.4-1-6.9-.3-14.6 2.9-21.8zM183 75.8c10.1 0 20.8 14.2 19.1 33.5-3.5 1-7.1 2.5-10.2 4.6 1.2-8.9-3.3-20.1-9.6-19.6-8.4.7-9.8 21.2-1.8 28.1 1 .8 1.9-.2-5.9 5.5-15.6-14.6-10.5-52.1 8.4-52.1zm-13.6 60.7c6.2-4.6 13.6-10 14.1-10.5 4.7-4.4 13.5-14.2 27.9-14.2 7.1 0 15.6 2.3 25.9 8.9 6.3 4.1 11.3 4.4 22.6 9.3 8.4 3.5 13.7 9.7 10.5 18.2-2.6 7.1-11 14.4-22.7 18.1-11.1 3.6-19.8 16-38.2 14.9-3.9-.2-7-1-9.6-2.1-8-3.5-12.2-10.4-20-15-8.6-4.8-13.2-10.4-14.7-15.3-1.4-4.9 0-9 4.2-12.3zm3.3 334c-2.7 35.1-43.9 34.4-75.3 18-29.9-15.8-68.6-6.5-76.5-21.9-2.4-4.7-2.4-12.7 2.6-26.4v-.2c2.4-7.6.6-16-.6-23.9-1.2-7.8-1.8-15 .9-20 3.5-6.7 8.5-9.1 14.8-11.3 10.3-3.7 11.8-3.4 19.6-9.9 5.5-5.7 9.5-12.9 14.3-18 5.1-5.5 10-8.1 17.7-6.9 8.1 1.2 15.1 6.8 21.9 16l19.6 35.6c9.5 19.9 43.1 48.4 41 68.9zm-1.4-25.9c-4.1-6.6-9.6-13.6-14.4-19.6 7.1 0 14.2-2.2 16.7-8.9 2.3-6.2 0-14.9-7.4-24.9-13.5-18.2-38.3-32.5-38.3-32.5-13.5-8.4-21.1-18.7-24.6-29.9s-3-23.3-.3-35.2c5.2-22.9 18.6-45.2 27.2-59.2 2.3-1.7.8 3.2-8.7 20.8-8.5 16.1-24.4 53.3-2.6 82.4.6-20.7 5.5-41.8 13.8-61.5 12-27.4 37.3-74.9 39.3-112.7 1.1.8 4.6 3.2 6.2 4.1 4.6 2.7 8.1 6.7 12.6 10.3 12.4 10 28.5 9.2 42.4 1.2 6.2-3.5 11.2-7.5 15.9-9 9.9-3.1 17.8-8.6 22.3-15 7.7 30.4 25.7 74.3 37.2 95.7 6.1 11.4 18.3 35.5 23.6 64.6 3.3-.1 7 .4 10.9 1.4 13.8-35.7-11.7-74.2-23.3-84.9-4.7-4.6-4.9-6.6-2.6-6.5 12.6 11.2 29.2 33.7 35.2 59 2.8 11.6 3.3 23.7.4 35.7 16.4 6.8 35.9 17.9 30.7 34.8-2.2-.1-3.2 0-4.2 0 3.2-10.1-3.9-17.6-22.8-26.1-19.6-8.6-36-8.6-38.3 12.5-12.1 4.2-18.3 14.7-21.4 27.3-2.8 11.2-3.6 24.7-4.4 39.9-.5 7.7-3.6 18-6.8 29-32.1 22.9-76.7 32.9-114.3 7.2zm257.4-11.5c-.9 16.8-41.2 19.9-63.2 46.5-13.2 15.7-29.4 24.4-43.6 25.5s-26.5-4.8-33.7-19.3c-4.7-11.1-2.4-23.1 1.1-36.3 3.7-14.2 9.2-28.8 9.9-40.6.8-15.2 1.7-28.5 4.2-38.7 2.6-10.3 6.6-17.2 13.7-21.1.3-.2.7-.3 1-.5.8 13.2 7.3 26.6 18.8 29.5 12.6 3.3 30.7-7.5 38.4-16.3 9-.3 15.7-.9 22.6 5.1 9.9 8.5 7.1 30.3 17.1 41.6 10.6 11.6 14 19.5 13.7 24.6zM173.3 148.7c2 1.9 4.7 4.5 8 7.1 6.6 5.2 15.8 10.6 27.3 10.6 11.6 0 22.5-5.9 31.8-10.8 4.9-2.6 10.9-7 14.8-10.4s5.9-6.3 3.1-6.6-2.6 2.6-6 5.1c-4.4 3.2-9.7 7.4-13.9 9.8-7.4 4.2-19.5 10.2-29.9 10.2s-18.7-4.8-24.9-9.7c-3.1-2.5-5.7-5-7.7-6.9-1.5-1.4-1.9-4.6-4.3-4.9-1.4-.1-1.8 3.7 1.7 6.5z"/></svg>',
+
+        icon_margin: "6px",
+
+      };
+
+    }
+
+  }
+
+
+
+  function humanFileSize(size) {
+
+    var i = Math.floor(Math.log(size) / Math.log(1024));
+
+    return (
+
+      (size / Math.pow(1024, i)).toFixed(2) * 1 +
+
+      " " +
+
+      ["B", "kB", "MB", "GB", "TB"][i]
+
+    );
+
+  }
+
+</script>
+
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Download Quarto – Quarto">
+<meta property="og:description" content="Install a release or pre-release build of Quarto.">
+<meta property="og:image" content="https://quarto.org/images/hero_right.png">
+<meta property="og:site_name" content="Quarto">
+<meta property="og:image:height" content="752">
+<meta property="og:image:width" content="840">
+<meta name="twitter:title" content="Download Quarto – Quarto">
+<meta name="twitter:description" content="Install a release or pre-release build of Quarto.">
+<meta name="twitter:image" content="https://quarto.org/images/hero_right.png">
+<meta name="twitter:image-height" content="752">
+<meta name="twitter:image-width" content="840">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../quarto.png" alt="Quarto logo." class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="搜索"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="展开或折叠导航栏" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">概述</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/get-started/index.html"> 
+<span class="menu-text">开始</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/guide/index.html"> 
+<span class="menu-text">指南</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/extensions/index.html"> 
+<span class="menu-text">扩展</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/reference/index.html"> 
+<span class="menu-text">引用</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/gallery/index.html"> 
+<span class="menu-text">展厅</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/blog/index.html"> 
+<span class="menu-text">博客</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">帮助</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/issues"><i class="bi bi-bug" role="img">
+</i> 
+ <span class="dropdown-text">提交Bug</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/discussions"><i class="bi bi-chat-right-text" role="img">
+</i> 
+ <span class="dropdown-text">回答问题</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/faq/index.html"><i class="bi bi-question-circle" role="img">
+</i> 
+ <span class="dropdown-text">常见问题</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://twitter.com/quarto_pub" title="Quarto Twitter" class="quarto-navigation-tool px-1" aria-label="Quarto Twitter"><i class="bi bi-twitter"></i></a>
+    <a href="https://github.com/quarto-dev/quarto-cli" title="Quarto GitHub" class="quarto-navigation-tool px-1" aria-label="Quarto GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://quarto.org/docs/blog/index.xml" title="Quarto Blog RSS" class="quarto-navigation-tool px-1" aria-label="Quarto Blog RSS"><i class="bi bi-rss"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Download Quarto</h1>
+<p class="subtitle lead">Install a release or pre-release build of Quarto.</p>
+</div>
+
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><strong>Current Release</strong> — v<span class="download-version"></span></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><strong>Pre-release</strong> — v<span class="download-pre-version"></span></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false"><strong>Older Releases</strong></a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="download-button" class="download-button">
+<div>
+<p><a href="_" id="download-url" class="btn btn-action btn-action-primary" title="Download Quarto">_</a> <span id="download-text" class="hidden download-text">Find your operating system in the table below</span></p>
+</div>
+</div>
+<div id="download-table" class="download-table">
+
+</div>
+<section id="download-section-highlights" class="level3">
+<h3 data-anchor-id="download-section-highlights">Highlights</h3>
+<p>Quarto 1.4 includes the following new features:</p>
+<ul>
+<li><p><a href="../../docs/manuscripts/index.html">Quarto Manuscripts</a>—A new project type for scholarly articles, where notebooks are both the source of the article, and part of the published record.</p></li>
+<li><p><a href="../../docs/dashboards/index.html">Quarto Dashboards</a>–A new format for creating interactive dashboards.</p></li>
+<li><p><a href="../../docs/output-formats/typst.html">Typst Format</a>—Support for the <code>typst</code> output format. <a href="https://github.com/typst/typst">Typst</a> is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.</p></li>
+<li><p>Cross-reference changes:</p>
+<ul>
+<li><p>Adds a new <a href="../../docs/authoring/cross-references-divs.html">Cross-Reference Div Syntax</a> to more flexibly define cross-referenceable elements.</p></li>
+<li><p>Allows the definition of <a href="../../docs/authoring/cross-references-custom.html">Custom Cross-Reference Types</a> via document or project YAML.</p></li>
+<li><p>Adds <code>lst-label</code> and <code>lst-cap</code> code cell options to create <a href="../../docs/authoring/cross-references.html#code-listings">Cross-referenceable Listings for Executable Code</a>.</p></li>
+<li><p>Allows <a href="../../docs/authoring/cross-references.html#callouts">Cross-Referencing Callouts</a>.</p></li>
+<li><p>Adds the prefixes <code>rem-</code> and <code>sol-</code> to cross-reference Remarks and Solutions in addition to the <a href="../..\docs/authoring/cross-references.html#theorems-and-proofs">existing theorem types</a>.</p></li>
+<li><p>Makes other <a href="../../docs/prerelease/1.4/crossref.html">behind the scenes changes</a>.</p></li>
+</ul></li>
+<li><p><a href="../../docs/dashboards/interactivity/shiny-python/index.html">Shiny for Python</a>—Support for using Shiny for Python within Quarto documents.</p></li>
+<li><p><a href="../../docs/computations/inline-code.html">Inline Execution for Jupyter</a>—Support for executing inline expressions when using Jupyter kernels.</p></li>
+<li><p><a href="../../docs/computations/render-scripts.html">Script Rendering</a></p>
+<ul>
+<li><p>Jupyter—Support for rendering script files (e.g.&nbsp;<code>.py</code>, <code>.jl</code>, or <code>.r</code>) that are <a href="https://jupytext.readthedocs.io/en/latest/formats-scripts.html">specially formatted</a> as notebooks.</p></li>
+<li><p>Knitr—Support for rendering R script files (e.g.&nbsp;<code>.r</code> or <code>.R</code>) that are formatted for report using <a href="https://bookdown.org/yihui/rmarkdown-cookbook/spin.html"><code>knitr::spin()</code> syntax</a>.</p></li>
+</ul></li>
+<li><p><a href="../../docs/projects/binder.html">Easy Binder Configuration for Quarto Projects</a>—Support for generating files required to deploy a Quarto project using Binder.</p></li>
+<li><p><a href="../../docs/prerelease/1.4/email.html">Connect Email Generation</a>—Extends the <code>html</code> output format so that HTML/text emails can be created and selectively delivered through Posit Connect.</p></li>
+<li><p><a href="../../docs/publishing/posit-cloud.html">Publish to Posit Cloud</a>—Adds <code>posit-cloud</code> as a venue for <code>quarto publish</code>.</p></li>
+<li><p><a href="../../docs/output-formats/html-lightbox-figures.html">Lightbox Treatment for Images and Figures</a>—Support for zooming into images and figures using a <code>lightbox</code>. Includes support for grouping multiple images into a gallery.</p></li>
+<li><p><a href="../../docs/prerelease/1.4/lua_changes.html">Lua changes</a>—Quarto v1.4 adds new features to writers of Lua filters.</p></li>
+<li><p><a href="../../docs/prerelease/1.4/ast.html">AST processing changes</a>—Quarto v1.4 improves on the HTML table processing added in v1.3 and adds a way for LaTeX raw blocks to include Quarto-compatible markdown for processing.</p></li>
+</ul>
+</section>
+<div id="download-section-news">
+<section id="download-release-notes" class="level3">
+<h3 data-anchor-id="download-release-notes">Release Notes</h3>
+<div id="download-news" class="download-news">
+
+</div>
+</section>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="download-pre-button" class="download-button">
+<div>
+<p><a href="_" id="download-pre-url" class="btn btn-action btn-action-primary" title="Download Quarto">_</a> <span id="download-pre-text" class="hidden download-text">Find your operating system in the table below</span></p>
+</div>
+</div>
+<div id="download-pre-table" class="download-table">
+
+</div>
+<section id="download-section-highlights" class="level3">
+<h3 data-anchor-id="download-section-highlights">Highlights</h3>
+<section id="website-draft-mode-1" class="level4">
+<h4 data-anchor-id="website-draft-mode-1">Website Draft Mode</h4>
+<p>Quarto websites now have improved support for workflows involving draft posts and pages. Learn more about our <a href="../../docs/prerelease/1.5/website-drafts.html">new draft support</a>.</p>
+</section>
+<section id="project-pre-render-scripts-1" class="level4">
+<h4 data-anchor-id="project-pre-render-scripts-1">Project Pre Render Scripts</h4>
+<p>Previously, project metadata and the project render list were loaded prior to executing any pre-render scripts for a project. This prevented these pre-render scripts from modifying any project metadata or adding to the render list (for example by generating <code>qmd</code> files or <code>ipynb</code> files that should be rendered).</p>
+<p>Starting in Quarto 1.5, the project metadata and render list will be re-computed after any pre-render scripts have executed, allowing them to modify this project data.</p>
+<p>Note that pre-render scripts cannot modify the project directory, the output directory, or the project type. If a pre-render script modifies any of these values, an error will be returned and the render will fail.</p>
+</section>
+<section id="element-wide-disabling-of-html-processing-1" class="level4">
+<h4 data-anchor-id="element-wide-disabling-of-html-processing-1">Element-wide disabling of HTML processing</h4>
+<p>Quarto 1.5 provides <a href="../../docs/prerelease/1.5/lua-table-processing.html">additional control</a> for its table processing.</p>
+</section>
+</section>
+<div id="download-pre-section-news">
+<section id="download-pre-release-notes" class="level3">
+<h3 data-anchor-id="download-pre-release-notes">Release Notes</h3>
+<div id="download-pre-news" class="download-news">
+
+</div>
+</section>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Pages containing all installers for the most recent releases of older versions of Quarto are linked below.</p>
+<div id="listing-download-older" class="quarto-listing quarto-listing-container-table">
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+标题
+</th>
+<th>
+日期
+</th>
+<th>
+Url
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-date-sort="1692720000000" data-listing-path-sort="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.3.450" data-listing-title-sort="v1.3.450">
+<td>
+<a href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.3.450" class="title listing-title">v1.3.450</a>
+</td>
+<td>
+<span class="listing-date">Aug 23, 2023</span>
+</td>
+<td>
+<a href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.3.450" class="path listing-path">https://github.com/quarto-dev/quarto-cli/releases/tag/v1.3.450</a>
+</td>
+</tr>
+<tr data-index="1" data-listing-date-sort="1679414400000" data-listing-path-sort="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.2.475" data-listing-title-sort="v1.2.475">
+<td>
+<a href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.2.475" class="title listing-title">v1.2.475</a>
+</td>
+<td>
+<span class="listing-date">Mar 22, 2023</span>
+</td>
+<td>
+<a href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.2.475" class="path listing-path">https://github.com/quarto-dev/quarto-cli/releases/tag/v1.2.475</a>
+</td>
+</tr>
+<tr data-index="2" data-listing-date-sort="1662220800000" data-listing-path-sort="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.1.189" data-listing-title-sort="v1.1.189">
+<td>
+<a href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.1.189" class="title listing-title">v1.1.189</a>
+</td>
+<td>
+<span class="listing-date">Sep 4, 2022</span>
+</td>
+<td>
+<a href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.1.189" class="path listing-path">https://github.com/quarto-dev/quarto-cli/releases/tag/v1.1.189</a>
+</td>
+</tr>
+<tr data-index="3" data-listing-date-sort="1659542400000" data-listing-path-sort="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.0.38" data-listing-title-sort="v1.0.38">
+<td>
+<a href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.0.38" class="title listing-title">v1.0.38</a>
+</td>
+<td>
+<span class="listing-date">Aug 4, 2022</span>
+</td>
+<td>
+<a href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.0.38" class="path listing-path">https://github.com/quarto-dev/quarto-cli/releases/tag/v1.0.38</a>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">
+无匹配项
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</main> <!-- /main -->
+<script type="text/javascript">
+
+
+
+// replace cmd keyboard shortcut w/ control on non-Mac platforms
+
+const kPlatformMac = typeof navigator !== 'undefined' ? /Mac/.test(navigator.platform) : false;
+
+if (!kPlatformMac) {
+
+   var kbds = document.querySelectorAll("kbd")
+
+   kbds.forEach(function(kbd) {
+
+      kbd.innerHTML = kbd.innerHTML.replace(/⌘/g, '⌃');
+
+   });
+
+}
+
+
+
+// tweak headings in pymd
+
+document.querySelectorAll(".pymd span.co").forEach(el => {
+
+   if (!el.innerText.startsWith("#|")) {
+
+      el.style.fontWeight = 1000;
+
+   }
+
+});
+
+
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "已复制");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "已复制");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/quarto\.org");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Proudly supported by <a href="https://posit.co"><img src="https://www.rstudio.com/assets/img/posit-logo-fullcolor-TM.svg" class="img-fluid" alt="Posit" width="65"></a></p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+<p>关于</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../docs/faq/index.html">
+<p>问答</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../trademark.html">
+<p>商标</p>
+</a>
+  </li>  
+</ul>
+    <div class="toc-actions"><ul><li><a href="https://github.com/quarto-dev/quarto-web/edit/main/docs/download/index.qmd" class="toc-action"><i class="bi bi-github"></i>编辑页面</a></li><li><a href="https://github.com/quarto-dev/quarto-cli/issues/new/choose" class="toc-action"><i class="bi empty"></i>反馈问题</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/quarto_pub">
+      <i class="bi bi-twitter" role="img" aria-label="Quarto Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/quarto-dev/quarto-cli">
+      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://quarto.org/docs/blog/index.xml">
+      <i class="bi bi-rss" role="img" aria-label="Quarto Blog RSS">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+window['quarto-download-prerelease'] = true;
+window['quarto-download-release'] = true;
+window['quarto-download-archives'] = true;
+window["quarto-prerelease-mode"] = '';
+</script>
+
+
+
+
+</body></html>

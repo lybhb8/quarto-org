@@ -1,0 +1,3519 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.55">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Diagrams – Quarto</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete-preset-algolia.umd.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../docs/authoring/videos.html" rel="next">
+<link href="../../docs/authoring/tables.html" rel="prev">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "algolia": {
+    "application-id": "ZPJB5I1QN7",
+    "search-only-api-key": "41be6c1e0a7fea4a51b107810facf577",
+    "index-name": "prod_QUARTO",
+    "analytics-events": true,
+    "show-logo": true,
+    "libDir": "site_libs"
+  },
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": true,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+
+
+<script type="text/javascript">
+var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights/dist/search-insights.iife.min.js";
+!function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+(e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+</script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-algolia-insights">
+
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FV9Z7SDZ0M"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
+</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Diagrams – Quarto">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://quarto.org/docs/authoring/quarto-dark-bg.jpeg">
+<meta property="og:site_name" content="Quarto">
+<meta name="twitter:title" content="Diagrams – Quarto">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://quarto.org/docs/authoring/quarto-dark-bg.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../quarto.png" alt="Quarto logo." class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="搜索"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="展开或折叠导航栏" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">概述</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/get-started/index.html"> 
+<span class="menu-text">开始</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../docs/guide/index.html" aria-current="page"> 
+<span class="menu-text">指南</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/extensions/index.html"> 
+<span class="menu-text">扩展</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/reference/index.html"> 
+<span class="menu-text">引用</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/gallery/index.html"> 
+<span class="menu-text">展厅</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/blog/index.html"> 
+<span class="menu-text">博客</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">帮助</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/issues"><i class="bi bi-bug" role="img">
+</i> 
+ <span class="dropdown-text">提交Bug</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/discussions"><i class="bi bi-chat-right-text" role="img">
+</i> 
+ <span class="dropdown-text">回答问题</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/faq/index.html"><i class="bi bi-question-circle" role="img">
+</i> 
+ <span class="dropdown-text">常见问题</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://twitter.com/quarto_pub" title="Quarto Twitter" class="quarto-navigation-tool px-1" aria-label="Quarto Twitter"><i class="bi bi-twitter"></i></a>
+    <a href="https://github.com/quarto-dev/quarto-cli" title="Quarto GitHub" class="quarto-navigation-tool px-1" aria-label="Quarto GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://quarto.org/docs/blog/index.xml" title="Quarto Blog RSS" class="quarto-navigation-tool px-1" aria-label="Quarto Blog RSS"><i class="bi bi-rss"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/guide/index.html">指南</a></li><li class="breadcrumb-item"><a href="../../docs/authoring/markdown-basics.html">创作</a></li><li class="breadcrumb-item"><a href="../../docs/authoring/diagrams.html">Diagrams</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/guide/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">指南</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">创作</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/markdown-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Markdown Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/figures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Figures</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/diagrams.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Diagrams</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/videos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Videos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/notebook-embed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Embeds</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/callouts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Callout Blocks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/code-annotation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code Annotation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/article-layout.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Article Layout</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Scholarly Writing</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/front-matter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Front Matter</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/title-blocks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Title Blocks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/footnotes-and-citations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Citations &amp; Footnotes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Cross-References</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/cross-references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">基础</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/cross-reference-options.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">选择</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/cross-references-divs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Div Syntax</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/cross-references-custom.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Custom Floats</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/create-citeable-articles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating Citeable Articles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/appendices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendices</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">计算方法</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/julia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using Julia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/ojs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using Observable</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/inline-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inline Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/render-scripts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rendering Script Files</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/execution-options.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Execution Options</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/parameters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Parameters</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">编辑工具</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">JupyterLab</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/jupyter-lab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">JupyterLab Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/jupyter-lab-extension.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">JupyterLab Extension</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">RStudio IDE</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/rstudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">RStudio Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/visual-editor/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Visual Editor</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Editor Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/technical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Technical Writing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/content.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Content Editing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/options.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Shortcuts &amp; Options</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/markdown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Markdown Output</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/tools/vscode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/vscode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/vscode/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Visual Editor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/vscode-notebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notebook Editor</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/neovim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Neovim</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/text-editors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Text Editors</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">文档</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">HTML</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HTML Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HTML Code Blocks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-themes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HTML Theming</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-multi-format.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Including Other Formats</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-lightbox-figures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lightbox Figures</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-publishing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Publishing HTML</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+ <span class="menu-text">PDF</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/pdf-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PDF Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/pdf-engine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PDF Engines</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
+ <span class="menu-text">MS Word</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/ms-word.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Word Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/ms-word-templates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Word Templates</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
+ <span class="menu-text">Typst</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/typst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Typst Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/typst-custom.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Custom Formats</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false">
+ <span class="menu-text">Markdown</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/gfm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GitHub (GFM)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/hugo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hugo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/docusaurus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Docusaurus</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/all-formats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">All Formats</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false">
+ <span class="menu-text">讲稿</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/presentations/revealjs/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Revealjs</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/revealjs/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reveal Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/revealjs/presenting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presenting Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/revealjs/advanced.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Advanced Reveal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/revealjs/themes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reveal Themes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/powerpoint.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PowerPoint</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/beamer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Beamer</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/dashboards/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">展板</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/dashboards/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/dashboards/layout.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using Dashboards</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/dashboards/layout.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Layout</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/dashboards/data-display.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Display</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/dashboards/inputs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inputs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/dashboards/theming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theming</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/dashboards/parameters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Parameters</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/dashboards/deployment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Deployment</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/dashboards/interactivity/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interactivity</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/dashboards/interactivity/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/dashboards/interactivity/shiny-python/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Shiny for Python</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/dashboards/interactivity/shiny-python/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting Started</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/dashboards/interactivity/shiny-python/running.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Running Dashboards</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/dashboards/interactivity/shiny-python/execution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Execution Contexts</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/dashboards/interactivity/shiny-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Shiny for R</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/dashboards/interactivity/shiny-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting Started</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/shiny/running.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Running Documents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/shiny/execution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Execution Contexts</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/dashboards/interactivity/observable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Observable JS</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/dashboards/examples/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Examples</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/websites/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">网站</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating a Website</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-navigation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Website Navigation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-blog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating a Blog</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-search.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Website Search</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Website Tools</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About Pages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/websites/website-listings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Listing Pages</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-listings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Document Listings</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-listings-custom.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Custom Listings</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/books/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">图书</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/books/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating a Book</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/books/book-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Book Structure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/books/book-crossrefs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Book Crossrefs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/books/book-output.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Customizing Output</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/manuscripts/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">手稿</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-27" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/manuscripts/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting Started</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/manuscripts/authoring/jupyterlab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Authoring Manuscripts</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/manuscripts/authoring/jupyterlab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter Lab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/manuscripts/authoring/vscode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/manuscripts/authoring/rstudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">RStudio</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/manuscripts/publishing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Publishing Manuscripts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/manuscripts/next-steps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Next Steps</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/manuscripts/components.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using Manuscripts</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" role="navigation" aria-expanded="false">
+ <span class="menu-text">互动</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-28" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/interactive/ojs/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Observable JS</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-29" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/libraries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Libraries</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/data-sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Sources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/ojs-cells.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OJS Cells</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/shiny.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Shiny Reactives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/code-reuse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code Reuse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" role="navigation" aria-expanded="false">
+ <span class="menu-text">Examples</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-30" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/penguins.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Penguins</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/sunburst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sunburst</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/arquero.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Arquero</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/population.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Population</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/noaa-co2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NOAA CO2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GitHub API</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/layout.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Layout</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-31" role="navigation" aria-expanded="false">
+ <span class="menu-text">Shiny</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-31" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-31" class="collapse list-unstyled sidebar-section depth5 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/kmeans-shiny-ojs/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">K-Means</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/binning-shiny-ojs/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Binning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/data-shiny-ojs/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Binding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/covid19-bicartogram/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Covid Map</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/interactive/shiny/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Shiny</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-32" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-32" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/shiny/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/shiny/running.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Running Documents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/shiny/execution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Execution Contexts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/shiny/resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">External Resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-33" role="navigation" aria-expanded="false">
+ <span class="menu-text">Examples</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-33" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-33" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/shiny-old-faithful/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Old Faithful</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/shiny-k-means/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">K-Means</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/shiny-diamonds/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Diamonds</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-34" role="navigation" aria-expanded="false">
+ <span class="menu-text">Widgets</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-34" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-34" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/widgets/jupyter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter Widgets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/widgets/htmlwidgets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">htmlwidgets for R</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/layout.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Component Layout</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-35" role="navigation" aria-expanded="false">
+ <span class="menu-text">部署</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-35" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-35" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Publishing Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/quarto-pub.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto Pub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/github-pages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GitHub Pages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/rstudio-connect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Posit Connect</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/posit-cloud.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Posit Cloud</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/netlify.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Netlify</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/confluence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Confluence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/other.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Other Services</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/ci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Publishing with CI</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-36" role="navigation" aria-expanded="false">
+ <span class="menu-text">项目</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-36" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-36" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/quarto-projects.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/code-execution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Managing Execution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/profiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Profiles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/environment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Environment Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/scripts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Scripts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/virtual-environments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Virtual Environments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/binder.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using Binder With Quarto</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-37" role="navigation" aria-expanded="false">
+ <span class="menu-text">先进</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-37" role="navigation" aria-expanded="false" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-37" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/includes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Includes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/page-layout.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Page Layout</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/language.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Document Language</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/conditional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditional Content</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/nbfilter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notebook Filters</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">页面目录</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#mermaid" id="toc-mermaid" class="nav-link" data-scroll-target="#mermaid">Mermaid</a></li>
+  <li><a href="#graphviz" id="toc-graphviz" class="nav-link" data-scroll-target="#graphviz">Graphviz</a></li>
+  <li><a href="#authoring" id="toc-authoring" class="nav-link" data-scroll-target="#authoring">Authoring</a></li>
+  <li><a href="#cross-references" id="toc-cross-references" class="nav-link" data-scroll-target="#cross-references">Cross-References</a></li>
+  <li><a href="#file-include" id="toc-file-include" class="nav-link" data-scroll-target="#file-include">File Include</a></li>
+  <li><a href="#sizing" id="toc-sizing" class="nav-link" data-scroll-target="#sizing">Sizing</a></li>
+  <li><a href="#mermaid-formats" id="toc-mermaid-formats" class="nav-link" data-scroll-target="#mermaid-formats">Mermaid Formats</a></li>
+  <li><a href="#mermaid-theming" id="toc-mermaid-theming" class="nav-link" data-scroll-target="#mermaid-theming">Mermaid Themes</a>
+  <ul class="collapse">
+  <li><a href="#default-colors-for-mermaid-diagrams" id="toc-default-colors-for-mermaid-diagrams" class="nav-link" data-scroll-target="#default-colors-for-mermaid-diagrams">Default Colors for Mermaid Diagrams</a></li>
+  <li><a href="#using-mermaids-built-in-themes" id="toc-using-mermaids-built-in-themes" class="nav-link" data-scroll-target="#using-mermaids-built-in-themes">Using Mermaid’s Built-in Themes</a></li>
+  <li><a href="#customizing-mermaid" id="toc-customizing-mermaid" class="nav-link" data-scroll-target="#customizing-mermaid">Customizing the Mermaid Theme</a></li>
+  </ul></li>
+  <li><a href="#code-echo" id="toc-code-echo" class="nav-link" data-scroll-target="#code-echo">Code Echo</a></li>
+  <li><a href="#chrome-install" id="toc-chrome-install" class="nav-link" data-scroll-target="#chrome-install">Chrome Install</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/quarto-dev/quarto-web/edit/main/docs/authoring/diagrams.qmd" class="toc-action"><i class="bi bi-github"></i>编辑页面</a></li><li><a href="https://github.com/quarto-dev/quarto-cli/issues/new/choose" class="toc-action"><i class="bi empty"></i>反馈问题</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/guide/index.html">指南</a></li><li class="breadcrumb-item"><a href="../../docs/authoring/markdown-basics.html">创作</a></li><li class="breadcrumb-item"><a href="../../docs/authoring/diagrams.html">Diagrams</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Diagrams</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Quarto has native support for embedding <a href="https://mermaid-js.github.io/mermaid/#/">Mermaid</a> and <a href="https://graphviz.org/">Graphviz</a> diagrams. This enables you to create flowcharts, sequence diagrams, state diagrams, gantt charts, and more using a plain text syntax inspired by markdown.</p>
+<p>For example, here we embed a flowchart created using Mermaid:</p>
+<div class="cell" data-layout-align="default">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="in">flowchart LR</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="in">  A[Hard edge] --&gt; B(Round edge)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="in">  B --&gt; C{Decision}</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="in">  C --&gt; D[Result one]</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="in">  C --&gt; E[Result two]</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Hard edge] --&gt; B(Round edge)
+  B --&gt; C{Decision}
+  C --&gt; D[Result one]
+  C --&gt; E[Result two]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>As illustrated above, Mermaid diagrams are embedded using <code>{mermaid}</code> executable cells. Graphviz diagrams are embedded using <code>{dot}</code> executable cells. Note that cell options are added with slightly different syntax: <code>%%|</code> for <code>{mermaid}</code>, and <code>//|</code> for <code>{dot}</code>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+注解
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For print output formats like <code>pdf</code> or <code>docx</code>, diagram rendering makes use of the Chrome or Edge web browser to create a high-quality PNG. Quarto can automatically use an existing version of Chrome or Edge on your system, or alternatively if you don’t have either installed, can use a lighter-weight library version of Chrome (see <a href="#chrome-install">Chrome Install</a> below for details).</p>
+</div>
+</div>
+</section>
+<section id="mermaid" class="level2">
+<h2 class="anchored" data-anchor-id="mermaid">Mermaid</h2>
+<p>Mermaid is a Javascript based diagramming and charting tool that uses Markdown-inspired text definitions and a renderer to create and modify complex diagrams.</p>
+<p>Mermaid diagrams use <code>%%</code> as their comment syntax, and so cell options are declared using <code>%%|</code>. Cell options <strong>must</strong> be included directly beneath the start of the diagram code chunk.</p>
+<p>Above we demonstrated a flowchart created with Mermaid, here is a sequence diagram (also embedded using a <code>{mermaid}</code> executable cell):</p>
+<div class="cell" data-layout-align="default">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="in">sequenceDiagram</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="in">  participant Alice</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="in">  participant Bob</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="in">  Alice-&gt;&gt;John: Hello John, how are you?</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="in">  loop Healthcheck</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">    John-&gt;&gt;John: Fight against hypochondria</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="in">  end</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="in">  Note right of John: Rational thoughts &lt;br/&gt;prevail!</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in">  John--&gt;&gt;Alice: Great!</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="in">  John-&gt;&gt;Bob: How about you?</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="in">  Bob--&gt;&gt;John: Jolly good!</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+  participant Alice
+  participant Bob
+  Alice-&gt;&gt;John: Hello John, how are you?
+  loop Healthcheck
+    John-&gt;&gt;John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts &lt;br/&gt;prevail!
+  John--&gt;&gt;Alice: Great!
+  John-&gt;&gt;Bob: How about you?
+  Bob--&gt;&gt;John: Jolly good!
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Note that Mermaid output varies depending on the target format (e.g.&nbsp;HTML vs.&nbsp;print-based). See the section below on <a href="#mermaid-formats">Mermaid Formats</a> for additional details.</p>
+<p>To learn more about using Mermaid, see the <a href="https://mermaid-js.github.io/mermaid/">Mermaid website</a> or the <a href="https://www.amazon.com/Official-Guide-Mermaid-js-beautiful-flowcharts-dp-1801078025/dp/1801078025">Mermaid book</a> (which is written by the creator of Mermaid).</p>
+</section>
+<section id="graphviz" class="level2">
+<h2 class="anchored" data-anchor-id="graphviz">Graphviz</h2>
+<p>The Graphviz layout programs take descriptions of graphs in a simple text language, and make diagrams in useful formats. Graphviz has many useful features for concrete diagrams, such as options for colors, fonts, tabular node layouts, line styles, hyperlinks, and custom shapes.</p>
+<p>Graphviz diagrams use <code>//</code> as their comment syntax, and so cell options are declared using <code>//|</code>. Cell options <strong>must</strong> be included directly beneath the start of the diagram code chunk.</p>
+<p>For example, here is a simple undirected graph created using graphviz:</p>
+<div class="cell" data-layout-align="default">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{dot}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="in">graph G {</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="in">  layout=neato</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="in">  run -- intr;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="in">  intr -- runbl;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="in">  runbl -- run;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="in">  run -- kernel;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="in">  kernel -- zombie;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="in">  kernel -- sleep;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="in">  kernel -- runmem;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="in">  sleep -- swap;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="in">  swap -- runswap;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="in">  runswap -- new;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="in">  runswap -- runmem;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="in">  new -- runmem;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="in">  sleep -- runmem;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 370.99 246.71" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 242.71)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-242.71 366.99,-242.71 366.99,4 -4,4"></polygon>
+<!-- run -->
+<g id="node1" class="node">
+<title>run</title>
+<ellipse fill="none" stroke="black" cx="105.22" cy="-110.03" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="105.22" y="-105.83" font-family="Times,serif" font-size="14.00">run</text>
+</g>
+<!-- intr -->
+<g id="node2" class="node">
+<title>intr</title>
+<ellipse fill="none" stroke="black" cx="48.11" cy="-59.71" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="48.11" y="-55.51" font-family="Times,serif" font-size="14.00">intr</text>
+</g>
+<!-- run&#45;&#45;intr -->
+<g id="edge1" class="edge">
+<title>run--intr</title>
+<path fill="none" stroke="black" d="M88.7,-95.48C81.19,-88.86 72.32,-81.04 64.79,-74.4"></path>
+</g>
+<!-- kernel -->
+<g id="node4" class="node">
+<title>kernel</title>
+<ellipse fill="none" stroke="black" cx="180.95" cy="-137.54" rx="35.33" ry="18"></ellipse>
+<text text-anchor="middle" x="180.95" y="-133.34" font-family="Times,serif" font-size="14.00">kernel</text>
+</g>
+<!-- run&#45;&#45;kernel -->
+<g id="edge4" class="edge">
+<title>run--kernel</title>
+<path fill="none" stroke="black" d="M129.18,-118.73C136.46,-121.38 144.54,-124.31 152.1,-127.06"></path>
+</g>
+<!-- runbl -->
+<g id="node3" class="node">
+<title>runbl</title>
+<ellipse fill="none" stroke="black" cx="31.42" cy="-126.16" rx="31.34" ry="18"></ellipse>
+<text text-anchor="middle" x="31.42" y="-121.96" font-family="Times,serif" font-size="14.00">runbl</text>
+</g>
+<!-- intr&#45;&#45;runbl -->
+<g id="edge2" class="edge">
+<title>intr--runbl</title>
+<path fill="none" stroke="black" d="M43.64,-77.51C41.25,-87.05 38.3,-98.76 35.91,-108.3"></path>
+</g>
+<!-- runbl&#45;&#45;run -->
+<g id="edge3" class="edge">
+<title>runbl--run</title>
+<path fill="none" stroke="black" d="M61.01,-119.7C67.11,-118.36 73.48,-116.97 79.43,-115.67"></path>
+</g>
+<!-- zombie -->
+<g id="node5" class="node">
+<title>zombie</title>
+<ellipse fill="none" stroke="black" cx="168.31" cy="-220.71" rx="39.42" ry="18"></ellipse>
+<text text-anchor="middle" x="168.31" y="-216.51" font-family="Times,serif" font-size="14.00">zombie</text>
+</g>
+<!-- kernel&#45;&#45;zombie -->
+<g id="edge5" class="edge">
+<title>kernel--zombie</title>
+<path fill="none" stroke="black" d="M178.21,-155.58C176.09,-169.54 173.17,-188.76 171.05,-202.7"></path>
+</g>
+<!-- sleep -->
+<g id="node6" class="node">
+<title>sleep</title>
+<ellipse fill="none" stroke="black" cx="253.25" cy="-154.97" rx="30.76" ry="18"></ellipse>
+<text text-anchor="middle" x="253.25" y="-150.77" font-family="Times,serif" font-size="14.00">sleep</text>
+</g>
+<!-- kernel&#45;&#45;sleep -->
+<g id="edge6" class="edge">
+<title>kernel--sleep</title>
+<path fill="none" stroke="black" d="M212.87,-145.23C216.81,-146.18 220.81,-147.15 224.69,-148.08"></path>
+</g>
+<!-- runmem -->
+<g id="node7" class="node">
+<title>runmem</title>
+<ellipse fill="none" stroke="black" cx="240.17" cy="-83.36" rx="43.44" ry="18"></ellipse>
+<text text-anchor="middle" x="240.17" y="-79.16" font-family="Times,serif" font-size="14.00">runmem</text>
+</g>
+<!-- kernel&#45;&#45;runmem -->
+<g id="edge7" class="edge">
+<title>kernel--runmem</title>
+<path fill="none" stroke="black" d="M198.4,-121.57C205.9,-114.71 214.67,-106.69 222.23,-99.77"></path>
+</g>
+<!-- sleep&#45;&#45;runmem -->
+<g id="edge13" class="edge">
+<title>sleep--runmem</title>
+<path fill="none" stroke="black" d="M249.95,-136.9C247.98,-126.13 245.49,-112.49 243.51,-101.67"></path>
+</g>
+<!-- swap -->
+<g id="node8" class="node">
+<title>swap</title>
+<ellipse fill="none" stroke="black" cx="330.95" cy="-148.25" rx="30.77" ry="18"></ellipse>
+<text text-anchor="middle" x="330.95" y="-144.05" font-family="Times,serif" font-size="14.00">swap</text>
+</g>
+<!-- sleep&#45;&#45;swap -->
+<g id="edge8" class="edge">
+<title>sleep--swap</title>
+<path fill="none" stroke="black" d="M283.96,-152.31C289.3,-151.85 294.86,-151.37 300.21,-150.91"></path>
+</g>
+<!-- runswap -->
+<g id="node9" class="node">
+<title>runswap</title>
+<ellipse fill="none" stroke="black" cx="319.23" cy="-73.46" rx="43.51" ry="18"></ellipse>
+<text text-anchor="middle" x="319.23" y="-69.26" font-family="Times,serif" font-size="14.00">runswap</text>
+</g>
+<!-- swap&#45;&#45;runswap -->
+<g id="edge9" class="edge">
+<title>swap--runswap</title>
+<path fill="none" stroke="black" d="M328.11,-130.15C326.28,-118.47 323.91,-103.35 322.08,-91.66"></path>
+</g>
+<!-- runswap&#45;&#45;runmem -->
+<g id="edge11" class="edge">
+<title>runswap--runmem</title>
+<path fill="none" stroke="black" d="M276.92,-78.76C276.78,-78.77 276.63,-78.79 276.48,-78.81"></path>
+</g>
+<!-- new -->
+<g id="node10" class="node">
+<title>new</title>
+<ellipse fill="none" stroke="black" cx="278.31" cy="-18" rx="27.25" ry="18"></ellipse>
+<text text-anchor="middle" x="278.31" y="-13.8" font-family="Times,serif" font-size="14.00">new</text>
+</g>
+<!-- runswap&#45;&#45;new -->
+<g id="edge10" class="edge">
+<title>runswap--new</title>
+<path fill="none" stroke="black" d="M306.51,-56.21C301.35,-49.22 295.42,-41.18 290.33,-34.29"></path>
+</g>
+<!-- new&#45;&#45;runmem -->
+<g id="edge12" class="edge">
+<title>new--runmem</title>
+<path fill="none" stroke="black" d="M268.49,-34.83C263.01,-44.21 256.2,-55.89 250.62,-65.44"></path>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>To learn more about Graphviz, see the <a href="https://graphviz.org/">Graphviz website</a>, this list of simple <a href="https://renenyffenegger.ch/notes/tools/Graphviz/examples/index">Graphiz Examples</a>, or the <a href="https://graphviz.org/gallery/">Graphviz Gallery</a>.</p>
+</section>
+<section id="authoring" class="level2">
+<h2 class="anchored" data-anchor-id="authoring">Authoring</h2>
+<p>There are a variety of tools available to improve your productivity authoring diagrams:</p>
+<ol type="1">
+<li><p>The <a href="https://mermaid.live/">Mermaid Live Editor</a> is an online tool for editing and previewing Mermaid diagrams in real time.</p></li>
+<li><p><a href="https://dreampuf.github.io/GraphvizOnline/">Graphviz Online</a> provides a similar tool for editing Graphviz diagrams.</p></li>
+<li><p><a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a> includes support for editing and previewing <code>.mmd</code> and <code>.dot</code> files (with help from the <a href="https://rich-iannone.github.io/DiagrammeR/">DiagrammeR</a> package).</p></li>
+<li><p>The Quarto <a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">VS Code Extension</a> supports live preview of diagrams embedded in <code>.qmd</code> files and in <code>.mmd</code> and <code>.dot</code> files:</p>
+<p><img src="images/vscode-graphviz.gif" class="border img-fluid" alt="A Quarto document being edited in Visual Studio Code, with a live preview of the currenly edited diagram shown in a pane to the right"></p>
+<p>Note that you should be sure to have installed the <a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">very latest</a> version of the Quarto VS Code extension to try this out.</p></li>
+</ol>
+</section>
+<section id="cross-references" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="cross-references">Cross-References</h2>
+<p>Diagrams can be treated as figures the same way that images and plot output are. For example, if we added the following figure options to the diagram above:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{dot}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="in">//| label: fig-simple</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="in">//| fig-cap: "This is a simple graphviz graph."</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We’d get this output:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-simple" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-simple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 370.99 246.71" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 242.71)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-242.71 366.99,-242.71 366.99,4 -4,4"></polygon>
+<!-- run -->
+<g id="node1" class="node">
+<title>run</title>
+<ellipse fill="none" stroke="black" cx="105.22" cy="-110.03" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="105.22" y="-105.83" font-family="Times,serif" font-size="14.00">run</text>
+</g>
+<!-- intr -->
+<g id="node2" class="node">
+<title>intr</title>
+<ellipse fill="none" stroke="black" cx="48.11" cy="-59.71" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="48.11" y="-55.51" font-family="Times,serif" font-size="14.00">intr</text>
+</g>
+<!-- run&#45;&#45;intr -->
+<g id="edge1" class="edge">
+<title>run--intr</title>
+<path fill="none" stroke="black" d="M88.7,-95.48C81.19,-88.86 72.32,-81.04 64.79,-74.4"></path>
+</g>
+<!-- kernel -->
+<g id="node4" class="node">
+<title>kernel</title>
+<ellipse fill="none" stroke="black" cx="180.95" cy="-137.54" rx="35.33" ry="18"></ellipse>
+<text text-anchor="middle" x="180.95" y="-133.34" font-family="Times,serif" font-size="14.00">kernel</text>
+</g>
+<!-- run&#45;&#45;kernel -->
+<g id="edge4" class="edge">
+<title>run--kernel</title>
+<path fill="none" stroke="black" d="M129.18,-118.73C136.46,-121.38 144.54,-124.31 152.1,-127.06"></path>
+</g>
+<!-- runbl -->
+<g id="node3" class="node">
+<title>runbl</title>
+<ellipse fill="none" stroke="black" cx="31.42" cy="-126.16" rx="31.34" ry="18"></ellipse>
+<text text-anchor="middle" x="31.42" y="-121.96" font-family="Times,serif" font-size="14.00">runbl</text>
+</g>
+<!-- intr&#45;&#45;runbl -->
+<g id="edge2" class="edge">
+<title>intr--runbl</title>
+<path fill="none" stroke="black" d="M43.64,-77.51C41.25,-87.05 38.3,-98.76 35.91,-108.3"></path>
+</g>
+<!-- runbl&#45;&#45;run -->
+<g id="edge3" class="edge">
+<title>runbl--run</title>
+<path fill="none" stroke="black" d="M61.01,-119.7C67.11,-118.36 73.48,-116.97 79.43,-115.67"></path>
+</g>
+<!-- zombie -->
+<g id="node5" class="node">
+<title>zombie</title>
+<ellipse fill="none" stroke="black" cx="168.31" cy="-220.71" rx="39.42" ry="18"></ellipse>
+<text text-anchor="middle" x="168.31" y="-216.51" font-family="Times,serif" font-size="14.00">zombie</text>
+</g>
+<!-- kernel&#45;&#45;zombie -->
+<g id="edge5" class="edge">
+<title>kernel--zombie</title>
+<path fill="none" stroke="black" d="M178.21,-155.58C176.09,-169.54 173.17,-188.76 171.05,-202.7"></path>
+</g>
+<!-- sleep -->
+<g id="node6" class="node">
+<title>sleep</title>
+<ellipse fill="none" stroke="black" cx="253.25" cy="-154.97" rx="30.76" ry="18"></ellipse>
+<text text-anchor="middle" x="253.25" y="-150.77" font-family="Times,serif" font-size="14.00">sleep</text>
+</g>
+<!-- kernel&#45;&#45;sleep -->
+<g id="edge6" class="edge">
+<title>kernel--sleep</title>
+<path fill="none" stroke="black" d="M212.87,-145.23C216.81,-146.18 220.81,-147.15 224.69,-148.08"></path>
+</g>
+<!-- runmem -->
+<g id="node7" class="node">
+<title>runmem</title>
+<ellipse fill="none" stroke="black" cx="240.17" cy="-83.36" rx="43.44" ry="18"></ellipse>
+<text text-anchor="middle" x="240.17" y="-79.16" font-family="Times,serif" font-size="14.00">runmem</text>
+</g>
+<!-- kernel&#45;&#45;runmem -->
+<g id="edge7" class="edge">
+<title>kernel--runmem</title>
+<path fill="none" stroke="black" d="M198.4,-121.57C205.9,-114.71 214.67,-106.69 222.23,-99.77"></path>
+</g>
+<!-- sleep&#45;&#45;runmem -->
+<g id="edge13" class="edge">
+<title>sleep--runmem</title>
+<path fill="none" stroke="black" d="M249.95,-136.9C247.98,-126.13 245.49,-112.49 243.51,-101.67"></path>
+</g>
+<!-- swap -->
+<g id="node8" class="node">
+<title>swap</title>
+<ellipse fill="none" stroke="black" cx="330.95" cy="-148.25" rx="30.77" ry="18"></ellipse>
+<text text-anchor="middle" x="330.95" y="-144.05" font-family="Times,serif" font-size="14.00">swap</text>
+</g>
+<!-- sleep&#45;&#45;swap -->
+<g id="edge8" class="edge">
+<title>sleep--swap</title>
+<path fill="none" stroke="black" d="M283.96,-152.31C289.3,-151.85 294.86,-151.37 300.21,-150.91"></path>
+</g>
+<!-- runswap -->
+<g id="node9" class="node">
+<title>runswap</title>
+<ellipse fill="none" stroke="black" cx="319.23" cy="-73.46" rx="43.51" ry="18"></ellipse>
+<text text-anchor="middle" x="319.23" y="-69.26" font-family="Times,serif" font-size="14.00">runswap</text>
+</g>
+<!-- swap&#45;&#45;runswap -->
+<g id="edge9" class="edge">
+<title>swap--runswap</title>
+<path fill="none" stroke="black" d="M328.11,-130.15C326.28,-118.47 323.91,-103.35 322.08,-91.66"></path>
+</g>
+<!-- runswap&#45;&#45;runmem -->
+<g id="edge11" class="edge">
+<title>runswap--runmem</title>
+<path fill="none" stroke="black" d="M276.92,-78.76C276.78,-78.77 276.63,-78.79 276.48,-78.81"></path>
+</g>
+<!-- new -->
+<g id="node10" class="node">
+<title>new</title>
+<ellipse fill="none" stroke="black" cx="278.31" cy="-18" rx="27.25" ry="18"></ellipse>
+<text text-anchor="middle" x="278.31" y="-13.8" font-family="Times,serif" font-size="14.00">new</text>
+</g>
+<!-- runswap&#45;&#45;new -->
+<g id="edge10" class="edge">
+<title>runswap--new</title>
+<path fill="none" stroke="black" d="M306.51,-56.21C301.35,-49.22 295.42,-41.18 290.33,-34.29"></path>
+</g>
+<!-- new&#45;&#45;runmem -->
+<g id="edge12" class="edge">
+<title>new--runmem</title>
+<path fill="none" stroke="black" d="M268.49,-34.83C263.01,-44.21 256.2,-55.89 250.62,-65.44"></path>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-simple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图&nbsp;1: This is a simple graphviz graph.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>We could then create a cross-reference to the diagram with:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>@fig-simple</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To create a cross-references to a diagram using div syntax, treat it like a figure. For example, <a href="#fig-simple" class="quarto-xref">图&nbsp;2</a> is created using:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>::: {#fig-simple}</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="in">```{dot}</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="in">graph {</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="in">  A -- B</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>This is a simple graphviz graph</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-simple" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-simple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell" data-fig-width="1.5" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="144" height="480" viewbox="0.00 0.00 62.00 116.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-112 58,-112 58,4 -4,4"></polygon>
+<!-- A -->
+<g id="node1" class="node">
+<title>A</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-90" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="27" y="-85.8" font-family="Times,serif" font-size="14.00">A</text>
+</g>
+<!-- B -->
+<g id="node2" class="node">
+<title>B</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-18" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="27" y="-13.8" font-family="Times,serif" font-size="14.00">B</text>
+</g>
+<!-- A&#45;&#45;B -->
+<g id="edge1" class="edge">
+<title>A--B</title>
+<path fill="none" stroke="black" d="M27,-71.7C27,-60.85 27,-46.92 27,-36.1"></path>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-simple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图&nbsp;2: This is a simple graphviz graph
+</figcaption>
+</figure>
+</div></div><p>If you would rather give diagrams a label and counter distinct from figures, consider defining <a href="../../docs/authoring/cross-references-custom.html">Custom Cross-Reference Types</a>.</p>
+</section>
+<section id="file-include" class="level2">
+<h2 class="anchored" data-anchor-id="file-include">File Include</h2>
+<p>You might find it more convenient to edit your diagram in a standalone <code>.dot</code> or <code>.mmd</code> file and then reference it from within your <code>.qmd</code> document. You can do this by adding the <code>file</code> option to a Mermaid or Graphviz cell.</p>
+<p>For example, here we include a very complex diagram whose definition would be too unwieldy to provide inline:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{dot}</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="in">//| label: fig-linux-kernel</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="in">//| fig-cap: "A diagram of the Linux kernel."</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="in">//| file: linux-kernel-diagram.dot</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-file="images/linux-kernel-diagram.dot" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-linux-kernel" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-linux-kernel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 1444.00 805.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 801.8)">
+<title>Linux_kernel_diagram</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-801.8 1440,-801.8 1440,4 -4,4"></polygon>
+<!-- system_ -->
+<!-- SCI -->
+<g id="node3" class="node">
+<title>SCI</title>
+<g id="a_node3"><a href="https://en.wikibooks.org/wiki/The_Linux_Kernel/Syscalls" title="System calls">
+<ellipse fill="#d9e7ee" stroke="#e27dd6" stroke-width="5" cx="483" cy="-592" rx="79" ry="36"></ellipse>
+<text text-anchor="middle" x="483" y="-584.8" font-family="Helvetica,Arial,sans-serif" font-size="24.00">System calls</text>
+</a>
+</g>
+</g>
+<!-- system_&#45;&gt;SCI -->
+<!-- system -->
+<g id="node2" class="node">
+<title>system</title>
+<g id="a_node2"><a href="https://en.wikibooks.org/wiki/The_Linux_Kernel/System" title="system">
+<polygon fill="white" stroke="#e27dd6" stroke-width="5" points="555,-735.8 411,-735.8 411,-692.8 555,-692.8 555,-735.8"></polygon>
+<text text-anchor="middle" x="483" y="-707.1" font-family="Helvetica,Arial,sans-serif" font-size="24.00">system</text>
+</a>
+</g>
+</g>
+<!-- system&#45;&gt;system_ -->
+<g id="edge1" class="edge">
+<title>system-&gt;system_</title>
+<path fill="none" stroke="#e27dd6" stroke-width="5" d="M483,-692.79C483,-683.35 483,-672.9 483,-666.75"></path>
+<polygon fill="#e27dd6" stroke="#e27dd6" stroke-width="5" points="485.19,-666.45 483,-661.45 480.81,-666.45 485.19,-666.45"></polygon>
+</g>
+<!-- processing -->
+<g id="node18" class="node">
+<title>processing</title>
+<g id="a_node18"><a href="https://en.wikibooks.org/wiki/The_Linux_Kernel/Processing" title="processing">
+<polygon fill="white" stroke="#c46747" stroke-width="5" points="735,-735.8 591,-735.8 591,-692.8 735,-692.8 735,-735.8"></polygon>
+<text text-anchor="middle" x="663" y="-707.1" font-family="Helvetica,Arial,sans-serif" font-size="24.00">processing</text>
+</a>
+</g>
+</g>
+<!-- system&#45;&gt;processing -->
+<!-- sysfs -->
+<g id="node4" class="node">
+<title>sysfs</title>
+<polygon fill="#b2d3e4" stroke="#e27dd6" stroke-width="5" points="562,-542 404,-542 404,-470 562,-470 562,-542"></polygon>
+<text text-anchor="middle" x="483" y="-513.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">proc &amp; sysfs</text>
+<text text-anchor="middle" x="483" y="-484.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00">file systems</text>
+</g>
+<!-- SCI&#45;&gt;sysfs -->
+<g id="edge2" class="edge">
+<title>SCI-&gt;sysfs</title>
+<path fill="none" stroke="#e27dd6" stroke-width="5" d="M483,-555.86C483,-551.37 483,-546.76 483,-542.27"></path>
+</g>
+<!-- DM -->
+<g id="node5" class="node">
+<title>DM</title>
+<polygon fill="#91b5c9" stroke="#e27dd6" stroke-width="5" points="555,-407.99 555,-432.01 512.82,-449 453.18,-449 411,-432.01 411,-407.99 453.18,-391 512.82,-391 555,-407.99"></polygon>
+<text text-anchor="middle" x="483" y="-426" font-family="Helvetica,Arial,sans-serif" font-size="20.00">Device</text>
+<text text-anchor="middle" x="483" y="-402" font-family="Helvetica,Arial,sans-serif" font-size="20.00">Model</text>
+</g>
+<!-- sysfs&#45;&gt;DM -->
+<g id="edge3" class="edge">
+<title>sysfs-&gt;DM</title>
+<path fill="none" stroke="#e27dd6" stroke-width="5" d="M483,-469.86C483,-462.94 483,-455.76 483,-449.11"></path>
+</g>
+<!-- log_sys -->
+<g id="node6" class="node">
+<title>log_sys</title>
+<polygon fill="#6a9ab1" stroke="#e27dd6" stroke-width="5" points="562,-370 404,-370 404,-266 562,-266 562,-370"></polygon>
+<text text-anchor="middle" x="483" y="-348" font-family="Helvetica,Arial,sans-serif" font-size="20.00">system run,</text>
+<text text-anchor="middle" x="483" y="-324" font-family="Helvetica,Arial,sans-serif" font-size="20.00">modules,</text>
+<text text-anchor="middle" x="483" y="-300" font-family="Helvetica,Arial,sans-serif" font-size="20.00">generic</text>
+<text text-anchor="middle" x="483" y="-276" font-family="Helvetica,Arial,sans-serif" font-size="20.00">HW access </text>
+</g>
+<!-- DM&#45;&gt;log_sys -->
+<g id="edge4" class="edge">
+<title>DM-&gt;log_sys</title>
+<path fill="none" stroke="#e27dd6" stroke-width="5" d="M483,-390.88C483,-384.41 483,-377.33 483,-370.22"></path>
+</g>
+<!-- bus_drv -->
+<g id="node7" class="node">
+<title>bus_drv</title>
+<polygon fill="#71809b" stroke="#e27dd6" stroke-width="5" points="562,-248 404,-248 404,-176 562,-176 562,-248"></polygon>
+<text text-anchor="middle" x="483" y="-204.8" font-family="Helvetica,Arial,sans-serif" font-size="24.00">bus drivers</text>
+</g>
+<!-- log_sys&#45;&gt;bus_drv -->
+<g id="edge5" class="edge">
+<title>log_sys-&gt;bus_drv</title>
+<path fill="none" stroke="#e27dd6" stroke-width="5" d="M483,-265.91C483,-259.85 483,-253.77 483,-248.01"></path>
+</g>
+<!-- buses -->
+<g id="node8" class="node">
+<title>buses</title>
+<polygon fill="#777777" stroke="#e27dd6" stroke-width="5" points="562,-158 404,-158 404,-86 562,-86 562,-158"></polygon>
+<text text-anchor="middle" x="483" y="-128" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="white">buses:</text>
+<text text-anchor="middle" x="483" y="-104" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="white">PCI, USB ...</text>
+</g>
+<!-- bus_drv&#45;&gt;buses -->
+<g id="edge6" class="edge">
+<title>bus_drv-&gt;buses</title>
+<path fill="none" stroke="#e27dd6" stroke-width="5" d="M483,-175.97C483,-170.12 483,-164.05 483,-158.2"></path>
+</g>
+<!-- networking_ -->
+<!-- sock -->
+<g id="node11" class="node">
+<title>sock</title>
+<ellipse fill="#d9e7ee" stroke="#61c2c5" stroke-width="5" cx="1357" cy="-592" rx="79" ry="36"></ellipse>
+<text text-anchor="middle" x="1357" y="-584.8" font-family="Helvetica,Arial,sans-serif" font-size="24.00">Sockets</text>
+</g>
+<!-- networking_&#45;&gt;sock -->
+<!-- networking -->
+<g id="node10" class="node">
+<title>networking</title>
+<g id="a_node10"><a href="https://en.wikibooks.org/wiki/The_Linux_Kernel/Networking" title="networking">
+<polygon fill="white" stroke="#61c2c5" stroke-width="5" points="1429,-735.8 1285,-735.8 1285,-692.8 1429,-692.8 1429,-735.8"></polygon>
+<text text-anchor="middle" x="1357" y="-707.1" font-family="Helvetica,Arial,sans-serif" font-size="24.00">networking</text>
+</a>
+</g>
+</g>
+<!-- networking&#45;&gt;networking_ -->
+<g id="edge7" class="edge">
+<title>networking-&gt;networking_</title>
+<path fill="none" stroke="#61c2c5" stroke-width="5" d="M1357,-692.79C1357,-683.35 1357,-672.9 1357,-666.75"></path>
+<polygon fill="#61c2c5" stroke="#61c2c5" stroke-width="5" points="1359.19,-666.45 1357,-661.45 1354.81,-666.45 1359.19,-666.45"></polygon>
+</g>
+<!-- prot_fam -->
+<g id="node12" class="node">
+<title>prot_fam</title>
+<polygon fill="#b2d3e4" stroke="#61c2c5" stroke-width="5" points="1436,-542 1278,-542 1278,-470 1436,-470 1436,-542"></polygon>
+<text text-anchor="middle" x="1357" y="-513.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">protocol</text>
+<text text-anchor="middle" x="1357" y="-484.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00">families</text>
+</g>
+<!-- sock&#45;&gt;prot_fam -->
+<g id="edge8" class="edge">
+<title>sock-&gt;prot_fam</title>
+<path fill="none" stroke="#61c2c5" stroke-width="5" d="M1357,-555.86C1357,-551.37 1357,-546.76 1357,-542.27"></path>
+</g>
+<!-- log_prot -->
+<g id="node13" class="node">
+<title>log_prot</title>
+<polygon fill="#6a9ab1" stroke="#61c2c5" stroke-width="5" points="1436,-354 1278,-354 1278,-282 1436,-282 1436,-354"></polygon>
+<text text-anchor="middle" x="1357" y="-325.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">protocols:</text>
+<text text-anchor="middle" x="1357" y="-296.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00">TCP, UDP, IP</text>
+</g>
+<!-- prot_fam&#45;&gt;log_prot -->
+<g id="edge9" class="edge">
+<title>prot_fam-&gt;log_prot</title>
+<path fill="none" stroke="#61c2c5" stroke-width="5" d="M1357,-469.75C1357,-436.46 1357,-387.39 1357,-354.14"></path>
+</g>
+<!-- netif -->
+<g id="node14" class="node">
+<title>netif</title>
+<polygon fill="#71809b" stroke="#61c2c5" stroke-width="5" points="1436,-252 1278,-252 1278,-172 1436,-172 1436,-252"></polygon>
+<text text-anchor="middle" x="1357" y="-230" font-family="Helvetica,Arial,sans-serif" font-size="20.00">network</text>
+<text text-anchor="middle" x="1357" y="-206" font-family="Helvetica,Arial,sans-serif" font-size="20.00">interfaces</text>
+<text text-anchor="middle" x="1357" y="-182" font-family="Helvetica,Arial,sans-serif" font-size="20.00">and drivers</text>
+</g>
+<!-- log_prot&#45;&gt;netif -->
+<g id="edge10" class="edge">
+<title>log_prot-&gt;netif</title>
+<path fill="none" stroke="#61c2c5" stroke-width="5" d="M1357,-281.79C1357,-272.24 1357,-261.85 1357,-252.1"></path>
+</g>
+<!-- net_hw -->
+<g id="node15" class="node">
+<title>net_hw</title>
+<polygon fill="#777777" stroke="#61c2c5" stroke-width="5" points="1436,-158 1278,-158 1278,-86 1436,-86 1436,-158"></polygon>
+<text text-anchor="middle" x="1357" y="-128" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="white">network:</text>
+<text text-anchor="middle" x="1357" y="-104" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="white">Ethernet, WiFi ...</text>
+</g>
+<!-- netif&#45;&gt;net_hw -->
+<g id="edge11" class="edge">
+<title>netif-&gt;net_hw</title>
+<path fill="none" stroke="#61c2c5" stroke-width="5" d="M1357,-171.89C1357,-167.3 1357,-162.64 1357,-158.11"></path>
+</g>
+<!-- NFS -->
+<g id="node16" class="node">
+<title>NFS</title>
+<polygon fill="#91b5c9" stroke="#8383cc" stroke-width="5" points="1310,-407.99 1310,-432.01 1284.81,-449 1249.19,-449 1224,-432.01 1224,-407.99 1249.19,-391 1284.81,-391 1310,-407.99"></polygon>
+<text text-anchor="middle" x="1267" y="-412.8" font-family="Helvetica,Arial,sans-serif" font-size="24.00">NFS</text>
+</g>
+<!-- NFS&#45;&gt;log_prot -->
+<g id="edge12" class="edge">
+<title>NFS-&gt;log_prot</title>
+<path fill="none" stroke="#61c2c5" stroke-width="5" d="M1289.48,-394.02C1300.31,-381.99 1313.48,-367.35 1325.31,-354.21"></path>
+</g>
+<!-- processing_ -->
+<!-- proc -->
+<g id="node19" class="node">
+<title>proc</title>
+<ellipse fill="#d9e7ee" stroke="#c46747" stroke-width="5" cx="663" cy="-592" rx="79" ry="36"></ellipse>
+<text text-anchor="middle" x="663" y="-584.8" font-family="Helvetica,Arial,sans-serif" font-size="24.00">Processes</text>
+</g>
+<!-- processing_&#45;&gt;proc -->
+<!-- processing&#45;&gt;processing_ -->
+<g id="edge13" class="edge">
+<title>processing-&gt;processing_</title>
+<path fill="none" stroke="#c46747" stroke-width="5" d="M663,-692.79C663,-683.35 663,-672.9 663,-666.75"></path>
+<polygon fill="#c46747" stroke="#c46747" stroke-width="5" points="665.19,-666.45 663,-661.45 660.81,-666.45 665.19,-666.45"></polygon>
+</g>
+<!-- memory -->
+<g id="node34" class="node">
+<title>memory</title>
+<g id="a_node34"><a href="https://en.wikibooks.org/wiki/The_Linux_Kernel/Memory" title="memory">
+<polygon fill="white" stroke="#51bf5b" stroke-width="5" points="915,-735.8 771,-735.8 771,-692.8 915,-692.8 915,-735.8"></polygon>
+<text text-anchor="middle" x="843" y="-707.1" font-family="Helvetica,Arial,sans-serif" font-size="24.00">memory</text>
+</a>
+</g>
+</g>
+<!-- processing&#45;&gt;memory -->
+<!-- Tasks -->
+<g id="node20" class="node">
+<title>Tasks</title>
+<polygon fill="#b2d3e4" stroke="#c46747" stroke-width="5" points="742,-542 584,-542 584,-470 742,-470 742,-542"></polygon>
+<text text-anchor="middle" x="663" y="-498.8" font-family="Helvetica,Arial,sans-serif" font-size="24.00">Tasks</text>
+</g>
+<!-- proc&#45;&gt;Tasks -->
+<g id="edge14" class="edge">
+<title>proc-&gt;Tasks</title>
+<path fill="none" stroke="#c46747" stroke-width="5" d="M663,-555.86C663,-551.37 663,-546.76 663,-542.27"></path>
+</g>
+<!-- sync -->
+<g id="node21" class="node">
+<title>sync</title>
+<polygon fill="#91b5c9" stroke="#c46747" stroke-width="5" points="742,-409.64 742,-430.36 695.72,-445 630.28,-445 584,-430.36 584,-409.64 630.28,-395 695.72,-395 742,-409.64"></polygon>
+<text text-anchor="middle" x="663" y="-414" font-family="Arial Narrow" font-size="20.00">synchronization</text>
+</g>
+<!-- Tasks&#45;&gt;sync -->
+<g id="edge15" class="edge">
+<title>Tasks-&gt;sync</title>
+<path fill="none" stroke="#c46747" stroke-width="5" d="M663,-469.86C663,-461.59 663,-452.95 663,-445.28"></path>
+</g>
+<!-- sched -->
+<g id="node22" class="node">
+<title>sched</title>
+<polygon fill="#6a9ab1" stroke="#c46747" stroke-width="5" points="742,-354 584,-354 584,-282 742,-282 742,-354"></polygon>
+<text text-anchor="middle" x="663" y="-310.8" font-family="Helvetica,Arial,sans-serif" font-size="24.00">Scheduler</text>
+</g>
+<!-- sync&#45;&gt;sched -->
+<g id="edge16" class="edge">
+<title>sync-&gt;sched</title>
+<path fill="none" stroke="#c46747" stroke-width="5" d="M663,-394.79C663,-382.65 663,-367.72 663,-354.33"></path>
+</g>
+<!-- IRQ -->
+<g id="node23" class="node">
+<title>IRQ</title>
+<polygon fill="#71809b" stroke="#c46747" stroke-width="5" points="742,-252 584,-252 584,-172 742,-172 742,-252"></polygon>
+<text text-anchor="middle" x="663" y="-230" font-family="Helvetica,Arial,sans-serif" font-size="20.00">interrupts</text>
+<text text-anchor="middle" x="663" y="-206" font-family="Helvetica,Arial,sans-serif" font-size="20.00">core,</text>
+<text text-anchor="middle" x="663" y="-182" font-family="Helvetica,Arial,sans-serif" font-size="20.00">CPU arch</text>
+</g>
+<!-- sched&#45;&gt;IRQ -->
+<g id="edge17" class="edge">
+<title>sched-&gt;IRQ</title>
+<path fill="none" stroke="#c46747" stroke-width="5" d="M663,-281.79C663,-272.24 663,-261.85 663,-252.1"></path>
+</g>
+<!-- CPU -->
+<g id="node24" class="node">
+<title>CPU</title>
+<polygon fill="#777777" stroke="#c46747" stroke-width="5" points="742,-158 584,-158 584,-86 742,-86 742,-158"></polygon>
+<text text-anchor="middle" x="663" y="-116" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="white">CPU</text>
+</g>
+<!-- IRQ&#45;&gt;CPU -->
+<g id="edge18" class="edge">
+<title>IRQ-&gt;CPU</title>
+<path fill="none" stroke="#c46747" stroke-width="5" d="M663,-171.89C663,-167.3 663,-162.64 663,-158.11"></path>
+</g>
+<!-- bottom -->
+<g id="node63" class="node">
+<title>bottom</title>
+<g id="a_node63"><a href="http://www.MakeLinux.net/kernel/diagram" title="© 2007-2022 Costa Shulyupin http://www.MakeLinux.net/kernel/diagram">
+<text text-anchor="middle" x="663" y="-28.8" font-family="Helvetica,Arial,sans-serif" font-size="24.00">© 2007-2022 Costa Shulyupin http://www.MakeLinux.net/kernel/diagram</text>
+</a>
+</g>
+</g>
+<!-- CPU&#45;&gt;bottom -->
+<!-- MA -->
+<g id="node25" class="node">
+<title>MA</title>
+<ellipse fill="#d9e7ee" stroke="#51bf5b" stroke-width="5" cx="843" cy="-592" rx="79" ry="36"></ellipse>
+<text text-anchor="middle" x="843" y="-599.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">memory</text>
+<text text-anchor="middle" x="843" y="-570.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00">access</text>
+</g>
+<!-- VM -->
+<g id="node26" class="node">
+<title>VM</title>
+<polygon fill="#b2d3e4" stroke="#51bf5b" stroke-width="5" points="922,-542 764,-542 764,-470 922,-470 922,-542"></polygon>
+<text text-anchor="middle" x="843" y="-513.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">Virtual</text>
+<text text-anchor="middle" x="843" y="-484.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00">memory</text>
+</g>
+<!-- MA&#45;&gt;VM -->
+<g id="edge19" class="edge">
+<title>MA-&gt;VM</title>
+<path fill="none" stroke="#51bf5b" stroke-width="5" d="M843,-555.86C843,-551.37 843,-546.76 843,-542.27"></path>
+</g>
+<!-- mmap -->
+<g id="node27" class="node">
+<title>mmap</title>
+<polygon fill="#91b5c9" stroke="#51bf5b" stroke-width="5" points="915,-407.99 915,-432.01 872.82,-449 813.18,-449 771,-432.01 771,-407.99 813.18,-391 872.82,-391 915,-407.99"></polygon>
+<text text-anchor="middle" x="843" y="-426" font-family="Helvetica,Arial,sans-serif" font-size="20.00">memory</text>
+<text text-anchor="middle" x="843" y="-402" font-family="Helvetica,Arial,sans-serif" font-size="20.00">mapping</text>
+</g>
+<!-- VM&#45;&gt;mmap -->
+<g id="edge27" class="edge">
+<title>VM-&gt;mmap</title>
+<path fill="none" stroke="#51bf5b" stroke-width="5" d="M843,-469.86C843,-462.94 843,-455.76 843,-449.11"></path>
+</g>
+<!-- log_mem -->
+<g id="node28" class="node">
+<title>log_mem</title>
+<polygon fill="#6a9ab1" stroke="#51bf5b" stroke-width="5" points="922,-354 764,-354 764,-282 922,-282 922,-354"></polygon>
+<text text-anchor="middle" x="843" y="-325.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">logical</text>
+<text text-anchor="middle" x="843" y="-296.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00">memory</text>
+</g>
+<!-- mmap&#45;&gt;log_mem -->
+<g id="edge20" class="edge">
+<title>mmap-&gt;log_mem</title>
+<path fill="none" stroke="#51bf5b" stroke-width="5" d="M843,-390.88C843,-379.44 843,-366.1 843,-354.04"></path>
+</g>
+<!-- SW -->
+<g id="node30" class="node">
+<title>SW</title>
+<polygon fill="#91b5c9" stroke="#8383cc" stroke-width="5" points="1030,-305.99 1030,-330.01 1004.81,-347 969.19,-347 944,-330.01 944,-305.99 969.19,-289 1004.81,-289 1030,-305.99"></polygon>
+<text text-anchor="middle" x="987" y="-310.8" font-family="Helvetica,Arial,sans-serif" font-size="24.00">Swap</text>
+</g>
+<!-- mmap&#45;&gt;SW -->
+<g id="edge22" class="edge">
+<title>mmap-&gt;SW</title>
+<path fill="none" stroke="#51bf5b" stroke-width="5" d="M879.71,-393.51C903.87,-376.73 935.09,-355.05 957.61,-339.41"></path>
+</g>
+<!-- PA -->
+<g id="node29" class="node">
+<title>PA</title>
+<polygon fill="#71809b" stroke="#51bf5b" stroke-width="5" points="922,-248 764,-248 764,-176 922,-176 922,-248"></polygon>
+<text text-anchor="middle" x="843" y="-219.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">Page</text>
+<text text-anchor="middle" x="843" y="-190.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00">Allocator</text>
+</g>
+<!-- log_mem&#45;&gt;PA -->
+<g id="edge21" class="edge">
+<title>log_mem-&gt;PA</title>
+<path fill="none" stroke="#51bf5b" stroke-width="5" d="M843,-281.79C843,-270.95 843,-259.01 843,-248.17"></path>
+</g>
+<!-- RAM -->
+<g id="node33" class="node">
+<title>RAM</title>
+<polygon fill="#777777" stroke="#51bf5b" stroke-width="5" points="922,-158 764,-158 764,-86 922,-86 922,-158"></polygon>
+<text text-anchor="middle" x="843" y="-116" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="white">MMU, RAM</text>
+</g>
+<!-- PA&#45;&gt;RAM -->
+<g id="edge25" class="edge">
+<title>PA-&gt;RAM</title>
+<path fill="none" stroke="#51bf5b" stroke-width="5" d="M843,-175.97C843,-170.12 843,-164.05 843,-158.2"></path>
+</g>
+<!-- block -->
+<g id="node31" class="node">
+<title>block</title>
+<polygon fill="#71809b" stroke="#51bf5b" stroke-width="5" points="1256,-252 1098,-252 1098,-172 1256,-172 1256,-252"></polygon>
+<text text-anchor="middle" x="1177" y="-230" font-family="Helvetica,Arial,sans-serif" font-size="20.00">Block</text>
+<text text-anchor="middle" x="1177" y="-206" font-family="Helvetica,Arial,sans-serif" font-size="20.00">devices</text>
+<text text-anchor="middle" x="1177" y="-182" font-family="Helvetica,Arial,sans-serif" font-size="20.00">and drivers</text>
+</g>
+<!-- SW&#45;&gt;block -->
+<g id="edge23" class="edge">
+<title>SW-&gt;block</title>
+<path fill="none" stroke="#8383cc" stroke-width="5" d="M1020.1,-298.88C1043.7,-285.96 1076.33,-268.1 1105.73,-252.01"></path>
+</g>
+<!-- SD -->
+<g id="node41" class="node">
+<title>SD</title>
+<polygon fill="#777777" stroke="#8383cc" stroke-width="5" points="1256,-158 1098,-158 1098,-86 1256,-86 1256,-158"></polygon>
+<text text-anchor="middle" x="1177" y="-128" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="white">storage devices:</text>
+<text text-anchor="middle" x="1177" y="-104" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="white">SCSI, NVMe ...</text>
+</g>
+<!-- block&#45;&gt;SD -->
+<g id="edge35" class="edge">
+<title>block-&gt;SD</title>
+<path fill="none" stroke="#8383cc" stroke-width="5" d="M1177,-171.89C1177,-167.3 1177,-162.64 1177,-158.11"></path>
+</g>
+<!-- PC -->
+<g id="node32" class="node">
+<title>PC</title>
+<polygon fill="#91b5c9" stroke="#51bf5b" stroke-width="5" points="1104,-407.99 1104,-432.01 1078.81,-449 1043.19,-449 1018,-432.01 1018,-407.99 1043.19,-391 1078.81,-391 1104,-407.99"></polygon>
+<text text-anchor="middle" x="1061" y="-426" font-family="Helvetica,Arial,sans-serif" font-size="20.00">page</text>
+<text text-anchor="middle" x="1061" y="-402" font-family="Helvetica,Arial,sans-serif" font-size="20.00">cache</text>
+</g>
+<!-- PC&#45;&gt;PA -->
+<g id="edge24" class="edge">
+<title>PC-&gt;PA</title>
+<path fill="none" stroke="#51bf5b" stroke-width="5" d="M1035.57,-395.73C997.49,-359.4 925.42,-290.64 881.06,-248.31"></path>
+</g>
+<!-- memory_ -->
+<!-- memory&#45;&gt;memory_ -->
+<g id="edge26" class="edge">
+<title>memory-&gt;memory_</title>
+<path fill="none" stroke="#51bf5b" stroke-width="5" d="M843,-692.79C843,-683.35 843,-672.9 843,-666.75"></path>
+<polygon fill="#51bf5b" stroke="#51bf5b" stroke-width="5" points="845.19,-666.45 843,-661.45 840.81,-666.45 845.19,-666.45"></polygon>
+</g>
+<!-- storage -->
+<g id="node37" class="node">
+<title>storage</title>
+<g id="a_node37"><a href="https://en.wikibooks.org/wiki/The_Linux_Kernel/Storage" title="storage">
+<polygon fill="white" stroke="#8383cc" stroke-width="5" points="1249,-735.8 1105,-735.8 1105,-692.8 1249,-692.8 1249,-735.8"></polygon>
+<text text-anchor="middle" x="1177" y="-707.1" font-family="Helvetica,Arial,sans-serif" font-size="24.00">storage</text>
+</a>
+</g>
+</g>
+<!-- memory&#45;&gt;storage -->
+<!-- memory_&#45;&gt;MA -->
+<!-- storage_ -->
+<!-- FS -->
+<g id="node38" class="node">
+<title>FS</title>
+<ellipse fill="#d9e7ee" stroke="#8383cc" stroke-width="5" cx="1177" cy="-592" rx="79" ry="36"></ellipse>
+<text text-anchor="middle" x="1177" y="-599.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">files and</text>
+<text text-anchor="middle" x="1177" y="-570.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00">directories</text>
+</g>
+<!-- storage_&#45;&gt;FS -->
+<!-- storage&#45;&gt;networking -->
+<!-- storage&#45;&gt;storage_ -->
+<g id="edge28" class="edge">
+<title>storage-&gt;storage_</title>
+<path fill="none" stroke="#8383cc" stroke-width="5" d="M1177,-692.79C1177,-683.35 1177,-672.9 1177,-666.75"></path>
+<polygon fill="#8383cc" stroke="#8383cc" stroke-width="5" points="1179.19,-666.45 1177,-661.45 1174.81,-666.45 1179.19,-666.45"></polygon>
+</g>
+<!-- VFS -->
+<g id="node39" class="node">
+<title>VFS</title>
+<polygon fill="#b2d3e4" stroke="#8383cc" stroke-width="5" points="1256,-542 1098,-542 1098,-470 1256,-470 1256,-542"></polygon>
+<text text-anchor="middle" x="1177" y="-513.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">Virtual</text>
+<text text-anchor="middle" x="1177" y="-484.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00">File System</text>
+</g>
+<!-- FS&#45;&gt;VFS -->
+<g id="edge29" class="edge">
+<title>FS-&gt;VFS</title>
+<path fill="none" stroke="#8383cc" stroke-width="5" d="M1177,-555.86C1177,-551.37 1177,-546.76 1177,-542.27"></path>
+</g>
+<!-- VFS&#45;&gt;NFS -->
+<g id="edge31" class="edge">
+<title>VFS-&gt;NFS</title>
+<path fill="none" stroke="#8383cc" stroke-width="5" d="M1214.65,-469.86C1223.9,-461.23 1233.57,-452.2 1242.05,-444.29"></path>
+</g>
+<!-- VFS&#45;&gt;mmap -->
+<g id="edge30" class="edge">
+<title>VFS-&gt;mmap</title>
+<path fill="none" stroke="#8383cc" stroke-width="5" d="M1097.85,-485.09C1038.62,-470.2 958.8,-450.12 904.37,-436.43"></path>
+</g>
+<!-- VFS&#45;&gt;PC -->
+<g id="edge33" class="edge">
+<title>VFS-&gt;PC</title>
+<path fill="none" stroke="#8383cc" stroke-width="5" d="M1128.48,-469.86C1115.32,-460.33 1101.48,-450.32 1089.8,-441.85"></path>
+</g>
+<!-- logFS -->
+<g id="node40" class="node">
+<title>logFS</title>
+<polygon fill="#6a9ab1" stroke="#8383cc" stroke-width="5" points="1256,-358 1098,-358 1098,-278 1256,-278 1256,-358"></polygon>
+<text text-anchor="middle" x="1177" y="-336" font-family="Helvetica,Arial,sans-serif" font-size="20.00">logical</text>
+<text text-anchor="middle" x="1177" y="-312" font-family="Helvetica,Arial,sans-serif" font-size="20.00">filesystems:</text>
+<text text-anchor="middle" x="1177" y="-288" font-family="Helvetica,Arial,sans-serif" font-size="20.00">ext3, xfs ...</text>
+</g>
+<!-- VFS&#45;&gt;logFS -->
+<g id="edge32" class="edge">
+<title>VFS-&gt;logFS</title>
+<path fill="none" stroke="#8383cc" stroke-width="5" d="M1177,-469.75C1177,-437.74 1177,-391.14 1177,-358.04"></path>
+</g>
+<!-- logFS&#45;&gt;block -->
+<g id="edge34" class="edge">
+<title>logFS-&gt;block</title>
+<path fill="none" stroke="#8383cc" stroke-width="5" d="M1177,-277.98C1177,-269.56 1177,-260.66 1177,-252.24"></path>
+</g>
+<!-- HI_ -->
+<!-- char -->
+<g id="node44" class="node">
+<title>char</title>
+<ellipse fill="#d9e7ee" stroke="#cfbf57" stroke-width="5" cx="303" cy="-592" rx="79" ry="36"></ellipse>
+<text text-anchor="middle" x="303" y="-599.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">char</text>
+<text text-anchor="middle" x="303" y="-570.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00">devices</text>
+</g>
+<!-- HI_&#45;&gt;char -->
+<!-- HI -->
+<g id="node43" class="node">
+<title>HI</title>
+<g id="a_node43"><a href="https://en.wikibooks.org/wiki/The_Linux_Kernel/Human_interfaces" title="human\ninterface">
+<polygon fill="white" stroke="#cfbf57" stroke-width="5" points="375,-735.8 231,-735.8 231,-692.8 375,-692.8 375,-735.8"></polygon>
+<text text-anchor="middle" x="303" y="-717.9" font-family="Helvetica,Arial,sans-serif" font-size="12.00">human</text>
+<text text-anchor="middle" x="303" y="-703.5" font-family="Helvetica,Arial,sans-serif" font-size="12.00">interface</text>
+</a>
+</g>
+</g>
+<!-- HI&#45;&gt;system -->
+<!-- HI&#45;&gt;HI_ -->
+<g id="edge36" class="edge">
+<title>HI-&gt;HI_</title>
+<path fill="none" stroke="#cfbf57" stroke-width="5" d="M303,-692.79C303,-683.35 303,-672.9 303,-666.75"></path>
+<polygon fill="#cfbf57" stroke="#cfbf57" stroke-width="5" points="305.19,-666.45 303,-661.45 300.81,-666.45 305.19,-666.45"></polygon>
+</g>
+<!-- input -->
+<g id="node45" class="node">
+<title>input</title>
+<polygon fill="#b2d3e4" stroke="#cfbf57" stroke-width="5" points="382,-542 224,-542 224,-470 382,-470 382,-542"></polygon>
+<text text-anchor="middle" x="303" y="-513.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">input</text>
+<text text-anchor="middle" x="303" y="-484.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00">subsystem</text>
+</g>
+<!-- char&#45;&gt;input -->
+<g id="edge37" class="edge">
+<title>char-&gt;input</title>
+<path fill="none" stroke="#cfbf57" stroke-width="5" d="M303,-555.86C303,-551.37 303,-546.76 303,-542.27"></path>
+</g>
+<!-- F7 -->
+<g id="node46" class="node">
+<title>F7</title>
+<polygon fill="#6a9ab1" stroke="#cfbf57" stroke-width="5" points="382,-354 224,-354 224,-282 382,-282 382,-354"></polygon>
+<text text-anchor="middle" x="303" y="-325.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">HI class</text>
+<text text-anchor="middle" x="303" y="-296.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00">drivers</text>
+</g>
+<!-- input&#45;&gt;F7 -->
+<g id="edge38" class="edge">
+<title>input-&gt;F7</title>
+<path fill="none" stroke="#cfbf57" stroke-width="5" d="M303,-469.75C303,-436.46 303,-387.39 303,-354.14"></path>
+</g>
+<!-- HID -->
+<g id="node47" class="node">
+<title>HID</title>
+<g id="a_node47"><a href="https://www.kernel.org/doc/html/latest/hid/" title="HI\nperipherals\ndrivers">
+<polygon fill="#71809b" stroke="#cfbf57" stroke-width="5" points="382,-252 224,-252 224,-172 382,-172 382,-252"></polygon>
+<text text-anchor="middle" x="303" y="-230" font-family="Helvetica,Arial,sans-serif" font-size="20.00">HI</text>
+<text text-anchor="middle" x="303" y="-206" font-family="Helvetica,Arial,sans-serif" font-size="20.00">peripherals</text>
+<text text-anchor="middle" x="303" y="-182" font-family="Helvetica,Arial,sans-serif" font-size="20.00">drivers</text>
+</a>
+</g>
+</g>
+<!-- F7&#45;&gt;HID -->
+<g id="edge39" class="edge">
+<title>F7-&gt;HID</title>
+<path fill="none" stroke="#cfbf57" stroke-width="5" d="M303,-281.79C303,-272.24 303,-261.85 303,-252.1"></path>
+</g>
+<!-- display -->
+<g id="node48" class="node">
+<title>display</title>
+<polygon fill="#777777" stroke="#cfbf57" stroke-width="5" points="382,-158 224,-158 224,-86 382,-86 382,-158"></polygon>
+<text text-anchor="middle" x="303" y="-127.7" font-family="Helvetica,Arial,sans-serif" font-size="19.00" fill="white">keyboard, mouse,</text>
+<text text-anchor="middle" x="303" y="-104.9" font-family="Helvetica,Arial,sans-serif" font-size="19.00" fill="white">display, audio</text>
+</g>
+<!-- HID&#45;&gt;display -->
+<g id="edge40" class="edge">
+<title>HID-&gt;display</title>
+<path fill="none" stroke="#cfbf57" stroke-width="5" d="M303,-171.89C303,-167.3 303,-162.64 303,-158.11"></path>
+</g>
+<!-- functions_ -->
+<!-- functions_&#45;&gt;HI -->
+<!-- functions -->
+<g id="node50" class="node">
+<title>functions</title>
+<g id="a_node50"><a href="http://www.makelinux.net/ldd3/chp-1-sect-2.shtml" title="Columns represent main functionalities of the kernel">
+<polygon fill="none" stroke="gray" stroke-dasharray="5,2" points="136.5,-735.8 21.5,-735.8 21.5,-692.8 136.5,-692.8 136.5,-735.8"></polygon>
+<text text-anchor="middle" x="79" y="-707.1" font-family="Helvetica,Arial,sans-serif" font-size="24.00">functions</text>
+</a>
+</g>
+</g>
+<!-- functions&#45;&gt;functions_ -->
+<g id="edge47" class="edge">
+<title>functions-&gt;functions_</title>
+<path fill="none" stroke="gray" d="M136.83,-714.3C150.73,-714.3 164.62,-714.3 178.51,-714.3"></path>
+<polygon fill="gray" stroke="gray" points="178.63,-716.05 183.63,-714.3 178.63,-712.55 178.63,-716.05"></polygon>
+</g>
+<!-- layers -->
+<g id="node64" class="node">
+<title>layers</title>
+<g id="a_node64"><a title="Functionalities are divided to common layers. It is approximate division.">
+<polygon fill="lightgray" stroke="black" stroke-width="0" points="115.81,-678.7 42.19,-678.7 42.19,-642.1 115.81,-642.1 115.81,-678.7"></polygon>
+<text text-anchor="middle" x="79" y="-653.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">layers</text>
+</a>
+</g>
+</g>
+<!-- functions&#45;&gt;layers -->
+<!-- usr_ -->
+<!-- usr -->
+<g id="node52" class="node">
+<title>usr</title>
+<ellipse fill="#d9e7ee" stroke="black" stroke-width="0" cx="79" cy="-592" rx="79" ry="36"></ellipse>
+<text text-anchor="middle" x="79" y="-599.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">user space</text>
+<text text-anchor="middle" x="79" y="-570.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00">interfaces</text>
+</g>
+<!-- usr&#45;&gt;usr_ -->
+<g id="edge56" class="edge">
+<title>usr-&gt;usr_</title>
+<path fill="none" stroke="#d9e7ee" stroke-width="5" d="M158.28,-592C171.04,-592 183.81,-592 196.57,-592"></path>
+<polygon fill="#d9e7ee" stroke="#d9e7ee" stroke-width="5" points="196.66,-594.19 201.66,-592 196.66,-589.81 196.66,-594.19"></polygon>
+</g>
+<!-- virt -->
+<g id="node54" class="node">
+<title>virt</title>
+<g id="a_node54"><a href="https://en.wikipedia.org/wiki/Proxy_pattern" title="proxy between standard user space interfaces and internal implementations">
+<polygon fill="#b2d3e4" stroke="black" stroke-width="0" points="158,-542 0,-542 0,-470 158,-470 158,-542"></polygon>
+<text text-anchor="middle" x="79" y="-513.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">virtual</text>
+<text text-anchor="middle" x="79" y="-484.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00">subsystems</text>
+</a>
+</g>
+</g>
+<!-- usr&#45;&gt;virt -->
+<g id="edge57" class="edge">
+<title>usr-&gt;virt</title>
+<path fill="none" stroke="#d9e7ee" stroke-width="5" d="M79,-555.86C79,-551.37 79,-546.76 79,-542.27"></path>
+</g>
+<!-- D0 -->
+<!-- virt&#45;&gt;D0 -->
+<g id="edge58" class="edge">
+<title>virt-&gt;D0</title>
+<path fill="none" stroke="#b2d3e4" stroke-width="5" d="M158.28,-506C171.04,-506 183.81,-506 196.57,-506"></path>
+<polygon fill="#b2d3e4" stroke="#b2d3e4" stroke-width="5" points="196.66,-508.19 201.66,-506 196.66,-503.81 196.66,-508.19"></polygon>
+</g>
+<!-- bridges -->
+<g id="node55" class="node">
+<title>bridges</title>
+<g id="a_node55"><a href="https://en.wikipedia.org/wiki/Bridge_pattern" title="bridges between uniform virtual interfaces and various implementations">
+<polygon fill="#91b5c9" stroke="black" stroke-width="0" points="158,-405.09 158,-434.91 111.72,-456 46.28,-456 0,-434.91 0,-405.09 46.28,-384 111.72,-384 158,-405.09"></polygon>
+<text text-anchor="middle" x="79" y="-412.8" font-family="Helvetica,Arial,sans-serif" font-size="24.00">bridges</text>
+</a>
+</g>
+</g>
+<!-- virt&#45;&gt;bridges -->
+<g id="edge59" class="edge">
+<title>virt-&gt;bridges</title>
+<path fill="none" stroke="#b2d3e4" stroke-width="5" d="M79,-469.86C79,-465.37 79,-460.76 79,-456.27"></path>
+</g>
+<!-- E0 -->
+<!-- bridges&#45;&gt;E0 -->
+<g id="edge60" class="edge">
+<title>bridges-&gt;E0</title>
+<path fill="none" stroke="#91b5c9" stroke-width="6" d="M158.28,-420C171.04,-420 183.81,-420 196.57,-420"></path>
+<polygon fill="#91b5c9" stroke="#91b5c9" stroke-width="6" points="196.66,-422.63 201.66,-420 196.66,-417.38 196.66,-422.63"></polygon>
+</g>
+<!-- logical -->
+<g id="node58" class="node">
+<title>logical</title>
+<polygon fill="#6a9ab1" stroke="black" stroke-width="0" points="158,-354 0,-354 0,-282 158,-282 158,-354"></polygon>
+<text text-anchor="middle" x="79" y="-310.8" font-family="Helvetica,Arial,sans-serif" font-size="24.00">logical</text>
+</g>
+<!-- bridges&#45;&gt;logical -->
+<g id="edge61" class="edge">
+<title>bridges-&gt;logical</title>
+<path fill="none" stroke="#91b5c9" stroke-width="6" d="M79,-383.74C79,-374.18 79,-363.84 79,-354.27"></path>
+</g>
+<!-- F0 -->
+<!-- logical&#45;&gt;F0 -->
+<g id="edge62" class="edge">
+<title>logical-&gt;F0</title>
+<path fill="none" stroke="#6a9ab1" stroke-width="6" d="M158.28,-318C171.04,-318 183.81,-318 196.57,-318"></path>
+<polygon fill="#6a9ab1" stroke="#6a9ab1" stroke-width="6" points="196.66,-320.63 201.66,-318 196.66,-315.38 196.66,-320.63"></polygon>
+</g>
+<!-- HWI -->
+<g id="node59" class="node">
+<title>HWI</title>
+<polygon fill="#71809b" stroke="black" stroke-width="0" points="158,-248 0,-248 0,-176 158,-176 158,-248"></polygon>
+<text text-anchor="middle" x="79" y="-219.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00">hardware</text>
+<text text-anchor="middle" x="79" y="-190.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00">interfaces</text>
+</g>
+<!-- logical&#45;&gt;HWI -->
+<g id="edge63" class="edge">
+<title>logical-&gt;HWI</title>
+<path fill="none" stroke="#6a9ab1" stroke-width="6" d="M79,-281.79C79,-270.95 79,-259.01 79,-248.17"></path>
+</g>
+<!-- G0 -->
+<!-- HWI&#45;&gt;G0 -->
+<g id="edge64" class="edge">
+<title>HWI-&gt;G0</title>
+<path fill="none" stroke="#71809b" stroke-width="6" d="M158.28,-212C171.04,-212 183.81,-212 196.57,-212"></path>
+<polygon fill="#71809b" stroke="#71809b" stroke-width="6" points="196.66,-214.63 201.66,-212 196.66,-209.38 196.66,-214.63"></polygon>
+</g>
+<!-- HW -->
+<g id="node61" class="node">
+<title>HW</title>
+<polygon fill="#777777" stroke="black" stroke-width="0" points="158,-158 0,-158 0,-86 158,-86 158,-158"></polygon>
+<text text-anchor="middle" x="79" y="-129.2" font-family="Helvetica,Arial,sans-serif" font-size="24.00" fill="white">electronics,</text>
+<text text-anchor="middle" x="79" y="-100.4" font-family="Helvetica,Arial,sans-serif" font-size="24.00" fill="white">hardware</text>
+</g>
+<!-- HWI&#45;&gt;HW -->
+<g id="edge65" class="edge">
+<title>HWI-&gt;HW</title>
+<path fill="none" stroke="#71809b" stroke-width="6" d="M79,-175.97C79,-170.12 79,-164.05 79,-158.2"></path>
+</g>
+<!-- H0 -->
+<!-- HW&#45;&gt;H0 -->
+<g id="edge66" class="edge">
+<title>HW-&gt;H0</title>
+<path fill="none" stroke="#777777" stroke-width="6" d="M158.28,-122C171.04,-122 183.81,-122 196.57,-122"></path>
+<polygon fill="#777777" stroke="#777777" stroke-width="6" points="196.66,-124.63 201.66,-122 196.66,-119.38 196.66,-124.63"></polygon>
+</g>
+<!-- layers&#45;&gt;usr -->
+<g id="edge67" class="edge">
+<title>layers-&gt;usr</title>
+<path fill="none" stroke="gray" d="M79,-641.95C79,-639.26 79,-636.4 79,-633.45"></path>
+<polygon fill="gray" stroke="gray" points="80.75,-633.07 79,-628.07 77.25,-633.07 80.75,-633.07"></polygon>
+</g>
+<!-- LKD -->
+<g id="node65" class="node">
+<title>LKD</title>
+<text text-anchor="middle" x="663" y="-761.8" font-family="Helvetica,Arial,sans-serif" font-size="40.00">Linux kernel diagram</text>
+</g>
+<!-- LKD&#45;&gt;processing -->
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linux-kernel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图&nbsp;3: A diagram of the Linux kernel.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Note that the <code>label</code> and <code>fig-cap</code> attributes still work as expected with <code>file</code> includes.</p>
+</section>
+<section id="sizing" class="level2">
+<h2 class="anchored" data-anchor-id="sizing">Sizing</h2>
+<p>By default, diagrams are rendered at their natural size (i.e.&nbsp;they are not stretched to fit the default figure size for the current document). Within HTML output formats, diagrams are also made responsive, so that their width doesn’t overflow the current page column. This is similar to the treatment given to images and dynamic JavaScript widgets.</p>
+<p>You can disable responsive sizing by specifying the <code>fig-responsive: false</code> option. You can also specify explicit sizes via <code>fig-width</code> and <code>fig-height</code>. For example, here we want to make a mermaid diagram a bit bigger because it contains only a few elements:</p>
+<div class="cell" data-fig-width="6.5" data-layout-align="default">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="in">%%| fig-width: 6.5</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="in">flowchart LR</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="in">  A[Hard edge] --&gt; B(Round edge)</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="in">  B --&gt; C{Decision}</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Hard edge] --&gt; B(Round edge)
+  B --&gt; C{Decision}
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="mermaid-formats" class="level2">
+<h2 class="anchored" data-anchor-id="mermaid-formats">Mermaid Formats</h2>
+<p>When you include a Mermaid diagram in a document, the diagram format used is chosen automatically based on the output format:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Format</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>HTML (<code>html</code>, <code>revealjs</code>, etc.)</td>
+<td>Mermaid native (JavaScript)</td>
+</tr>
+<tr class="even">
+<td>GitHub Flavored Markdown (<code>gfm</code>)</td>
+<td>Mermaid code block</td>
+</tr>
+<tr class="odd">
+<td>Other Formats (<code>pdf</code>, <code>docx</code>, etc.)</td>
+<td>PNG image</td>
+</tr>
+</tbody>
+</table>
+<p>The Mermaid native format is used by default whenever the underlying output format supports JavaScript.</p>
+<p>When using <code>format: gfm</code>, diagrams will be emitted as plain <code>mermaid</code> code blocks. This is because both <a href="https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/">GitHub</a> and <a href="https://docs.gitlab.com/ee/user/markdown.html#mermaid">GitLab</a> natively support rendering Mermaid diagrams from code.</p>
+<p>For formats that don’t do special handling of Mermaid or lack a JavaScript run-time (e.g.&nbsp;formats like <code>pdf</code>, <code>docx</code>, <code>epub</code>, etc.) a PNG image is created using <a href="#chrome-install">Chrome</a>.</p>
+<p>You can change the default behavior using the <code>mermaid-format</code> option. For example:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">gfm</span><span class="kw">:</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">mermaid-format</span><span class="kw">:</span><span class="at"> png</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Valid values for <code>mermaid-format</code> include <code>js</code>, <code>png</code>, and <code>svg</code>,</p>
+</section>
+<section id="mermaid-theming" class="level2">
+<h2 class="anchored" data-anchor-id="mermaid-theming">Mermaid Themes</h2>
+<p>The following sections describe the ways in which you can control the color theme of Mermaid diagrams:</p>
+<ul>
+<li>Using the current document theme.</li>
+<li>Using one of Mermaid’s own color themes via a YAML option.</li>
+<li>Using SCSS and CSS variables.</li>
+</ul>
+<section id="default-colors-for-mermaid-diagrams" class="level3">
+<h3 class="anchored" data-anchor-id="default-colors-for-mermaid-diagrams">Default Colors for Mermaid Diagrams</h3>
+<p>If you use Quarto’s <a href="../../docs/output-formats/html-themes.html">bootswatch built-in themes</a>, including the default theme, or a custom theme that uses the same SCSS variables, your Mermaid diagrams will automatically follow your theme.</p>
+<p>The following examples demonstrate this with a few of Quarto’s built-in bootswatch themes.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Darkly</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Sandstone</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Vapor</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><img src="images/mermaid-darkly.png" class="img-fluid" alt="A screenshot of a Mermaid flowchart in a document using bootswatch's Darkly theme."></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><img src="images/mermaid-sandstone.png" class="img-fluid" alt="A screenshot of a Mermaid flowchart in a document using bootswatch's Sandstone theme."></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><img src="images/mermaid-vapor.png" class="img-fluid" alt="A screenshot of a Mermaid flowchart in a document using bootswatch's Vapor theme."></p>
+</div>
+</div>
+</div>
+<p>You can read more about the correspondence between Bootstrap’s SCSS variables and Quarto’s Mermaid SCSS variables, and how to change it, below in <a href="#customizing-mermaid">Customizing the Mermaid Theme</a>.</p>
+</section>
+<section id="using-mermaids-built-in-themes" class="level3">
+<h3 class="anchored" data-anchor-id="using-mermaids-built-in-themes">Using Mermaid’s Built-in Themes</h3>
+<p>If you want to use Mermaid’s own themes, you can do so by configuring the <code>mermaid</code> option in your YAML front matter:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">mermaid</span><span class="kw">:</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> forest</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The available themes from mermaid are: <code>default</code>, <code>dark</code>, <code>forest</code>, and <code>neutral</code>.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">default</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">dark</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">forest</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">neutral</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p><img src="images/mermaid-default.png" class="img-fluid" alt="A screenshot of a Mermaid flowchart using the Mermaid's default theme."></p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><img src="images/mermaid-dark.png" class="img-fluid" alt="A screenshot of a Mermaid flowchart using the Mermaid's dark theme."></p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p><img src="images/mermaid-forest.png" class="img-fluid" alt="A screenshot of a Mermaid flowchart using the Mermaid's forest theme."></p>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p><img src="images/mermaid-neutral.png" class="img-fluid" alt="A screenshot of a Mermaid flowchart using the Mermaid's neutral theme."></p>
+</div>
+</div>
+</div>
+</section>
+<section id="customizing-mermaid" class="level3">
+<h3 class="anchored" data-anchor-id="customizing-mermaid">Customizing the Mermaid Theme</h3>
+<p>Quarto provides its own Mermaid SCSS and CSS variables that can be overwritten to allow some customization of the diagram theme. The SCSS variables, together with their default values, are:</p>
+<!-- This comes from quarto-dev/quarto-cli/src/resources/formats/html/_quarto-rules.scss -->
+<div class="sourceCode" id="cb11"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="va">$mermaid-bg-color</span>: <span class="va">$body-bg</span><span class="op">;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="va">$mermaid-edge-color</span>: <span class="va">$secondary</span><span class="op">;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="va">$mermaid-node-fg-color</span>: <span class="va">$body-color</span><span class="op">;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="va">$mermaid-fg-color</span>: <span class="va">$body-color</span><span class="op">;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="va">$mermaid-fg-color--lighter</span>: <span class="fu">lighten(</span><span class="va">$body-color</span><span class="op">,</span> <span class="dv">10</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="va">$mermaid-fg-color--lightest</span>: <span class="fu">lighten(</span><span class="va">$body-color</span><span class="op">,</span> <span class="dv">20</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="va">$mermaid-font-family</span>: <span class="va">$font-family-sans-serif</span><span class="op">;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="va">$mermaid-label-bg-color</span>: <span class="va">$body-bg</span><span class="op">;</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="va">$mermaid-label-fg-color</span>: <span class="va">$primary</span><span class="op">;</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="va">$mermaid-node-bg-color</span>: <span class="fu">rgba(</span><span class="va">$primary</span><span class="op">,</span> <span class="dv">0.1</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="va">$mermaid-node-fg-color</span>: <span class="va">$primary</span><span class="op">;</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Their CSS variable counterparts are:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--mermaid-bg-color</span><span class="ch">:</span> #{$<span class="dv">mermaid-bg-color</span>};</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  --mermaid-edge-color<span class="in">:</span> #{$mermaid-edge-color};</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  --mermaid-node-fg-color<span class="in">:</span> #{$mermaid-node-fg-color};</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  --mermaid-fg-color<span class="in">:</span> #{$mermaid-fg-color};</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  --mermaid-fg-color--lighter<span class="in">:</span> #{$mermaid-fg-color--lighter};</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  --mermaid-fg-color--lightest<span class="in">:</span> #{$mermaid-fg-color--lightest};</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  --mermaid-font-family<span class="in">:</span> #{$mermaid-font-family};</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  --mermaid-label-bg-color<span class="in">:</span> #{$mermaid-label-bg-color};</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  --mermaid-label-fg-color<span class="in">:</span> #{$mermaid-label-fg-color};</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  --mermaid-node-bg-color<span class="in">:</span> #{$mermaid-node-bg-color};</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  --mermaid-node-fg-color<span class="in">:</span> #{$mermaid-node-fg-color};</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For example, to provide a custom color for the background of the nodes you could <a href="../../output-formats/html-basics.html#css-styles">add a custom CSS stylesheet</a> containing:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--mermaid-node-bg-color</span><span class="ch">:</span> <span class="cn">#375a7f</span><span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can find the correspondence between Quarto’s variables and Mermaid’s native CSS classes in Quarto’s source code in the file <a href="https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/html/mermaid/embed-mermaid.css">embed-mermaid.css</a>.</p>
+</section>
+</section>
+<section id="code-echo" class="level2">
+<h2 class="anchored" data-anchor-id="code-echo">Code Echo</h2>
+<p>Note that unlike other executable cell handlers (e.g.&nbsp;<code>{python}</code>), cells with diagrams don’t display their code in the rendered document by default. You can display code by adding an <code>echo: true</code> option in a comment at the top the cell.</p>
+<p>To include code for <code>{mermaid}</code>, add <code>%%| echo: true</code> to the top of the cell. For example:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="in">%%| echo: true</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To include code for <code>{dot}</code>, add <code>//| echo: true</code> to the top of the cell. For example:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{dot}</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="in">//| echo: true</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="chrome-install" class="level2">
+<h2 class="anchored" data-anchor-id="chrome-install">Chrome Install</h2>
+<p>For printing to output formats like <code>pdf</code> or <code>docx</code>, diagram rendering makes use of the Chrome or Edge web browser to create a high-quality PNG.</p>
+<p>Quarto can automatically use an existing version of Chrome or Edge on your system for rendering. Alternatively, if you don’t have either, you can install a minimal version of Chrome for use by Quarto with the following command:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb16" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install chromium</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+注解
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quarto installs headless Chromium via Puppeteer. The bundled Chromium that Puppeteer installs may not work on Docker containers; please check <a href="https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#running-puppeteer-in-docker">the Puppeteer documentation</a> as well as <a href="https://pptr.dev/next/troubleshooting#running-puppeteer-on-wsl-windows-subsystem-for-linux">this article</a> if you are attempting to install within Windows Subsystem for Linux (WSL).</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script type="text/javascript">
+
+
+
+// replace cmd keyboard shortcut w/ control on non-Mac platforms
+
+const kPlatformMac = typeof navigator !== 'undefined' ? /Mac/.test(navigator.platform) : false;
+
+if (!kPlatformMac) {
+
+   var kbds = document.querySelectorAll("kbd")
+
+   kbds.forEach(function(kbd) {
+
+      kbd.innerHTML = kbd.innerHTML.replace(/⌘/g, '⌃');
+
+   });
+
+}
+
+
+
+// tweak headings in pymd
+
+document.querySelectorAll(".pymd span.co").forEach(el => {
+
+   if (!el.innerText.startsWith("#|")) {
+
+      el.style.fontWeight = 1000;
+
+   }
+
+});
+
+
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "已复制");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "已复制");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/quarto\.org");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../docs/authoring/tables.html" class="pagination-link" aria-label="Tables">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Tables</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../docs/authoring/videos.html" class="pagination-link" aria-label="Videos">
+        <span class="nav-page-text">Videos</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Proudly supported by <a href="https://posit.co"><img src="https://www.rstudio.com/assets/img/posit-logo-fullcolor-TM.svg" class="img-fluid" alt="Posit" width="65"></a></p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+<p>关于</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../docs/faq/index.html">
+<p>问答</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../trademark.html">
+<p>商标</p>
+</a>
+  </li>  
+</ul>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/quarto-dev/quarto-web/edit/main/docs/authoring/diagrams.qmd" class="toc-action"><i class="bi bi-github"></i>编辑页面</a></li><li><a href="https://github.com/quarto-dev/quarto-cli/issues/new/choose" class="toc-action"><i class="bi empty"></i>反馈问题</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/quarto_pub">
+      <i class="bi bi-twitter" role="img" aria-label="Quarto Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/quarto-dev/quarto-cli">
+      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://quarto.org/docs/blog/index.xml">
+      <i class="bi bi-rss" role="img" aria-label="Quarto Blog RSS">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
