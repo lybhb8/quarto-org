@@ -1,7 +1,7 @@
 {
   "cells": [
     {
-      "cell_type": "raw",
+      "cell_type": "markdown",
       "metadata": {},
       "source": [
         "---\n",
@@ -12,14 +12,11 @@
         "aliases: \n",
         "  - /docs/authoring/cross-references-listings.html\n",
         "  - /docs/authoring/cross-references-callouts.html\n",
-        "---"
-      ],
-      "id": "a5ed7a58"
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {},
-      "source": [
+        "---\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
         "## 概述\n",
         "\n",
         "交叉引用可为图和表等各种实体提供编号引用和超链接，从而方便读者浏览文档。每个可交叉引用的实体都需要一个标签--一个前缀有交叉引用类型的唯一标识符，例如`#fig-element`。例如，这是一个可交叉引用的图：\n",
@@ -134,6 +131,7 @@
         "\n",
         "请再次注意，交叉引用标识符必须以其类型开头（例如 `#fig-`），并且交叉引用标识符必须全部小写。\n",
         "\n",
+        "\n",
         "To create a cross-reference to a figure using div syntax, create a fenced div with an id starting with `fig-`, include the image followed by the caption inside the div:\n",
         "\n",
         "````markdown\n",
@@ -206,6 +204,7 @@
         "![](images/crossref-figure-r.png){fig-alt=\"A scatter plot of speed versus distance for the `cars` dataset. The label 'Figure 1: Plot' is centered beneath it. The text 'For example, see fig. 1' is aligned to the left underneath that.\"}\n",
         ":::\n",
         "\n",
+        "\n",
         "::: {.callout-tip}\n",
         "\n",
         "## Computed Captions\n",
@@ -253,6 +252,7 @@
         "\n",
         "\n",
         "\n",
+        "\n",
         "对于 markdown 表格，请在表格下方添加标题，然后在标题末尾用大括号包含一个 `#tbl-` 标签。例如：\n",
         "\n",
         "``` markdown\n",
@@ -279,6 +279,7 @@
         "为了使表格可以交叉引用，其标签必须以 `tbl-` 前缀开头。\n",
         ":::\n",
         "\n",
+        "\n",
         "To create a cross-reference to a table using div syntax, create a fenced div with an id starting with `tbl-`, include the table followed by the caption inside the div:\n",
         "\n",
         "````markdown\n",
@@ -300,6 +301,7 @@
         "有关在表格中使用 div 语法的更多信息，请参阅 [交叉引用 div 语法](cross-references-divs.qmd#tables \"Cross-Reference Div Syntax\")。\n",
         "\n",
         "#### Subtables|子表\n",
+        "\n",
         "\n",
         "您可能希望创建一个由多个子表格组成的组合。为此，请创建一个带有主标识符的 div，然后将子标识符（以及可选的标题文本）应用到所包含的表格中。例如\n",
         "\n",
@@ -348,6 +350,7 @@
         "```\n",
         "\n",
         "![](/docs/authoring/images/crossref-table-knitr.png){fig-alt=\"Example table output.\" fig-align=\"center\" width=\"80%\"}\n",
+        "\n",
         "\n",
         "::: {.callout-tip}\n",
         "\n",
@@ -404,6 +407,7 @@
         "Then we query the customers database (@lst-customers).\n",
         "````\n",
         "\n",
+        "\n",
         "To create a cross-reference to a code listing using div syntax, create a fenced div with an id starting with `lst-`, include the code cell followed by the caption inside the div:   \n",
         "\n",
         "````markdown\n",
@@ -422,6 +426,7 @@
         "\n",
         "您可以在 [交叉引用 div 语法](cross-references-divs.qmd \"Cross-Reference Div Syntax\") 中阅读有关使用 div 语法进行代码列表的更多信息。\n",
         "\n",
+        "\n",
         "To cross-reference code from an executable code block, add the code cell options `lst-label` and `lst-cap`. The option `lst-label` provides the cross reference identifier and must begin with the prefix `lst-` to be treated as a code listing. The value of `lst-cap` provides the caption for the code listing. For example:\n",
         "\n",
         "````{.markdown}\n",
@@ -437,9 +442,9 @@
         "\n",
         "When rendered, this results in the following:\n",
         "\n",
-        "::: {.border .p-3}"
+        "::: {.border .p-3}\n"
       ],
-      "id": "63ea694f"
+      "id": "331bb9bc"
     },
     {
       "cell_type": "code",
@@ -450,7 +455,7 @@
         "\n",
         "import matplotlib.pyplot as plt"
       ],
-      "id": "5feebd3d",
+      "id": "66df3eaf",
       "execution_count": null,
       "outputs": []
     },
@@ -480,9 +485,9 @@
         "\n",
         "When rendered, this produces the following output:\n",
         "\n",
-        ":::{.border .p-3}"
+        ":::{.border .p-3}\n"
       ],
-      "id": "e1c74da4"
+      "id": "cf70b85c"
     },
     {
       "cell_type": "code",
@@ -510,6 +515,7 @@
         "\n",
         "\n",
         "## Callouts|提示\n",
+        "\n",
         "\n",
         "要交叉引用提示，请添加一个以相应提示前缀开头的 ID 属性（请参阅 @tbl-callout-prefixes）。然后就可以使用通常的 `@`语法引用调用。例如，在这里我们将 ID `#tip-example` 添加到提示中，然后再引用它：\n",
         "\n",
@@ -645,14 +651,15 @@
         "---\n",
         "```\n"
       ],
-      "id": "4bef9894"
+      "id": "1a0d8011"
     }
   ],
   "metadata": {
     "kernelspec": {
       "name": "python3",
       "language": "python",
-      "display_name": "Python 3 (ipykernel)"
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\13419\\AppData\\Roaming\\Python\\share\\jupyter\\kernels\\python3"
     }
   },
   "nbformat": 4,
