@@ -1,6 +1,13 @@
 ---
-title: "Quarto Computations"
+title: "Quarto 计算方法" #"Quarto Computations"
 ---
+
+<!--
+#The following is the original English version.
+-->
+
+
+<!--
 
 This dataset contains a subset of the fuel economy data from the EPA.
 Specifically, we use the `mpg` dataset from the **ggplot2** package.
@@ -14,6 +21,37 @@ library(ggplot2)
 
 The visualization below shows a positive, strong, and linear relationship between the city and highway mileage of these cars.
 Additionally, mileage is higher for cars with fewer cylinders.
+
+```{r}
+#| label: scatterplot
+
+ggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +
+  geom_point(alpha = 0.5, size = 2) +
+  scale_color_viridis_c() +
+  theme_minimal()
+```
+
+-->
+
+<!--
+---
+#The above is the original English version.
+---
+-->
+
+
+该数据集包含美国环保署的燃油经济性数据子集。
+具体来说，我们使用了 **ggplot2** 软件包中的  `mpg ` 数据集。
+
+```{r}
+#| label: load-packages
+#| echo: false
+
+library(ggplot2)
+```
+
+下面的直观图显示了这些汽车的城市和高速公路行驶里程之间的正向、强烈和线性关系。
+此外，气缸数较少的汽车行驶里程也较高。
 
 ```{r}
 #| label: scatterplot

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.55">
+<meta name="generator" content="quarto-1.5.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorial: Hello, Quarto – Quarto</title>
+<title>您好,Quarto – Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,6 +75,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -137,11 +139,11 @@ gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="../../../styles.css">
 <link rel="stylesheet" href="../tutorial.css">
-<meta property="og:title" content="Tutorial: Hello, Quarto – Quarto">
+<meta property="og:title" content="您好,Quarto – Quarto">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://quarto.org/docs/get-started/hello/quarto-dark-bg.jpeg">
 <meta property="og:site_name" content="Quarto">
-<meta name="twitter:title" content="Tutorial: Hello, Quarto – Quarto">
+<meta name="twitter:title" content="您好,Quarto – Quarto">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://quarto.org/docs/get-started/hello/quarto-dark-bg.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -228,7 +230,7 @@ gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Tutorial: Hello, Quarto</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">您好,Quarto</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -243,7 +245,7 @@ gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/get-started/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Get Started</span></a>
+ <span class="menu-text">开始</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -274,16 +276,16 @@ gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
     <h2 id="toc-title">页面目录</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#rendering" id="toc-rendering" class="nav-link" data-scroll-target="#rendering">Rendering</a></li>
-  <li><a href="#authoring" id="toc-authoring" class="nav-link" data-scroll-target="#authoring">Authoring</a>
+  <li><a href="#概述" id="toc-概述" class="nav-link active" data-scroll-target="#概述">概述</a></li>
+  <li><a href="#渲染" id="toc-渲染" class="nav-link" data-scroll-target="#渲染">渲染</a></li>
+  <li><a href="#创作" id="toc-创作" class="nav-link" data-scroll-target="#创作">创作</a>
   <ul class="collapse">
-  <li><a href="#yaml-header" id="toc-yaml-header" class="nav-link" data-scroll-target="#yaml-header">YAML header</a></li>
-  <li><a href="#code-chunks" id="toc-code-chunks" class="nav-link" data-scroll-target="#code-chunks">Code chunks</a></li>
+  <li><a href="#yaml-头文件" id="toc-yaml-头文件" class="nav-link" data-scroll-target="#yaml-头文件">YAML 头文件</a></li>
+  <li><a href="#代码块" id="toc-代码块" class="nav-link" data-scroll-target="#代码块">代码块</a></li>
   <li><a href="#markdown-text" id="toc-markdown-text" class="nav-link" data-scroll-target="#markdown-text">Markdown text</a></li>
   </ul></li>
-  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works">How it works</a></li>
-  <li><a href="#next-up" id="toc-next-up" class="nav-link" data-scroll-target="#next-up">Next Up</a></li>
+  <li><a href="#如何工作" id="toc-如何工作" class="nav-link" data-scroll-target="#如何工作">如何工作</a></li>
+  <li><a href="#下一步" id="toc-下一步" class="nav-link" data-scroll-target="#下一步">下一步</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/quarto-dev/quarto-web/edit/main/docs/get-started/hello/rstudio.qmd" class="toc-action"><i class="bi bi-github"></i>编辑页面</a></li><li><a href="https://github.com/quarto-dev/quarto-cli/issues/new/choose" class="toc-action"><i class="bi empty"></i>反馈问题</a></li></ul></div></nav>
     </div>
@@ -292,7 +294,7 @@ gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorial: Hello, Quarto</h1>
+<h1 class="title">您好,Quarto</h1>
 </div>
 
 
@@ -309,6 +311,157 @@ gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
 </header>
 
 
+<!--
+#The following is the original English version.
+-->
+<!--
+
+""{{< include ../_tool-chooser.md >}}""
+
+
+## Overview
+
+Quarto is a multi-language, [next-generation](/docs/faq/rmarkdown.qmd) version of R Markdown from Posit and includes dozens of new features and capabilities while at the same being able to render most existing Rmd files without modification.
+
+In this tutorial, we'll show you how to use RStudio with Quarto.
+You'll edit code and markdown in RStudio just as you would with any computational document (e.g., R Markdown) and preview the rendered document in the Viewer tab as you work.
+
+The following is a Quarto document with the extension `.qmd` (on the left), along with its rendered version as HTML (on the right).
+You could also choose to render it into other formats like PDF, MS Word, etc.
+
+![](images/rstudio-hello.png){.column-page-right .border fig-alt="RStudio with a Quarto document titled \"Penguins, meet Quarto!\" open on the left side and the rendered version of the document on the right side." fig-align="center"}
+
+This is the basic model for Quarto publishing---take a source document and render it to a variety of output formats.
+
+If you would like a video introduction to Quarto before you dive into the tutorial, watch the [Get Started with Quarto](https://youtu.be/_f3latmOhew) where you can see a preview of authoring a Quarto document with executable code chunks, rendering to multiple formats, including revealjs presentations, creating a website, and publishing on QuartoPub.
+
+
+
+
+
+
+
+
+
+
+
+If you would like to follow along with this tutorial in your own environment, follow the steps outlined below.
+
+1.  Download and install the latest release of RStudio (v2023.12):
+
+    ::: {.callout appearance="minimal"}
+    <i class="bi bi-download"></i> [Download RStudio v2023.12](https://posit.co/download/rstudio-desktop/)
+    :::
+
+2.  Be sure that you have installed the `tidyverse` and `palmerpenguins` packages:
+
+    ``` r
+    install.packages("tidyverse")
+    install.packages("palmerpenguins")
+    ```
+
+3.  Download the Quarto document (`.qmd`) below, open it in RStudio, and click on <kbd>![](images/rstudio-render-button.png){width="25" height="20"}</kbd> Render.
+
+    ::: {.callout appearance="minimal"}
+    <i class="bi bi-download"></i> [Download hello.qmd](rstudio/_hello.qmd){download="hello.qmd"}
+    :::
+
+## Rendering
+
+Use the <kbd>![](images/rstudio-render-button.png){width="25" height="20"}</kbd> **Render** button in the RStudio IDE to render the file and preview the output with a single click or keyboard shortcut (⇧⌘K).
+
+![](images/rstudio-render.png){.border fig-alt="Top of the text editor in RStudio with the Render button highlighted with a purple box." fig-align="center"}
+
+If you prefer to automatically render whenever you save, you can check the Render on Save option on the editor toolbar.
+The preview will update whenever you re-render the document.
+Side-by-side preview works for both HTML and PDF outputs.
+
+![](images/rstudio-render-on-save.png){.border fig-alt="Top of the text editor in RStudio with the Render on Save checkbox checked and highlighted with a purple box." fig-align="center"}
+
+Note that documents can also be rendered from the R console via the **quarto** package:
+
+``` r
+install.packages("quarto")
+quarto::quarto_render("hello.qmd")
+```
+
+When rendering, Quarto generates a new file that contains selected text, code, and results from the .qmd file.
+The new file can be an [HTML](https://quarto.org/docs/output-formats/all-formats.html), [PDF](https://quarto.org/docs/output-formats/pdf-basics.html), [MS Word](https://quarto.org/docs/output-formats/ms-word.html) document, [presentation](https://quarto.org/docs/presentations/), [website](https://quarto.org/docs/websites/), [book](https://quarto.org/docs/books/), [interactive document](https://quarto.org/docs/interactive/), or [other format](https://quarto.org/docs/output-formats/all-formats.html).
+
+## Authoring
+
+In the image below, we can see the same document in the two modes of the RStudio editor: visual (on the left) and source (on the right).
+RStudio's [visual editor](/docs/visual-editor/) offers an [WYSIWYM](https://en.wikipedia.org/wiki/WYSIWYM) authoring experience for markdown.
+For formatting (e.g., bolding text), you can use the toolbar, a keyboard shortcut (⌘B), or the markdown construct (`**bold**`).
+The plain text source code underlying the document is written for you, and you can view/edit it at any point by switching to source mode for editing.
+You can toggle back and forth between these two modes by clicking on **Source** and **Visual** in the editor toolbar (or using the keyboard shortcut ⌘⇧ F4).
+
+![](images/rstudio-source-visual.png){.column-page-right fig-alt="On the left: Document in the visual editor. On the right: Same document in the source editor. The visual/source editor toggle is highlighted in both documents marking their current state. The document shown is the \"Hello Quarto\" document from a previous image on the page." fig-align="center"}
+
+Next, let's turn our attention to the contents of our Quarto document.
+The file contains three types of content: a YAML header, code chunks, and markdown text.
+
+### YAML header
+
+An (optional) YAML header demarcated by three dashes (`---`) on either end.
+
+``` yaml
+---
+title: "Hello, Quarto"
+format: html
+editor: visual
+---
+```
+
+When rendered, the `title`, `"Hello, Quarto"`, will appear at the top of the rendered document with a larger font size than the rest of the document.
+The other two YAML fields denote that the output should be in `html` `format` and the document should open in the `visual` `editor` by default.
+
+The basic syntax of YAML uses key-value pairs in the format `key: value`.
+Other YAML fields commonly found in headers of documents include metadata like `author`, `subtitle`, `date` as well as customization options like `theme`, `fontcolor`, `fig-width`, etc.
+You can find out about all available YAML fields for HTML documents [here](/docs/reference/formats/html.html).
+The available YAML fields vary based on document format, e.g., see [here](/docs/reference/formats/pdf.html) for YAML fields for PDF documents and [here](/docs/reference/formats/docx.html) for MS Word.
+
+### Code chunks
+
+R code chunks identified with `{r}` with (optional) chunk options, in YAML style, identified by `#|` at the beginning of the line.
+
+```` markdown
+```xjmpe
+#| label: load-packages
+#| include: false
+
+library(tidyverse)
+library(palmerpenguins)
+```
+````
+
+In this case, the `label` of the code chunk is `load-packages`, and we set `include` to `false` to indicate that we don't want the chunk itself or any of its outputs in the rendered documents.
+
+In addition to rendering the complete document to view the results of code chunks, you can also run each code chunk interactively in the RStudio editor by clicking the ![](https://d33wubrfki0l68.cloudfront.net/18153fb9953057ee5cff086122bd26f9cee8fe93/3aba9/images/notebook-run-chunk.png) icon or keyboard shortcut (⇧⌘⏎).
+RStudio executes the code and displays the results either inline within your file or in the Console, depending on your preference.
+
+![](images/rstudio-inline-output.png){fig-alt="In the background, the code chunk labeled plot-penguins from hello.qmd. The chunk is partially covered by its output, a scatterplot showing the relationship between bill length and flipper length of penguins, colors by species. The button for running the code chunk is highlighted, and an arrow extends to the plot, showing that clicking the button results in the plot being generated." fig-align="center"}
+
+### Markdown text
+
+Text with formatting, including section headers, hyperlinks, an embedded image, and an inline code chunk.
+
+![](images/rstudio-text.png){.border fig-alt="Text portion of the of the linked example document titled \"Penguins, meet Quarto!\", with an annotation that reads \"Text\"." fig-align="center"}
+
+Quarto uses markdown syntax for text.
+If using the visual editor, you won't need to learn much markdown syntax for authoring your document, as you can use the menus and shortcuts to add a header, bold text, insert a table, etc.
+If using the source editor, you can achieve these with markdown expressions like `##`, `**bold**`, etc.
+
+## How it works
+
+When you render a Quarto document, first [knitr](http://yihui.name/knitr/) executes all of the code chunks and creates a new markdown (.md) document, which includes the code and its output.
+The markdown file generated is then processed by [pandoc](http://pandoc.org/), which creates the finished format.
+The Render button encapsulates these actions and executes them in the right order for you.
+
+![](images/rstudio-qmd-how-it-works.png){.border fig-alt="Workflow diagram starting with a qmd file, then knitr, then md, then pandoc, then PDF, MS Word, or HTML." fig-align="center"}
+
+"{{< include _footer.md >}}"
+-->
 <ul id="choose-your-tool" class="nav nav-tabs" role="tablist">
   <h3 class="no-anchor">Choose your tool</h3>
   <li class="nav-item" role="presentation">
@@ -357,22 +510,22 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 </script>
-<section id="overview" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Quarto is a multi-language, <a href="../../../docs/faq/rmarkdown.html">next-generation</a> version of R Markdown from Posit and includes dozens of new features and capabilities while at the same being able to render most existing Rmd files without modification.</p>
-<p>In this tutorial, we’ll show you how to use RStudio with Quarto. You’ll edit code and markdown in RStudio just as you would with any computational document (e.g., R Markdown) and preview the rendered document in the Viewer tab as you work.</p>
-<p>The following is a Quarto document with the extension <code>.qmd</code> (on the left), along with its rendered version as HTML (on the right). You could also choose to render it into other formats like PDF, MS Word, etc.</p>
+<section id="概述" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="概述">概述</h2>
+<p>Quarto 是 Posit 推出的 R Markdown 的多语言<a href="../../../docs/faq/rmarkdown.html" title="下一代">next-generation</a>版本，包含数十种新特性和功能，同时无需修改即可呈现大多数现有 <strong>Rmd</strong> 文件。</p>
+<p>在本教程中，我们将向您展示如何将 RStudio 与 Quarto 结合使用。 您将在 RStudio 中编辑代码和标记符，就像在任何计算文档（如 R Markdown）中一样，并在工作时在 <code>Viewer tab</code>选项卡中预览渲染后的文档。</p>
+<p>下面是扩展名为 <code>.qmd</code>（左侧）的 Quarto 文档，以及它的 HTML 渲染版本（右侧）。 您也可以选择将其渲染为 PDF、MS Word 等其他格式。</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
 <p class="page-columns page-full"><img src="images/rstudio-hello.png" class="border column-page-right img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio with a Quarto document titled &quot;Penguins, meet Quarto!&quot; open on the left side and the rendered version of the document on the right side."></p>
 </figure>
 </div>
-<p>This is the basic model for Quarto publishing—take a source document and render it to a variety of output formats.</p>
-<p>If you would like a video introduction to Quarto before you dive into the tutorial, watch the <a href="https://youtu.be/_f3latmOhew">Get Started with Quarto</a> where you can see a preview of authoring a Quarto document with executable code chunks, rendering to multiple formats, including revealjs presentations, creating a website, and publishing on QuartoPub.</p>
+<p>这就是 Quarto 发布的基本模式–获取源文档并将其呈现为各种输出格式。</p>
+<p>如果您想在深入学习本教程之前观看 Quarto 视频介绍，请观看<a href="https://youtu.be/_f3latmOhew" title="Quarto 入门">Get Started with Quarto</a>，在这里您可以预览使用可执行代码块编写 Quarto 文档、渲染为多种格式（包括 revealjs 演示文稿）、创建网站以及在 QuartoPub 上发布的过程。</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/_f3latmOhew" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>If you would like to follow along with this tutorial in your own environment, follow the steps outlined below.</p>
+<p>如果您想在自己的环境中学习本教程，请按照以下步骤操作。</p>
 <ol type="1">
-<li><p>Download and install the latest release of RStudio (v2023.12):</p>
+<li><p>下载并安装 RStudio 的最新版本（v2023.12）：</p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -383,10 +536,10 @@ document.addEventListener("DOMContentLoaded", function() {
 </div>
 </div>
 </div></li>
-<li><p>Be sure that you have installed the <code>tidyverse</code> and <code>palmerpenguins</code> packages:</p>
+<li><p>确保已安装 <code>tidyverse</code> 和 <code>palmerpenguins</code> 软件包：</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"palmerpenguins"</span>)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Download the Quarto document (<code>.qmd</code>) below, open it in RStudio, and click on <kbd><img src="images/rstudio-render-button.png" width="25" height="20"></kbd> Render.</p>
+<li><p>下载下面的 Quarto 文档 (<code>.qmd</code>)，在 RStudio 中打开它，然后点击 <kbd><img src="images/rstudio-render-button.png" width="25" height="20"></kbd> 渲染.</p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -399,48 +552,48 @@ document.addEventListener("DOMContentLoaded", function() {
 </div></li>
 </ol>
 </section>
-<section id="rendering" class="level2">
-<h2 class="anchored" data-anchor-id="rendering">Rendering</h2>
-<p>Use the <kbd><img src="images/rstudio-render-button.png" width="25" height="20"></kbd> <strong>Render</strong> button in the RStudio IDE to render the file and preview the output with a single click or keyboard shortcut (⇧⌘K).</p>
+<section id="渲染" class="level2">
+<h2 class="anchored" data-anchor-id="渲染">渲染</h2>
+<p>使用 RStudio IDE 中的 <kbd><img src="images/rstudio-render-button.png" width="25" height="20"></kbd> <strong>Render</strong>按钮，只需单击或使用键盘快捷键 (⇧⌘K) 即可渲染文件并预览输出。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/rstudio-render.png" class="border img-fluid quarto-figure quarto-figure-center figure-img" alt="Top of the text editor in RStudio with the Render button highlighted with a purple box."></p>
 </figure>
 </div>
-<p>If you prefer to automatically render whenever you save, you can check the Render on Save option on the editor toolbar. The preview will update whenever you re-render the document. Side-by-side preview works for both HTML and PDF outputs.</p>
+<p>如果希望在保存时自动渲染，可以选中编辑器工具栏上的 “Render on Save” 选项。 只要重新渲染文档，预览就会更新。 并排预览适用于 HTML 和 PDF 输出。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/rstudio-render-on-save.png" class="border img-fluid quarto-figure quarto-figure-center figure-img" alt="Top of the text editor in RStudio with the Render on Save checkbox checked and highlighted with a purple box."></p>
 </figure>
 </div>
-<p>Note that documents can also be rendered from the R console via the <strong>quarto</strong> package:</p>
+<p>请注意，也可以通过 <strong>quarto</strong> 软件包从 R 控制台( <strong>console</strong>)渲染文档：</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"quarto"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>quarto<span class="sc">::</span><span class="fu">quarto_render</span>(<span class="st">"hello.qmd"</span>)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>When rendering, Quarto generates a new file that contains selected text, code, and results from the .qmd file. The new file can be an <a href="https://quarto.org/docs/output-formats/all-formats.html">HTML</a>, <a href="https://quarto.org/docs/output-formats/pdf-basics.html">PDF</a>, <a href="https://quarto.org/docs/output-formats/ms-word.html">MS Word</a> document, <a href="https://quarto.org/docs/presentations/">presentation</a>, <a href="https://quarto.org/docs/websites/">website</a>, <a href="https://quarto.org/docs/books/">book</a>, <a href="https://quarto.org/docs/interactive/">interactive document</a>, or <a href="https://quarto.org/docs/output-formats/all-formats.html">other format</a>.</p>
+<p>渲染时，Quarto 会生成一个新文件，其中包含从 .qmd 文件中选择的文本、代码和结果。 新文件可以是 <a href="https://quarto.org/docs/output-formats/all-formats.html" title="超文本标记语言（HyperText Markup Language，简称：HTML）">HTML</a>、<a href="https://quarto.org/docs/output-formats/pdf-basics.html">PDF</a>、<a href="https://quarto.org/docs/output-formats/ms-word.html">MS Word</a>、<a href="https://quarto.org/docs/presentations/" title="演示文稿">presentation</a>、<a href="https://quarto.org/docs/websites/" title="网站">website</a>、<a href="https://quarto.org/docs/books/" title="书籍">book</a>、<a href="https://quarto.org/docs/interactive/" title="交互式文档">Interactive document</a>或<a href="https://quarto.org/docs/output-formats/all-formats.html" title="其余格式">other format</a>。</p>
 </section>
-<section id="authoring" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="authoring">Authoring</h2>
-<p>In the image below, we can see the same document in the two modes of the RStudio editor: visual (on the left) and source (on the right). RStudio’s <a href="../../..\docs/visual-editor/">visual editor</a> offers an <a href="https://en.wikipedia.org/wiki/WYSIWYM">WYSIWYM</a> authoring experience for markdown. For formatting (e.g., bolding text), you can use the toolbar, a keyboard shortcut (⌘B), or the markdown construct (<code>**bold**</code>). The plain text source code underlying the document is written for you, and you can view/edit it at any point by switching to source mode for editing. You can toggle back and forth between these two modes by clicking on <strong>Source</strong> and <strong>Visual</strong> in the editor toolbar (or using the keyboard shortcut ⌘⇧ F4).</p>
+<section id="创作" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="创作">创作</h2>
+<p>在下图中，我们可以看到 RStudio 编辑器两种模式下的同一文档：可视化（左侧）和源代码（右侧）。 RStudio 的<a href="../../..\docs/visual-editor/" title="可视化编辑器">visual editor</a>为 markdown 提供了<a href="https://en.wikipedia.org/wiki/WYSIWYM" title="所见即所得">WYSIWYM</a>的编辑体验。 您可以使用工具栏、键盘快捷键（⌘B）或标记符结构（<code>**bold**</code>）来进行格式化（如加粗文本）。 文档的纯文本源代码是为你编写的，你可以随时切换到源代码模式进行编辑，从而查看/编辑源代码。 你可以通过点击编辑器工具栏上的 <strong>Source</strong> 和<strong>Visual</strong>（或使用键盘快捷键⌘⇧ F4）在这两种模式之间来回切换。</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
 <p class="page-columns page-full"><img src="images/rstudio-source-visual.png" class="column-page-right img-fluid quarto-figure quarto-figure-center figure-img" alt="On the left: Document in the visual editor. On the right: Same document in the source editor. The visual/source editor toggle is highlighted in both documents marking their current state. The document shown is the &quot;Hello Quarto&quot; document from a previous image on the page."></p>
 </figure>
 </div>
-<p>Next, let’s turn our attention to the contents of our Quarto document. The file contains three types of content: a YAML header, code chunks, and markdown text.</p>
-<section id="yaml-header" class="level3">
-<h3 class="anchored" data-anchor-id="yaml-header">YAML header</h3>
-<p>An (optional) YAML header demarcated by three dashes (<code>---</code>) on either end.</p>
+<p>接下来，让我们来看看 Quarto 文档的内容。 该文件包含三种类型的内容：YAML 标头、代码块和 markdown 文本。</p>
+<section id="yaml-头文件" class="level3">
+<h3 class="anchored" data-anchor-id="yaml-头文件">YAML 头文件</h3>
+<p>一个 YAML 标头（可选），两端用三个破折号 (<code>---</code>) 分隔。</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Hello, Quarto"</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> visual</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>When rendered, the <code>title</code>, <code>"Hello, Quarto"</code>, will appear at the top of the rendered document with a larger font size than the rest of the document. The other two YAML fields denote that the output should be in <code>html</code> <code>format</code> and the document should open in the <code>visual</code> <code>editor</code> by default.</p>
-<p>The basic syntax of YAML uses key-value pairs in the format <code>key: value</code>. Other YAML fields commonly found in headers of documents include metadata like <code>author</code>, <code>subtitle</code>, <code>date</code> as well as customization options like <code>theme</code>, <code>fontcolor</code>, <code>fig-width</code>, etc. You can find out about all available YAML fields for HTML documents <a href="../../..\docs/reference/formats/html.html">here</a>. The available YAML fields vary based on document format, e.g., see <a href="../../..\docs/reference/formats/pdf.html">here</a> for YAML fields for PDF documents and <a href="../../..\docs/reference/formats/docx.html">here</a> for MS Word.</p>
+<p>渲染时，“标题” “你好，Quarto”将出现在渲染文档的顶部，字体大小比文档的其他部分大。 其他两个 YAML 字段表示输出应为 “html”格式，默认情况下文档应在 “可视”编辑器中打开。</p>
+<p>YAML 的基本语法使用 “key: value” 格式的键值对。 文档标题中常见的其他 YAML 字段包括 “作者”、“副标题”、“日期”等元数据，以及 “主题”、“字体颜色”、“字体宽度”等自定义选项。 您可以在 [here]（/docs/reference/formats/html.html”此处”）了解 HTML 文档的所有可用 YAML 字段。 可用的 YAML 字段因文档格式而异，例如，PDF 文档的 YAML 字段请参见 <a href="../../..\docs/reference/formats/pdf.html" title="此处">here</a>，MS Word 文档的 YAML 字段请参见 <a href="../../..\docs/reference/formats/docx.html" title="此处">here</a>。</p>
 </section>
-<section id="code-chunks" class="level3">
-<h3 class="anchored" data-anchor-id="code-chunks">Code chunks</h3>
-<p>R code chunks identified with <code>{r}</code> with (optional) chunk options, in YAML style, identified by <code>#|</code> at the beginning of the line.</p>
+<section id="代码块" class="level3">
+<h3 class="anchored" data-anchor-id="代码块">代码块</h3>
+<p>用 <code>{r}</code> 标识的 R 代码块，带有 YAML 风格的（可选）块选项，行首用 <code>#|</code>标识。</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: load-packages</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| include: false</span></span>
@@ -448,40 +601,49 @@ document.addEventListener("DOMContentLoaded", function() {
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="in">library(tidyverse)</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="in">library(palmerpenguins)</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In this case, the <code>label</code> of the code chunk is <code>load-packages</code>, and we set <code>include</code> to <code>false</code> to indicate that we don’t want the chunk itself or any of its outputs in the rendered documents.</p>
-<p>In addition to rendering the complete document to view the results of code chunks, you can also run each code chunk interactively in the RStudio editor by clicking the <img src="https://d33wubrfki0l68.cloudfront.net/18153fb9953057ee5cff086122bd26f9cee8fe93/3aba9/images/notebook-run-chunk.png" class="img-fluid"> icon or keyboard shortcut (⇧⌘⏎). RStudio executes the code and displays the results either inline within your file or in the Console, depending on your preference.</p>
+<p>在本例中，代码块的 “标签”是 “load-packages”，我们将 “include”设为 “false”，表示我们不希望在渲染的文档中出现代码块本身或其任何输出。</p>
+<p>除了渲染完整文档以查看代码块的结果外，还可以在 RStudio 编辑器中通过点击 <img src="https://d33wubrfki0l68.cloudfront.net/18153fb9953057ee5cff086122bd26f9cee8fe93/3aba9/images/notebook-run-chunk.png" class="img-fluid"> 图标或键盘快捷键（⇧⌘⏎）交互式运行每个代码块。 RStudio 会执行代码，并根据您的偏好在文件内嵌或控制台中显示结果。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/rstudio-inline-output.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="In the background, the code chunk labeled plot-penguins from hello.qmd. The chunk is partially covered by its output, a scatterplot showing the relationship between bill length and flipper length of penguins, colors by species. The button for running the code chunk is highlighted, and an arrow extends to the plot, showing that clicking the button results in the plot being generated."></p>
+<p><img src="images/rstudio-inline-output.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="在背景中，标有 plot-penguins 的代码块来自 hello.qmd。该代码块的部分输出被散点图所覆盖，该散点图显示了企鹅喙长和鳍长之间的关系，并按种类显示了颜色。运行代码块的按钮突出显示，箭头延伸至曲线图，表明点击该按钮将生成曲线图。"></p>
 </figure>
 </div>
 </section>
 <section id="markdown-text" class="level3">
 <h3 class="anchored" data-anchor-id="markdown-text">Markdown text</h3>
-<p>Text with formatting, including section headers, hyperlinks, an embedded image, and an inline code chunk.</p>
+<p>格式化文本，包括章节标题、超链接、内嵌图片和代码块。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/rstudio-text.png" class="border img-fluid quarto-figure quarto-figure-center figure-img" alt="Text portion of the of the linked example document titled &quot;Penguins, meet Quarto!&quot;, with an annotation that reads &quot;Text&quot;."></p>
 </figure>
 </div>
-<p>Quarto uses markdown syntax for text. If using the visual editor, you won’t need to learn much markdown syntax for authoring your document, as you can use the menus and shortcuts to add a header, bold text, insert a table, etc. If using the source editor, you can achieve these with markdown expressions like <code>##</code>, <code>**bold**</code>, etc.</p>
+<p>Quarto 对文本使用 markdown 语法。 如果使用visual editor可视化编辑器，你不需要学习太多的 Markdown 语法来编写文档，因为你可以使用菜单和快捷键来添加标题、加粗文本、插入表格等。 如果使用源代码编辑器，则可以使用<code>##</code>、<code>**粗体**</code>等标记表达式来实现这些功能。</p>
 </section>
 </section>
-<section id="how-it-works" class="level2">
-<h2 class="anchored" data-anchor-id="how-it-works">How it works</h2>
-<p>When you render a Quarto document, first <a href="http://yihui.name/knitr/">knitr</a> executes all of the code chunks and creates a new markdown (.md) document, which includes the code and its output. The markdown file generated is then processed by <a href="http://pandoc.org/">pandoc</a>, which creates the finished format. The Render button encapsulates these actions and executes them in the right order for you.</p>
+<section id="如何工作" class="level2">
+<h2 class="anchored" data-anchor-id="如何工作">如何工作</h2>
+<p>在渲染 Quarto 文档时，<a href="http://yihui.name/knitr/">knitr</a> 首先会执行所有代码块，并创建一个新的 markdown (.md) 文档，其中包括代码及其输出。</p>
+<p>然后，<a href="http://pandoc.org/">pandoc</a> 对生成的标记符文件进行处理，创建最终格式。 <strong>Render</strong>（渲染）按钮封装了这些操作，并按照正确的顺序执行。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/rstudio-qmd-how-it-works.png" class="border img-fluid quarto-figure quarto-figure-center figure-img" alt="Workflow diagram starting with a qmd file, then knitr, then md, then pandoc, then PDF, MS Word, or HTML."></p>
 </figure>
 </div>
+<!--## Next Up-->
 </section>
-<section id="next-up" class="level2">
-<h2 class="anchored" data-anchor-id="next-up">Next Up</h2>
-<p>You now know the basics of creating and authoring Quarto documents. The following tutorials explore Quarto in more depth:</p>
+<section id="下一步" class="level2">
+<h2 class="anchored" data-anchor-id="下一步">下一步</h2>
+<!--
+You now know the basics of creating and authoring Quarto documents. The following tutorials explore Quarto in more depth:
+
+-   [Tutorial: Computations](../computations/) --- Learn how to tailor the behavior and output of executable code blocks.
+
+-   [Tutorial: Authoring](../authoring/) --- Learn more about output formats and technical writing features like citations, crossrefs, and advanced layout.
+-->
+<p>您现在已经了解了创建和创作Quarto文档的基础知识。以下教程更深入地探讨了Quarto：</p>
 <ul>
-<li><p><a href="../computations/">Tutorial: Computations</a> — Learn how to tailor the behavior and output of executable code blocks.</p></li>
-<li><p><a href="../authoring/">Tutorial: Authoring</a> — Learn more about output formats and technical writing features like citations, crossrefs, and advanced layout.</p></li>
+<li><p><a href="../computations/">教程: 计算方法</a> — 了解如何定制可执行代码块的行为和输出。</p></li>
+<li><p><a href="../authoring/">教程: 写作</a> — 了解有关输出格式和技术写作功能（如引文、交叉引用和高级布局）的更多信息。</p></li>
 </ul>
 
 
@@ -999,6 +1161,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>videojs(video_shortcode_videojs_video1);</script>
 
 
 

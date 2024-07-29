@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.55">
+<meta name="generator" content="quarto-1.5.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorial: Computations – Quarto</title>
+<title>计算方法 – Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -137,13 +137,13 @@ gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="../../../styles.css">
 <link rel="stylesheet" href="../tutorial.css">
-<meta property="og:title" content="Tutorial: Computations – Quarto">
+<meta property="og:title" content="计算方法 – Quarto">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://quarto.org/docs/tools/images/vscode-preview-button.png">
 <meta property="og:site_name" content="Quarto">
 <meta property="og:image:height" content="124">
 <meta property="og:image:width" content="1252">
-<meta name="twitter:title" content="Tutorial: Computations – Quarto">
+<meta name="twitter:title" content="计算方法 – Quarto">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://quarto.org/docs/tools/images/vscode-preview-button.png">
 <meta name="twitter:image-height" content="124">
@@ -232,7 +232,7 @@ gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Tutorial: Computations</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">计算方法</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -247,7 +247,7 @@ gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/get-started/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Get Started</span></a>
+ <span class="menu-text">开始</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -278,13 +278,13 @@ gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
     <h2 id="toc-title">页面目录</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#cell-execution" id="toc-cell-execution" class="nav-link" data-scroll-target="#cell-execution">Cell Execution</a></li>
-  <li><a href="#cell-output" id="toc-cell-output" class="nav-link" data-scroll-target="#cell-output">Cell Output</a></li>
-  <li><a href="#code-folding" id="toc-code-folding" class="nav-link" data-scroll-target="#code-folding">Code Folding</a></li>
-  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
-  <li><a href="#multiple-figures" id="toc-multiple-figures" class="nav-link" data-scroll-target="#multiple-figures">Multiple Figures</a></li>
-  <li><a href="#next-up" id="toc-next-up" class="nav-link" data-scroll-target="#next-up">Next Up</a></li>
+  <li><a href="#概述" id="toc-概述" class="nav-link active" data-scroll-target="#概述">概述</a></li>
+  <li><a href="#单元格运行" id="toc-单元格运行" class="nav-link" data-scroll-target="#单元格运行">单元格运行</a></li>
+  <li><a href="#单元格输出" id="toc-单元格输出" class="nav-link" data-scroll-target="#单元格输出">单元格输出</a></li>
+  <li><a href="#代码折叠" id="toc-代码折叠" class="nav-link" data-scroll-target="#代码折叠">代码折叠</a></li>
+  <li><a href="#图片" id="toc-图片" class="nav-link" data-scroll-target="#图片">图片</a></li>
+  <li><a href="#多个图片" id="toc-多个图片" class="nav-link" data-scroll-target="#多个图片">多个图片</a></li>
+  <li><a href="#下一步" id="toc-下一步" class="nav-link" data-scroll-target="#下一步">下一步</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/quarto-dev/quarto-web/edit/main/docs/get-started/computations/vscode.qmd" class="toc-action"><i class="bi bi-github"></i>编辑页面</a></li><li><a href="https://github.com/quarto-dev/quarto-cli/issues/new/choose" class="toc-action"><i class="bi empty"></i>反馈问题</a></li></ul></div></nav>
     </div>
@@ -293,7 +293,7 @@ gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorial: Computations</h1>
+<h1 class="title">计算方法</h1>
 </div>
 
 
@@ -310,6 +310,307 @@ gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
 </header>
 
 
+<!--
+#The following is the original English version.
+-->
+<!--
+
+""{{< include ../_tool-chooser.md >}}""
+
+
+## Overview
+
+Quarto has a wide variety of options available for controlling how code and computational output appear within rendered documents.
+In this tutorial we'll take a `.qmd` file that has some numeric output and plots, and cover how to apply these options.
+
+This tutorial will make use of the `matplotlib` and `plotly` Python packages.
+The commands you can use to install them are given in the table below.
+
++-----------+---------------------------------------------------------+
+| Platform  | Commands                                                |
++===========+=========================================================+
+| Mac/Linux | ```{.bash filename="Terminal"}                          |
+|           | python3 -m pip install jupyter matplotlib plotly pandas |
+|           | ```                                                     |
++-----------+---------------------------------------------------------+
+| Windows   | ```{.powershell filename="Terminal"}                    |
+|           | py -m pip install jupyter matplotlib plotly pandas      |
+|           | ```                                                     |
++-----------+---------------------------------------------------------+
+
+If you want to follow along step-by-step in your own environment, create a `computations.qmd` file and copy the following content into it.
+
+```` markdown
+---
+title: Quarto Computations
+jupyter: python3
+---
+
+## NumPy
+
+```irptkndjgc
+import numpy as np
+a = np.arange(15).reshape(3, 5)
+a
+```
+
+## Matplotlib
+
+```irptkndjgc
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+x = np.arange(10)
+y = 2.5 * np.sin(x / 20 * np.pi)
+yerr = np.linspace(0.05, 0.2, 10)
+
+plt.errorbar(x, y + 3, yerr=yerr, label='both limits (default)')
+plt.errorbar(x, y + 2, yerr=yerr, uplims=True, label='uplims=True')
+plt.errorbar(x, y + 1, yerr=yerr, uplims=True, lolims=True,
+             label='uplims=True, lolims=True')
+
+upperlimits = [True, False] * 5
+lowerlimits = [False, True] * 5
+plt.errorbar(x, y, yerr=yerr, uplims=upperlimits, lolims=lowerlimits,
+             label='subsets of uplims and lolims')
+
+plt.legend(loc='lower right')
+plt.show(fig)
+```
+
+## Plotly
+
+```irptkndjgc
+import plotly.express as px
+import plotly.io as pio
+gapminder = px.data.gapminder()
+gapminder2007 = gapminder.query("year == 2007")
+fig = px.scatter(gapminder2007, 
+                 x="gdpPercap", y="lifeExp", color="continent", 
+                 size="pop", size_max=60,
+                 hover_name="country")
+fig.show()
+```
+````
+
+Then, execute the **Quarto: Preview** command.
+You can alternatively use the <kbd>Ctrl+Shift+K</kbd> keyboard shortcut, or the **Preview** button at the top right of the editor:
+
+![](/docs/tools/images/vscode-preview-button.png){.border fig-alt="The top of the Visual Studio code editor. The right side of the editor tab area includes a Preview button."}
+
+::: {.callout-note appearance="simple"}
+Note that on the Mac you should use `Cmd` rather than `Ctrl` as the prefix for all Quarto keyboard shortcuts.
+:::
+
+Here is what you should see within VS Code:
+
+![](images/vscode-computations-preview.png){.border .column-page-outset-right fig-alt="Side-by-side preview of text editor on the left and live preview in the browser on the right."}
+
+## Cell Execution
+
+As you author a document you may want to execute one or more cells without re-rendering the entire document.
+You can do this using the **Run Cell** button above the code cell.
+Click that button to execute the cell (output is shown side by side in the Jupyter interactive console):
+
+![](/docs/tools/images/vscode-execute-cell.png){.border fig-alt="VS Code with two panes open, vscode.qmd source code on the right, and the interactive output of that code shown in a second pane on the left."}
+
+There are a variety of commands and keyboard shortcuts available for executing cells:
+
+| Quarto Command       | Keyboard Shortcut   |
+|----------------------|---------------------|
+| Run Current Cell     | <kbd>⇧⌘ Enter</kbd> |
+| Run Selected Line(s) | <kbd>⌘ Enter</kbd>  |
+| Run Next Cell        | <kbd>⌥⌘ N</kbd>     |
+| Run Previous Cell    | <kbd>⌥⌘ P</kbd>     |
+| Run All Cells        | <kbd>⌥⌘ R</kbd>     |
+| Run Cells Above      | <kbd>⇧⌥⌘ P</kbd>    |
+| Run Cells Below      | <kbd>⇧⌥⌘ N</kbd>    |
+
+## Cell Output
+
+All of the code in the source file is displayed within the rendered document.
+However, in some cases, you may want to hide all of the code and just show the output.
+Let's go ahead and specify `echo: false` within the document `execute` options to prevent code from being printed.
+
+``` yaml
+---
+title: Quarto Computations
+execute:
+  echo: false
+jupyter: python3
+---
+```
+
+Re-render the document and the preview will update to show the output with no code (remember that you do not need to save the file before rendering, as this happens automatically when you render).
+
+![](images/exec-echo-false-preview.png){.border fig-alt="Output of computations.qmd with 'echo: false' set, shows Title, resulting array in NumPy section, line chart in Matplotlib section, and interactive bubble chart in Plotly section."}
+
+You might want to selectively enable code `echo` for some cells.
+To do this add the `echo: true` cell option.
+Try this with the NumPy cell.
+
+```` markdown
+```irptkndjgc
+#| echo: true
+
+import numpy as np
+a = np.arange(15).reshape(3, 5)
+a
+```
+````
+
+Re-render note that the code is now included for the NumPy cell.
+
+![](images/exec-echo-true-preview.png){.border fig-alt="Rendered NumPy section of computations.qmd which shows the code and the resulting array."}
+
+There a large number of other options available for cell output, for example `warning` to show/hide warnings (which can be especially helpful for package loading messages), `include` as a catch all for preventing any output (code or results) from being included in output, and `error` to prevent errors in code execution from halting the rendering of the document (and print the error in the rendered document).
+
+See the [Jupyter Cell Options](https://quarto.org/docs/reference/cells/cells-jupyter.html) documentation for additional details.
+
+## Code Folding
+
+Rather than hiding code entirely, you might want to fold it and allow readers to view it at their discretion.
+You can do this via the `code-fold` option.
+Remove the `echo` option we previously added and add the `code-fold` HTML format option.
+
+``` yaml
+---
+title: Quarto Computations
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+```
+
+Render the document.
+Now a "Code" widget is available above the output of each cell.
+
+![](images/code-fold-preview.png){.border fig-alt="Rendered NumPy section of computations.qmd which shows a toggleable section that is labelled 'Code' and the resulting array."}
+
+You can also provide global control over code folding.
+Try adding `code-tools: true` to the HTML format options.
+
+``` yaml
+---
+title: Quarto Computations
+format:
+  html:
+    code-fold: true
+    code-tools: true
+jupyter: python3
+---
+```
+
+Render the document and you'll see that a code menu appears at the top right of the document that provides global control over showing and hiding code.
+
+![](images/text-editor-code-tools-preview.png){.border fig-alt="Rendered version of the computations.qmd document. A new code widget appears on top right of the document. The screenshot shows that the widget is clicked on, which reveals a drop down menu with three choices: Show All Code, Hide All Code, and View Source. In the background is the rendered document. The title is followed by some text, which is followed by a Code widget that would expand if clicked on, which is followed by the output of the code. The Code widgets are folded, so the code is not visible in the rendered document."}
+
+## Figures
+
+Let's improve the appearance of our Matplotlib output.
+It could certainly stand to be wider, and it would be nice to provide a caption and a label for cross-referencing.
+
+Go ahead and modify the Matplotlib cell to include `label` and `fig-cap` options as well as a call to `fig.set_size_inches()` to set a larger figure size with a wider aspect ratio:
+
+```` markdown
+```irptkndjgc
+#| label: fig-limits
+#| fig-cap: "Errorbar limit selector"
+
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+fig.set_size_inches(12, 7)
+```
+````
+
+After re-rendering the document you'll see the updated plot:
+
+![](images/figure-options-preview.png){.border fig-alt="Rendered Matplotlib section of computations.qmd which includes a toggleable code-folding widget, the figure, and a caption under the figure that reads 'Figure 1: Errorbar limit selection.'"}
+
+## Multiple Figures
+
+The Plotly cell visualizes GDP and life expectancy data from a single year (2007).
+Let's plot another year next to it for comparison and add a caption and subcaptions.
+Since this will produce a wider visualization we'll also use the `column` option to lay it out across the entire page rather than being constrained to the body text column.
+
+There are quite a few changes to this cell.
+Copy and paste this code into `computations.qmd` if you want to try them locally:
+
+``` python
+#| label: fig-gapminder
+#| fig-cap: "Life Expectancy and GDP"
+#| fig-subcap:
+#|   - "Gapminder: 1957"
+#|   - "Gapminder: 2007"
+#| layout-ncol: 2
+#| column: page
+
+import plotly.express as px
+import plotly.io as pio
+gapminder = px.data.gapminder()
+def gapminder_plot(year):
+    gapminderYear = gapminder.query("year == " + 
+                                    str(year))
+    fig = px.scatter(gapminderYear, 
+                     x="gdpPercap", y="lifeExp",
+                     size="pop", size_max=60,
+                     hover_name="country")
+    fig.show()
+    
+gapminder_plot(1957)
+gapminder_plot(2007)
+```
+
+Render the document and the preview will update as follows:
+
+![](images/plotly-preview.png){.border fig-alt="Output of Plotly section which shows two charts side-by-side. The first has a caption below that reads '(a) Gapminder: 1957', the second's caption reads '(b) Gapminder 2007'. Below both figures, there's a caption that reads 'Figure 1: Life Expectancy and GDP (Data from World Bank via gapminder.org).'"}
+
+Let's discuss some of the new options used here.
+You've seen `fig-cap` before but we've now added a `fig-subcap` option:
+
+``` python
+#| fig-cap: "Life Expectancy and GDP"
+#| fig-subcap:
+#|   - "Gapminder: 1957"
+#|   - "Gapminder: 2007"
+```
+
+For code cells with multiple outputs adding the `fig-subcap` option enables us to treat them as subfigures.
+
+We also added an option to control how multiple figures are laid out---in this case we specified side-by-side in two columns:
+
+``` python
+#| layout-ncol: 2
+```
+
+If you have 3, 4, or more figures in a panel there are many options available for customizing their layout.
+See the article [Figures](/docs/authoring/figures.qmd) for details.
+
+Finally, we added an option to control the span of the page that our figures occupy:
+
+``` python
+#| column: page
+```
+
+This allows our figure display to span out beyond the normal body text column.
+See the documentation on [Article Layout](/docs/authoring/article-layout.qmd) to learn about all of the available layout options.
+
+"{{< include _footer.md >}}"
+
+-->
+<!--
+
+
+
+---
+#The above is the original English version.
+---
+
+
+
+-->
 <ul id="choose-your-tool" class="nav nav-tabs" role="tablist">
   <h3 class="no-anchor">Choose your tool</h3>
   <li class="nav-item" role="presentation">
@@ -358,14 +659,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 </script>
-<section id="overview" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Quarto has a wide variety of options available for controlling how code and computational output appear within rendered documents. In this tutorial we’ll take a <code>.qmd</code> file that has some numeric output and plots, and cover how to apply these options.</p>
-<p>This tutorial will make use of the <code>matplotlib</code> and <code>plotly</code> Python packages. The commands you can use to install them are given in the table below.</p>
+<section id="概述" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="概述">概述</h2>
+<p>Quarto 有多种选项可用于控制代码和计算输出在渲染文档中的显示方式。 在本教程中，我们将使用一个包含一些数字输出和绘图的 <code>.qmd</code> 文件，并介绍如何应用这些选项。</p>
+<p>本教程将使用 <code>matplotlib</code> 和 <code>plotly</code> Python 软件包。 下表列出了安装它们的命令。</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 16%">
-<col style="width: 80%">
+<col style="width: 70%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -380,7 +681,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="sourceCode" id="cb1" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install jupyter matplotlib plotly pandas</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install jupyter matplotlib plotly</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></td>
 </tr>
 <tr class="even">
@@ -389,12 +690,12 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="sourceCode" id="cb2" data-filename="Terminal"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>py <span class="op">-</span>m pip install jupyter matplotlib plotly pandas</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2" data-filename="Terminal"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>py <span class="op">-</span>m pip install jupyter matplotlib plotly</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></td>
 </tr>
 </tbody>
 </table>
-<p>If you want to follow along step-by-step in your own environment, create a <code>computations.qmd</code> file and copy the following content into it.</p>
+<p>如果你想在自己的环境中一步一步地学习，请创建一个 <code>computations.qmd</code> 文件，并将以下内容复制到其中。</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Quarto Computations</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
@@ -445,7 +746,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="in">                 hover_name="country")</span></span>
 <span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="in">fig.show()</span></span>
 <span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Then, execute the <strong>Quarto: Preview</strong> command. You can alternatively use the <kbd>Ctrl+Shift+K</kbd> keyboard shortcut, or the <strong>Preview</strong> button at the top right of the editor:</p>
+<p>然后，执行<strong>Quarto: Preview</strong>命令。您也可以使用 <kbd>Ctrl+Shift+K</kbd> 键盘快捷键或编辑器右上角的 <strong>Preview</strong> 按钮：</p>
 <p><img src="../../..\docs/tools/images/vscode-preview-button.png" class="border img-fluid" alt="The top of the Visual Studio code editor. The right side of the editor tab area includes a Preview button."></p>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
@@ -453,69 +754,104 @@ document.addEventListener("DOMContentLoaded", function() {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Note that on the Mac you should use <code>Cmd</code> rather than <code>Ctrl</code> as the prefix for all Quarto keyboard shortcuts.</p>
+<p>请注意，在 Mac 上，您应该使用 <code>Cmd</code> 而不是 <code>Ctrl</code> 作为所有Quarto快捷键的前缀。</p>
 </div>
 </div>
 </div>
-<p>Here is what you should see within VS Code:</p>
+<p>以下是您在 VS 代码中应该看到的内容：</p>
 <p class="page-columns page-full"><img src="images/vscode-computations-preview.png" class="border column-page-outset-right img-fluid" alt="Side-by-side preview of text editor on the left and live preview in the browser on the right."></p>
 </section>
-<section id="cell-execution" class="level2">
-<h2 class="anchored" data-anchor-id="cell-execution">Cell Execution</h2>
-<p>As you author a document you may want to execute one or more cells without re-rendering the entire document. You can do this using the <strong>Run Cell</strong> button above the code cell. Click that button to execute the cell (output is shown side by side in the Jupyter interactive console):</p>
+<section id="单元格运行" class="level2">
+<h2 class="anchored" data-anchor-id="单元格运行">单元格运行</h2>
+<p>在编写文档时，您可能希望执行一个或多个单元格，而无需重新渲染整个文档。 您可以使用代码单元格上方的 <strong>Run Cell</strong> 按钮来实现这一点。 点击该按钮即可执行单元格（输出将并排显示在 Jupyter 交互式控制台中）：</p>
 <p><img src="../../..\docs/tools/images/vscode-execute-cell.png" class="border img-fluid" alt="VS Code with two panes open, vscode.qmd source code on the right, and the interactive output of that code shown in a second pane on the left."></p>
-<p>There are a variety of commands and keyboard shortcuts available for executing cells:</p>
+<p>有多种命令和键盘快捷键可用于执行单元格：</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 27%">
+<col style="width: 21%">
+<col style="width: 22%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Quarto Command</th>
-<th>Keyboard Shortcut</th>
+<th>Quarto 命令</th>
+<th>快捷键</th>
+<th>中文</th>
+<th>键组合</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Run Current Cell</td>
 <td><kbd>⇧⌘ Enter</kbd></td>
+<td>执行单元格</td>
+<td>shift+Enter</td>
 </tr>
 <tr class="even">
 <td>Run Selected Line(s)</td>
-<td><kbd>⌘ Enter</kbd></td>
+<td><kbd> ⌘ Enter</kbd></td>
+<td>执行选定行</td>
+<td>Enter</td>
 </tr>
 <tr class="odd">
 <td>Run Next Cell</td>
 <td><kbd>⌥⌘ N</kbd></td>
+<td>执行下一单元</td>
+<td>Alt+N</td>
 </tr>
 <tr class="even">
 <td>Run Previous Cell</td>
 <td><kbd>⌥⌘ P</kbd></td>
+<td>执行前一单元</td>
+<td>Alt+p</td>
 </tr>
 <tr class="odd">
 <td>Run All Cells</td>
 <td><kbd>⌥⌘ R</kbd></td>
+<td>执行所以单元</td>
+<td>Alt+R</td>
 </tr>
 <tr class="even">
 <td>Run Cells Above</td>
 <td><kbd>⇧⌥⌘ P</kbd></td>
+<td>执行以上单元</td>
+<td>shift+Alt+p</td>
 </tr>
 <tr class="odd">
 <td>Run Cells Below</td>
 <td><kbd>⇧⌥⌘ N</kbd></td>
+<td>执行以下单元</td>
+<td>shift+Alt+N</td>
 </tr>
 </tbody>
 </table>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<ul>
+<li>在 <cmd 命令行=""> 执行快捷键组合</cmd></li>
+<li>⇧: shift键 ⌥: Alt键</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
-<section id="cell-output" class="level2">
-<h2 class="anchored" data-anchor-id="cell-output">Cell Output</h2>
-<p>All of the code in the source file is displayed within the rendered document. However, in some cases, you may want to hide all of the code and just show the output. Let’s go ahead and specify <code>echo: false</code> within the document <code>execute</code> options to prevent code from being printed.</p>
+<section id="单元格输出" class="level2">
+<h2 class="anchored" data-anchor-id="单元格输出">单元格输出</h2>
+<p>源文件中的所有代码都会显示在渲染文档中。 不过，在某些情况下，您可能希望隐藏所有代码，只显示输出结果。 让我们继续在文档的 <code>execute</code> 选项中指定 <code>echo: false</code> 以防止代码被打印出来。</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Quarto Computations</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">execute</span><span class="kw">:</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">jupyter</span><span class="kw">:</span><span class="at"> python3</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Re-render the document and the preview will update to show the output with no code (remember that you do not need to save the file before rendering, as this happens automatically when you render).</p>
+<p>重新渲染文档，预览将更新为显示无代码输出（记住，渲染前无需保存文件，因为渲染时会自动保存）。</p>
 <p><img src="images/exec-echo-false-preview.png" class="border img-fluid" alt="Output of computations.qmd with 'echo: false' set, shows Title, resulting array in NumPy section, line chart in Matplotlib section, and interactive bubble chart in Plotly section."></p>
-<p>You might want to selectively enable code <code>echo</code> for some cells. To do this add the <code>echo: true</code> cell option. Try this with the NumPy cell.</p>
+<p>您可能希望有选择性地为某些单元格启用代码 <code>echo</code>。 为此，请添加 <code>echo: true</code> 单元格选项。 用 NumPy 单元格试试看。</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| echo: true</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -523,14 +859,14 @@ document.addEventListener("DOMContentLoaded", function() {
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="in">a = np.arange(15).reshape(3, 5)</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="in">a</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Re-render note that the code is now included for the NumPy cell.</p>
+<p>重新渲染注意，现在 NumPy 单元已包含代码。</p>
 <p><img src="images/exec-echo-true-preview.png" class="border img-fluid" alt="Rendered NumPy section of computations.qmd which shows the code and the resulting array."></p>
-<p>There a large number of other options available for cell output, for example <code>warning</code> to show/hide warnings (which can be especially helpful for package loading messages), <code>include</code> as a catch all for preventing any output (code or results) from being included in output, and <code>error</code> to prevent errors in code execution from halting the rendering of the document (and print the error in the rendered document).</p>
-<p>See the <a href="https://quarto.org/docs/reference/cells/cells-jupyter.html">Jupyter Cell Options</a> documentation for additional details.</p>
+<p>单元格输出还有许多其他选项，例如，<code>warning</code>用于显示/隐藏警告（这对软件包加载信息特别有用），“include”用于防止输出中包含任何输出（代码或结果），“error”用于防止代码执行错误导致文档渲染停止（并在渲染的文档中打印错误信息）。</p>
+<p>更多详情，请参阅 <a href="https://quarto.org/docs/reference/cells/cells-jupyter.html" title="Jupyter 单元选项">Jupyter Cell Options</a> 文档。</p>
 </section>
-<section id="code-folding" class="level2">
-<h2 class="anchored" data-anchor-id="code-folding">Code Folding</h2>
-<p>Rather than hiding code entirely, you might want to fold it and allow readers to view it at their discretion. You can do this via the <code>code-fold</code> option. Remove the <code>echo</code> option we previously added and add the <code>code-fold</code> HTML format option.</p>
+<section id="代码折叠" class="level2">
+<h2 class="anchored" data-anchor-id="代码折叠">代码折叠</h2>
+<p>与其完全隐藏代码，不如将其折叠起来，让读者自行决定是否查看。 您可以通过 <code>code-fold</code> 选项来实现这一点。 移除我们之前添加的 <code>echo</code> 选项，并添加 <code>code-fold</code> HTML 格式选项。</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Quarto Computations</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
@@ -538,9 +874,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code-fold</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">jupyter</span><span class="kw">:</span><span class="at"> python3</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Render the document. Now a “Code” widget is available above the output of each cell.</p>
+<p>渲染文档。 现在，每个单元格的输出上方都有一个 “代码”部件。</p>
 <p><img src="images/code-fold-preview.png" class="border img-fluid" alt="Rendered NumPy section of computations.qmd which shows a toggleable section that is labelled 'Code' and the resulting array."></p>
-<p>You can also provide global control over code folding. Try adding <code>code-tools: true</code> to the HTML format options.</p>
+<p>您还可以对代码折叠进行全局控制。 请尝试在 HTML 格式选项中添加 <code>code-tools: true</code>。</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Quarto Computations</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
@@ -549,13 +885,13 @@ document.addEventListener("DOMContentLoaded", function() {
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code-tools</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">jupyter</span><span class="kw">:</span><span class="at"> python3</span></span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Render the document and you’ll see that a code menu appears at the top right of the document that provides global control over showing and hiding code.</p>
+<p>渲染文档后，你会发现文档右上方出现了一个代码菜单，可以全局控制代码的显示和隐藏。</p>
 <p><img src="images/text-editor-code-tools-preview.png" class="border img-fluid" alt="Rendered version of the computations.qmd document. A new code widget appears on top right of the document. The screenshot shows that the widget is clicked on, which reveals a drop down menu with three choices: Show All Code, Hide All Code, and View Source. In the background is the rendered document. The title is followed by some text, which is followed by a Code widget that would expand if clicked on, which is followed by the output of the code. The Code widgets are folded, so the code is not visible in the rendered document."></p>
 </section>
-<section id="figures" class="level2">
-<h2 class="anchored" data-anchor-id="figures">Figures</h2>
-<p>Let’s improve the appearance of our Matplotlib output. It could certainly stand to be wider, and it would be nice to provide a caption and a label for cross-referencing.</p>
-<p>Go ahead and modify the Matplotlib cell to include <code>label</code> and <code>fig-cap</code> options as well as a call to <code>fig.set_size_inches()</code> to set a larger figure size with a wider aspect ratio:</p>
+<section id="图片" class="level2">
+<h2 class="anchored" data-anchor-id="图片">图片</h2>
+<p>让我们来改善 Matplotlib 输出的外观。 它当然可以更宽一些，如果能提供一个标题和标签用于交叉引用就更好了。</p>
+<p>继续修改 Matplotlib 单元，加入 <code>label</code>和 <code>fig-cap</code>选项，并调用 <code>fig.set_size_inches()</code>来设置更大的图形尺寸和更宽的纵横比：</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-limits</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "Errorbar limit selector"</span></span>
@@ -565,13 +901,13 @@ document.addEventListener("DOMContentLoaded", function() {
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="in">fig = plt.figure()</span></span>
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="in">fig.set_size_inches(12, 7)</span></span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>After re-rendering the document you’ll see the updated plot:</p>
+<p>重新渲染文档后，您将看到更新后的图形：</p>
 <p><img src="images/figure-options-preview.png" class="border img-fluid" alt="Rendered Matplotlib section of computations.qmd which includes a toggleable code-folding widget, the figure, and a caption under the figure that reads 'Figure 1: Errorbar limit selection.'"></p>
 </section>
-<section id="multiple-figures" class="level2">
-<h2 class="anchored" data-anchor-id="multiple-figures">Multiple Figures</h2>
-<p>The Plotly cell visualizes GDP and life expectancy data from a single year (2007). Let’s plot another year next to it for comparison and add a caption and subcaptions. Since this will produce a wider visualization we’ll also use the <code>column</code> option to lay it out across the entire page rather than being constrained to the body text column.</p>
-<p>There are quite a few changes to this cell. Copy and paste this code into <code>computations.qmd</code> if you want to try them locally:</p>
+<section id="多个图片" class="level2">
+<h2 class="anchored" data-anchor-id="多个图片">多个图片</h2>
+<p>Plotly 单元格可视化了单个年份（2007 年）的 GDP 和预期寿命数据。 让我们在其旁边绘制另一年的数据以作比较，并添加标题和副标题。 由于这将产生更广泛的可视化效果，我们还将使用 <code>column</code>(列) 选项将其铺满整个页面，而不是局限于正文一列。</p>
+<p>这个单元格有很多改动。 如果您想在本地试用，请将这些代码复制并粘贴到 <code>computations.qmd</code> 中：</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-gapminder</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Life Expectancy and GDP"</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-subcap:</span></span>
@@ -594,25 +930,29 @@ document.addEventListener("DOMContentLoaded", function() {
 <span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>gapminder_plot(<span class="dv">1957</span>)</span>
 <span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>gapminder_plot(<span class="dv">2007</span>)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Render the document and the preview will update as follows:</p>
+<p>渲染文档后，预览会更新如下：</p>
 <p><img src="images/plotly-preview.png" class="border img-fluid" alt="Output of Plotly section which shows two charts side-by-side. The first has a caption below that reads '(a) Gapminder: 1957', the second's caption reads '(b) Gapminder 2007'. Below both figures, there's a caption that reads 'Figure 1: Life Expectancy and GDP (Data from World Bank via gapminder.org).'"></p>
-<p>Let’s discuss some of the new options used here. You’ve seen <code>fig-cap</code> before but we’ve now added a <code>fig-subcap</code> option:</p>
+<p>让我们来讨论一下这里使用的一些新选项。 你以前见过 <code>fig-cap</code> 选项，但现在我们增加了一个 <code>fig-subcap</code> 选项：</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Life Expectancy and GDP"</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-subcap:</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#|   - "Gapminder: 1957"</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">#|   - "Gapminder: 2007"</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>For code cells with multiple outputs adding the <code>fig-subcap</code> option enables us to treat them as subfigures.</p>
-<p>We also added an option to control how multiple figures are laid out—in this case we specified side-by-side in two columns:</p>
+<p>对于有多个输出的代码单元，添加 “fig-subcap”选项后，我们就能将它们视为子图。</p>
+<p>我们还添加了一个选项来控制多个图形的布局方式–在本例中，我们指定了并列的两列：</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| layout-ncol: 2</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If you have 3, 4, or more figures in a panel there are many options available for customizing their layout. See the article <a href="../../../docs/authoring/figures.html">Figures</a> for details.</p>
-<p>Finally, we added an option to control the span of the page that our figures occupy:</p>
+<p>如果一个面板中有 3 个、4 个或更多图片，有很多选项可用于自定义它们的布局。 详见文章 <a href="../../../docs/authoring/figures.html" title="图片">Figures</a> 。</p>
+<p>最后，我们添加了一个选项来控制图表所占页面的跨度：</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| column: page</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This allows our figure display to span out beyond the normal body text column. See the documentation on <a href="../../../docs/authoring/article-layout.html">Article Layout</a> to learn about all of the available layout options.</p>
+<p>这样，我们的图片显示就可以超出正常的正文列。 请参阅<a href="../../../docs/authoring/article-layout.html" title="文章布局">Article Layout</a>文档，了解所有可用的布局选项。</p>
+<!--## Next Up -->
 </section>
-<section id="next-up" class="level2">
-<h2 class="anchored" data-anchor-id="next-up">Next Up</h2>
-<p>You’ve now covered the basics of customizing the behavior and output of executable code in Quarto documents.</p>
-<p>Next, check out the the <a href="../authoring/">Authoring Tutorial</a> to learn more about output formats and technical writing features like citations, crossrefs, and advanced layout.</p>
+<section id="下一步" class="level2">
+<h2 class="anchored" data-anchor-id="下一步">下一步</h2>
+<p>现在，您已经掌握了在 Quarto 文档中自定义可执行代码的行为和输出的基础知识。</p>
+<!--
+Next, check out the the [Authoring Tutorial](../authoring/) to learn more about output formats and technical writing features like citations, crossrefs, and advanced layout.
+-->
+<p>接下来，请查看<a href=".../authoring/" title="创作教程">Authoring Tutorial</a>，了解更多有关输出格式和技术写作功能（如引用、交叉引用和高级排版）的信息。</p>
 
 
 </section>
